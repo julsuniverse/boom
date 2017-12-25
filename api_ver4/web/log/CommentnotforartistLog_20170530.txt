@@ -1,0 +1,64 @@
+
+
+ ************************
+ Start Send to Android push: 
+30 May '17 14:37 PM
+ Device Token: fRmjoQmVXB0:APA91bF8ABRtA2kxb80ryxDGWdnAeOjzKu1--jp92IwBYhuNrGXpBw5Zg07Ws8GH0NMwySZYoUOXg3_5qtwDr41RhUrzHd1AFteZSmTBCQFIE_YslOLMFxH37MwatXRfaI8xMfg88i2e 
+
+ ArtistID: 110 
+
+ Message: Brittanya has answered your question 
+
+ PostID: 6819 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_110/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+30 May '17 18:23 PM
+ Device Token: fmigXMvnL-A:APA91bFLOxmESAzasGXJdsj1LUwIwNL7sHWI7Ca_wwc0IaKddV1QBQXsVZmKhl8Sd-JDbw1duTzgpLfyvK6qQWMzsdjKNNMs-rn9HYhUanCV4MM2h2xWJxBqcqKryNa6pNA-TAzhFYT1 
+
+ ArtistID: 185 
+
+ Message: Yuliett Torres has answered your question 
+
+ PostID: 6808 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_185/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+30 May '17 18:25 PM
+ Device Token: fmigXMvnL-A:APA91bFLOxmESAzasGXJdsj1LUwIwNL7sHWI7Ca_wwc0IaKddV1QBQXsVZmKhl8Sd-JDbw1duTzgpLfyvK6qQWMzsdjKNNMs-rn9HYhUanCV4MM2h2xWJxBqcqKryNa6pNA-TAzhFYT1 
+
+ ArtistID: 185 
+
+ Message: Yuliett Torres has answered your question 
+
+ PostID: 6809 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_185/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+30 May '17 18:26 PM
+ Device Token: dXYgcbRPxsU:APA91bGhJLb3Hyqf0GkHTaTGT8XuUgmHfrTPsTxnpmm6PJAH0F58LnRofm6LEyePMCrU766IowLET3mbwAlyVS1hXyhS1qdSD7p-bdXf1k7K-qyWjiXIlpGZvLJGurRvvhFad1VkCBP8 
+
+ ArtistID: 185 
+
+ Message: Yuliett Torres has answered your question 
+
+ PostID: 6822 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_185/android_api_key_user.txt 

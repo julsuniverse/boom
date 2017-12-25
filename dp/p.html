@@ -1,0 +1,69 @@
+
+<p id="t">Hello World!</p>
+<script>
+openlink("post");
+function openDeepLink(link,storeLink) {
+        var app = {
+            launchApp: function() {
+                window.location.replace(link);
+                this.time = setTimeout(this.openStoreLink,1000);
+            },
+
+            openStoreLink: function() {
+                window.location.replace(storeLink);
+            }
+        };
+        app.launchApp();
+    };
+function getURLParameter(name) {
+  return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [null, ''])[1].replace(/\+/g, '%20')) || null;
+}
+
+function openDeepLink_an(link,storeLink){
+setTimeout(function () { window.location = storeLink; }, 25);
+
+// try to load the deep link URL
+window.location = link;
+}
+
+function openlink(filename){
+    var appname=getURLParameter('name');
+    var scheme=getURLParameter('scheme');
+    var applink=scheme+"://"+filename+location.search;
+    var appid=getURLParameter('appid');
+    var  marketlink="https://itunes.apple.com/au/app/id"+appid+"?mt=8";
+    var br=getMobileOperatingSystem();
+    //br="Android";
+    if(br=="Android") {
+      marketlink="market://details?id=com."+appname+"&hl=en";
+      if(appname=="JailyneOjeda") marketlink="market://details?id=jailyne.com.jailyneojedaochoa&hl=en";
+      openDeepLink_an(applink,marketlink);
+    }else{
+      //openDeepLink(applink,marketlink);
+    }
+    document.getElementById("t").innerHTML =marketlink;
+    console.log(applink);
+    console.log(marketlink);
+
+}
+
+function getMobileOperatingSystem() {
+  var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+    // iOS detection from: http://stackoverflow.com/a/9039885/177710
+    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        return "iOS";
+    }
+
+      // Windows Phone must come first because its UA also contains "Android"
+    if (/windows phone/i.test(userAgent)) {
+        return "Windows Phone";
+    }
+    if (/android/i.test(userAgent)) {
+        return "Android";
+    }
+
+    return "unknown";
+}
+</script>
+

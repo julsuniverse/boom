@@ -1,0 +1,20 @@
+
+ ************************
+ DateTime : 2016-12-15 21:47:11
+ Message : exception 'yii\base\ErrorException' with message 'Undefined index: ArtistID' in /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php:479
+Stack trace:
+#0 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(479): yii\base\ErrorHandler->handleError(8, 'Undefined index...', '/var/www/html/b...', 479, Array)
+#1 [internal function]: api_ver2\controllers\UserController->actionLogin()
+#2 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#3 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('login', Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/login', Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#8 {main}
+ Data: 
+ Params : {"Username":"MyPersonalApp","Language":"english","LoginType":1,"UserType":2,"DeviceType":"1","Password":"boomcollective","DeviceToken":"fc71b095fdcfa6630f33ea45ddf06c5748efa411f0af0dcab21a4d2148fbdd87","ArtistID":"1"}\n
+ SP : CALL Member_Login('MyPersonalApp','','','boomcollective','1','fc71b095fdcfa6630f33ea45ddf06c5748efa411f0af0dcab21a4d2148fbdd87',2,1,1,'boom@123','http://d1k9hpqb4as18m.cloudfront.net/boom-','/profileimages/',@UserID,@ProfileID,@UserType,@ErrorCode)\n
+ Member Profile : CALL Member_GetProfile('2','3','1','boom@123','http://d1k9hpqb4as18m.cloudfront.net/boom-','/profileimages/thumb/')\n
+ Artist Profile : CALL Member_GetProfile('2','2','1','boom@123','http://d1k9hpqb4as18m.cloudfront.net/boom-','/profileimages/thumb/')\n
+ Artist_Home_News_Feed : CALL Artist_Home_News_Feed(1,'http://d1k9hpqb4as18m.cloudfront.net','http://d1k9hpqb4as18m.cloudfront.net/boom-','/profileimages/thumb/','/stickerimages/',30,1,@o_RecCount)\n

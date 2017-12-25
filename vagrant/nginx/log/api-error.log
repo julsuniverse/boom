@@ -1,0 +1,32 @@
+2017/12/25 16:24:41 [error] 1712#1712: *1 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\base\InvalidRouteException: Unable to resolve the request "site/error". in /app/vendor/yiisoft/yii2/base/Module.php:461
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(85): yii\base\Module->runAction('site/error')
+#1 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(109): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "site/index/". in /app/vendor/yiisoft/yii2/base/Module.php:461
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('site/index/', Array)
+#1 /app/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /app/rest/web/index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException:" while reading upstream, client: 192.168.83.1, server: rest.boom.test, request: "GET /site/index/ HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.1-fpm.sock:", host: "rest.boom.test"
+2017/12/25 16:27:58 [error] 1712#1712: *15 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\base\InvalidRouteException: Unable to resolve the request "site/error". in /app/vendor/yiisoft/yii2/base/Module.php:461
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(85): yii\base\Module->runAction('site/error')
+#1 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(109): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "site/index/". in /app/vendor/yiisoft/yii2/base/Module.php:461
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('site/index/', Array)
+#1 /app/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /app/rest/web/index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException:" while reading upstream, client: 192.168.83.1, server: rest.boom.test, request: "GET /site/index/ HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.1-fpm.sock:", host: "rest.boom.test"

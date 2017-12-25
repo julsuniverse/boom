@@ -1,0 +1,16 @@
+
+ ************************
+ DateTime : 2017-09-12 07:04:03
+ Message : exception 'yii\base\ErrorException' with message 'Undefined property: stdClass::$ArtistID' in /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php:358
+Stack trace:
+#0 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(358): yii\base\ErrorHandler->handleError(8, 'Undefined prope...', '/var/www/html/b...', 358, Array)
+#1 [internal function]: api_ver2\controllers\UserController->actionLogin()
+#2 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#3 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('login', Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/login', Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#8 {main}
+ Data: 
+ Params : {"UserType":2,"LoginType":1,"Password":"ojeda.positive","Username":"Jailyneojeda","Language":"english","DeviceToken":"dP_TJKTYsOw:APA91bH8ZN6MuWPO0ozugBZCp7vup9vdxpCp1Z35mXKrfx7FMZYj9tTS-PI8RDtBq3MJbL3LzR_EnZvoALFJgq05pEZqdNfxLiqve0IyEcAOaKgIcbUlf-KZ4a-fUPpJa4XqiZ-j9rx2","DeviceType":2}\n

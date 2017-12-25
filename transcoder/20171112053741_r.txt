@@ -1,0 +1,52 @@
+
+Notification Message:
+
+Message
+{
+  "state" : "COMPLETED",
+  "version" : "2012-09-25",
+  "jobId" : "1510465014510-4me003",
+  "pipelineId" : "1508299918111-bmswsf",
+  "input" : {
+    "key" : "boom-185/postvideos/reply_38445_20171111233405.mp4"
+  },
+  "inputCount" : 1,
+  "outputs" : [ {
+    "id" : "1",
+    "presetId" : "1351620000001-000010",
+    "key" : "boom-185/streaming/mp4-post_reply_38445_20171111233405.mp4",
+    "thumbnailPattern" : "boom-185/streaming/thumb/thumb-post_reply_38445_20171111233405-{count}",
+    "status" : "Complete",
+    "duration" : 20,
+    "width" : 404,
+    "height" : 720
+  } ]
+}
+MessageId
+8068ae77-99d5-59df-8053-fcf679959171
+SubscribeURL
+TimeStamp
+2017-11-12T05:37:04.425Z
+Token
+
+TopicArn
+arn:aws:sns:us-west-2:630949593304:AppbeatVIdeoComplete
+Type
+Notification
+Query: UPDATE post SET ReplyStreamURL = 'http://d1votgrx00p4vc.cloudfront.net/boom-185/streaming/mp4-post_reply_38445_20171111233405.mp4', ReplyImage = 'http://d1votgrx00p4vc.cloudfront.net/boom-185/streaming/thumb/thumb-post_reply_38445_20171111233405-00001.png'  WHERE Reply = 'boom-185/postvideos/reply_38445_20171111233405.mp4' 
+file name 
+boom-185/postvideos/reply_38445_20171111233405.mp4
+ Query: 
+SELECT a.ArtistName,p.ArtistID,a.DeviceToken,a.DeviceType,p.PostID,p.MobileStreamUrl,p.MemberID,p.PostType 
+                                                 FROM post p 
+                                                 JOIN artist a 
+                                                 ON (a.ArtistID=p.ArtistID)
+                                                 WHERE p.Reply='boom-185/postvideos/reply_38445_20171111233405.mp4'Number of records 
+
+1\nArtistID=185
+artist reply 
+ff31babb3f14ead1c852232ed2546756242639842aba57fe8cffed8f5540b9f9
+Token ff31babb3f14ead1c852232ed2546756242639842aba57fe8cffed8f5540b9f9
+Message:Yuliett Torres has answered your question
+NotificationType:replyAns
+Type:member

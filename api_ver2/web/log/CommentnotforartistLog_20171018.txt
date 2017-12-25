@@ -1,0 +1,3392 @@
+
+
+ ************************
+ Start Send to Iphone push: 
+18 Oct '17 00:07 AM
+ Device Token: 5ed7272e72a0e155767ca951bb32a1314677e45548fb92847aaef5d5ad459a45 
+
+ ArtistID: 185 
+
+ Message: Yuliett Torres has answered your question 
+
+ PostID: 24593 
+
+ Notification Type: replyAns 
+
+ Exception: Gateway not connected 
+exception 'yii\base\ErrorException' with message 'stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14094410:SSL routines:SSL3_READ_BYTES:sslv3 alert handshake failure' in /var/www/html/boomvideo/public_html/api/models/Commentnotforartist.php:68
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'stream_socket_c...', '/var/www/html/b...', 68, Array)
+#1 /var/www/html/boomvideo/public_html/api/models/Commentnotforartist.php(68): stream_socket_client('ssl://gateway.p...', 0, '', 60, 5, Resource id #16)
+#2 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(3482): api\models\Commentnotforartist->sendToIphone(185, 'user')
+#3 [internal function]: api_ver2\controllers\UserController->actionAddpost()
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('addpost', Array)
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/addpost', Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#10 {main}
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 00:07 AM
+ Device Token: csSyB5KZn88:APA91bGXulha-vwzQZOajQxFNY6y5EQ4s7_7XPnWWRtWrqIpbggcNSPHmp5-9luigRgu0dHARonzBi7AonAGaf_i7kYQOdQ9nlk-nsY11jY1yEsPQMNmEE2x0iiDSq4Orkyd7O2Q3z3v 
+
+ ArtistID: 185 
+
+ Message: Yuliett Torres has answered your question 
+
+ PostID: 24532 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_185/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 00:07 AM
+ Device Token: fj_mxmORcN4:APA91bFoTi8ia-QTQT-l5v8ARlDMVwbAgOd40ak3CXnSDUNDAwzt8M9aXcqkn1qEnn4zmB04eqwV_-wGHriGz035eOhl0KUCuXrP3MLQZRbqZlMBt2QQGEm38_WQyqJFRXKB6kEnIW_G 
+
+ ArtistID: 185 
+
+ Message: Yuliett Torres has answered your question 
+
+ PostID: 24534 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_185/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 00:07 AM
+ Device Token: cDpjezQiXAg:APA91bGdjmH6uqSeDpVmGGBkmsCZmfMqKAqRAuKtQdz8ag8_iHjBh7CpCNjTIHauyOSG512I2yQDTwY5HlHV_VWCngRcQk5OIkw8InYX6Iad9p9PTtKwyONjAvcDCKRxhCmGUnG50_IV 
+
+ ArtistID: 185 
+
+ Message: Yuliett Torres has answered your question 
+
+ PostID: 24536 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_185/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 00:08 AM
+ Device Token: ewARxSkHcKE:APA91bF4ceSdTOc8uon7IsYf1ITD2PD0029GfVq3MT9Le9dcOpD-0AW9wlYvJqPeUDhcvheiBhvbQM1w3RtbIz_14AV6PdKseiJnr7ANIwSJzKxdK8TwUwSCPhJCoFlOv97u6U4K1mNE 
+
+ ArtistID: 185 
+
+ Message: Yuliett Torres has answered your question 
+
+ PostID: 24540 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_185/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 00:08 AM
+ Device Token: cl872S2poyw:APA91bG9V5oc4uB1QS1wMpVbJXQ62qhMmoHnsWrQzx7Scwm-OOO_Y1u0J8RQJWrMCqEMomjz-dFRuDhe3GKmmMkwWSLgmiyQ7ZfJEom-hir3uPTwWtSh_bhGSF3qZfc_4FUdTl4sxpFC 
+
+ ArtistID: 185 
+
+ Message: Yuliett Torres has answered your question 
+
+ PostID: 24543 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_185/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 00:08 AM
+ Device Token: c-3CREuCBhw:APA91bHs0d-ssAgZfFWcnE9yeKo55uQ-cwDwSxEwolswcMNeQxB5Rvgapf3KYt8Q1DCR0wMfXKW-L8IzWNOdBnl4RiS1CwjAfnTjSIbfY4bwzMz5IqOGyEPltAYqU9O_kO8tdhFg7VA- 
+
+ ArtistID: 185 
+
+ Message: Yuliett Torres has answered your question 
+
+ PostID: 24545 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_185/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 00:09 AM
+ Device Token: eSHhL-GdE1o:APA91bEzUDqybAGZd9wBFFK76JaDRBlincQaivSP4m4NLshFGpJTKYSSmCkQ13EKoCl0wr8BZljG9WuxI0b7mPAXaXgjayrzGzEoAtsfvov3IkwqsAi8P0LhkxyhWWVPXYEyq-Kp28jD 
+
+ ArtistID: 185 
+
+ Message: Yuliett Torres has answered your question 
+
+ PostID: 24550 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_185/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 00:09 AM
+ Device Token: dZiD3fOdSLc:APA91bEuWUHTpCl8-7HtcrGrUCBPjAUVbFq_V4LGVYkL_zvWmV7ZaQU5khkkdptZWON9eC7kdd6UoUDTY7eg2f58b5WZY6zoLqjVY2BunuCxzrkGi7mnXVJoxI-5MHxx19UVoKZc0xHE 
+
+ ArtistID: 185 
+
+ Message: Yuliett Torres has answered your question 
+
+ PostID: 24586 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_185/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 00:09 AM
+ Device Token: dSPwsRggFxQ:APA91bE1NwDQTlm-JgUwlQdK234wTW2E-gXvnCiwiuSvMd2iFaREfnxCVygpPmMfz_I_cjt3hpbh0f8H4au10fc3a407QTkovJa-UHTLC9y3ndji04lTeRzE4qVeQd2HdTTYYuvw9NZB 
+
+ ArtistID: 185 
+
+ Message: Yuliett Torres has answered your question 
+
+ PostID: 24582 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_185/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 00:09 AM
+ Device Token: cmtWUWIPuyo:APA91bHXNx6XYwKC1mxObkrSskTkblKi_7W1QIbjDZp6NlGXcld2NqX8BCSW3KzZLIZYlJaU7l93wNLQeX_-Y7YnyRRzafS0OYzaqRDsIGiQLGIxabaoWRl-Dcb3UTQwcFD8LnW47s0C 
+
+ ArtistID: 185 
+
+ Message: Yuliett Torres has answered your question 
+
+ PostID: 24581 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_185/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 00:10 AM
+ Device Token: cmtWUWIPuyo:APA91bHXNx6XYwKC1mxObkrSskTkblKi_7W1QIbjDZp6NlGXcld2NqX8BCSW3KzZLIZYlJaU7l93wNLQeX_-Y7YnyRRzafS0OYzaqRDsIGiQLGIxabaoWRl-Dcb3UTQwcFD8LnW47s0C 
+
+ ArtistID: 185 
+
+ Message: Yuliett Torres has answered your question 
+
+ PostID: 24560 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_185/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 00:10 AM
+ Device Token: f6HztPafSmg:APA91bEMeAr7rqHr-RgSL-HApbj3gBfnIwzxLgXU4N3IQ-XtP98BkWXz1JVw2KLyrEQptW05BayA8KEACinmxVssZo5XcBo7WPvTd23AjDbbMTI6ttXCMH0YR47a79kI0QGTFSURfB45 
+
+ ArtistID: 185 
+
+ Message: Yuliett Torres has answered your question 
+
+ PostID: 24570 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_185/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 00:10 AM
+ Device Token: cmtWUWIPuyo:APA91bHXNx6XYwKC1mxObkrSskTkblKi_7W1QIbjDZp6NlGXcld2NqX8BCSW3KzZLIZYlJaU7l93wNLQeX_-Y7YnyRRzafS0OYzaqRDsIGiQLGIxabaoWRl-Dcb3UTQwcFD8LnW47s0C 
+
+ ArtistID: 185 
+
+ Message: Yuliett Torres has answered your question 
+
+ PostID: 24564 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_185/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 00:10 AM
+ Device Token: dSPwsRggFxQ:APA91bE1NwDQTlm-JgUwlQdK234wTW2E-gXvnCiwiuSvMd2iFaREfnxCVygpPmMfz_I_cjt3hpbh0f8H4au10fc3a407QTkovJa-UHTLC9y3ndji04lTeRzE4qVeQd2HdTTYYuvw9NZB 
+
+ ArtistID: 185 
+
+ Message: Yuliett Torres has answered your question 
+
+ PostID: 24583 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_185/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 00:11 AM
+ Device Token: etnMXHbT-s0:APA91bG1uSvn636SY1n3wm4mG-nvX134g5qnWsPII17_P0chwqVOBrBetR4h6m_wPLaYVIOZIfq_rS5DYPQXXFnIzhnnonTfeUOCsDAiEmuWaTuzp6JoRCO2uL38DtoYW7BlY8oFY9qM 
+
+ ArtistID: 185 
+
+ Message: Yuliett Torres has answered your question 
+
+ PostID: 24573 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_185/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Iphone push: 
+18 Oct '17 00:11 AM
+ Device Token: c146d389062b40a5e1dd96259c7d9ef3f29ebc8c5b2c24b5308501ffc2830cc4 
+
+ ArtistID: 185 
+
+ Message: Yuliett Torres has answered your question 
+
+ PostID: 24575 
+
+ Notification Type: replyAns 
+
+ Exception: Gateway not connected 
+exception 'yii\base\ErrorException' with message 'stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14094410:SSL routines:SSL3_READ_BYTES:sslv3 alert handshake failure' in /var/www/html/boomvideo/public_html/api/models/Commentnotforartist.php:68
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'stream_socket_c...', '/var/www/html/b...', 68, Array)
+#1 /var/www/html/boomvideo/public_html/api/models/Commentnotforartist.php(68): stream_socket_client('ssl://gateway.p...', 0, '', 60, 5, Resource id #17)
+#2 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(3482): api\models\Commentnotforartist->sendToIphone(185, 'user')
+#3 [internal function]: api_ver2\controllers\UserController->actionAddpost()
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('addpost', Array)
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/addpost', Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#10 {main}
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 00:11 AM
+ Device Token: ceiej5GMPt4:APA91bGsJx1hM_i3PXXKSXfCf3Tqx79Ryv4ab9Bh_X_UpO_-ZdOY00s-HBCDNaItkFTetV_uy-cvUsD52cWGo0yfboqnSfYa7S8aFlip0BUEbnKK389fGUIj8-FjKy3wBI2shYWzwIAP 
+
+ ArtistID: 185 
+
+ Message: Yuliett Torres has answered your question 
+
+ PostID: 24589 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_185/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Iphone push: 
+18 Oct '17 00:12 AM
+ Device Token: 1c1450b0d89e9c0a4669958ba4b654df2237a6436791ac53f0d4a94b8d70db1b 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24557 
+
+ Notification Type: replyAns 
+
+ Exception: Gateway not connected 
+exception 'yii\base\ErrorException' with message 'stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14094410:SSL routines:SSL3_READ_BYTES:sslv3 alert handshake failure' in /var/www/html/boomvideo/public_html/api/models/Commentnotforartist.php:68
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'stream_socket_c...', '/var/www/html/b...', 68, Array)
+#1 /var/www/html/boomvideo/public_html/api/models/Commentnotforartist.php(68): stream_socket_client('ssl://gateway.p...', 0, '', 60, 5, Resource id #17)
+#2 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(3482): api\models\Commentnotforartist->sendToIphone(187, 'user')
+#3 [internal function]: api_ver2\controllers\UserController->actionAddpost()
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('addpost', Array)
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/addpost', Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#10 {main}
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 00:13 AM
+ Device Token: dCgJEv__A8I:APA91bFrsf6CWWHiUUoWdwuu7eEYhM7vxlrrfUJhSX6I52qRa-kmaVxcmpX_el11AMQTjL8iuy5gMorIQOhcJaB-YMneTBGkYGqhzVnbFnICrnX8fxxKh1CM1A4ABqdlx8kIBqBzI_FU 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24558 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 00:14 AM
+ Device Token: epig0SWF7ao:APA91bEEIVt_S1yuLYFr57SNNnpZeVehOs7E5h40n5Lu6mTDj9Bkv47v2Lo0o-Tx-RBppZpXSFYVov79PJrCl3rjWtASEtaxTtdHa4Am0LwBDqbIM79hOsxZq-UyN4yLE9uv_hGkPfXD 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24563 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 00:14 AM
+ Device Token: epig0SWF7ao:APA91bEEIVt_S1yuLYFr57SNNnpZeVehOs7E5h40n5Lu6mTDj9Bkv47v2Lo0o-Tx-RBppZpXSFYVov79PJrCl3rjWtASEtaxTtdHa4Am0LwBDqbIM79hOsxZq-UyN4yLE9uv_hGkPfXD 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24565 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 00:15 AM
+ Device Token: epig0SWF7ao:APA91bEEIVt_S1yuLYFr57SNNnpZeVehOs7E5h40n5Lu6mTDj9Bkv47v2Lo0o-Tx-RBppZpXSFYVov79PJrCl3rjWtASEtaxTtdHa4Am0LwBDqbIM79hOsxZq-UyN4yLE9uv_hGkPfXD 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24566 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 00:16 AM
+ Device Token: cwFo4ZQ7fF0:APA91bFrqvqDQVIN-mLm9H24zUggDs564w8JNP1JoG3EefJ-U2b77b_G7_XxoLOBLismWImNr3gOapx1JiH50lzQSsBA6dYwyZnT1gCKLRJqHV9HNMgyYeviD5VyGxVMrBlPG_tw_vvn 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24584 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 00:18 AM
+ Device Token: cICB72V2KQc:APA91bEOuEgho-lCW0Js11barrSLQpoLUUgT4_ys8rSTUsIjU-I8WUbrgYd0jFGR3pEKi2ncZO2FF3gtw-1xv48iwxJdjfcz9TqBhEeG0sc-KekJmEls9wkK0ld7EdOZCZFZK1QinyZw 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24576 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 00:19 AM
+ Device Token: egfhfpHOAjo:APA91bG4AOmaWN8CsOKmELo4iqiMRA8JffCUjGPlk5snk_31z3GmW2rS1kGq2nt5ZgLy2nkOSDsCtodXZ4gZUTryS4mozTcxbu0DC8xkv9UTDhcCiNfIm7kqoiljTQnmlY6fKaGxiw3R 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24569 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 00:20 AM
+ Device Token: eHxgw3npMqM:APA91bGbVgotR4gEvTBCsA3PaU2iZ0_GencsLsILzPwL9FeQPxv4nc5siLdyl3VM1FNify5X0zvbL729aO6YhV5yNbR_wQBlyiqFN0uYhwdedaBknXtxcVGasyajXQvxaxGr2S6atz_l 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24568 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 00:22 AM
+ Device Token: ez8mWX31IiI:APA91bHQc1Hqyh2coOvxlgpZNNmkTZhMtkE7xkM-aPE3sBB0lSGk6VIGVzIqqPgF9K0ImhZb8hJ7OZCCdoYDzqp2zTpP5zJHvmv1jIVLBDFwnHSxxg29wEh8Kn1MWDW650cYpiKy3G4- 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24585 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 00:22 AM
+ Device Token: c9GosDba7bA:APA91bFbNLpV-ok0wL0z0icVtlqCGaOy45cE2zvKRBV1vyBv0gUDrcpU-wkvm17mV_EGQ4Ki5tnUKHXMLG7n34Q2Ve6MDtpUp_BDLf2R2ocVSvVMaSq6ORp8GfCNHA634WJrK8IyzTRX 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24588 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 00:23 AM
+ Device Token: dYC0S9JE_Xs:APA91bH3AN-A4CmockV-CgG-z82m5JGHGlvsUMNrqfMwVXJQ3-zkvquwJaAw_X6qCxd7jkwT2E_B_P_szNbQOO2iuc9q7K6aAR8vpNSKkyMcXn6koz7OuRm69AxB-cGEWEW6eSFHqAv9 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24590 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 00:23 AM
+ Device Token: fxvoh2TZyBY:APA91bEap9mtlpwvsVYJgp0507zTf9v_RU_EiIXFtINT6ujL5_AUH56MWs2tUI9X8Ev2FKoJsWWBRftyynTg32XSqtWaUNK-n35r4rtxDoE7BnJlbfCfGfYByg5vYNW13MuNDBeEqVbM 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24592 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 00:23 AM
+ Device Token: fxvoh2TZyBY:APA91bEap9mtlpwvsVYJgp0507zTf9v_RU_EiIXFtINT6ujL5_AUH56MWs2tUI9X8Ev2FKoJsWWBRftyynTg32XSqtWaUNK-n35r4rtxDoE7BnJlbfCfGfYByg5vYNW13MuNDBeEqVbM 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24594 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 00:25 AM
+ Device Token: d9uAkRrI5FI:APA91bGM0Bmr-4Z3BuiHUYKURWHmjVoB4VJo_BZXby0R2ZBDNSJ_DiJ6IGjO814gP_o7FvOD7Ktn535xouBpuk_5_1LEogY4Lzsv6YYa7EUviKDSpKyTjloJRAkbUtcsEXGtwyUSYzH_ 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 20115 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 00:26 AM
+ Device Token: chS3ONat2PM:APA91bGGIV2mDGq2zEZ3ZDikrtFaHd-FAxTh3diRR1ZFhuKjrEG3n1teZBuKg90acKvUZvD_GXmbq_hABDqVNs7pe9TgxbzDVy9M97BEpjgYcsEjGuwAqs8nl89HI2JPRbUO2DlEYQeA 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24559 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 00:27 AM
+ Device Token: chS3ONat2PM:APA91bGGIV2mDGq2zEZ3ZDikrtFaHd-FAxTh3diRR1ZFhuKjrEG3n1teZBuKg90acKvUZvD_GXmbq_hABDqVNs7pe9TgxbzDVy9M97BEpjgYcsEjGuwAqs8nl89HI2JPRbUO2DlEYQeA 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24561 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 00:28 AM
+ Device Token: chS3ONat2PM:APA91bGGIV2mDGq2zEZ3ZDikrtFaHd-FAxTh3diRR1ZFhuKjrEG3n1teZBuKg90acKvUZvD_GXmbq_hABDqVNs7pe9TgxbzDVy9M97BEpjgYcsEjGuwAqs8nl89HI2JPRbUO2DlEYQeA 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24567 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 00:29 AM
+ Device Token: chS3ONat2PM:APA91bGGIV2mDGq2zEZ3ZDikrtFaHd-FAxTh3diRR1ZFhuKjrEG3n1teZBuKg90acKvUZvD_GXmbq_hABDqVNs7pe9TgxbzDVy9M97BEpjgYcsEjGuwAqs8nl89HI2JPRbUO2DlEYQeA 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24571 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Iphone push: 
+18 Oct '17 00:30 AM
+ Device Token: dc573e75d6b2c26fdfff04fba4b894fee43bc8ca3bb65a68986697e624a68b95 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24598 
+
+ Notification Type: replyAns 
+
+ Exception: Gateway not connected 
+exception 'yii\base\ErrorException' with message 'stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14094410:SSL routines:SSL3_READ_BYTES:sslv3 alert handshake failure' in /var/www/html/boomvideo/public_html/api/models/Commentnotforartist.php:68
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'stream_socket_c...', '/var/www/html/b...', 68, Array)
+#1 /var/www/html/boomvideo/public_html/api/models/Commentnotforartist.php(68): stream_socket_client('ssl://gateway.p...', 0, '', 60, 5, Resource id #17)
+#2 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(3482): api\models\Commentnotforartist->sendToIphone(187, 'user')
+#3 [internal function]: api_ver2\controllers\UserController->actionAddpost()
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('addpost', Array)
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/addpost', Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#10 {main}
+
+ ************************
+ Start Send to Iphone push: 
+18 Oct '17 00:31 AM
+ Device Token: 1c1450b0d89e9c0a4669958ba4b654df2237a6436791ac53f0d4a94b8d70db1b 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24595 
+
+ Notification Type: replyAns 
+
+ Exception: Gateway not connected 
+exception 'yii\base\ErrorException' with message 'stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14094410:SSL routines:SSL3_READ_BYTES:sslv3 alert handshake failure' in /var/www/html/boomvideo/public_html/api/models/Commentnotforartist.php:68
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'stream_socket_c...', '/var/www/html/b...', 68, Array)
+#1 /var/www/html/boomvideo/public_html/api/models/Commentnotforartist.php(68): stream_socket_client('ssl://gateway.p...', 0, '', 60, 5, Resource id #17)
+#2 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(3482): api\models\Commentnotforartist->sendToIphone(187, 'user')
+#3 [internal function]: api_ver2\controllers\UserController->actionAddpost()
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('addpost', Array)
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/addpost', Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#10 {main}
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 00:32 AM
+ Device Token: epig0SWF7ao:APA91bEEIVt_S1yuLYFr57SNNnpZeVehOs7E5h40n5Lu6mTDj9Bkv47v2Lo0o-Tx-RBppZpXSFYVov79PJrCl3rjWtASEtaxTtdHa4Am0LwBDqbIM79hOsxZq-UyN4yLE9uv_hGkPfXD 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24578 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 00:32 AM
+ Device Token: epig0SWF7ao:APA91bEEIVt_S1yuLYFr57SNNnpZeVehOs7E5h40n5Lu6mTDj9Bkv47v2Lo0o-Tx-RBppZpXSFYVov79PJrCl3rjWtASEtaxTtdHa4Am0LwBDqbIM79hOsxZq-UyN4yLE9uv_hGkPfXD 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24579 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 00:32 AM
+ Device Token: epig0SWF7ao:APA91bEEIVt_S1yuLYFr57SNNnpZeVehOs7E5h40n5Lu6mTDj9Bkv47v2Lo0o-Tx-RBppZpXSFYVov79PJrCl3rjWtASEtaxTtdHa4Am0LwBDqbIM79hOsxZq-UyN4yLE9uv_hGkPfXD 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24596 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 00:33 AM
+ Device Token: epig0SWF7ao:APA91bEEIVt_S1yuLYFr57SNNnpZeVehOs7E5h40n5Lu6mTDj9Bkv47v2Lo0o-Tx-RBppZpXSFYVov79PJrCl3rjWtASEtaxTtdHa4Am0LwBDqbIM79hOsxZq-UyN4yLE9uv_hGkPfXD 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24599 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 00:33 AM
+ Device Token: epig0SWF7ao:APA91bEEIVt_S1yuLYFr57SNNnpZeVehOs7E5h40n5Lu6mTDj9Bkv47v2Lo0o-Tx-RBppZpXSFYVov79PJrCl3rjWtASEtaxTtdHa4Am0LwBDqbIM79hOsxZq-UyN4yLE9uv_hGkPfXD 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24600 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 00:34 AM
+ Device Token: dCgJEv__A8I:APA91bFrsf6CWWHiUUoWdwuu7eEYhM7vxlrrfUJhSX6I52qRa-kmaVxcmpX_el11AMQTjL8iuy5gMorIQOhcJaB-YMneTBGkYGqhzVnbFnICrnX8fxxKh1CM1A4ABqdlx8kIBqBzI_FU 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24601 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 03:37 AM
+ Device Token: eSHhL-GdE1o:APA91bEzUDqybAGZd9wBFFK76JaDRBlincQaivSP4m4NLshFGpJTKYSSmCkQ13EKoCl0wr8BZljG9WuxI0b7mPAXaXgjayrzGzEoAtsfvov3IkwqsAi8P0LhkxyhWWVPXYEyq-Kp28jD 
+
+ ArtistID: 185 
+
+ Message: Yuliett Torres has answered your question 
+
+ PostID: 24603 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_185/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 03:37 AM
+ Device Token: cDpjezQiXAg:APA91bGdjmH6uqSeDpVmGGBkmsCZmfMqKAqRAuKtQdz8ag8_iHjBh7CpCNjTIHauyOSG512I2yQDTwY5HlHV_VWCngRcQk5OIkw8InYX6Iad9p9PTtKwyONjAvcDCKRxhCmGUnG50_IV 
+
+ ArtistID: 185 
+
+ Message: Yuliett Torres has answered your question 
+
+ PostID: 24609 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_185/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 03:37 AM
+ Device Token: ceiej5GMPt4:APA91bGsJx1hM_i3PXXKSXfCf3Tqx79Ryv4ab9Bh_X_UpO_-ZdOY00s-HBCDNaItkFTetV_uy-cvUsD52cWGo0yfboqnSfYa7S8aFlip0BUEbnKK389fGUIj8-FjKy3wBI2shYWzwIAP 
+
+ ArtistID: 185 
+
+ Message: Yuliett Torres has answered your question 
+
+ PostID: 24613 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_185/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 03:37 AM
+ Device Token: ewARxSkHcKE:APA91bF4ceSdTOc8uon7IsYf1ITD2PD0029GfVq3MT9Le9dcOpD-0AW9wlYvJqPeUDhcvheiBhvbQM1w3RtbIz_14AV6PdKseiJnr7ANIwSJzKxdK8TwUwSCPhJCoFlOv97u6U4K1mNE 
+
+ ArtistID: 185 
+
+ Message: Yuliett Torres has answered your question 
+
+ PostID: 24615 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_185/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 03:38 AM
+ Device Token: e1xrjVzc_Cw:APA91bEHqE-TU8fXVE82vUtTL40rClEgwoOyvRQJWWcyujpOeVR4Wb_nNDft6aoAxWLrNy2aZ-NT_EYlRMz2YupKX-7v550El5bQWmdLO9YH3Dlr5VzUJ4U81UeBHhsvqCTxvVbTyBnO 
+
+ ArtistID: 185 
+
+ Message: Yuliett Torres has answered your question 
+
+ PostID: 24619 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_185/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 03:38 AM
+ Device Token: e1xrjVzc_Cw:APA91bEHqE-TU8fXVE82vUtTL40rClEgwoOyvRQJWWcyujpOeVR4Wb_nNDft6aoAxWLrNy2aZ-NT_EYlRMz2YupKX-7v550El5bQWmdLO9YH3Dlr5VzUJ4U81UeBHhsvqCTxvVbTyBnO 
+
+ ArtistID: 185 
+
+ Message: Yuliett Torres has answered your question 
+
+ PostID: 24620 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_185/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 03:38 AM
+ Device Token: fH20y2m5VIg:APA91bGJLTW5hv5tAfOcRyqZrPE0ZSkUjhO2LkYhvy00q-pHFprdVk6EywbWtxXEsLIIiULj0DQ3dUWZcxcualVs63RDPo74tSGWAWEgSDOPzzZ0nXRqmvP9VG8lJZ8rvxWvk8xTI_Ua 
+
+ ArtistID: 185 
+
+ Message: Yuliett Torres has answered your question 
+
+ PostID: 24623 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_185/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 03:38 AM
+ Device Token: dykT75bgLJY:APA91bEHdM_CnLzXzyi4RfCuNloTb2QrUHVa1zEf30CALXXqDx9MTYg0VH-EMZrTHLXEAqhavkPf6PcuKegJGFqEguMR6yAZ2HLpAZ5sUpF6M1_5NJ8n6l4azuVMDAqfmq3wW26DXe52 
+
+ ArtistID: 185 
+
+ Message: Yuliett Torres has answered your question 
+
+ PostID: 24641 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_185/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 03:39 AM
+ Device Token: dykT75bgLJY:APA91bEHdM_CnLzXzyi4RfCuNloTb2QrUHVa1zEf30CALXXqDx9MTYg0VH-EMZrTHLXEAqhavkPf6PcuKegJGFqEguMR6yAZ2HLpAZ5sUpF6M1_5NJ8n6l4azuVMDAqfmq3wW26DXe52 
+
+ ArtistID: 185 
+
+ Message: Yuliett Torres has answered your question 
+
+ PostID: 24662 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_185/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 03:39 AM
+ Device Token: fj_mxmORcN4:APA91bFoTi8ia-QTQT-l5v8ARlDMVwbAgOd40ak3CXnSDUNDAwzt8M9aXcqkn1qEnn4zmB04eqwV_-wGHriGz035eOhl0KUCuXrP3MLQZRbqZlMBt2QQGEm38_WQyqJFRXKB6kEnIW_G 
+
+ ArtistID: 185 
+
+ Message: Yuliett Torres has answered your question 
+
+ PostID: 24656 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_185/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 03:39 AM
+ Device Token: cO2Wa_R-JV4:APA91bEGuHqXp1x4GQoCcDtMH0brmRw5WX5V-cl3A7oCLTDxblGURs4a-T4SfbO67witJO2h5HlQ6rFlcinKut9bXCMnzNZRZzSTE3AkDArgzGUUePxcoGRxuuun69HIePo7zXb0491Q 
+
+ ArtistID: 185 
+
+ Message: Yuliett Torres has answered your question 
+
+ PostID: 24648 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_185/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 03:39 AM
+ Device Token: c-3CREuCBhw:APA91bHs0d-ssAgZfFWcnE9yeKo55uQ-cwDwSxEwolswcMNeQxB5Rvgapf3KYt8Q1DCR0wMfXKW-L8IzWNOdBnl4RiS1CwjAfnTjSIbfY4bwzMz5IqOGyEPltAYqU9O_kO8tdhFg7VA- 
+
+ ArtistID: 185 
+
+ Message: Yuliett Torres has answered your question 
+
+ PostID: 24616 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_185/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 03:40 AM
+ Device Token: eFoLvGBlhOE:APA91bEVSn1uw8eZehX0QdDPVaWe_9gXZMCiboJk2YHdcSxTCxAXxhNK23batY8R9Eu6B3LSfANzAa83BJdilOxlBP0NXibG4_vvbWmh63sgaOxB3rSN-pzoWFVAw3u3_eoj8nKPT-vZ 
+
+ ArtistID: 185 
+
+ Message: Yuliett Torres has answered your question 
+
+ PostID: 24657 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_185/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Iphone push: 
+18 Oct '17 03:40 AM
+ Device Token: 8a0345dab3571cd9226d25065c9647264e3773fcbec33a019d4570d5a870ad89 
+
+ ArtistID: 185 
+
+ Message: Yuliett Torres has answered your question 
+
+ PostID: 24651 
+
+ Notification Type: replyAns 
+
+ Exception: Gateway not connected 
+exception 'yii\base\ErrorException' with message 'stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14094410:SSL routines:SSL3_READ_BYTES:sslv3 alert handshake failure' in /var/www/html/boomvideo/public_html/api/models/Commentnotforartist.php:68
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'stream_socket_c...', '/var/www/html/b...', 68, Array)
+#1 /var/www/html/boomvideo/public_html/api/models/Commentnotforartist.php(68): stream_socket_client('ssl://gateway.p...', 0, '', 60, 5, Resource id #17)
+#2 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(3482): api\models\Commentnotforartist->sendToIphone(185, 'user')
+#3 [internal function]: api_ver2\controllers\UserController->actionAddpost()
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('addpost', Array)
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/addpost', Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#10 {main}
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 03:40 AM
+ Device Token: diJ7hB2U6Uk:APA91bHCZEDBADEl7krcLDLZtrN2quhYQ7Ekp7d-dUK7YmE9LSkymfGzmTS9V1TmISnj6fh4hd0IwJ9QdiDnlTIjx88dLSS35ywuxCDUSKzjMXMGBtWipv7FZrotv8lQ--w5QeEkRXbC 
+
+ ArtistID: 185 
+
+ Message: Yuliett Torres has answered your question 
+
+ PostID: 24665 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_185/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 03:40 AM
+ Device Token: ewARxSkHcKE:APA91bF4ceSdTOc8uon7IsYf1ITD2PD0029GfVq3MT9Le9dcOpD-0AW9wlYvJqPeUDhcvheiBhvbQM1w3RtbIz_14AV6PdKseiJnr7ANIwSJzKxdK8TwUwSCPhJCoFlOv97u6U4K1mNE 
+
+ ArtistID: 185 
+
+ Message: Yuliett Torres is ignoring this question as it may be in breach of the Ask Me a Question policy 
+
+ PostID: 24661 
+
+ Notification Type: ignoreQue 
+
+ File not exists: ../../api/web/pushkey/artist_185/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 03:40 AM
+ Device Token: ewARxSkHcKE:APA91bF4ceSdTOc8uon7IsYf1ITD2PD0029GfVq3MT9Le9dcOpD-0AW9wlYvJqPeUDhcvheiBhvbQM1w3RtbIz_14AV6PdKseiJnr7ANIwSJzKxdK8TwUwSCPhJCoFlOv97u6U4K1mNE 
+
+ ArtistID: 185 
+
+ Message: Yuliett Torres will reply to you 
+
+ PostID: 24661 
+
+ Notification Type: ignoreQue 
+
+ File not exists: ../../api/web/pushkey/artist_185/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 03:40 AM
+ Device Token: ewARxSkHcKE:APA91bF4ceSdTOc8uon7IsYf1ITD2PD0029GfVq3MT9Le9dcOpD-0AW9wlYvJqPeUDhcvheiBhvbQM1w3RtbIz_14AV6PdKseiJnr7ANIwSJzKxdK8TwUwSCPhJCoFlOv97u6U4K1mNE 
+
+ ArtistID: 185 
+
+ Message: Yuliett Torres has answered your question 
+
+ PostID: 24661 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_185/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 03:41 AM
+ Device Token: csSyB5KZn88:APA91bGXulha-vwzQZOajQxFNY6y5EQ4s7_7XPnWWRtWrqIpbggcNSPHmp5-9luigRgu0dHARonzBi7AonAGaf_i7kYQOdQ9nlk-nsY11jY1yEsPQMNmEE2x0iiDSq4Orkyd7O2Q3z3v 
+
+ ArtistID: 185 
+
+ Message: Yuliett Torres has answered your question 
+
+ PostID: 24625 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_185/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 03:41 AM
+ Device Token: eciNaQEfl1o:APA91bG8feztj_cHy28f0hKVTHuHWlAhx7rcqGpckSCL9VrbfN4Iy8l4zGBvN0gP2KZQsmk8JZaSYKtm1gSEtVPh4x1Sdw8m5pwceCQMpf5C4avwTztw1Vt35bgrWJP-rS0UvWvn3Qr5 
+
+ ArtistID: 185 
+
+ Message: Yuliett Torres has answered your question 
+
+ PostID: 24663 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_185/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 03:42 AM
+ Device Token: dMe0cZ8F6ZA:APA91bHcOntkHXC8Cc5KkQp81NxZSqwKukATtljN_UrVjRhCczQ9OVMe4KCy6MvFQjz8dozxoqAxWOPH1rs61-Gik9Lsl0BaTIGIEvu7fd865CFLIaL0R3B-Nqk1shWWkME3y5VfylII 
+
+ ArtistID: 185 
+
+ Message: Yuliett Torres has answered your question 
+
+ PostID: 24604 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_185/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 03:44 AM
+ Device Token: cbJJY-fGNLk:APA91bGRoqXletoGpGphdF2ePqT7vaLka9RMZsaxIwRSD5Ak-6dgX0RCeNiIKIZbuCkS1IyLm27U3DTi40RkYopajcVf58h9unAA3BBN9vgdINYItO4tyM3aawBL1aknBBIpDOXQ0nTN 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24660 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 03:44 AM
+ Device Token: fy0O8DCYyaU:APA91bHhv5Ic8B9EL8jLK6nUIGNBi7Z_KEH6aurUzR2ZMA1gERVJVmx_q70q450PRGZ7r-PAQJ68dwSxlrqwTCgyyABVEqXwQ8YztlG9vYuqjFiJ7nfFbWPlfkg4fJLqDyjosB4xtI7B 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24652 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 03:44 AM
+ Device Token: c3SI71FAADk:APA91bHTmK7PEdc6o8gRV3sJZbCSyT8dGCCK8UB_IeTvHXNtpr19Hbda_J1_AobWnUaJMu4K8VGWUHZ0rM49hmU4VpEIQyJhw3HR2KLkK_xLGBcMkRZ55hDEc8vpAR-c44k_HAbqhfrL 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24646 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 03:44 AM
+ Device Token: cG3ZrvwDluY:APA91bGVk02fdglES7AYjq60h4eYSITkk0RRA-wfg8y9KD05SK5EPetzIuGOOecHLjp_qa5T5bSdhu79NWnY8_QgC5rUVbU_fl22sG91BFwKOBLw1_SML47VGcK16FhuvnifSlhPoR3u 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24640 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 03:44 AM
+ Device Token: cpwbG1Q9slk:APA91bGr53PvdrCmpMTm1jPzc_XprW34gUDG1NYqcjxB75R7kC9oz34iO1gf5cmTfzA_wFhbo9Lr8q3VfvGegnARs5CeNVY9WcnwBTiMSud3iZUzGrUQopqUchTJbFiGUqY-cS4GC_aY 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24637 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 03:45 AM
+ Device Token: dCgJEv__A8I:APA91bFrsf6CWWHiUUoWdwuu7eEYhM7vxlrrfUJhSX6I52qRa-kmaVxcmpX_el11AMQTjL8iuy5gMorIQOhcJaB-YMneTBGkYGqhzVnbFnICrnX8fxxKh1CM1A4ABqdlx8kIBqBzI_FU 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24634 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 03:46 AM
+ Device Token: dw5ppf8jjJI:APA91bGrk4oGX2kHKO61O01oXMCNLRbcViA-7Cl-rc1cBtmdB7z_-ef9SVtdo4ikB6iek6VbdpdgtCIb2LPYEzV5_F_bUkJDv7vcoLlU0EKLn3fbjiy-cVJbu4RMK2hIcnypXhPxIsDx 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24621 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Iphone push: 
+18 Oct '17 03:46 AM
+ Device Token: 1c1450b0d89e9c0a4669958ba4b654df2237a6436791ac53f0d4a94b8d70db1b 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24610 
+
+ Notification Type: replyAns 
+
+ Exception: Gateway not connected 
+exception 'yii\base\ErrorException' with message 'stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14094410:SSL routines:SSL3_READ_BYTES:sslv3 alert handshake failure' in /var/www/html/boomvideo/public_html/api/models/Commentnotforartist.php:68
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'stream_socket_c...', '/var/www/html/b...', 68, Array)
+#1 /var/www/html/boomvideo/public_html/api/models/Commentnotforartist.php(68): stream_socket_client('ssl://gateway.p...', 0, '', 60, 5, Resource id #17)
+#2 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(3482): api\models\Commentnotforartist->sendToIphone(187, 'user')
+#3 [internal function]: api_ver2\controllers\UserController->actionAddpost()
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('addpost', Array)
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/addpost', Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#10 {main}
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 03:47 AM
+ Device Token: d0gfu_aCPlI:APA91bFFj55aNCCg0A-dEs7zZfTy7pNeu27ieQjkDvEyWNHbMuP5ooAShi542Yv93Rz44jRkWCmji3_SOGPfno53KWdw1nwHdx1nghX-jUpM-SYr_CG6bdFJoI6OJAjqrffpk5N4CMM1 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24606 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 03:48 AM
+ Device Token: ez8mWX31IiI:APA91bHQc1Hqyh2coOvxlgpZNNmkTZhMtkE7xkM-aPE3sBB0lSGk6VIGVzIqqPgF9K0ImhZb8hJ7OZCCdoYDzqp2zTpP5zJHvmv1jIVLBDFwnHSxxg29wEh8Kn1MWDW650cYpiKy3G4- 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24612 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 03:49 AM
+ Device Token: dCgJEv__A8I:APA91bFrsf6CWWHiUUoWdwuu7eEYhM7vxlrrfUJhSX6I52qRa-kmaVxcmpX_el11AMQTjL8iuy5gMorIQOhcJaB-YMneTBGkYGqhzVnbFnICrnX8fxxKh1CM1A4ABqdlx8kIBqBzI_FU 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24614 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 03:49 AM
+ Device Token: dCgJEv__A8I:APA91bFrsf6CWWHiUUoWdwuu7eEYhM7vxlrrfUJhSX6I52qRa-kmaVxcmpX_el11AMQTjL8iuy5gMorIQOhcJaB-YMneTBGkYGqhzVnbFnICrnX8fxxKh1CM1A4ABqdlx8kIBqBzI_FU 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24618 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Iphone push: 
+18 Oct '17 03:51 AM
+ Device Token: 11455f6fb7877a11d01bd2be592e6ff4b085a25b961fadc5b56ad296b3c8cb2a 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24633 
+
+ Notification Type: replyAns 
+
+ Exception: Gateway not connected 
+exception 'yii\base\ErrorException' with message 'stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14094410:SSL routines:SSL3_READ_BYTES:sslv3 alert handshake failure' in /var/www/html/boomvideo/public_html/api/models/Commentnotforartist.php:68
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'stream_socket_c...', '/var/www/html/b...', 68, Array)
+#1 /var/www/html/boomvideo/public_html/api/models/Commentnotforartist.php(68): stream_socket_client('ssl://gateway.p...', 0, '', 60, 5, Resource id #17)
+#2 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(3482): api\models\Commentnotforartist->sendToIphone(187, 'user')
+#3 [internal function]: api_ver2\controllers\UserController->actionAddpost()
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('addpost', Array)
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/addpost', Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#10 {main}
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 03:52 AM
+ Device Token: eHxgw3npMqM:APA91bGbVgotR4gEvTBCsA3PaU2iZ0_GencsLsILzPwL9FeQPxv4nc5siLdyl3VM1FNify5X0zvbL729aO6YhV5yNbR_wQBlyiqFN0uYhwdedaBknXtxcVGasyajXQvxaxGr2S6atz_l 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24626 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 03:53 AM
+ Device Token: e8TvQc8A8nk:APA91bHjvCFPWdmfbMSMAw-9vSh-EGnEJsAqufNr7NX3eoursg_l07rYog1JZq2rEWROjS-r7R2er09pVoIsITM7FgNqF6pgG2YNtEe1rO5DmnJsYY_AzGHzda_UjAlR3xNDaDNqIn1s 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24627 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 03:53 AM
+ Device Token: fxvoh2TZyBY:APA91bEap9mtlpwvsVYJgp0507zTf9v_RU_EiIXFtINT6ujL5_AUH56MWs2tUI9X8Ev2FKoJsWWBRftyynTg32XSqtWaUNK-n35r4rtxDoE7BnJlbfCfGfYByg5vYNW13MuNDBeEqVbM 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24642 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 03:54 AM
+ Device Token: eSOfI0F3jhk:APA91bHxS_-b2D9HgVLdZVyfm2uKmOlXkMY8m4fB9On_atIC7ba_w22nw0UNfLtd4iWOcfND30SB-AtpOpNN8A6DvjjemXWAgg-e_YwnWmb5Co8PWzZ9c1UgWMblD_6fyD1Gv-3HV8MR 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24639 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 03:54 AM
+ Device Token: c9GosDba7bA:APA91bFbNLpV-ok0wL0z0icVtlqCGaOy45cE2zvKRBV1vyBv0gUDrcpU-wkvm17mV_EGQ4Ki5tnUKHXMLG7n34Q2Ve6MDtpUp_BDLf2R2ocVSvVMaSq6ORp8GfCNHA634WJrK8IyzTRX 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24636 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Iphone push: 
+18 Oct '17 03:55 AM
+ Device Token: 44711cecb7942bbb0188837a91395f44dacfec6b2ac748c5218f33efabe4762f 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24643 
+
+ Notification Type: replyAns 
+
+ Exception: Gateway not connected 
+exception 'yii\base\ErrorException' with message 'stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14094410:SSL routines:SSL3_READ_BYTES:sslv3 alert handshake failure' in /var/www/html/boomvideo/public_html/api/models/Commentnotforartist.php:68
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'stream_socket_c...', '/var/www/html/b...', 68, Array)
+#1 /var/www/html/boomvideo/public_html/api/models/Commentnotforartist.php(68): stream_socket_client('ssl://gateway.p...', 0, '', 60, 5, Resource id #17)
+#2 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(3482): api\models\Commentnotforartist->sendToIphone(187, 'user')
+#3 [internal function]: api_ver2\controllers\UserController->actionAddpost()
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('addpost', Array)
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/addpost', Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#10 {main}
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 03:55 AM
+ Device Token: cUDVKF15j9Y:APA91bGXRMhMDx1rHeswv1mtl1aoPUTwlxHMsJBpNEKLYTZvP52e2RGT-45OFJXKuDNMQaGBadqITG40-0e9ydBpitH8t1BCrcs8_fNvFqlL3vXCcfWsM9K0vOoV-jJHeL5DmPsv1IpW 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24644 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 03:56 AM
+ Device Token: f6JSjWSzFd0:APA91bF291ps76xGeQAkuBlX89QHeZKNoEFbOoZcu7jwOciupQlJDC0Q6Zbuux6SOXxvP6heZv94q8ei8fxvff80ZQPn5B-rXGrAPzrvxYxCu02opbEphU9k9IVjtuunwyYZl1rlWUCn 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24650 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 03:56 AM
+ Device Token: ctMMAvZcMwY:APA91bH-2lr9C4WX-PHbqkpb9J8BwaX0EaFUZSZZo9FCq883_mgVRISGPbnPPNnXgy2qLZ54a6sD8pN8wauJsX98CRXaAld9Mc4G-1swVjIzF8lEvuBzmdsc2JT5bZY7dkF8yoJjwcjn 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24653 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 03:56 AM
+ Device Token: c5N4fM-cN9I:APA91bEJA3hdcH6529BfjADHWxfi6_Pd2cvw-WvWzrkkoFp-uKazTyAdd3x2ptecWgbhGzPQoCagw0rr2lv70o9v9q1R0n0InwXw9d8xqXi75WRUWibw1lTV-57A8mP-SsnBYs5tO5Bp 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24655 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 03:57 AM
+ Device Token: ctMMAvZcMwY:APA91bH-2lr9C4WX-PHbqkpb9J8BwaX0EaFUZSZZo9FCq883_mgVRISGPbnPPNnXgy2qLZ54a6sD8pN8wauJsX98CRXaAld9Mc4G-1swVjIzF8lEvuBzmdsc2JT5bZY7dkF8yoJjwcjn 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24669 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 03:57 AM
+ Device Token: cls0tomlYAY:APA91bFZiS3K5PYpLgXxezLDp2MybeI0UebFY_Xhal5LBtTHZsyqqfM-lYgFns8JPT2zmTRTS5AZZ3-hslsU7L5TkeAv_y0V4xSsRIFf2pXOoccpsZ3tH8lZQzpPxa1aLdYiLFpOr26M 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24654 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 03:58 AM
+ Device Token: fojC2XQ4aSU:APA91bFSrpkQnfc9QgUH_Ze4AslOlxQ7bw06pjkdwBbBVgtKORPmOjbTp4eONnMuSw6JIDhE-dbOpIhHYiNYXhARa23ig2QZZC2zUucOyYfozcQ3IbLYyJQQYcFy71ByDsrZ9nSN98z2 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24622 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 03:59 AM
+ Device Token: fojC2XQ4aSU:APA91bFSrpkQnfc9QgUH_Ze4AslOlxQ7bw06pjkdwBbBVgtKORPmOjbTp4eONnMuSw6JIDhE-dbOpIhHYiNYXhARa23ig2QZZC2zUucOyYfozcQ3IbLYyJQQYcFy71ByDsrZ9nSN98z2 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24635 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 04:00 AM
+ Device Token: etU-pSynzoM:APA91bEqwsN6U2O6YiwOYI9fQZEPly6hBYr5xDzB6zkLi0uTG5Ll7hUNoz4AhQXnN0MyB-LjhjA4CWy-NJcHxDEp4RPLCe47zwJgAQfYcV1O_gUKRWPOiAGm7Vk5a1L7xOJJ4-iIOAp5 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24666 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 04:00 AM
+ Device Token: epig0SWF7ao:APA91bEEIVt_S1yuLYFr57SNNnpZeVehOs7E5h40n5Lu6mTDj9Bkv47v2Lo0o-Tx-RBppZpXSFYVov79PJrCl3rjWtASEtaxTtdHa4Am0LwBDqbIM79hOsxZq-UyN4yLE9uv_hGkPfXD 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24605 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 04:01 AM
+ Device Token: epig0SWF7ao:APA91bEEIVt_S1yuLYFr57SNNnpZeVehOs7E5h40n5Lu6mTDj9Bkv47v2Lo0o-Tx-RBppZpXSFYVov79PJrCl3rjWtASEtaxTtdHa4Am0LwBDqbIM79hOsxZq-UyN4yLE9uv_hGkPfXD 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24608 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 04:01 AM
+ Device Token: epig0SWF7ao:APA91bEEIVt_S1yuLYFr57SNNnpZeVehOs7E5h40n5Lu6mTDj9Bkv47v2Lo0o-Tx-RBppZpXSFYVov79PJrCl3rjWtASEtaxTtdHa4Am0LwBDqbIM79hOsxZq-UyN4yLE9uv_hGkPfXD 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24611 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 04:01 AM
+ Device Token: eHxgw3npMqM:APA91bGbVgotR4gEvTBCsA3PaU2iZ0_GencsLsILzPwL9FeQPxv4nc5siLdyl3VM1FNify5X0zvbL729aO6YhV5yNbR_wQBlyiqFN0uYhwdedaBknXtxcVGasyajXQvxaxGr2S6atz_l 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24674 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 04:02 AM
+ Device Token: eucqOKw_8p4:APA91bGzYgzGjPZx2IgqELHUpAQbMi8ScLx2pcvLfO7zA5zUD2Adz8-yOoX-OgCfuvSN6mZR3nFBuZ-1venDuu-4vIJ_2q8KGrilAqCSM2ZxRRTcQE-n_g5Vcl2Q9h0FxD9xDk4tsdRi 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24649 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Iphone push: 
+18 Oct '17 04:18 AM
+ Device Token: 1ddb07295a73829c517e914394d44f32f324a052faf762d839f191091c27bf16 
+
+ ArtistID: 188 
+
+ Message: Alejandra Trevino has answered your question 
+
+ PostID: 24671 
+
+ Notification Type: replyAns 
+
+ Exception: Gateway not connected 
+exception 'yii\base\ErrorException' with message 'stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14094410:SSL routines:SSL3_READ_BYTES:sslv3 alert handshake failure' in /var/www/html/boomvideo/public_html/api/models/Commentnotforartist.php:68
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'stream_socket_c...', '/var/www/html/b...', 68, Array)
+#1 /var/www/html/boomvideo/public_html/api/models/Commentnotforartist.php(68): stream_socket_client('ssl://gateway.p...', 0, '', 60, 5, Resource id #17)
+#2 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(3482): api\models\Commentnotforartist->sendToIphone('188', 'user')
+#3 [internal function]: api_ver2\controllers\UserController->actionAddpost()
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('addpost', Array)
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/addpost', Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#10 {main}
+
+ ************************
+ Start Send to Iphone push: 
+18 Oct '17 04:18 AM
+ Device Token: 0f8ffc436eff0a861b0bee8dbcf9f06ea28312d94dc24f902de6cdcc6977ed0c 
+
+ ArtistID: 188 
+
+ Message: Alejandra Trevino has answered your question 
+
+ PostID: 24667 
+
+ Notification Type: replyAns 
+
+ Exception: Gateway not connected 
+exception 'yii\base\ErrorException' with message 'stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14094410:SSL routines:SSL3_READ_BYTES:sslv3 alert handshake failure' in /var/www/html/boomvideo/public_html/api/models/Commentnotforartist.php:68
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'stream_socket_c...', '/var/www/html/b...', 68, Array)
+#1 /var/www/html/boomvideo/public_html/api/models/Commentnotforartist.php(68): stream_socket_client('ssl://gateway.p...', 0, '', 60, 5, Resource id #17)
+#2 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(3482): api\models\Commentnotforartist->sendToIphone('188', 'user')
+#3 [internal function]: api_ver2\controllers\UserController->actionAddpost()
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('addpost', Array)
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/addpost', Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#10 {main}
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 04:20 AM
+ Device Token: fFpZFIPj4sM:APA91bFu6rlaPdhMxnYlSadranNcxpLNnFxEUYHO7b5f0IZh_QnpnO33S-VVMwaAT5V7XdEGTtTExT4GTEbL28120SAkb1t9sXqx0eB8gSZukWPu3TohsaEDxTG-92eWl6EdxjoV8cGk 
+
+ ArtistID: 188 
+
+ Message: Alejandra Trevino has answered your question 
+
+ PostID: 24664 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_188/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 04:21 AM
+ Device Token: cn_KK5zV2TA:APA91bHW9VSelJ-a7nGoCGmnlOly1whqvrZfTjkwy4KKLuMJuTZdHbeAi8P0y9SDCO5vCW2DVUlgIgkmyXZos5q8gSHkOBR7BIgXWk5uBDPihmkXLG2cRZIDF2kaRcBAwQy3ZPrTjgtu 
+
+ ArtistID: 188 
+
+ Message: Alejandra Trevino has answered your question 
+
+ PostID: 24659 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_188/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 04:22 AM
+ Device Token: d4S86lJxNQY:APA91bFWFTjyj9nGBnz20yexybmcrkPec41RLSK55NQLe4F7h8kJzgLme7EnCGe5oFLn3lMJz_aUNNLdUXEtpLN8frJaLYxKq_t5DLThc_emMqt177hK5h6GIEuhpcAoOa8BMCs1Z-kt 
+
+ ArtistID: 188 
+
+ Message: Alejandra Trevino has answered your question 
+
+ PostID: 24658 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_188/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 04:22 AM
+ Device Token: fw8wrWOLZMI:APA91bFGF0CGVwwrhIdQDNBbR3RsRMD1ibSZwR4ZPTVLQJHauh4tYiASg9yomdh7aiA7Kuwns0DvWwS2o9CpNu29rdbPRMuJBUTG4zC0CHOXHWOv-KBT3vpqW4vIFEjQw9nDV2qMymac 
+
+ ArtistID: 188 
+
+ Message: Alejandra Trevino has answered your question 
+
+ PostID: 24647 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_188/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 04:22 AM
+ Device Token: d1RcnT1Cb4E:APA91bGHauQ9IDLVTga5Rt1gw4OdJnXT6TqiS7b3bNOYv5o7JM4Oyx6NoGEAEvIWTLtnTrmcv6r2qj31VbDiFJtOR6ZiWuuvAdU97siF5WlN5TpTq84ngqdthcS6oebD1kxUnQPkYy8P 
+
+ ArtistID: 188 
+
+ Message: Alejandra Trevino has answered your question 
+
+ PostID: 24645 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_188/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 04:27 AM
+ Device Token: dQJRptciN_w:APA91bEp09ybrttrfj3N41qOwfdXPNnn77kV-jZbY-we8neeKGbubUGwebvEiONMOxOcA8_RVFiTsQ0cwGIHRKn2NZsRjHgtnwVlxxuDSliv_eYCsYfAmAwUJUsBzM8qcANGblQzFY1E 
+
+ ArtistID: 188 
+
+ Message: Alejandra Trevino has answered your question 
+
+ PostID: 24632 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_188/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 04:28 AM
+ Device Token: eQoEoSeI82o:APA91bGQvJXq7tYB6sqZwWLUddyc_SyxTlheQCdSzhRMRn10stYe6GGhFbvmkDBJBk-S4V69jMU-VjUlMbT58NugCuS0J10TkUCh9brWyss4pWPPFAI3z1uJP1AW0jaAX0wuq4PxGWYp 
+
+ ArtistID: 188 
+
+ Message: Alejandra Trevino has answered your question 
+
+ PostID: 24631 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_188/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 04:30 AM
+ Device Token: dQJRptciN_w:APA91bEp09ybrttrfj3N41qOwfdXPNnn77kV-jZbY-we8neeKGbubUGwebvEiONMOxOcA8_RVFiTsQ0cwGIHRKn2NZsRjHgtnwVlxxuDSliv_eYCsYfAmAwUJUsBzM8qcANGblQzFY1E 
+
+ ArtistID: 188 
+
+ Message: Alejandra Trevino has answered your question 
+
+ PostID: 24629 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_188/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 04:31 AM
+ Device Token: cxb4Oegbst0:APA91bGr3vj0bxNYuvNA1YSJX4QuG39Fic87G1uMWqnzv8UyT9esCwBgDGBAOSMfJXsv9_GAc0CH7i1LufIbYaKLR-qDwOkyELDI9E8RaFZ3ol3uD8q87J4_NFYSE9uI50li1AZJnE15 
+
+ ArtistID: 188 
+
+ Message: Alejandra Trevino has answered your question 
+
+ PostID: 24687 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_188/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 04:31 AM
+ Device Token: cxb4Oegbst0:APA91bGr3vj0bxNYuvNA1YSJX4QuG39Fic87G1uMWqnzv8UyT9esCwBgDGBAOSMfJXsv9_GAc0CH7i1LufIbYaKLR-qDwOkyELDI9E8RaFZ3ol3uD8q87J4_NFYSE9uI50li1AZJnE15 
+
+ ArtistID: 188 
+
+ Message: Alejandra Trevino has answered your question 
+
+ PostID: 24691 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_188/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Iphone push: 
+18 Oct '17 04:36 AM
+ Device Token: fc2565e9fd78a5f0187d2391a8608f4a9f19607e99041710b186038ac3e63d5c 
+
+ ArtistID: 188 
+
+ Message: Alejandra Trevino has answered your question 
+
+ PostID: 24624 
+
+ Notification Type: replyAns 
+
+ Exception: Gateway not connected 
+exception 'yii\base\ErrorException' with message 'stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14094410:SSL routines:SSL3_READ_BYTES:sslv3 alert handshake failure' in /var/www/html/boomvideo/public_html/api/models/Commentnotforartist.php:68
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'stream_socket_c...', '/var/www/html/b...', 68, Array)
+#1 /var/www/html/boomvideo/public_html/api/models/Commentnotforartist.php(68): stream_socket_client('ssl://gateway.p...', 0, '', 60, 5, Resource id #17)
+#2 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(3482): api\models\Commentnotforartist->sendToIphone('188', 'user')
+#3 [internal function]: api_ver2\controllers\UserController->actionAddpost()
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('addpost', Array)
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/addpost', Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#10 {main}
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 04:38 AM
+ Device Token: cQpaLtuDdps:APA91bHt-YyQnQqaGwYqu33LHrf9Y370Kl5hhqZokEfGQM1GJGjoBvHn-4jtWrhyXNoSGycGy4HnH4NKWvsY52s3-hlYb4lFAwF55xjgVOEvksLYnTV0q14VNq_iMoqaGHUgiXdZjrt9 
+
+ ArtistID: 188 
+
+ Message: Alejandra Trevino has answered your question 
+
+ PostID: 24607 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_188/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 04:38 AM
+ Device Token: cwC5GcM3tsI:APA91bHji9WLhLsCjJLAT-ntZDsgemMvnpSHRpLqPrV6VzoO-4KzESnUJdSuiOgiUM7C7HNg44BD58llXyMqazp1oyHrJl4GvwjwMUGYskDzONs3RP1FNfAxHsTXODi1k94qbhJtICnW 
+
+ ArtistID: 188 
+
+ Message: Alejandra Trevino has answered your question 
+
+ PostID: 24591 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_188/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Iphone push: 
+18 Oct '17 04:41 AM
+ Device Token: 51aad1eadbb8175380d20a15156d719e042f267cc01d3088e421caa6e70aafec 
+
+ ArtistID: 188 
+
+ Message: Alejandra Trevino has answered your question 
+
+ PostID: 24519 
+
+ Notification Type: replyAns 
+
+ Exception: Gateway not connected 
+exception 'yii\base\ErrorException' with message 'stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14094410:SSL routines:SSL3_READ_BYTES:sslv3 alert handshake failure' in /var/www/html/boomvideo/public_html/api/models/Commentnotforartist.php:68
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'stream_socket_c...', '/var/www/html/b...', 68, Array)
+#1 /var/www/html/boomvideo/public_html/api/models/Commentnotforartist.php(68): stream_socket_client('ssl://gateway.p...', 0, '', 60, 5, Resource id #17)
+#2 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(3482): api\models\Commentnotforartist->sendToIphone('188', 'user')
+#3 [internal function]: api_ver2\controllers\UserController->actionAddpost()
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('addpost', Array)
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/addpost', Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#10 {main}
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 04:41 AM
+ Device Token: fuOjQiYh-VU:APA91bGu-H94eYyDbKo5Fr0gtLHt_5w3pCRpMB6txJZ6xmaYYGZeWRO40_yG5RfLAKcZYdh2071Snz0M2eybwluBVhAqMOl31b4oKJ9bQ4BhiS6TChKiSzsFz1unn5OnvDPFSk0nBmsl 
+
+ ArtistID: 188 
+
+ Message: Alejandra Trevino has answered your question 
+
+ PostID: 24516 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_188/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 04:41 AM
+ Device Token: erFyMVsrCJQ:APA91bFha6EdTZ2aHpZne84UQWL09lCuDEJnKSrzJ-5Elr6vZO2kTJjncdhijb0Snv8ubJvYHMpGKvFMFW7Uq2erGFIFhILWN89LucScqNBFG0X37GtZzFL0QQc-f32xLafiug_Vwxgd 
+
+ ArtistID: 188 
+
+ Message: Alejandra Trevino has answered your question 
+
+ PostID: 24514 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_188/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 04:42 AM
+ Device Token: e0DLnSPI6Ws:APA91bEZRbDi4_O8KAXWCiF_UO10MNNVyg4F22pZYgh1eNY27umLx7qvH6Pdwcqj0FTMT_yV9WzHpEy99z01XGDObkQ-GeIUHeBqN-y2PSX6IIcjDV6M3eHeOB5i7zurVZ3fsvWhIVlQ 
+
+ ArtistID: 188 
+
+ Message: Alejandra Trevino has answered your question 
+
+ PostID: 24504 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_188/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 04:42 AM
+ Device Token: cuoAobPrdIE:APA91bHVbh5MKxwkXRrAPEYyxpUSSpVvdAqgyf1HKzPBnXJtBAkX27wi-sebh_dem2ZdXQ-_gIEUj62-pyyP29X_oUz6Tywb1s2V-xH0BzTArw8-8D9JoPrSfl0iq-fXDfCjvkr6Ly6b 
+
+ ArtistID: 188 
+
+ Message: Alejandra Trevino has answered your question 
+
+ PostID: 24503 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_188/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 04:43 AM
+ Device Token: dPnlEUd7JRE:APA91bH3g4cJ-2IkfSijVvOQxNbQCYvJxgqSecgGnfCfFErAzJt-TayWq2fPuJNYbSyenISYtqXu1MrYtIpdS_nUo1vq33rkfnS9q4wgkp7a0qLISYR4xYgP2J27bci9CTQWyccAljOk 
+
+ ArtistID: 188 
+
+ Message: Alejandra Trevino has answered your question 
+
+ PostID: 24501 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_188/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 04:43 AM
+ Device Token: ffrLSdbjtTk:APA91bEAYGdASWBF5mw9tG22b-MW_CrhxWYRUvUlbJl5toUWpuODBdlXzhARcX88MQZmChCUKc6Pm2m1rMOuM8rMBJI4PceKfk4ek5bJwvKjiTqVWC348Oqc_Hjt8bBB18-7x0ECcaF3 
+
+ ArtistID: 188 
+
+ Message: Alejandra Trevino has answered your question 
+
+ PostID: 24499 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_188/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 04:43 AM
+ Device Token: ecVUKEZC4a0:APA91bGe19hY492y7iSO8-L6lyIWRM_qDTqnx2LBJRJZLSoJEH8zykKs0_Yzsdijl8Ln5gHoyQWDa5fpBf6Dht1sQoXBdFHySK1RK4B_rNC1IYualtw8pc2gFrCdm8dGAWmsns7fC800 
+
+ ArtistID: 188 
+
+ Message: Alejandra Trevino has answered your question 
+
+ PostID: 24495 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_188/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 04:44 AM
+ Device Token: fnFRH0hPBzk:APA91bF1wFz5ogc86d0GIlLRPqqBvGPT1IUjwbgnU-o4bu4O-Vi6f_PLk2EXrSNj8H_WXpk0NpCKBZxM8apqGMXFotczavH52FWQkEJ6kx0YAdIBVqiIio9AlYRAyoCYImCcxtd6ZQ23 
+
+ ArtistID: 188 
+
+ Message: Alejandra Trevino has answered your question 
+
+ PostID: 24494 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_188/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 04:44 AM
+ Device Token: e3gU-m1MgMI:APA91bFIJPIHb9Foo0FBabIgi-K1KNpjlDd3m_zmlBdtGXXAzA6B1Ff13ols61hX_BywK9r7-Ae-tKCJK4oUvoIKco3PDDJ4jn45xhhRxEV-4RLMMF8x75zlWENrXHENZYFzAqt_uroJ 
+
+ ArtistID: 188 
+
+ Message: Alejandra Trevino has answered your question 
+
+ PostID: 24491 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_188/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 04:46 AM
+ Device Token: etItLMRDmz8:APA91bEjjkRvxLHqkHBVdASfQeK3LzeyFWTBriudrR9bb4xCHh437nIZDgDwjTkAF4cQjknD6Og1h92ui0eLgaxYCbH4T_1KVU7-f2Jonm1RjsPsu8WOOs9Vn1uYlAlOE7-436uBB-66 
+
+ ArtistID: 188 
+
+ Message: Alejandra Trevino has answered your question 
+
+ PostID: 24487 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_188/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 04:51 AM
+ Device Token: fFzls1HJahY:APA91bFktaAYsewqkNijjlLzLz3Cb8GxmmIotGrYeT7I7dWhQZbgnde7UeyiaL8K2g8weoowzkNbh5uMZXoKFmVSbyyxMmNIqVp8XTO3M-qXVPHLo-qAzgo-os3Ja-9ew8GT2JRC9kVY 
+
+ ArtistID: 188 
+
+ Message: Alejandra Trevino has answered your question 
+
+ PostID: 24196 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_188/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 04:51 AM
+ Device Token: crWzfexWuJ4:APA91bHLYbZ3NLWj33O3aMobhke8LHf6yKtTNQqjTSr4E7GXCwsjc1Nq-CuDOsdH3kqRE71LdGErkD_lijY_2M1V5yWqhpk_5-j709YueNPa6bh-duKkGnPQYx6UFoevMuo3FjnTOMcr 
+
+ ArtistID: 188 
+
+ Message: Alejandra Trevino has answered your question 
+
+ PostID: 24191 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_188/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 04:51 AM
+ Device Token: c3jiB5vSqxA:APA91bFRWxTuowNVmjscVJksQTQ3VyP-s8XaUPOmYTIUYbuVwkOMdqHHPSDVYWTQbBoOfArlJVvANYTLPmk-eFw6Z09VbfutOK0v2UjZSQDZ9GGQUAxgkPObQICUwQQl78VS3ofmw_Nn 
+
+ ArtistID: 188 
+
+ Message: Alejandra Trevino has answered your question 
+
+ PostID: 24182 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_188/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 04:51 AM
+ Device Token: etItLMRDmz8:APA91bEjjkRvxLHqkHBVdASfQeK3LzeyFWTBriudrR9bb4xCHh437nIZDgDwjTkAF4cQjknD6Og1h92ui0eLgaxYCbH4T_1KVU7-f2Jonm1RjsPsu8WOOs9Vn1uYlAlOE7-436uBB-66 
+
+ ArtistID: 188 
+
+ Message: Alejandra Trevino has answered your question 
+
+ PostID: 24178 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_188/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 04:51 AM
+ Device Token: cQpaLtuDdps:APA91bHt-YyQnQqaGwYqu33LHrf9Y370Kl5hhqZokEfGQM1GJGjoBvHn-4jtWrhyXNoSGycGy4HnH4NKWvsY52s3-hlYb4lFAwF55xjgVOEvksLYnTV0q14VNq_iMoqaGHUgiXdZjrt9 
+
+ ArtistID: 188 
+
+ Message: Alejandra Trevino has answered your question 
+
+ PostID: 24176 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_188/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 04:52 AM
+ Device Token: etItLMRDmz8:APA91bEjjkRvxLHqkHBVdASfQeK3LzeyFWTBriudrR9bb4xCHh437nIZDgDwjTkAF4cQjknD6Og1h92ui0eLgaxYCbH4T_1KVU7-f2Jonm1RjsPsu8WOOs9Vn1uYlAlOE7-436uBB-66 
+
+ ArtistID: 188 
+
+ Message: Alejandra Trevino has answered your question 
+
+ PostID: 24175 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_188/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 15:17 PM
+ Device Token: ewARxSkHcKE:APA91bF4ceSdTOc8uon7IsYf1ITD2PD0029GfVq3MT9Le9dcOpD-0AW9wlYvJqPeUDhcvheiBhvbQM1w3RtbIz_14AV6PdKseiJnr7ANIwSJzKxdK8TwUwSCPhJCoFlOv97u6U4K1mNE 
+
+ ArtistID: 185 
+
+ Message: Yuliett Torres has answered your question 
+
+ PostID: 24668 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_185/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 15:17 PM
+ Device Token: ewARxSkHcKE:APA91bF4ceSdTOc8uon7IsYf1ITD2PD0029GfVq3MT9Le9dcOpD-0AW9wlYvJqPeUDhcvheiBhvbQM1w3RtbIz_14AV6PdKseiJnr7ANIwSJzKxdK8TwUwSCPhJCoFlOv97u6U4K1mNE 
+
+ ArtistID: 185 
+
+ Message: Yuliett Torres has answered your question 
+
+ PostID: 24672 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_185/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 15:18 PM
+ Device Token: eciNaQEfl1o:APA91bG8feztj_cHy28f0hKVTHuHWlAhx7rcqGpckSCL9VrbfN4Iy8l4zGBvN0gP2KZQsmk8JZaSYKtm1gSEtVPh4x1Sdw8m5pwceCQMpf5C4avwTztw1Vt35bgrWJP-rS0UvWvn3Qr5 
+
+ ArtistID: 185 
+
+ Message: Yuliett Torres has answered your question 
+
+ PostID: 24673 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_185/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 15:21 PM
+ Device Token: didTcdJ86cg:APA91bFMdR4gq-mDwHGY7HjHma7yD3ncmFvraXeyuqYTjJP_gsbEAur8cn2c38kMZXW6HqwAw7rL_XPY0Sfb4JoYB_d3OQbjEI_Ge_XZd3i1W7oxnQXQCl73605qqFeAXRcKe5AIK_Gx 
+
+ ArtistID: 185 
+
+ Message: Yuliett Torres has answered your question 
+
+ PostID: 24670 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_185/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 15:21 PM
+ Device Token: dG6phVQKMCA:APA91bEC8OHsSfm1mv3_XVrcEZ2aR7SoyHHXikUodpjzXE0lQtVOopjxfko-YSUHw2DHKO5tlG1OvA9wtOo89buFmpvwn7cz0qWc4I-BGbr0U_0XbQTMUy7CP68CKIGyJi_5WV06ciMA 
+
+ ArtistID: 185 
+
+ Message: Yuliett Torres has answered your question 
+
+ PostID: 24686 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_185/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 15:21 PM
+ Device Token: cDpjezQiXAg:APA91bGdjmH6uqSeDpVmGGBkmsCZmfMqKAqRAuKtQdz8ag8_iHjBh7CpCNjTIHauyOSG512I2yQDTwY5HlHV_VWCngRcQk5OIkw8InYX6Iad9p9PTtKwyONjAvcDCKRxhCmGUnG50_IV 
+
+ ArtistID: 185 
+
+ Message: Yuliett Torres has answered your question 
+
+ PostID: 24693 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_185/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 15:22 PM
+ Device Token: eqlRbn56zeM:APA91bEx57gygxh8EuL47UWtywVDDpamfH2TzLRENfhOme33C-p5H6wzDV4yOTgJAGUym3gttREn0cJUr1A7FpJU3x5M61v2wt6fXY4c92FVL1_Jiw54KWyuOfG5gsHtctNBMb0o041c 
+
+ ArtistID: 185 
+
+ Message: Yuliett Torres has answered your question 
+
+ PostID: 24679 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_185/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 15:22 PM
+ Device Token: ceiej5GMPt4:APA91bGsJx1hM_i3PXXKSXfCf3Tqx79Ryv4ab9Bh_X_UpO_-ZdOY00s-HBCDNaItkFTetV_uy-cvUsD52cWGo0yfboqnSfYa7S8aFlip0BUEbnKK389fGUIj8-FjKy3wBI2shYWzwIAP 
+
+ ArtistID: 185 
+
+ Message: Yuliett Torres has answered your question 
+
+ PostID: 24682 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_185/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 15:22 PM
+ Device Token: dlhvftoBKAU:APA91bHAVqNdjqEfJjq0nxcHtC9r4_MFCMAee3iwPnAedfNedHJ4GeaIs2FDq62V51h6O2fs2n7NYFpI09yhOe1d1MQTT5-Z3cOorZjtBVkXHnYyv8bMDyqvOnYWjFqw_wjPmC2wkjjW 
+
+ ArtistID: 185 
+
+ Message: Yuliett Torres has answered your question 
+
+ PostID: 24708 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_185/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 15:23 PM
+ Device Token: didTcdJ86cg:APA91bFMdR4gq-mDwHGY7HjHma7yD3ncmFvraXeyuqYTjJP_gsbEAur8cn2c38kMZXW6HqwAw7rL_XPY0Sfb4JoYB_d3OQbjEI_Ge_XZd3i1W7oxnQXQCl73605qqFeAXRcKe5AIK_Gx 
+
+ ArtistID: 185 
+
+ Message: Yuliett Torres has answered your question 
+
+ PostID: 24689 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_185/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 15:23 PM
+ Device Token: didTcdJ86cg:APA91bFMdR4gq-mDwHGY7HjHma7yD3ncmFvraXeyuqYTjJP_gsbEAur8cn2c38kMZXW6HqwAw7rL_XPY0Sfb4JoYB_d3OQbjEI_Ge_XZd3i1W7oxnQXQCl73605qqFeAXRcKe5AIK_Gx 
+
+ ArtistID: 185 
+
+ Message: Yuliett Torres has answered your question 
+
+ PostID: 24690 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_185/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 15:23 PM
+ Device Token: e47gvgnaSb8:APA91bGd-Tky0Jp0sDX5D6nuLGgbJxIv4v_YcHcA60djYCAwdllnuYVMTlgwP45VuRcdTWVhbx44Keq3iFFbL6BMaJxhA0RZ9ZhtGFIM0Dp8QjctD9FVZ_W3WNSELIAhN8oZuxDmny5i 
+
+ ArtistID: 185 
+
+ Message: Yuliett Torres has answered your question 
+
+ PostID: 24706 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_185/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 15:24 PM
+ Device Token: dlhvftoBKAU:APA91bHAVqNdjqEfJjq0nxcHtC9r4_MFCMAee3iwPnAedfNedHJ4GeaIs2FDq62V51h6O2fs2n7NYFpI09yhOe1d1MQTT5-Z3cOorZjtBVkXHnYyv8bMDyqvOnYWjFqw_wjPmC2wkjjW 
+
+ ArtistID: 185 
+
+ Message: Yuliett Torres has answered your question 
+
+ PostID: 24710 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_185/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 15:24 PM
+ Device Token: e1xrjVzc_Cw:APA91bEHqE-TU8fXVE82vUtTL40rClEgwoOyvRQJWWcyujpOeVR4Wb_nNDft6aoAxWLrNy2aZ-NT_EYlRMz2YupKX-7v550El5bQWmdLO9YH3Dlr5VzUJ4U81UeBHhsvqCTxvVbTyBnO 
+
+ ArtistID: 185 
+
+ Message: Yuliett Torres has answered your question 
+
+ PostID: 24753 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_185/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 15:25 PM
+ Device Token: ecTcfI0O_aw:APA91bFNtgvaAMRwDUUUFBCo7OyaaLcLwn3C3Wku1W_-BMZ2iuRNxA1VBvmpkNOBOcvfncHfrrjGADZ2s0b9-mOQ4z5MCiR_IXMsOfLececBV9KR4z0EMGbIQQtaAMb8-5m2kt-qdJIi 
+
+ ArtistID: 185 
+
+ Message: Yuliett Torres has answered your question 
+
+ PostID: 24720 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_185/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 15:25 PM
+ Device Token: dlhvftoBKAU:APA91bHAVqNdjqEfJjq0nxcHtC9r4_MFCMAee3iwPnAedfNedHJ4GeaIs2FDq62V51h6O2fs2n7NYFpI09yhOe1d1MQTT5-Z3cOorZjtBVkXHnYyv8bMDyqvOnYWjFqw_wjPmC2wkjjW 
+
+ ArtistID: 185 
+
+ Message: Yuliett Torres has answered your question 
+
+ PostID: 24711 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_185/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 15:25 PM
+ Device Token: ecTcfI0O_aw:APA91bFNtgvaAMRwDUUUFBCo7OyaaLcLwn3C3Wku1W_-BMZ2iuRNxA1VBvmpkNOBOcvfncHfrrjGADZ2s0b9-mOQ4z5MCiR_IXMsOfLececBV9KR4z0EMGbIQQtaAMb8-5m2kt-qdJIi 
+
+ ArtistID: 185 
+
+ Message: Yuliett Torres has answered your question 
+
+ PostID: 24721 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_185/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 15:26 PM
+ Device Token: ecTcfI0O_aw:APA91bFNtgvaAMRwDUUUFBCo7OyaaLcLwn3C3Wku1W_-BMZ2iuRNxA1VBvmpkNOBOcvfncHfrrjGADZ2s0b9-mOQ4z5MCiR_IXMsOfLececBV9KR4z0EMGbIQQtaAMb8-5m2kt-qdJIi 
+
+ ArtistID: 185 
+
+ Message: Yuliett Torres has answered your question 
+
+ PostID: 24722 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_185/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 15:26 PM
+ Device Token: c-3CREuCBhw:APA91bHs0d-ssAgZfFWcnE9yeKo55uQ-cwDwSxEwolswcMNeQxB5Rvgapf3KYt8Q1DCR0wMfXKW-L8IzWNOdBnl4RiS1CwjAfnTjSIbfY4bwzMz5IqOGyEPltAYqU9O_kO8tdhFg7VA- 
+
+ ArtistID: 185 
+
+ Message: Yuliett Torres has answered your question 
+
+ PostID: 24678 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_185/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 15:27 PM
+ Device Token: ea8JWlfB754:APA91bG2SOnSdAvh6IDvQ58fTWHkOLIdDNzkEoFdwTkhOO-KGD3P3bee0WGko0xx1F-kOJ0sSPaZ3B0Gh36syQjX24_3qxbLczgfKADwxja_orn5fO-X2Q692h-ksaX8vq3IBynnYAHZ 
+
+ ArtistID: 185 
+
+ Message: Yuliett Torres has answered your question 
+
+ PostID: 24698 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_185/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 15:28 PM
+ Device Token: fj_mxmORcN4:APA91bFoTi8ia-QTQT-l5v8ARlDMVwbAgOd40ak3CXnSDUNDAwzt8M9aXcqkn1qEnn4zmB04eqwV_-wGHriGz035eOhl0KUCuXrP3MLQZRbqZlMBt2QQGEm38_WQyqJFRXKB6kEnIW_G 
+
+ ArtistID: 185 
+
+ Message: Yuliett Torres has answered your question 
+
+ PostID: 24738 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_185/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 15:28 PM
+ Device Token: e0WfyyQ4Rz0:APA91bEpil1TXnm2Dt_wfcgAf7LcIkzZXJmlVxqdjDDyV3zWmvJRIFRDNdXnypxWmEdMwIEwRHG2jXvFaUymOrN9TbK1u7Z5cxzryjWyQz33LrfC3FouFn3zggBfJLXerMX988z-McG8 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24751 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 15:30 PM
+ Device Token: f4vtYlUej9o:APA91bHf9-_Lvs1AexLLqx7rCCqD8vwm4iwOUC33df2WxEUbpV92w21FuQms3rod2-0K1ftvxj-c38d2wKI2N57zj6dFcvcCznnRBtDcmCLRviJj_nnK4mktnRnBmoH9dHPiGVKEbnnZ 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24742 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 15:30 PM
+ Device Token: cICB72V2KQc:APA91bEOuEgho-lCW0Js11barrSLQpoLUUgT4_ys8rSTUsIjU-I8WUbrgYd0jFGR3pEKi2ncZO2FF3gtw-1xv48iwxJdjfcz9TqBhEeG0sc-KekJmEls9wkK0ld7EdOZCZFZK1QinyZw 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24736 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 15:31 PM
+ Device Token: ey-Ldy9IcLE:APA91bGUP1AHNWMMjPwKVdYbL4Jw2tE_OpzrJY6aiMl_WJfbyE1L-fdibofbh3PVebnjXzEKjVwGbZF1GO52AZEj6NDWgQ5ZGV8ewLcad0JPMHrZAFkh3IURhPcAy6zwONMi6CoPaZkk 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24728 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 15:32 PM
+ Device Token: enpxxGxkvC0:APA91bHpEB26JQewxbORtKWOkaXTA7h0-jguj5GE11Fsvvzi4vrEu-n2macbbi_L-ttSku86-DRnj0BhMDFaca60DvLZjRRgdoUkxXv_6sCOWmadqxTXgCeY4R6tKVp7aghdYsz6v9RD 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24723 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 15:33 PM
+ Device Token: dCgJEv__A8I:APA91bFrsf6CWWHiUUoWdwuu7eEYhM7vxlrrfUJhSX6I52qRa-kmaVxcmpX_el11AMQTjL8iuy5gMorIQOhcJaB-YMneTBGkYGqhzVnbFnICrnX8fxxKh1CM1A4ABqdlx8kIBqBzI_FU 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24712 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 15:34 PM
+ Device Token: ctMMAvZcMwY:APA91bH-2lr9C4WX-PHbqkpb9J8BwaX0EaFUZSZZo9FCq883_mgVRISGPbnPPNnXgy2qLZ54a6sD8pN8wauJsX98CRXaAld9Mc4G-1swVjIzF8lEvuBzmdsc2JT5bZY7dkF8yoJjwcjn 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24676 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 15:34 PM
+ Device Token: dtvVii95MRM:APA91bH3R5YS39BRF7dcF26L6QYL1F43jXS5ztXScvVORuJPrV9QmTrO8zBmZBMzdgc8A57Mt3mNSOc7ZvAu8Zvl1VFEf_ZQhdc72cwN8us0cEQI70tzCUFDr65kny43Ihh9SxRvAEMt 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24696 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 15:35 PM
+ Device Token: eZp1oqsbOGM:APA91bFp1JOfde5d6EL4bpvoMl8zUcXLP_vR29SiDUa4vD_BD11KOVbTdYUMV4o-Uib73iPdixYg9XzOF9_FGBISDKS0g-aX1hnfVey9S0Lk4yVXz160J2ZfuR1Ow_E0okJrycjTwKno 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24703 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 15:36 PM
+ Device Token: ey-Ldy9IcLE:APA91bGUP1AHNWMMjPwKVdYbL4Jw2tE_OpzrJY6aiMl_WJfbyE1L-fdibofbh3PVebnjXzEKjVwGbZF1GO52AZEj6NDWgQ5ZGV8ewLcad0JPMHrZAFkh3IURhPcAy6zwONMi6CoPaZkk 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24701 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 15:36 PM
+ Device Token: ey-Ldy9IcLE:APA91bGUP1AHNWMMjPwKVdYbL4Jw2tE_OpzrJY6aiMl_WJfbyE1L-fdibofbh3PVebnjXzEKjVwGbZF1GO52AZEj6NDWgQ5ZGV8ewLcad0JPMHrZAFkh3IURhPcAy6zwONMi6CoPaZkk 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24700 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 15:36 PM
+ Device Token: dXD0TV3FtqQ:APA91bEysz5OXvqH3qP-rIbTf4s9jlGF5YL5nwbQZimj7fZ_h50IjHrl7LWbx0PcKDIY6C8l5JTMJAU3ySWcA4UjNGvL6XRFexTW0ZO5KVm_XLAEjIS3zJlev0pt98fAwk-vQmkCnire 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24694 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 15:36 PM
+ Device Token: ez8mWX31IiI:APA91bHQc1Hqyh2coOvxlgpZNNmkTZhMtkE7xkM-aPE3sBB0lSGk6VIGVzIqqPgF9K0ImhZb8hJ7OZCCdoYDzqp2zTpP5zJHvmv1jIVLBDFwnHSxxg29wEh8Kn1MWDW650cYpiKy3G4- 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24683 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 15:36 PM
+ Device Token: ez8mWX31IiI:APA91bHQc1Hqyh2coOvxlgpZNNmkTZhMtkE7xkM-aPE3sBB0lSGk6VIGVzIqqPgF9K0ImhZb8hJ7OZCCdoYDzqp2zTpP5zJHvmv1jIVLBDFwnHSxxg29wEh8Kn1MWDW650cYpiKy3G4- 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24684 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 15:38 PM
+ Device Token: eucqOKw_8p4:APA91bGzYgzGjPZx2IgqELHUpAQbMi8ScLx2pcvLfO7zA5zUD2Adz8-yOoX-OgCfuvSN6mZR3nFBuZ-1venDuu-4vIJ_2q8KGrilAqCSM2ZxRRTcQE-n_g5Vcl2Q9h0FxD9xDk4tsdRi 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24677 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 15:40 PM
+ Device Token: cG3ZrvwDluY:APA91bGVk02fdglES7AYjq60h4eYSITkk0RRA-wfg8y9KD05SK5EPetzIuGOOecHLjp_qa5T5bSdhu79NWnY8_QgC5rUVbU_fl22sG91BFwKOBLw1_SML47VGcK16FhuvnifSlhPoR3u 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24746 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 15:40 PM
+ Device Token: cG3ZrvwDluY:APA91bGVk02fdglES7AYjq60h4eYSITkk0RRA-wfg8y9KD05SK5EPetzIuGOOecHLjp_qa5T5bSdhu79NWnY8_QgC5rUVbU_fl22sG91BFwKOBLw1_SML47VGcK16FhuvnifSlhPoR3u 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24747 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 15:40 PM
+ Device Token: cG3ZrvwDluY:APA91bGVk02fdglES7AYjq60h4eYSITkk0RRA-wfg8y9KD05SK5EPetzIuGOOecHLjp_qa5T5bSdhu79NWnY8_QgC5rUVbU_fl22sG91BFwKOBLw1_SML47VGcK16FhuvnifSlhPoR3u 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24748 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 15:41 PM
+ Device Token: cG3ZrvwDluY:APA91bGVk02fdglES7AYjq60h4eYSITkk0RRA-wfg8y9KD05SK5EPetzIuGOOecHLjp_qa5T5bSdhu79NWnY8_QgC5rUVbU_fl22sG91BFwKOBLw1_SML47VGcK16FhuvnifSlhPoR3u 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24749 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Iphone push: 
+18 Oct '17 15:42 PM
+ Device Token: c2326b9effaa55881e97234f9f28fa8a652f31fd129a826ee86d59505ad551a8 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24745 
+
+ Notification Type: replyAns 
+
+ Exception: Gateway not connected 
+exception 'yii\base\ErrorException' with message 'stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14094410:SSL routines:SSL3_READ_BYTES:sslv3 alert handshake failure' in /var/www/html/boomvideo/public_html/api/models/Commentnotforartist.php:68
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'stream_socket_c...', '/var/www/html/b...', 68, Array)
+#1 /var/www/html/boomvideo/public_html/api/models/Commentnotforartist.php(68): stream_socket_client('ssl://gateway.p...', 0, '', 60, 5, Resource id #17)
+#2 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(3482): api\models\Commentnotforartist->sendToIphone(187, 'user')
+#3 [internal function]: api_ver2\controllers\UserController->actionAddpost()
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('addpost', Array)
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/addpost', Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#10 {main}
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 15:43 PM
+ Device Token: c5N4fM-cN9I:APA91bEJA3hdcH6529BfjADHWxfi6_Pd2cvw-WvWzrkkoFp-uKazTyAdd3x2ptecWgbhGzPQoCagw0rr2lv70o9v9q1R0n0InwXw9d8xqXi75WRUWibw1lTV-57A8mP-SsnBYs5tO5Bp 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24740 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 15:43 PM
+ Device Token: cXn0RspSVr4:APA91bEpyt5eHr5G5DNwdhghDY4bWnwO0ccgNReIljFyj5P8B28L4CjrkKxEAwdicoHJcJmU_c9EP4S1hTSPmT6rdsqIyrZyf8pssARNgjyPZTrPr9ltFf6zqQYg9PJTo5U0sY8Lx8cr 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24725 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 15:43 PM
+ Device Token: cXn0RspSVr4:APA91bEpyt5eHr5G5DNwdhghDY4bWnwO0ccgNReIljFyj5P8B28L4CjrkKxEAwdicoHJcJmU_c9EP4S1hTSPmT6rdsqIyrZyf8pssARNgjyPZTrPr9ltFf6zqQYg9PJTo5U0sY8Lx8cr 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24724 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 15:44 PM
+ Device Token: cDDiuclQ2jo:APA91bFSi9RhAvwx_t56OKEx3UZJ-qq6LOrVIqEm0dJCuXn2cVx0TBnbeNsdGhCX2T8ePXd4pMUR61-fCxsSHP658lMJ8Dbiyk2miPsjCZIXi7chgmSBLX1BvoTuveVo7YgyVMyu4CoT 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24695 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 15:44 PM
+ Device Token: f4Q19448z7A:APA91bFAp8Xu4arhQkvI5tFg48syXkKQJqRTGDlJqEONpGUtLoUpHQIDCQptVPu-jL25scNa3SXQ6XGwWnyTW6ja48yPXLLu4X7_UtApPsyLqG3wq10_72dI6a9eVdLifEXSsHeSF3oc 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24741 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 15:45 PM
+ Device Token: dXgw7LMXV_8:APA91bFEDWDpmECnmwGDb1Wmx-0Fs6LCrVySvYFxH4wcoV4HoInQU9mLfG2pHYZTFnOB9y31mOQXOao708VDHK3gW89ukSO8FJhCgJryYnG72CjulBpCTyB7shb9a7hqXDHOWstbHKLc 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24731 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Iphone push: 
+18 Oct '17 15:45 PM
+ Device Token: acf395628a2130db06c2dfba7bb0ee444ae4943319faec8930c5d9517d0c3571 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24729 
+
+ Notification Type: replyAns 
+
+ Exception: Gateway not connected 
+exception 'yii\base\ErrorException' with message 'stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14094410:SSL routines:SSL3_READ_BYTES:sslv3 alert handshake failure' in /var/www/html/boomvideo/public_html/api/models/Commentnotforartist.php:68
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'stream_socket_c...', '/var/www/html/b...', 68, Array)
+#1 /var/www/html/boomvideo/public_html/api/models/Commentnotforartist.php(68): stream_socket_client('ssl://gateway.p...', 0, '', 60, 5, Resource id #17)
+#2 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(3482): api\models\Commentnotforartist->sendToIphone(187, 'user')
+#3 [internal function]: api_ver2\controllers\UserController->actionAddpost()
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('addpost', Array)
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/addpost', Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#10 {main}
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 15:47 PM
+ Device Token: eHxgw3npMqM:APA91bGbVgotR4gEvTBCsA3PaU2iZ0_GencsLsILzPwL9FeQPxv4nc5siLdyl3VM1FNify5X0zvbL729aO6YhV5yNbR_wQBlyiqFN0uYhwdedaBknXtxcVGasyajXQvxaxGr2S6atz_l 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24688 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Iphone push: 
+18 Oct '17 15:48 PM
+ Device Token: fb596ae9c3a33e439f37ea7c73f5d71d93dcb9e1582125f0fac7dca86144611e 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24718 
+
+ Notification Type: replyAns 
+
+ Exception: Gateway not connected 
+exception 'yii\base\ErrorException' with message 'stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14094410:SSL routines:SSL3_READ_BYTES:sslv3 alert handshake failure' in /var/www/html/boomvideo/public_html/api/models/Commentnotforartist.php:68
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'stream_socket_c...', '/var/www/html/b...', 68, Array)
+#1 /var/www/html/boomvideo/public_html/api/models/Commentnotforartist.php(68): stream_socket_client('ssl://gateway.p...', 0, '', 60, 5, Resource id #17)
+#2 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(3482): api\models\Commentnotforartist->sendToIphone(187, 'user')
+#3 [internal function]: api_ver2\controllers\UserController->actionAddpost()
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('addpost', Array)
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/addpost', Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#10 {main}
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 15:48 PM
+ Device Token: ctMMAvZcMwY:APA91bH-2lr9C4WX-PHbqkpb9J8BwaX0EaFUZSZZo9FCq883_mgVRISGPbnPPNnXgy2qLZ54a6sD8pN8wauJsX98CRXaAld9Mc4G-1swVjIzF8lEvuBzmdsc2JT5bZY7dkF8yoJjwcjn 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24758 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 15:49 PM
+ Device Token: cls0tomlYAY:APA91bFZiS3K5PYpLgXxezLDp2MybeI0UebFY_Xhal5LBtTHZsyqqfM-lYgFns8JPT2zmTRTS5AZZ3-hslsU7L5TkeAv_y0V4xSsRIFf2pXOoccpsZ3tH8lZQzpPxa1aLdYiLFpOr26M 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24756 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 15:49 PM
+ Device Token: dw5ppf8jjJI:APA91bGrk4oGX2kHKO61O01oXMCNLRbcViA-7Cl-rc1cBtmdB7z_-ef9SVtdo4ikB6iek6VbdpdgtCIb2LPYEzV5_F_bUkJDv7vcoLlU0EKLn3fbjiy-cVJbu4RMK2hIcnypXhPxIsDx 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24737 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 15:50 PM
+ Device Token: ckFFi0buhm4:APA91bHKBcYM9FButYNlLUh7P2vLhXVOGhSp_mYMPfNhYqktRE1biqsPIIMKEFnflfNl_T-Jk0YjPN5iz1-jkk_EWe9tdBpykLO5pa82_0P_kljw_jCJQYbF184hVtJHNSWaYhG3Foxg 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24734 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 15:51 PM
+ Device Token: e8TvQc8A8nk:APA91bHjvCFPWdmfbMSMAw-9vSh-EGnEJsAqufNr7NX3eoursg_l07rYog1JZq2rEWROjS-r7R2er09pVoIsITM7FgNqF6pgG2YNtEe1rO5DmnJsYY_AzGHzda_UjAlR3xNDaDNqIn1s 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24730 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 15:53 PM
+ Device Token: ctMMAvZcMwY:APA91bH-2lr9C4WX-PHbqkpb9J8BwaX0EaFUZSZZo9FCq883_mgVRISGPbnPPNnXgy2qLZ54a6sD8pN8wauJsX98CRXaAld9Mc4G-1swVjIzF8lEvuBzmdsc2JT5bZY7dkF8yoJjwcjn 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24761 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 15:55 PM
+ Device Token: cLWQf6hhopI:APA91bEfFZR4_VCyngzBRCLHCcS35JV4yE4zhP1q-dtyCcNlz7E6yATXl0C0a5yHLYub2iL97g2yDoJK0ayC-YIV3Cx45Mqsj4TuRoSTGRLRIkvRadQbZikCEMZ99BbwwA2KqT-qayGR 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24752 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 15:56 PM
+ Device Token: epig0SWF7ao:APA91bEEIVt_S1yuLYFr57SNNnpZeVehOs7E5h40n5Lu6mTDj9Bkv47v2Lo0o-Tx-RBppZpXSFYVov79PJrCl3rjWtASEtaxTtdHa4Am0LwBDqbIM79hOsxZq-UyN4yLE9uv_hGkPfXD 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24713 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 15:56 PM
+ Device Token: epig0SWF7ao:APA91bEEIVt_S1yuLYFr57SNNnpZeVehOs7E5h40n5Lu6mTDj9Bkv47v2Lo0o-Tx-RBppZpXSFYVov79PJrCl3rjWtASEtaxTtdHa4Am0LwBDqbIM79hOsxZq-UyN4yLE9uv_hGkPfXD 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24714 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 15:56 PM
+ Device Token: epig0SWF7ao:APA91bEEIVt_S1yuLYFr57SNNnpZeVehOs7E5h40n5Lu6mTDj9Bkv47v2Lo0o-Tx-RBppZpXSFYVov79PJrCl3rjWtASEtaxTtdHa4Am0LwBDqbIM79hOsxZq-UyN4yLE9uv_hGkPfXD 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24715 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 15:56 PM
+ Device Token: epig0SWF7ao:APA91bEEIVt_S1yuLYFr57SNNnpZeVehOs7E5h40n5Lu6mTDj9Bkv47v2Lo0o-Tx-RBppZpXSFYVov79PJrCl3rjWtASEtaxTtdHa4Am0LwBDqbIM79hOsxZq-UyN4yLE9uv_hGkPfXD 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24716 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 15:58 PM
+ Device Token: fojC2XQ4aSU:APA91bFSrpkQnfc9QgUH_Ze4AslOlxQ7bw06pjkdwBbBVgtKORPmOjbTp4eONnMuSw6JIDhE-dbOpIhHYiNYXhARa23ig2QZZC2zUucOyYfozcQ3IbLYyJQQYcFy71ByDsrZ9nSN98z2 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24681 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 15:59 PM
+ Device Token: fojC2XQ4aSU:APA91bFSrpkQnfc9QgUH_Ze4AslOlxQ7bw06pjkdwBbBVgtKORPmOjbTp4eONnMuSw6JIDhE-dbOpIhHYiNYXhARa23ig2QZZC2zUucOyYfozcQ3IbLYyJQQYcFy71ByDsrZ9nSN98z2 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24685 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 15:59 PM
+ Device Token: eucqOKw_8p4:APA91bGzYgzGjPZx2IgqELHUpAQbMi8ScLx2pcvLfO7zA5zUD2Adz8-yOoX-OgCfuvSN6mZR3nFBuZ-1venDuu-4vIJ_2q8KGrilAqCSM2ZxRRTcQE-n_g5Vcl2Q9h0FxD9xDk4tsdRi 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24762 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 16:00 PM
+ Device Token: f8z5t0LO1CE:APA91bFFy-vj359V89n-hD6JZjhTr-kBdNYYK3ZpUU9cgvQTXZcsCziR0qWfeeR-GWn-yFqgEUnZEW_tygMhMl3dOpw_5XBRqO33i1p-c8DwDtROv012MoWDd4bU1wU8NCd9NYIZ6rtt 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24764 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 16:00 PM
+ Device Token: f8z5t0LO1CE:APA91bFFy-vj359V89n-hD6JZjhTr-kBdNYYK3ZpUU9cgvQTXZcsCziR0qWfeeR-GWn-yFqgEUnZEW_tygMhMl3dOpw_5XBRqO33i1p-c8DwDtROv012MoWDd4bU1wU8NCd9NYIZ6rtt 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24765 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 16:00 PM
+ Device Token: ctMMAvZcMwY:APA91bH-2lr9C4WX-PHbqkpb9J8BwaX0EaFUZSZZo9FCq883_mgVRISGPbnPPNnXgy2qLZ54a6sD8pN8wauJsX98CRXaAld9Mc4G-1swVjIzF8lEvuBzmdsc2JT5bZY7dkF8yoJjwcjn 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24766 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+18 Oct '17 16:00 PM
+ Device Token: f4vtYlUej9o:APA91bHf9-_Lvs1AexLLqx7rCCqD8vwm4iwOUC33df2WxEUbpV92w21FuQms3rod2-0K1ftvxj-c38d2wKI2N57zj6dFcvcCznnRBtDcmCLRviJj_nnK4mktnRnBmoH9dHPiGVKEbnnZ 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 24759 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 

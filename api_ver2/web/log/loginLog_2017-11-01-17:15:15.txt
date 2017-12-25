@@ -1,0 +1,376 @@
+
+ ************************
+ DateTime : 2017-11-01 17:15:15
+ Message : exception 'yii\base\ErrorException' with message 'Trying to get property of non-object' in /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php:355
+Stack trace:
+#0 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(355): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', '/var/www/html/b...', 355, Array)
+#1 [internal function]: api_ver2\controllers\UserController->actionLogin()
+#2 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#3 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('login', Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/login', Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#8 {main}
+ Data: 
+ Params : {"UserType":3,"Email":"","LoginType":"1","Password":"\a","Username":"\a","Language":"english","DeviceToken":"cc6wb4T-wP4:APA91bEPE5Vkbm8AlvxTCDxO-yLPNFT2HNvuo31fBv-9bDqfCttgGLahWtLSuuQ0DKiQVB_A113MGzuINQR6ayI89XhbEebQgzFvq3os9qVKO65CV5N6j2gaXdnWwX-ifl9MW3Efe9jw","ArtistID":"185","DeviceType":"2","MemberName":""}\n
+ ************************
+ DateTime : 2017-11-01 17:15:15
+ Message : exception 'yii\base\ErrorException' with message 'Trying to get property of non-object' in /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php:355
+Stack trace:
+#0 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(355): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', '/var/www/html/b...', 355, Array)
+#1 [internal function]: api_ver2\controllers\UserController->actionLogin()
+#2 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#3 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('login', Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/login', Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#8 {main}
+ Data: 
+ Params : {"UserType":3,"Email":"","LoginType":"1","Password":"\a`\igo","Username":"\a`\igo","Language":"english","DeviceToken":"cc6wb4T-wP4:APA91bEPE5Vkbm8AlvxTCDxO-yLPNFT2HNvuo31fBv-9bDqfCttgGLahWtLSuuQ0DKiQVB_A113MGzuINQR6ayI89XhbEebQgzFvq3os9qVKO65CV5N6j2gaXdnWwX-ifl9MW3Efe9jw","ArtistID":"185","DeviceType":"2","MemberName":""}\n
+ ************************
+ DateTime : 2017-11-01 17:15:15
+ Message : exception 'yii\base\ErrorException' with message 'Trying to get property of non-object' in /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php:355
+Stack trace:
+#0 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(355): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', '/var/www/html/b...', 355, Array)
+#1 [internal function]: api_ver2\controllers\UserController->actionLogin()
+#2 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#3 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('login', Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/login', Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#8 {main}
+ Data: 
+ Params : {"UserType":3,"Email":"","LoginType":"1","Password":"\agaza","Username":"\agaza","Language":"english","DeviceToken":"cc6wb4T-wP4:APA91bEPE5Vkbm8AlvxTCDxO-yLPNFT2HNvuo31fBv-9bDqfCttgGLahWtLSuuQ0DKiQVB_A113MGzuINQR6ayI89XhbEebQgzFvq3os9qVKO65CV5N6j2gaXdnWwX-ifl9MW3Efe9jw","ArtistID":"185","DeviceType":"2","MemberName":""}\n
+ ************************
+ DateTime : 2017-11-01 17:15:15
+ Message : exception 'yii\base\ErrorException' with message 'Trying to get property of non-object' in /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php:355
+Stack trace:
+#0 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(355): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', '/var/www/html/b...', 355, Array)
+#1 [internal function]: api_ver2\controllers\UserController->actionLogin()
+#2 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#3 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('login', Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/login', Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#8 {main}
+ Data: 
+ Params : {"UserType":3,"Email":"","LoginType":"1","Password":"\acanina","Username":"\acanina","Language":"english","DeviceToken":"cc6wb4T-wP4:APA91bEPE5Vkbm8AlvxTCDxO-yLPNFT2HNvuo31fBv-9bDqfCttgGLahWtLSuuQ0DKiQVB_A113MGzuINQR6ayI89XhbEebQgzFvq3os9qVKO65CV5N6j2gaXdnWwX-ifl9MW3Efe9jw","ArtistID":"185","DeviceType":"2","MemberName":""}\n
+ ************************
+ DateTime : 2017-11-01 17:15:15
+ Message : exception 'yii\base\ErrorException' with message 'Trying to get property of non-object' in /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php:355
+Stack trace:
+#0 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(355): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', '/var/www/html/b...', 355, Array)
+#1 [internal function]: api_ver2\controllers\UserController->actionLogin()
+#2 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#3 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('login', Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/login', Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#8 {main}
+ Data: 
+ Params : {"UserType":3,"Email":"","LoginType":"1","Password":"\a\o","Username":"\a\o","Language":"english","DeviceToken":"cc6wb4T-wP4:APA91bEPE5Vkbm8AlvxTCDxO-yLPNFT2HNvuo31fBv-9bDqfCttgGLahWtLSuuQ0DKiQVB_A113MGzuINQR6ayI89XhbEebQgzFvq3os9qVKO65CV5N6j2gaXdnWwX-ifl9MW3Efe9jw","ArtistID":"185","DeviceType":"2","MemberName":""}\n
+ ************************
+ DateTime : 2017-11-01 17:15:15
+ Message : exception 'yii\base\ErrorException' with message 'Trying to get property of non-object' in /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php:355
+Stack trace:
+#0 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(355): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', '/var/www/html/b...', 355, Array)
+#1 [internal function]: api_ver2\controllers\UserController->actionLogin()
+#2 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#3 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('login', Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/login', Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#8 {main}
+ Data: 
+ Params : {"UserType":3,"Email":"","LoginType":"1","Password":"\a\a","Username":"\a\a","Language":"english","DeviceToken":"cc6wb4T-wP4:APA91bEPE5Vkbm8AlvxTCDxO-yLPNFT2HNvuo31fBv-9bDqfCttgGLahWtLSuuQ0DKiQVB_A113MGzuINQR6ayI89XhbEebQgzFvq3os9qVKO65CV5N6j2gaXdnWwX-ifl9MW3Efe9jw","ArtistID":"185","DeviceType":"2","MemberName":""}\n
+ ************************
+ DateTime : 2017-11-01 17:15:15
+ Message : exception 'yii\base\ErrorException' with message 'Trying to get property of non-object' in /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php:355
+Stack trace:
+#0 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(355): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', '/var/www/html/b...', 355, Array)
+#1 [internal function]: api_ver2\controllers\UserController->actionLogin()
+#2 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#3 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('login', Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/login', Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#8 {main}
+ Data: 
+ Params : {"UserType":3,"Email":"","LoginType":"1","Password":"\a`\iga","Username":"\a`\iga","Language":"english","DeviceToken":"cc6wb4T-wP4:APA91bEPE5Vkbm8AlvxTCDxO-yLPNFT2HNvuo31fBv-9bDqfCttgGLahWtLSuuQ0DKiQVB_A113MGzuINQR6ayI89XhbEebQgzFvq3os9qVKO65CV5N6j2gaXdnWwX-ifl9MW3Efe9jw","ArtistID":"185","DeviceType":"2","MemberName":""}\n
+ ************************
+ DateTime : 2017-11-01 17:15:15
+ Message : exception 'yii\base\ErrorException' with message 'Trying to get property of non-object' in /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php:355
+Stack trace:
+#0 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(355): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', '/var/www/html/b...', 355, Array)
+#1 [internal function]: api_ver2\controllers\UserController->actionLogin()
+#2 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#3 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('login', Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/login', Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#8 {main}
+ Data: 
+ Params : {"UserType":3,"Email":"","LoginType":"1","Password":"\acurutu`","Username":"\acurutu`","Language":"english","DeviceToken":"cc6wb4T-wP4:APA91bEPE5Vkbm8AlvxTCDxO-yLPNFT2HNvuo31fBv-9bDqfCttgGLahWtLSuuQ0DKiQVB_A113MGzuINQR6ayI89XhbEebQgzFvq3os9qVKO65CV5N6j2gaXdnWwX-ifl9MW3Efe9jw","ArtistID":"185","DeviceType":"2","MemberName":""}\n
+ ************************
+ DateTime : 2017-11-01 17:15:15
+ Message : exception 'yii\base\ErrorException' with message 'Trying to get property of non-object' in /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php:355
+Stack trace:
+#0 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(355): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', '/var/www/html/b...', 355, Array)
+#1 [internal function]: api_ver2\controllers\UserController->actionLogin()
+#2 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#3 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('login', Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/login', Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#8 {main}
+ Data: 
+ Params : {"UserType":3,"Email":"","LoginType":"1","Password":"\afrar","Username":"\afrar","Language":"english","DeviceToken":"cc6wb4T-wP4:APA91bEPE5Vkbm8AlvxTCDxO-yLPNFT2HNvuo31fBv-9bDqfCttgGLahWtLSuuQ0DKiQVB_A113MGzuINQR6ayI89XhbEebQgzFvq3os9qVKO65CV5N6j2gaXdnWwX-ifl9MW3Efe9jw","ArtistID":"185","DeviceType":"2","MemberName":""}\n
+ ************************
+ DateTime : 2017-11-01 17:15:15
+ Message : exception 'yii\base\ErrorException' with message 'Trying to get property of non-object' in /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php:355
+Stack trace:
+#0 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(355): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', '/var/www/html/b...', 355, Array)
+#1 [internal function]: api_ver2\controllers\UserController->actionLogin()
+#2 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#3 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('login', Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/login', Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#8 {main}
+ Data: 
+ Params : {"UserType":3,"Email":"","LoginType":"1","Password":"\a","Username":"\a","Language":"english","DeviceToken":"cc6wb4T-wP4:APA91bEPE5Vkbm8AlvxTCDxO-yLPNFT2HNvuo31fBv-9bDqfCttgGLahWtLSuuQ0DKiQVB_A113MGzuINQR6ayI89XhbEebQgzFvq3os9qVKO65CV5N6j2gaXdnWwX-ifl9MW3Efe9jw","ArtistID":"185","DeviceType":"2","MemberName":""}\n
+ ************************
+ DateTime : 2017-11-01 17:15:15
+ Message : exception 'yii\base\ErrorException' with message 'Trying to get property of non-object' in /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php:355
+Stack trace:
+#0 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(355): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', '/var/www/html/b...', 355, Array)
+#1 [internal function]: api_ver2\controllers\UserController->actionLogin()
+#2 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#3 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('login', Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/login', Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#8 {main}
+ Data: 
+ Params : {"UserType":3,"Email":"","LoginType":"1","Password":"\agaza","Username":"\agaza","Language":"english","DeviceToken":"cc6wb4T-wP4:APA91bEPE5Vkbm8AlvxTCDxO-yLPNFT2HNvuo31fBv-9bDqfCttgGLahWtLSuuQ0DKiQVB_A113MGzuINQR6ayI89XhbEebQgzFvq3os9qVKO65CV5N6j2gaXdnWwX-ifl9MW3Efe9jw","ArtistID":"185","DeviceType":"2","MemberName":""}\n
+ ************************
+ DateTime : 2017-11-01 17:15:15
+ Message : exception 'yii\base\ErrorException' with message 'Trying to get property of non-object' in /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php:355
+Stack trace:
+#0 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(355): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', '/var/www/html/b...', 355, Array)
+#1 [internal function]: api_ver2\controllers\UserController->actionLogin()
+#2 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#3 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('login', Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/login', Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#8 {main}
+ Data: 
+ Params : {"UserType":3,"Email":"","LoginType":"1","Password":"\acanina","Username":"\acanina","Language":"english","DeviceToken":"cc6wb4T-wP4:APA91bEPE5Vkbm8AlvxTCDxO-yLPNFT2HNvuo31fBv-9bDqfCttgGLahWtLSuuQ0DKiQVB_A113MGzuINQR6ayI89XhbEebQgzFvq3os9qVKO65CV5N6j2gaXdnWwX-ifl9MW3Efe9jw","ArtistID":"185","DeviceType":"2","MemberName":""}\n
+ ************************
+ DateTime : 2017-11-01 17:15:15
+ Message : exception 'yii\base\ErrorException' with message 'Trying to get property of non-object' in /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php:355
+Stack trace:
+#0 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(355): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', '/var/www/html/b...', 355, Array)
+#1 [internal function]: api_ver2\controllers\UserController->actionLogin()
+#2 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#3 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('login', Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/login', Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#8 {main}
+ Data: 
+ Params : {"UserType":3,"Email":"","LoginType":"1","Password":"\a\o","Username":"\a\o","Language":"english","DeviceToken":"cc6wb4T-wP4:APA91bEPE5Vkbm8AlvxTCDxO-yLPNFT2HNvuo31fBv-9bDqfCttgGLahWtLSuuQ0DKiQVB_A113MGzuINQR6ayI89XhbEebQgzFvq3os9qVKO65CV5N6j2gaXdnWwX-ifl9MW3Efe9jw","ArtistID":"185","DeviceType":"2","MemberName":""}\n
+ ************************
+ DateTime : 2017-11-01 17:15:15
+ Message : exception 'yii\base\ErrorException' with message 'Trying to get property of non-object' in /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php:355
+Stack trace:
+#0 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(355): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', '/var/www/html/b...', 355, Array)
+#1 [internal function]: api_ver2\controllers\UserController->actionLogin()
+#2 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#3 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('login', Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/login', Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#8 {main}
+ Data: 
+ Params : {"UserType":3,"Email":"","LoginType":"1","Password":"\a\a","Username":"\a\a","Language":"english","DeviceToken":"cc6wb4T-wP4:APA91bEPE5Vkbm8AlvxTCDxO-yLPNFT2HNvuo31fBv-9bDqfCttgGLahWtLSuuQ0DKiQVB_A113MGzuINQR6ayI89XhbEebQgzFvq3os9qVKO65CV5N6j2gaXdnWwX-ifl9MW3Efe9jw","ArtistID":"185","DeviceType":"2","MemberName":""}\n
+ ************************
+ DateTime : 2017-11-01 17:15:15
+ Message : exception 'yii\base\ErrorException' with message 'Trying to get property of non-object' in /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php:355
+Stack trace:
+#0 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(355): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', '/var/www/html/b...', 355, Array)
+#1 [internal function]: api_ver2\controllers\UserController->actionLogin()
+#2 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#3 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('login', Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/login', Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#8 {main}
+ Data: 
+ Params : {"UserType":3,"Email":"","LoginType":"1","Password":"\a`\igo","Username":"\a`\igo","Language":"english","DeviceToken":"cc6wb4T-wP4:APA91bEPE5Vkbm8AlvxTCDxO-yLPNFT2HNvuo31fBv-9bDqfCttgGLahWtLSuuQ0DKiQVB_A113MGzuINQR6ayI89XhbEebQgzFvq3os9qVKO65CV5N6j2gaXdnWwX-ifl9MW3Efe9jw","ArtistID":"185","DeviceType":"2","MemberName":""}\n
+ ************************
+ DateTime : 2017-11-01 17:15:15
+ Message : exception 'yii\base\ErrorException' with message 'Trying to get property of non-object' in /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php:355
+Stack trace:
+#0 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(355): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', '/var/www/html/b...', 355, Array)
+#1 [internal function]: api_ver2\controllers\UserController->actionLogin()
+#2 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#3 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('login', Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/login', Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#8 {main}
+ Data: 
+ Params : {"UserType":3,"Email":"","LoginType":"1","Password":"\a`\iga","Username":"\a`\iga","Language":"english","DeviceToken":"cc6wb4T-wP4:APA91bEPE5Vkbm8AlvxTCDxO-yLPNFT2HNvuo31fBv-9bDqfCttgGLahWtLSuuQ0DKiQVB_A113MGzuINQR6ayI89XhbEebQgzFvq3os9qVKO65CV5N6j2gaXdnWwX-ifl9MW3Efe9jw","ArtistID":"185","DeviceType":"2","MemberName":""}\n
+ ************************
+ DateTime : 2017-11-01 17:15:15
+ Message : exception 'yii\base\ErrorException' with message 'Trying to get property of non-object' in /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php:355
+Stack trace:
+#0 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(355): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', '/var/www/html/b...', 355, Array)
+#1 [internal function]: api_ver2\controllers\UserController->actionLogin()
+#2 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#3 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('login', Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/login', Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#8 {main}
+ Data: 
+ Params : {"UserType":3,"Email":"","LoginType":"1","Password":"\afrar","Username":"\afrar","Language":"english","DeviceToken":"cc6wb4T-wP4:APA91bEPE5Vkbm8AlvxTCDxO-yLPNFT2HNvuo31fBv-9bDqfCttgGLahWtLSuuQ0DKiQVB_A113MGzuINQR6ayI89XhbEebQgzFvq3os9qVKO65CV5N6j2gaXdnWwX-ifl9MW3Efe9jw","ArtistID":"185","DeviceType":"2","MemberName":""}\n
+ ************************
+ DateTime : 2017-11-01 17:15:15
+ Message : exception 'yii\base\ErrorException' with message 'Trying to get property of non-object' in /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php:355
+Stack trace:
+#0 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(355): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', '/var/www/html/b...', 355, Array)
+#1 [internal function]: api_ver2\controllers\UserController->actionLogin()
+#2 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#3 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('login', Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/login', Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#8 {main}
+ Data: 
+ Params : {"UserType":3,"Email":"","LoginType":"1","Password":"\acurutu`","Username":"\acurutu`","Language":"english","DeviceToken":"cc6wb4T-wP4:APA91bEPE5Vkbm8AlvxTCDxO-yLPNFT2HNvuo31fBv-9bDqfCttgGLahWtLSuuQ0DKiQVB_A113MGzuINQR6ayI89XhbEebQgzFvq3os9qVKO65CV5N6j2gaXdnWwX-ifl9MW3Efe9jw","ArtistID":"185","DeviceType":"2","MemberName":""}\n
+ ************************
+ DateTime : 2017-11-01 17:15:15
+ Message : exception 'yii\base\ErrorException' with message 'Trying to get property of non-object' in /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php:355
+Stack trace:
+#0 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(355): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', '/var/www/html/b...', 355, Array)
+#1 [internal function]: api_ver2\controllers\UserController->actionLogin()
+#2 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#3 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('login', Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/login', Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#8 {main}
+ Data: 
+ Params : {"UserType":3,"Email":"","LoginType":"1","Password":"\agaza","Username":"\agaza","Language":"english","DeviceToken":"cc6wb4T-wP4:APA91bEPE5Vkbm8AlvxTCDxO-yLPNFT2HNvuo31fBv-9bDqfCttgGLahWtLSuuQ0DKiQVB_A113MGzuINQR6ayI89XhbEebQgzFvq3os9qVKO65CV5N6j2gaXdnWwX-ifl9MW3Efe9jw","ArtistID":"185","DeviceType":"2","MemberName":""}\n
+ ************************
+ DateTime : 2017-11-01 17:15:15
+ Message : exception 'yii\base\ErrorException' with message 'Trying to get property of non-object' in /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php:355
+Stack trace:
+#0 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(355): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', '/var/www/html/b...', 355, Array)
+#1 [internal function]: api_ver2\controllers\UserController->actionLogin()
+#2 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#3 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('login', Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/login', Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#8 {main}
+ Data: 
+ Params : {"UserType":3,"Email":"","LoginType":"1","Password":"\a\o","Username":"\a\o","Language":"english","DeviceToken":"cc6wb4T-wP4:APA91bEPE5Vkbm8AlvxTCDxO-yLPNFT2HNvuo31fBv-9bDqfCttgGLahWtLSuuQ0DKiQVB_A113MGzuINQR6ayI89XhbEebQgzFvq3os9qVKO65CV5N6j2gaXdnWwX-ifl9MW3Efe9jw","ArtistID":"185","DeviceType":"2","MemberName":""}\n
+ ************************
+ DateTime : 2017-11-01 17:15:15
+ Message : exception 'yii\base\ErrorException' with message 'Trying to get property of non-object' in /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php:355
+Stack trace:
+#0 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(355): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', '/var/www/html/b...', 355, Array)
+#1 [internal function]: api_ver2\controllers\UserController->actionLogin()
+#2 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#3 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('login', Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/login', Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#8 {main}
+ Data: 
+ Params : {"UserType":3,"Email":"","LoginType":"1","Password":"\a\a","Username":"\a\a","Language":"english","DeviceToken":"cc6wb4T-wP4:APA91bEPE5Vkbm8AlvxTCDxO-yLPNFT2HNvuo31fBv-9bDqfCttgGLahWtLSuuQ0DKiQVB_A113MGzuINQR6ayI89XhbEebQgzFvq3os9qVKO65CV5N6j2gaXdnWwX-ifl9MW3Efe9jw","ArtistID":"185","DeviceType":"2","MemberName":""}\n
+ ************************
+ DateTime : 2017-11-01 17:15:15
+ Message : exception 'yii\base\ErrorException' with message 'Trying to get property of non-object' in /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php:355
+Stack trace:
+#0 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(355): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', '/var/www/html/b...', 355, Array)
+#1 [internal function]: api_ver2\controllers\UserController->actionLogin()
+#2 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#3 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('login', Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/login', Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#8 {main}
+ Data: 
+ Params : {"UserType":3,"Email":"","LoginType":"1","Password":"\a`\igo","Username":"\a`\igo","Language":"english","DeviceToken":"cc6wb4T-wP4:APA91bEPE5Vkbm8AlvxTCDxO-yLPNFT2HNvuo31fBv-9bDqfCttgGLahWtLSuuQ0DKiQVB_A113MGzuINQR6ayI89XhbEebQgzFvq3os9qVKO65CV5N6j2gaXdnWwX-ifl9MW3Efe9jw","ArtistID":"185","DeviceType":"2","MemberName":""}\n
+ ************************
+ DateTime : 2017-11-01 17:15:15
+ Message : exception 'yii\base\ErrorException' with message 'Trying to get property of non-object' in /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php:355
+Stack trace:
+#0 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(355): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', '/var/www/html/b...', 355, Array)
+#1 [internal function]: api_ver2\controllers\UserController->actionLogin()
+#2 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#3 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('login', Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/login', Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#8 {main}
+ Data: 
+ Params : {"UserType":3,"Email":"","LoginType":"1","Password":"\a","Username":"\a","Language":"english","DeviceToken":"cc6wb4T-wP4:APA91bEPE5Vkbm8AlvxTCDxO-yLPNFT2HNvuo31fBv-9bDqfCttgGLahWtLSuuQ0DKiQVB_A113MGzuINQR6ayI89XhbEebQgzFvq3os9qVKO65CV5N6j2gaXdnWwX-ifl9MW3Efe9jw","ArtistID":"185","DeviceType":"2","MemberName":""}\n
+ ************************
+ DateTime : 2017-11-01 17:15:15
+ Message : exception 'yii\base\ErrorException' with message 'Trying to get property of non-object' in /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php:355
+Stack trace:
+#0 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(355): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', '/var/www/html/b...', 355, Array)
+#1 [internal function]: api_ver2\controllers\UserController->actionLogin()
+#2 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#3 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('login', Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/login', Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#8 {main}
+ Data: 
+ Params : {"UserType":3,"Email":"","LoginType":"1","Password":"\acanina","Username":"\acanina","Language":"english","DeviceToken":"cc6wb4T-wP4:APA91bEPE5Vkbm8AlvxTCDxO-yLPNFT2HNvuo31fBv-9bDqfCttgGLahWtLSuuQ0DKiQVB_A113MGzuINQR6ayI89XhbEebQgzFvq3os9qVKO65CV5N6j2gaXdnWwX-ifl9MW3Efe9jw","ArtistID":"185","DeviceType":"2","MemberName":""}\n
+ ************************
+ DateTime : 2017-11-01 17:15:15
+ Message : exception 'yii\base\ErrorException' with message 'Trying to get property of non-object' in /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php:355
+Stack trace:
+#0 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(355): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', '/var/www/html/b...', 355, Array)
+#1 [internal function]: api_ver2\controllers\UserController->actionLogin()
+#2 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#3 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('login', Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/login', Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#8 {main}
+ Data: 
+ Params : {"UserType":3,"Email":"","LoginType":"1","Password":"\a`\iga","Username":"\a`\iga","Language":"english","DeviceToken":"cc6wb4T-wP4:APA91bEPE5Vkbm8AlvxTCDxO-yLPNFT2HNvuo31fBv-9bDqfCttgGLahWtLSuuQ0DKiQVB_A113MGzuINQR6ayI89XhbEebQgzFvq3os9qVKO65CV5N6j2gaXdnWwX-ifl9MW3Efe9jw","ArtistID":"185","DeviceType":"2","MemberName":""}\n

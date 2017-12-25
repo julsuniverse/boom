@@ -1,0 +1,16 @@
+
+
+ ************************
+ Start Send to Android push: 
+13 May '17 15:17 PM
+ Device Token: fU27frNXvGA:APA91bFi6JwT4bFFJEMoOG66Dj39q8OhIqOjtqQ3a--okZzBhTQMXmEgBUkFVn1-FM3ufX5g3nBV9jJItgrRqCN40JCSan2o64C4WJcywYsIONxIZFcleJXRioMVZlL_Cc6UX2mRNTc8 
+
+ ArtistID: 110 
+
+ Message: Brittanya has answered your question 
+
+ PostID: 6702 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_110/android_api_key_user.txt 

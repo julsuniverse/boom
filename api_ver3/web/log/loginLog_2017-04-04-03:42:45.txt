@@ -1,0 +1,22 @@
+
+ ************************
+ DateTime : 2017-04-04 03:42:45
+ Message : exception 'yii\base\ErrorException' with message 'Trying to get property of non-object' in /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php:663
+Stack trace:
+#0 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(663): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', '/var/www/html/b...', 663, Array)
+#1 [internal function]: api_ver2\controllers\UserController->actionLogin()
+#2 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#3 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('login', Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/login', Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#8 {main}
+ Data: 
+ Params : {"Username":"","Language":"english","LoginType":1,"UserType":3,"DeviceType":"1","Password":"","DeviceToken":"3eb93cf5e6aa92b0a01bc9b44d3f53fd627f4e56daccf5745e8885f24dd54802","ArtistID":"184"}\n
+ SP : CALL Member_Login('','','','','1','3eb93cf5e6aa92b0a01bc9b44d3f53fd627f4e56daccf5745e8885f24dd54802',3,184,1,'boom@123','http://d1k9hpqb4as18m.cloudfront.net/boom-','/profileimages/',@UserID,@ProfileID,@UserType,@ErrorCode)\n
+ Member Profile : CALL Member_GetProfile('0','3','0','boom@123','http://d1k9hpqb4as18m.cloudfront.net/boom-','/profileimages/thumb/')\n
+ Artist Profile : CALL Member_GetProfile('0','2','184','boom@123','http://d1k9hpqb4as18m.cloudfront.net/boom-','/profileimages/thumb/')\n
+ Fan
+ Post List : CALL Post_List(0,184,0,0,0,0,'http://d1k9hpqb4as18m.cloudfront.net/boom-','/thumb/','/postvideos/blurthumb/','','',@o_RecCount)\n
+ Sticker_List : CALL Sticker_List(0,184,1,'http://d1k9hpqb4as18m.cloudfront.net/','boom-184/stickerimages/','boom-184/stickerimages/StickerSmall/','boom-184/stickerimages/StickerMedium/')\n

@@ -1,0 +1,23 @@
+
+ ************************
+ DateTime : 2017-10-04 05:31:06
+ Message : exception 'yii\base\ErrorException' with message 'Undefined property: stdClass::$body' in /var/www/html/boomvideo/public_html/common/config/S3.php:877
+Stack trace:
+#0 /var/www/html/boomvideo/public_html/common/config/S3.php(877): yii\base\ErrorHandler->handleError(8, 'Undefined prope...', '/var/www/html/b...', 877, Array)
+#1 [internal function]: S3Request->__responseWriteCallback(Resource id #16, '<?xml version="...')
+#2 /var/www/html/boomvideo/public_html/common/config/S3.php(830): curl_exec(Resource id #16)
+#3 /var/www/html/boomvideo/public_html/common/config/S3.php(305): S3Request->getResponse()
+#4 /var/www/html/boomvideo/public_html/common/config/S3.php(331): S3::putObject(Array, 'boomvideo-in', 'boom-187/profil...', 'public-read', Array, NULL)
+#5 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(2210): S3::putObjectFile('/var/www/html/b...', 'boomvideo-in', 'boom-187/profil...', 'public-read')
+#6 [internal function]: api_ver2\controllers\UserController->actionEditprofile()
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#9 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('editprofile', Array)
+#10 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/editprofil...', Array)
+#11 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#13 {main}
+ Data: 
+ Params : {"Mobile":"","Birthdate":"","ShowNotification":1,"Email":"jtorr109@my.chemeketa.edu","Name":"Jose Raul Torres","ProfileID":"304095","Password":"","Zipcode":"97301","Username":"Jtorr109","Language":"english","Gender":"1","Image":"profile_304299_20173008183031.jpg","UserID":"304299","ArtistID":"187"}\n 
+ Check Username : CALL Check_Username('Jtorr109',0,3,'boom@123',1))n
+ Member Edit Profile : CALL Member_Edit_Profile_new('','Jose Raul Torres','profile_304299_20173008183031.jpg','jtorr109@my.chemeketa.edu','','0000-00-00','97301','','1','187','304095','304299',1,'boom@123')\n

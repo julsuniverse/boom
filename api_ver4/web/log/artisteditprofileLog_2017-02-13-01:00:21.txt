@@ -1,0 +1,33 @@
+
+ ************************
+ DateTime : 2017-02-13 01:00:21
+ Message : exception 'yii\base\ErrorException' with message 'Undefined property: stdClass::$body' in /var/www/html/boomvideo/public_html/common/config/S3.php:877
+Stack trace:
+#0 /var/www/html/boomvideo/public_html/common/config/S3.php(877): yii\base\ErrorHandler->handleError(8, 'Undefined prope...', '/var/www/html/b...', 877, Array)
+#1 [internal function]: S3Request->__responseWriteCallback(Resource id #18, '<?xml version="...')
+#2 /var/www/html/boomvideo/public_html/common/config/S3.php(830): curl_exec(Resource id #18)
+#3 /var/www/html/boomvideo/public_html/common/config/S3.php(305): S3Request->getResponse()
+#4 /var/www/html/boomvideo/public_html/common/config/S3.php(331): S3::putObject(Array, 'boomvideo-in', 'boom-1/profilei...', 'public-read', Array, NULL)
+#5 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(2280): S3::putObjectFile('/var/www/html/b...', 'boomvideo-in', 'boom-1/profilei...', 'public-read')
+#6 [internal function]: api_ver2\controllers\UserController->actionArtisteditprofile()
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#9 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('artisteditprofi...', Array)
+#10 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/artistedit...', Array)
+#11 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#13 {main}
+ Data: 
+ Params : {"ArtistID":1,"UserID":2,"ArtistName":"Boom Influencer App","ProfileThumb":"profile_1465046092.png","Email":"info@boomvideo.com.au","Birthdate":"2010-02-13","Nationality":"Australian","Residence":"Sydney","Website":"http:\/\/www.boomcollective.net\/","YouTubeChannelName":"","YearsActive":"2010","Genre":"YOUR BRANDING HERE","AboutMe":"Boom is building and publishing applications for Celebrities, Musicians, Sport stars, bloggers, and YouTubers.\r\n\r\nWe are enabling you to create your own branded mobile application.\r\n\r\nYou can now Engage and Interact with your fans in your own environment.\r\n\r\nIntroducing the Boom Mobile Application Building Platform.\r\n\r\nLets partner and get started today on building your own branded application.","YouTubePageUrl":"https:\/\/www.youtube.com\/user\/boomvideotv","InstagramPageUrl":"https:\/\/www.instagram.com\/boomvid\/","TwitterPageUrl":"https:\/\/twitter.com\/boomvid","FacebookPageUrl":"https:\/\/www.facebook.com\/boomvid\/","DeleteMediaIDs":[],"ArtistImages":[],"Password":"","Language":"english"}\n
+ Artist Edit Profile : CALL Artist_Edit_Profile(1,2,'Boom Influencer App','profile_1465046092.png',
+				       'info@boomvideo.com.au','13-02-2010','Australian','Sydney','http://www.boomcollective.net/','',
+				       '2010','YOUR BRANDING HERE','Boom is building and publishing applications for Celebrities, Musicians, Sport stars, bloggers, and YouTubers.
+
+We are enabling you to create your own branded mobile application.
+
+You can now Engage and Interact with your fans in your own environment.
+
+Introducing the Boom Mobile Application Building Platform.
+
+Lets partner and get started today on building your own branded application.','https://www.youtube.com/user/boomvideotv','https://www.instagram.com/boomvid/',
+				       'https://twitter.com/boomvid','https://www.facebook.com/boomvid/','','boom@123')\n

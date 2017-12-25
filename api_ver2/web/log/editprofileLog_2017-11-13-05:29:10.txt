@@ -1,0 +1,20 @@
+
+ ************************
+ DateTime : 2017-11-13 05:29:10
+ Message : exception 'yii\base\ErrorException' with message 'file_get_contents(http://d1t89cp2y0xf79.cloudfront.net/boom-187/profileimages/profile_273570_20171807112940.jpg): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+' in /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php:2196
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'file_get_conten...', '/var/www/html/b...', 2196, Array)
+#1 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(2196): file_get_contents('http://d1t89cp2...')
+#2 [internal function]: api_ver2\controllers\UserController->actionEditprofile()
+#3 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('editprofile', Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/editprofil...', Array)
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#9 {main}
+ Data: 
+ Params : {"Mobile":"","Birthdate":"","ShowNotification":1,"Email":"uri813@live.com","Name":"uri hernandez","ProfileID":"273366","Password":"","Zipcode":"","Username":"uri hernandez","Language":"english","Gender":"1","Image":"profile_273570_20171807112940.jpg","UserID":"273570","ArtistID":"187"}\n 
+ Check Username : CALL Check_Username('uri hernandez',0,3,'boom@123',1))n
+ Member Edit Profile : CALL Member_Edit_Profile_new('','uri hernandez','profile_273570_20171807112940.jpg','uri813@live.com','','0000-00-00','','','1','187','273366','273570',1,'boom@123')\n

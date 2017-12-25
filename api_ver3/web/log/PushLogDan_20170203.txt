@@ -1,0 +1,178 @@
+
+ ************************
+ Start Android Push: 
+03 Feb '17 12:50 PM
+ Device Token: eT25LK-_3qI:APA91bFZ-f7n_wcy9X08Car8JbZBXmwOiO-e-C87HUiiHyZ5kWE1LI5XvSAAN6wPq2y1LbTb_9c-JuW4uQDisukLmd60HFemnPdOd0TQT411Kc04s4bI8ccf2Z928q60YcaEFCS2Abjh 
+
+ ArtistID: 1 
+
+ Message: Test Push Dan 
+
+ PostID: 10 
+
+ Notification Type: replyAns 
+
+ File exists: pushkey/artist_1/android_api_key_user.txt 
+
+ Auth key: Authorization: key=AIzaSyBIlDarMom9SRI8F0dmiQmJSwxp-PuXMNI 
+
+ Notification Sent 
+
+ curl result: {"multicast_id":9068410457447277766,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1486126075709744%05e5ac3ef9fd7ecd"}]} 
+
+ ************************
+ Start Android Push: 
+03 Feb '17 12:51 PM
+ Device Token: eT25LK-_3qI:APA91bFZ-f7n_wcy9X08Car8JbZBXmwOiO-e-C87HUiiHyZ5kWE1LI5XvSAAN6wPq2y1LbTb_9c-JuW4uQDisukLmd60HFemnPdOd0TQT411Kc04s4bI8ccf2Z928q60YcaEFCS2Abjh 
+
+ ArtistID: 1 
+
+ Message: Test Push Dan 
+
+ PostID: 10 
+
+ Notification Type: replyAns 
+
+ File exists: pushkey/artist_1/android_api_key_user.txt 
+
+ Auth key: Authorization: key=AIzaSyBIlDarMom9SRI8F0dmiQmJSwxp-PuXMNI 
+
+ Notification Sent 
+
+ curl result: {"multicast_id":5432836044097235985,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1486126115216358%05e5ac3ef9fd7ecd"}]} 
+
+ ************************
+ Start Android Push: 
+03 Feb '17 13:18 PM
+ Device Token: eT25LK-_3qI:APA91bFZ-f7n_wcy9X08Car8JbZBXmwOiO-e-C87HUiiHyZ5kWE1LI5XvSAAN6wPq2y1LbTb_9c-JuW4uQDisukLmd60HFemnPdOd0TQT411Kc04s4bI8ccf2Z928q60YcaEFCS2Abjh 
+
+ ArtistID: 1 
+
+ Message: Test Message 
+
+ PostID: 3574 
+
+ Notification Type: replyAns 
+
+ File exists: pushkey/artist_1/android_api_key_user.txt 
+
+ Auth key: Authorization: key=AIzaSyBIlDarMom9SRI8F0dmiQmJSwxp-PuXMNI 
+
+ Notification Sent 
+
+ curl result: {"multicast_id":8383278652108880169,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1486127748786318%05e5ac3ef9fd7ecd"}]} 
+
+ ************************
+ Start Android Push: 
+03 Feb '17 13:20 PM
+ Device Token: eT25LK-_3qI:APA91bFZ-f7n_wcy9X08Car8JbZBXmwOiO-e-C87HUiiHyZ5kWE1LI5XvSAAN6wPq2y1LbTb_9c-JuW4uQDisukLmd60HFemnPdOd0TQT411Kc04s4bI8ccf2Z928q60YcaEFCS2Abjh 
+
+ ArtistID: 1 
+
+ Message: Test Message Android 
+
+ PostID: 3574 
+
+ Notification Type: replyAns 
+
+ File exists: pushkey/artist_1/android_api_key_user.txt 
+
+ Auth key: Authorization: key=AIzaSyBIlDarMom9SRI8F0dmiQmJSwxp-PuXMNI 
+
+ Notification Sent 
+
+ curl result: {"multicast_id":6622185309693894484,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1486127862720976%05e5ac3ef9fd7ecd"}]} 
+
+ ************************
+ Start Android Push: 
+03 Feb '17 13:51 PM
+ Device Token: eT25LK-_3qI:APA91bFZ-f7n_wcy9X08Car8JbZBXmwOiO-e-C87HUiiHyZ5kWE1LI5XvSAAN6wPq2y1LbTb_9c-JuW4uQDisukLmd60HFemnPdOd0TQT411Kc04s4bI8ccf2Z928q60YcaEFCS2Abjh 
+
+ ArtistID: 1 
+
+ Message: Test Message Android 
+
+ PostID: 3574 
+
+ Notification Type: replyAns 
+
+ File exists: pushkey/artist_1/android_api_key_user.txt 
+
+ Auth key: Authorization: key=AIzaSyBIlDarMom9SRI8F0dmiQmJSwxp-PuXMNI 
+
+ Notification Sent 
+
+ curl result: {"multicast_id":6953805515797190340,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1486129743790599%05e5ac3ef9fd7ecd"}]} 
+
+ ************************
+ Start iPhone Push: 
+03 Feb '17 13:58 PM
+ Device Token: 012b19c45d1e9680bb675802ee7e7665ac8c4d40b9fca7927fb752f2cca32867 
+
+ ArtistID: 1 
+
+ Message: Test Message iPhone 
+
+ PostID: 3574 
+
+ Notification Type: replyAns 
+
+ Exception: exception 'yii\base\ErrorException' with message 'stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14094438:SSL routines:SSL3_READ_BYTES:tlsv1 alert internal error' in /var/www/html/boomvideo/public_html/api/models/Commentnotforartist.php:520
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'stream_socket_c...', '/var/www/html/b...', 520, Array)
+#1 /var/www/html/boomvideo/public_html/api/models/Commentnotforartist.php(520): stream_socket_client('ssl://gateway.s...', 0, '', 60, 5, Resource id #7)
+#2 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(5927): api\models\Commentnotforartist->sendToIphoneDan(1, 'user')
+#3 [internal function]: api_ver2\controllers\UserController->actionTestpushdan()
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('testpushdan', Array)
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/testpushda...', Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#10 {main} 
+
+ ************************
+ Start iPhone Push: 
+03 Feb '17 14:04 PM
+ Device Token: 012b19c45d1e9680bb675802ee7e7665ac8c4d40b9fca7927fb752f2cca32867 
+
+ ArtistID: 1 
+
+ Message: Test Message iPhone 
+
+ PostID: 3574 
+
+ Notification Type: replyAns 
+
+ Exception: exception 'yii\base\ErrorException' with message 'stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14094438:SSL routines:SSL3_READ_BYTES:tlsv1 alert internal error' in /var/www/html/boomvideo/public_html/api/models/Commentnotforartist.php:517
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'stream_socket_c...', '/var/www/html/b...', 517, Array)
+#1 /var/www/html/boomvideo/public_html/api/models/Commentnotforartist.php(517): stream_socket_client('ssl://gateway.p...', 0, '', 60, 5, Resource id #8)
+#2 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(5927): api\models\Commentnotforartist->sendToIphoneDan(1, 'user')
+#3 [internal function]: api_ver2\controllers\UserController->actionTestpushdan()
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('testpushdan', Array)
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/testpushda...', Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#10 {main} 
+
+ ************************
+ Start iPhone Push: 
+03 Feb '17 14:09 PM
+ Device Token: 012b19c45d1e9680bb675802ee7e7665ac8c4d40b9fca7927fb752f2cca32867 
+
+ ArtistID: 1 
+
+ Message: Test Message iPhone 
+
+ PostID: 3574 
+
+ Notification Type: replyAns 
+
+ Connection Established 
+
+ Result: {"message":"Message successfully delivered","status":1} 

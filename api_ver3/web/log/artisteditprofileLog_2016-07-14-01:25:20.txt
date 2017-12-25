@@ -1,0 +1,27 @@
+
+ ************************
+ DateTime : 2016-07-14 01:25:20
+ Message : exception 'yii\base\ErrorException' with message 'Undefined property: stdClass::$body' in /var/www/html/boomvideo/public_html/common/config/S3.php:877
+Stack trace:
+#0 /var/www/html/boomvideo/public_html/common/config/S3.php(877): yii\base\ErrorHandler->handleError(8, 'Undefined prope...', '/var/www/html/b...', 877, Array)
+#1 [internal function]: S3Request->__responseWriteCallback(Resource id #16, '<?xml version="...')
+#2 /var/www/html/boomvideo/public_html/common/config/S3.php(830): curl_exec(Resource id #16)
+#3 /var/www/html/boomvideo/public_html/common/config/S3.php(305): S3Request->getResponse()
+#4 /var/www/html/boomvideo/public_html/common/config/S3.php(331): S3::putObject(Array, 'boomvideo-in', 'boom-85/profile...', 'public-read', Array, NULL)
+#5 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(1796): S3::putObjectFile('/var/www/html/b...', 'boomvideo-in', 'boom-85/profile...', 'public-read')
+#6 [internal function]: api_ver2\controllers\UserController->actionArtisteditprofile()
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#9 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('artisteditprofi...', Array)
+#10 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/artistedit...', Array)
+#11 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#13 {main}
+ Data: 
+ Params : {"UserID":"175","ArtistID":"85","Website":"http:\/\/www.brooklyntankfit.com","ArtistName":"Tank Fitness","Nationality":"a","FacebookPageUrl":"","Password":"","Language":"english","DeleteMediaIDs":["841"],"ProfileThumb":"profile_1467777982.png","Email":"scnavaretta@gmail.com","ArtistImages":["profile_175_20161307182234.png"],"TwitterPageUrl":"","AboutMe":"Stephen Navatetta, otherwise known as Brooklyn Tank, hails from Brooklyn NY, and is a master of calisthenics and functional bodyweight training. He has built an impressive physique and unique skillset as an athlete, encouraging the broader fitness community to safely experiment with new and innovative training styles. This shows that sometimes you can achieve more with less.\r\n\r\nI'm donating 25% of my app earnings to lymphoma cancer research. Thanks for the support & lets beat this horrible disease.","YouTubeChannelName":"","YearsActive":"2016","Birthdate":"2016-07-13","Genre":"Fitness","YouTubePageUrl":"","InstagramPageUrl":"https:\/\/www.instagram.com\/brooklyntank718\/","Residence":"a"}\n
+ Artist Edit Profile : CALL Artist_Edit_Profile(85,175,'Tank Fitness','profile_1467777982.png',
+				       'scnavaretta@gmail.com','13-07-2016','a','a','http://www.brooklyntankfit.com','',
+				       '2016','Fitness','Stephen Navatetta, otherwise known as Brooklyn Tank, hails from Brooklyn NY, and is a master of calisthenics and functional bodyweight training. He has built an impressive physique and unique skillset as an athlete, encouraging the broader fitness community to safely experiment with new and innovative training styles. This shows that sometimes you can achieve more with less.
+
+Im donating 25% of my app earnings to lymphoma cancer research. Thanks for the support & lets beat this horrible disease.','','https://www.instagram.com/brooklyntank718/',
+				       '','','','boom@123')\n

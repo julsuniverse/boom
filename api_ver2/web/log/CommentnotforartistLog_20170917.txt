@@ -1,0 +1,48 @@
+
+
+ ************************
+ Start Send to Android push: 
+17 Sep '17 00:42 AM
+ Device Token: dhj3OGFqHaw:APA91bFOyb9dgtXgJIMiEfAGrpuaaZ_hLk4PY6kPTE5mrhnCWBKdFcYWv-UVU2KSjz7Zp-A95_jVJV51qnr64sZrwkyYF0CQ4lmcddS-3Q1TW9BQ-3klhp9NOpjVVO4GyNo_dTZDPads 
+
+ ArtistID: 187 
+
+ Message: Jailyne Ojeda has answered your question 
+
+ PostID: 18655 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_187/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+17 Sep '17 16:37 PM
+ Device Token: dtNXuxAfZNw:APA91bHaQLSBbkcwxaYTs0LJE-pb-M10VxegRgyadR4Hc43BHezZfdaFNMWrVqVbR6jVCqzNTW7vLiODPEv7BO7X-YfnV9h0Fq77YRi_eds-hHbXtXW4tJJf_wF5e_Pzn2WRjgkwH7bs 
+
+ ArtistID: 110 
+
+ Message: Brittanya has answered your question 
+
+ PostID: 18683 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_110/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+17 Sep '17 16:37 PM
+ Device Token: d2dyoYGFTTw:APA91bGE14wG0GBH0h63Dwdn65mK7K1hQMHZQT6AwoO-zRGDMSk8o-uUzYxjQGu-Ak2tP3LDVqRgcA-WGnyh4056ii-4wDoz5VR5IxUNcCkw9aobC6Oers-00TTNM4Vkep0_D5w_R1Cb 
+
+ ArtistID: 110 
+
+ Message: Brittanya has answered your question 
+
+ PostID: 18735 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_110/android_api_key_user.txt 

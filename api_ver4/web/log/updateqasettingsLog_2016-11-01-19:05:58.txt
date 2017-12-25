@@ -1,0 +1,16 @@
+
+ ************************
+ DateTime : 2016-11-01 19:05:58
+ Message : exception 'yii\base\ErrorException' with message 'Undefined property: stdClass::$PhotoPrice' in /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php:774
+Stack trace:
+#0 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(774): yii\base\ErrorHandler->handleError(8, 'Undefined prope...', '/var/www/html/b...', 774, Array)
+#1 [internal function]: api_ver2\controllers\UserController->actionUpdateqasettings()
+#2 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#3 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('updateqasetting...', Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/updateqase...', Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#8 {main}
+ Data: 
+ Params : {"QAType":"3","Language":"english","TabName":"Ask Me Anything","ArtistID":"159","VideoProductSKUID":"com.boom.redrose.video","TextProductSKUID":"com.boom.redrose.text","VideoPrice":"14.99","TextPrice":"4.99"}\n

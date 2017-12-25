@@ -1,0 +1,16 @@
+
+
+ ************************
+ Start Send to Android push: 
+17 Feb '17 21:07 PM
+ Device Token: f-jiVeft8Ug:APA91bGplNUcI-YeVuBlotay1lmp3UkMbRbxaGTdBxBDmJQyOBMM1g7DGemytkI3QkbyoXTZNKzj5TAryot60m3oOlpide68ilxxE_7A3WFnTBYJ7c9ZjhsmaZMcsZIStt-UcgJpLHV8 
+
+ ArtistID: 85 
+
+ Message: Tank Fitness has answered your question 
+
+ PostID: 3622 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_85/android_api_key_user.txt 

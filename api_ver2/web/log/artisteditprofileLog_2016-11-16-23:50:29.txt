@@ -1,0 +1,27 @@
+
+ ************************
+ DateTime : 2016-11-16 23:50:29
+ Message : exception 'yii\base\ErrorException' with message 'Undefined property: stdClass::$body' in /var/www/html/boomvideo/public_html/common/config/S3.php:877
+Stack trace:
+#0 /var/www/html/boomvideo/public_html/common/config/S3.php(877): yii\base\ErrorHandler->handleError(8, 'Undefined prope...', '/var/www/html/b...', 877, Array)
+#1 [internal function]: S3Request->__responseWriteCallback(Resource id #16, '<?xml version="...')
+#2 /var/www/html/boomvideo/public_html/common/config/S3.php(830): curl_exec(Resource id #16)
+#3 /var/www/html/boomvideo/public_html/common/config/S3.php(305): S3Request->getResponse()
+#4 /var/www/html/boomvideo/public_html/common/config/S3.php(331): S3::putObject(Array, 'boomvideo-in', 'boom-25/profile...', 'public-read', Array, NULL)
+#5 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(1904): S3::putObjectFile('/var/www/html/b...', 'boomvideo-in', 'boom-25/profile...', 'public-read')
+#6 [internal function]: api_ver2\controllers\UserController->actionArtisteditprofile()
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#9 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('artisteditprofi...', Array)
+#10 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/artistedit...', Array)
+#11 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#13 {main}
+ Data: 
+ Params : {"UserID":"101","ArtistID":"25","Website":"http:\/\/www.sarahstonemusic.com","ArtistName":"Sarah Stone","Nationality":"Australian","FacebookPageUrl":"https:\/\/www.facebook.com\/sarahstonemusic","Password":"","Language":"english","DeleteMediaIDs":["1286"],"ProfileThumb":"profile_1461646322_IMG_0106.JPG","Email":"sarah.grimstone.music@hotmail.com","ArtistImages":["profile_101_20161711104718.png"],"TwitterPageUrl":"https:\/\/twitter.com\/sarahstonemusic","AboutMe":"Sarah Stone is a 22 year old Melbourne based Singer\/Songwriter who has recently debuted her first original single \"Lungs\" in April 2016. \r\n\r\nShe is also very well known for her YouTube cover videos massing a following of over 290,000 subscribers and 20 Million channel views since starting her channel in 2007.","YouTubeChannelName":"","YearsActive":"2007","Birthdate":"1994-02-02","Genre":"Musician","YouTubePageUrl":"https:\/\/www.youtube.com\/user\/sarahgrimstone","InstagramPageUrl":"https:\/\/www.instagram.com\/sarahstonemusic\/","Residence":"Australia"}\n
+ Artist Edit Profile : CALL Artist_Edit_Profile(25,101,'Sarah Stone','profile_1461646322_IMG_0106.JPG',
+				       'sarah.grimstone.music@hotmail.com','02-02-1994','Australian','Australia','http://www.sarahstonemusic.com','',
+				       '2007','Musician','Sarah Stone is a 22 year old Melbourne based Singer/Songwriter who has recently debuted her first original single "Lungs" in April 2016. 
+
+She is also very well known for her YouTube cover videos massing a following of over 290,000 subscribers and 20 Million channel views since starting her channel in 2007.','https://www.youtube.com/user/sarahgrimstone','https://www.instagram.com/sarahstonemusic/',
+				       'https://twitter.com/sarahstonemusic','https://www.facebook.com/sarahstonemusic','','boom@123')\n

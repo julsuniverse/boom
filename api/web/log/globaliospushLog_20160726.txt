@@ -1,0 +1,561 @@
+
+ ************************
+ Time : 2016-07-26 20:00:01
+ Message : exception 'yii\base\ErrorException' with message 'stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14094416:SSL routines:SSL3_READ_BYTES:sslv3 alert certificate unknown' in /var/www/html/boomvideo/public_html/api/models/Globalpush.php:37
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'stream_socket_c...', '/var/www/html/b...', 37, Array)
+#1 /var/www/html/boomvideo/public_html/api/models/Globalpush.php(37): stream_socket_client('ssl://gateway.p...', 0, '', 60, 5, Resource id #5)
+#2 /var/www/html/boomvideo/public_html/api/controllers/UserController.php(3097): api\models\Globalpush->sendToIphone(Array, 'Jailyne Ojeda h...', '26 Jul '16 20:0...', 109)
+#3 [internal function]: api\controllers\UserController->actionGlobaliospush()
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('globaliospush', Array)
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/globaliosp...', Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/boomvideo/public_html/api/web/index.php(20): yii\base\Application->run()
+#10 {main}
+ ************************
+ Time : 2016-07-26 16:28:02
+ Message : exception 'yii\base\ErrorException' with message 'stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14094416:SSL routines:SSL3_READ_BYTES:sslv3 alert certificate unknown' in /var/www/html/boomvideo/public_html/api/models/Globalpush.php:37
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'stream_socket_c...', '/var/www/html/b...', 37, Array)
+#1 /var/www/html/boomvideo/public_html/api/models/Globalpush.php(37): stream_socket_client('ssl://gateway.p...', 0, '', 60, 5, Resource id #5)
+#2 /var/www/html/boomvideo/public_html/api/controllers/UserController.php(3097): api\models\Globalpush->sendToIphone(Array, 'Jailyne Ojeda h...', '26 Jul '16 16:2...', 109)
+#3 [internal function]: api\controllers\UserController->actionGlobaliospush()
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('globaliospush', Array)
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/globaliosp...', Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/boomvideo/public_html/api/web/index.php(20): yii\base\Application->run()
+#10 {main}
+ ************************
+ Time : 2016-07-26 16:26:02
+ Message : exception 'yii\base\ErrorException' with message 'stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14094416:SSL routines:SSL3_READ_BYTES:sslv3 alert certificate unknown' in /var/www/html/boomvideo/public_html/api/models/Globalpush.php:37
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'stream_socket_c...', '/var/www/html/b...', 37, Array)
+#1 /var/www/html/boomvideo/public_html/api/models/Globalpush.php(37): stream_socket_client('ssl://gateway.p...', 0, '', 60, 5, Resource id #5)
+#2 /var/www/html/boomvideo/public_html/api/controllers/UserController.php(3097): api\models\Globalpush->sendToIphone(Array, 'Jailyne Ojeda h...', '26 Jul '16 16:2...', 109)
+#3 [internal function]: api\controllers\UserController->actionGlobaliospush()
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('globaliospush', Array)
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/globaliosp...', Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/boomvideo/public_html/api/web/index.php(20): yii\base\Application->run()
+#10 {main}
+ ************************
+ Time : 2016-07-26 16:24:02
+ Message : exception 'yii\base\ErrorException' with message 'stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14094416:SSL routines:SSL3_READ_BYTES:sslv3 alert certificate unknown' in /var/www/html/boomvideo/public_html/api/models/Globalpush.php:37
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'stream_socket_c...', '/var/www/html/b...', 37, Array)
+#1 /var/www/html/boomvideo/public_html/api/models/Globalpush.php(37): stream_socket_client('ssl://gateway.p...', 0, '', 60, 5, Resource id #5)
+#2 /var/www/html/boomvideo/public_html/api/controllers/UserController.php(3097): api\models\Globalpush->sendToIphone(Array, 'Jailyne Ojeda h...', '26 Jul '16 16:2...', 109)
+#3 [internal function]: api\controllers\UserController->actionGlobaliospush()
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('globaliospush', Array)
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/globaliosp...', Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/boomvideo/public_html/api/web/index.php(20): yii\base\Application->run()
+#10 {main}
+ ************************
+ Time : 2016-07-26 16:22:02
+ Message : exception 'yii\base\ErrorException' with message 'stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14094416:SSL routines:SSL3_READ_BYTES:sslv3 alert certificate unknown' in /var/www/html/boomvideo/public_html/api/models/Globalpush.php:37
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'stream_socket_c...', '/var/www/html/b...', 37, Array)
+#1 /var/www/html/boomvideo/public_html/api/models/Globalpush.php(37): stream_socket_client('ssl://gateway.p...', 0, '', 60, 5, Resource id #5)
+#2 /var/www/html/boomvideo/public_html/api/controllers/UserController.php(3097): api\models\Globalpush->sendToIphone(Array, 'Jailyne Ojeda h...', '26 Jul '16 16:2...', 109)
+#3 [internal function]: api\controllers\UserController->actionGlobaliospush()
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('globaliospush', Array)
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/globaliosp...', Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/boomvideo/public_html/api/web/index.php(20): yii\base\Application->run()
+#10 {main}
+ ************************
+ Time : 2016-07-26 16:20:02
+ Message : exception 'yii\base\ErrorException' with message 'stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14094416:SSL routines:SSL3_READ_BYTES:sslv3 alert certificate unknown' in /var/www/html/boomvideo/public_html/api/models/Globalpush.php:37
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'stream_socket_c...', '/var/www/html/b...', 37, Array)
+#1 /var/www/html/boomvideo/public_html/api/models/Globalpush.php(37): stream_socket_client('ssl://gateway.p...', 0, '', 60, 5, Resource id #5)
+#2 /var/www/html/boomvideo/public_html/api/controllers/UserController.php(3097): api\models\Globalpush->sendToIphone(Array, 'Jailyne Ojeda h...', '26 Jul '16 16:2...', 109)
+#3 [internal function]: api\controllers\UserController->actionGlobaliospush()
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('globaliospush', Array)
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/globaliosp...', Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/boomvideo/public_html/api/web/index.php(20): yii\base\Application->run()
+#10 {main}
+ ************************
+ Time : 2016-07-26 16:18:02
+ Message : exception 'yii\base\ErrorException' with message 'stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14094416:SSL routines:SSL3_READ_BYTES:sslv3 alert certificate unknown' in /var/www/html/boomvideo/public_html/api/models/Globalpush.php:37
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'stream_socket_c...', '/var/www/html/b...', 37, Array)
+#1 /var/www/html/boomvideo/public_html/api/models/Globalpush.php(37): stream_socket_client('ssl://gateway.p...', 0, '', 60, 5, Resource id #5)
+#2 /var/www/html/boomvideo/public_html/api/controllers/UserController.php(3097): api\models\Globalpush->sendToIphone(Array, 'Jailyne Ojeda h...', '26 Jul '16 16:1...', 109)
+#3 [internal function]: api\controllers\UserController->actionGlobaliospush()
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('globaliospush', Array)
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/globaliosp...', Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/boomvideo/public_html/api/web/index.php(20): yii\base\Application->run()
+#10 {main}
+ ************************
+ Time : 2016-07-26 16:16:02
+ Message : exception 'yii\base\ErrorException' with message 'stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14094416:SSL routines:SSL3_READ_BYTES:sslv3 alert certificate unknown' in /var/www/html/boomvideo/public_html/api/models/Globalpush.php:37
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'stream_socket_c...', '/var/www/html/b...', 37, Array)
+#1 /var/www/html/boomvideo/public_html/api/models/Globalpush.php(37): stream_socket_client('ssl://gateway.p...', 0, '', 60, 5, Resource id #5)
+#2 /var/www/html/boomvideo/public_html/api/controllers/UserController.php(3097): api\models\Globalpush->sendToIphone(Array, 'Jailyne Ojeda h...', '26 Jul '16 16:1...', 109)
+#3 [internal function]: api\controllers\UserController->actionGlobaliospush()
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('globaliospush', Array)
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/globaliosp...', Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/boomvideo/public_html/api/web/index.php(20): yii\base\Application->run()
+#10 {main}
+ ************************
+ Time : 2016-07-26 16:14:02
+ Message : exception 'yii\base\ErrorException' with message 'stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14094416:SSL routines:SSL3_READ_BYTES:sslv3 alert certificate unknown' in /var/www/html/boomvideo/public_html/api/models/Globalpush.php:37
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'stream_socket_c...', '/var/www/html/b...', 37, Array)
+#1 /var/www/html/boomvideo/public_html/api/models/Globalpush.php(37): stream_socket_client('ssl://gateway.p...', 0, '', 60, 5, Resource id #5)
+#2 /var/www/html/boomvideo/public_html/api/controllers/UserController.php(3097): api\models\Globalpush->sendToIphone(Array, 'Jailyne Ojeda h...', '26 Jul '16 16:1...', 109)
+#3 [internal function]: api\controllers\UserController->actionGlobaliospush()
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('globaliospush', Array)
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/globaliosp...', Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/boomvideo/public_html/api/web/index.php(20): yii\base\Application->run()
+#10 {main}
+ ************************
+ Time : 2016-07-26 16:12:02
+ Message : exception 'yii\base\ErrorException' with message 'stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14094416:SSL routines:SSL3_READ_BYTES:sslv3 alert certificate unknown' in /var/www/html/boomvideo/public_html/api/models/Globalpush.php:37
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'stream_socket_c...', '/var/www/html/b...', 37, Array)
+#1 /var/www/html/boomvideo/public_html/api/models/Globalpush.php(37): stream_socket_client('ssl://gateway.p...', 0, '', 60, 5, Resource id #5)
+#2 /var/www/html/boomvideo/public_html/api/controllers/UserController.php(3097): api\models\Globalpush->sendToIphone(Array, 'Jailyne Ojeda h...', '26 Jul '16 16:1...', 109)
+#3 [internal function]: api\controllers\UserController->actionGlobaliospush()
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('globaliospush', Array)
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/globaliosp...', Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/boomvideo/public_html/api/web/index.php(20): yii\base\Application->run()
+#10 {main}
+ ************************
+ Time : 2016-07-26 16:10:02
+ Message : exception 'yii\base\ErrorException' with message 'stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14094416:SSL routines:SSL3_READ_BYTES:sslv3 alert certificate unknown' in /var/www/html/boomvideo/public_html/api/models/Globalpush.php:37
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'stream_socket_c...', '/var/www/html/b...', 37, Array)
+#1 /var/www/html/boomvideo/public_html/api/models/Globalpush.php(37): stream_socket_client('ssl://gateway.p...', 0, '', 60, 5, Resource id #5)
+#2 /var/www/html/boomvideo/public_html/api/controllers/UserController.php(3097): api\models\Globalpush->sendToIphone(Array, 'Jailyne Ojeda h...', '26 Jul '16 16:1...', 109)
+#3 [internal function]: api\controllers\UserController->actionGlobaliospush()
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('globaliospush', Array)
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/globaliosp...', Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/boomvideo/public_html/api/web/index.php(20): yii\base\Application->run()
+#10 {main}
+ ************************
+ Time : 2016-07-26 16:08:02
+ Message : exception 'yii\base\ErrorException' with message 'stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14094416:SSL routines:SSL3_READ_BYTES:sslv3 alert certificate unknown' in /var/www/html/boomvideo/public_html/api/models/Globalpush.php:37
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'stream_socket_c...', '/var/www/html/b...', 37, Array)
+#1 /var/www/html/boomvideo/public_html/api/models/Globalpush.php(37): stream_socket_client('ssl://gateway.p...', 0, '', 60, 5, Resource id #5)
+#2 /var/www/html/boomvideo/public_html/api/controllers/UserController.php(3097): api\models\Globalpush->sendToIphone(Array, 'Jailyne Ojeda h...', '26 Jul '16 16:0...', 109)
+#3 [internal function]: api\controllers\UserController->actionGlobaliospush()
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('globaliospush', Array)
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/globaliosp...', Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/boomvideo/public_html/api/web/index.php(20): yii\base\Application->run()
+#10 {main}
+ ************************
+ Time : 2016-07-26 16:06:02
+ Message : exception 'yii\base\ErrorException' with message 'stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14094416:SSL routines:SSL3_READ_BYTES:sslv3 alert certificate unknown' in /var/www/html/boomvideo/public_html/api/models/Globalpush.php:37
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'stream_socket_c...', '/var/www/html/b...', 37, Array)
+#1 /var/www/html/boomvideo/public_html/api/models/Globalpush.php(37): stream_socket_client('ssl://gateway.p...', 0, '', 60, 5, Resource id #5)
+#2 /var/www/html/boomvideo/public_html/api/controllers/UserController.php(3097): api\models\Globalpush->sendToIphone(Array, 'Jailyne Ojeda h...', '26 Jul '16 16:0...', 109)
+#3 [internal function]: api\controllers\UserController->actionGlobaliospush()
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('globaliospush', Array)
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/globaliosp...', Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/boomvideo/public_html/api/web/index.php(20): yii\base\Application->run()
+#10 {main}
+ ************************
+ Time : 2016-07-26 16:04:02
+ Message : exception 'yii\base\ErrorException' with message 'stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14094416:SSL routines:SSL3_READ_BYTES:sslv3 alert certificate unknown' in /var/www/html/boomvideo/public_html/api/models/Globalpush.php:37
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'stream_socket_c...', '/var/www/html/b...', 37, Array)
+#1 /var/www/html/boomvideo/public_html/api/models/Globalpush.php(37): stream_socket_client('ssl://gateway.p...', 0, '', 60, 5, Resource id #5)
+#2 /var/www/html/boomvideo/public_html/api/controllers/UserController.php(3097): api\models\Globalpush->sendToIphone(Array, 'Jailyne Ojeda h...', '26 Jul '16 16:0...', 109)
+#3 [internal function]: api\controllers\UserController->actionGlobaliospush()
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('globaliospush', Array)
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/globaliosp...', Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/boomvideo/public_html/api/web/index.php(20): yii\base\Application->run()
+#10 {main}
+ ************************
+ Time : 2016-07-26 16:02:02
+ Message : exception 'yii\base\ErrorException' with message 'stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14094416:SSL routines:SSL3_READ_BYTES:sslv3 alert certificate unknown' in /var/www/html/boomvideo/public_html/api/models/Globalpush.php:37
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'stream_socket_c...', '/var/www/html/b...', 37, Array)
+#1 /var/www/html/boomvideo/public_html/api/models/Globalpush.php(37): stream_socket_client('ssl://gateway.p...', 0, '', 60, 5, Resource id #5)
+#2 /var/www/html/boomvideo/public_html/api/controllers/UserController.php(3097): api\models\Globalpush->sendToIphone(Array, 'Jailyne Ojeda h...', '26 Jul '16 16:0...', 109)
+#3 [internal function]: api\controllers\UserController->actionGlobaliospush()
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('globaliospush', Array)
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/globaliosp...', Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/boomvideo/public_html/api/web/index.php(20): yii\base\Application->run()
+#10 {main}
+ ************************
+ Time : 2016-07-26 16:00:02
+ Message : exception 'yii\base\ErrorException' with message 'stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14094416:SSL routines:SSL3_READ_BYTES:sslv3 alert certificate unknown' in /var/www/html/boomvideo/public_html/api/models/Globalpush.php:37
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'stream_socket_c...', '/var/www/html/b...', 37, Array)
+#1 /var/www/html/boomvideo/public_html/api/models/Globalpush.php(37): stream_socket_client('ssl://gateway.p...', 0, '', 60, 5, Resource id #5)
+#2 /var/www/html/boomvideo/public_html/api/controllers/UserController.php(3097): api\models\Globalpush->sendToIphone(Array, 'Jailyne Ojeda h...', '26 Jul '16 16:0...', 109)
+#3 [internal function]: api\controllers\UserController->actionGlobaliospush()
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('globaliospush', Array)
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/globaliosp...', Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/boomvideo/public_html/api/web/index.php(20): yii\base\Application->run()
+#10 {main}
+ ************************
+ Time : 2016-07-26 15:58:03
+ Message : exception 'yii\base\ErrorException' with message 'stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14094416:SSL routines:SSL3_READ_BYTES:sslv3 alert certificate unknown' in /var/www/html/boomvideo/public_html/api/models/Globalpush.php:37
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'stream_socket_c...', '/var/www/html/b...', 37, Array)
+#1 /var/www/html/boomvideo/public_html/api/models/Globalpush.php(37): stream_socket_client('ssl://gateway.p...', 0, '', 60, 5, Resource id #5)
+#2 /var/www/html/boomvideo/public_html/api/controllers/UserController.php(3097): api\models\Globalpush->sendToIphone(Array, 'Jailyne Ojeda h...', '26 Jul '16 15:5...', 109)
+#3 [internal function]: api\controllers\UserController->actionGlobaliospush()
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('globaliospush', Array)
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/globaliosp...', Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/boomvideo/public_html/api/web/index.php(20): yii\base\Application->run()
+#10 {main}
+ ************************
+ Time : 2016-07-26 15:56:02
+ Message : exception 'yii\base\ErrorException' with message 'stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14094416:SSL routines:SSL3_READ_BYTES:sslv3 alert certificate unknown' in /var/www/html/boomvideo/public_html/api/models/Globalpush.php:37
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'stream_socket_c...', '/var/www/html/b...', 37, Array)
+#1 /var/www/html/boomvideo/public_html/api/models/Globalpush.php(37): stream_socket_client('ssl://gateway.p...', 0, '', 60, 5, Resource id #5)
+#2 /var/www/html/boomvideo/public_html/api/controllers/UserController.php(3097): api\models\Globalpush->sendToIphone(Array, 'Jailyne Ojeda h...', '26 Jul '16 15:5...', 109)
+#3 [internal function]: api\controllers\UserController->actionGlobaliospush()
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('globaliospush', Array)
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/globaliosp...', Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/boomvideo/public_html/api/web/index.php(20): yii\base\Application->run()
+#10 {main}
+ ************************
+ Time : 2016-07-26 15:54:02
+ Message : exception 'yii\base\ErrorException' with message 'stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14094416:SSL routines:SSL3_READ_BYTES:sslv3 alert certificate unknown' in /var/www/html/boomvideo/public_html/api/models/Globalpush.php:37
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'stream_socket_c...', '/var/www/html/b...', 37, Array)
+#1 /var/www/html/boomvideo/public_html/api/models/Globalpush.php(37): stream_socket_client('ssl://gateway.p...', 0, '', 60, 5, Resource id #5)
+#2 /var/www/html/boomvideo/public_html/api/controllers/UserController.php(3097): api\models\Globalpush->sendToIphone(Array, 'Jailyne Ojeda h...', '26 Jul '16 15:5...', 109)
+#3 [internal function]: api\controllers\UserController->actionGlobaliospush()
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('globaliospush', Array)
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/globaliosp...', Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/boomvideo/public_html/api/web/index.php(20): yii\base\Application->run()
+#10 {main}
+ ************************
+ Time : 2016-07-26 15:52:02
+ Message : exception 'yii\base\ErrorException' with message 'stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14094416:SSL routines:SSL3_READ_BYTES:sslv3 alert certificate unknown' in /var/www/html/boomvideo/public_html/api/models/Globalpush.php:37
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'stream_socket_c...', '/var/www/html/b...', 37, Array)
+#1 /var/www/html/boomvideo/public_html/api/models/Globalpush.php(37): stream_socket_client('ssl://gateway.p...', 0, '', 60, 5, Resource id #5)
+#2 /var/www/html/boomvideo/public_html/api/controllers/UserController.php(3097): api\models\Globalpush->sendToIphone(Array, 'Jailyne Ojeda h...', '26 Jul '16 15:5...', 109)
+#3 [internal function]: api\controllers\UserController->actionGlobaliospush()
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('globaliospush', Array)
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/globaliosp...', Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/boomvideo/public_html/api/web/index.php(20): yii\base\Application->run()
+#10 {main}
+ ************************
+ Time : 2016-07-26 15:50:02
+ Message : exception 'yii\base\ErrorException' with message 'stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14094416:SSL routines:SSL3_READ_BYTES:sslv3 alert certificate unknown' in /var/www/html/boomvideo/public_html/api/models/Globalpush.php:37
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'stream_socket_c...', '/var/www/html/b...', 37, Array)
+#1 /var/www/html/boomvideo/public_html/api/models/Globalpush.php(37): stream_socket_client('ssl://gateway.p...', 0, '', 60, 5, Resource id #5)
+#2 /var/www/html/boomvideo/public_html/api/controllers/UserController.php(3097): api\models\Globalpush->sendToIphone(Array, 'Jailyne Ojeda h...', '26 Jul '16 15:5...', 109)
+#3 [internal function]: api\controllers\UserController->actionGlobaliospush()
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('globaliospush', Array)
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/globaliosp...', Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/boomvideo/public_html/api/web/index.php(20): yii\base\Application->run()
+#10 {main}
+ ************************
+ Time : 2016-07-26 15:48:02
+ Message : exception 'yii\base\ErrorException' with message 'stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14094416:SSL routines:SSL3_READ_BYTES:sslv3 alert certificate unknown' in /var/www/html/boomvideo/public_html/api/models/Globalpush.php:37
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'stream_socket_c...', '/var/www/html/b...', 37, Array)
+#1 /var/www/html/boomvideo/public_html/api/models/Globalpush.php(37): stream_socket_client('ssl://gateway.p...', 0, '', 60, 5, Resource id #5)
+#2 /var/www/html/boomvideo/public_html/api/controllers/UserController.php(3097): api\models\Globalpush->sendToIphone(Array, 'Jailyne Ojeda h...', '26 Jul '16 15:4...', 109)
+#3 [internal function]: api\controllers\UserController->actionGlobaliospush()
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('globaliospush', Array)
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/globaliosp...', Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/boomvideo/public_html/api/web/index.php(20): yii\base\Application->run()
+#10 {main}
+ ************************
+ Time : 2016-07-26 15:46:02
+ Message : exception 'yii\base\ErrorException' with message 'stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14094416:SSL routines:SSL3_READ_BYTES:sslv3 alert certificate unknown' in /var/www/html/boomvideo/public_html/api/models/Globalpush.php:37
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'stream_socket_c...', '/var/www/html/b...', 37, Array)
+#1 /var/www/html/boomvideo/public_html/api/models/Globalpush.php(37): stream_socket_client('ssl://gateway.p...', 0, '', 60, 5, Resource id #5)
+#2 /var/www/html/boomvideo/public_html/api/controllers/UserController.php(3097): api\models\Globalpush->sendToIphone(Array, 'Jailyne Ojeda h...', '26 Jul '16 15:4...', 109)
+#3 [internal function]: api\controllers\UserController->actionGlobaliospush()
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('globaliospush', Array)
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/globaliosp...', Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/boomvideo/public_html/api/web/index.php(20): yii\base\Application->run()
+#10 {main}
+ ************************
+ Time : 2016-07-26 15:44:02
+ Message : exception 'yii\base\ErrorException' with message 'stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14094416:SSL routines:SSL3_READ_BYTES:sslv3 alert certificate unknown' in /var/www/html/boomvideo/public_html/api/models/Globalpush.php:37
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'stream_socket_c...', '/var/www/html/b...', 37, Array)
+#1 /var/www/html/boomvideo/public_html/api/models/Globalpush.php(37): stream_socket_client('ssl://gateway.p...', 0, '', 60, 5, Resource id #5)
+#2 /var/www/html/boomvideo/public_html/api/controllers/UserController.php(3097): api\models\Globalpush->sendToIphone(Array, 'Jailyne Ojeda h...', '26 Jul '16 15:4...', 109)
+#3 [internal function]: api\controllers\UserController->actionGlobaliospush()
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('globaliospush', Array)
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/globaliosp...', Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/boomvideo/public_html/api/web/index.php(20): yii\base\Application->run()
+#10 {main}
+ ************************
+ Time : 2016-07-26 15:42:03
+ Message : exception 'yii\base\ErrorException' with message 'stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14094416:SSL routines:SSL3_READ_BYTES:sslv3 alert certificate unknown' in /var/www/html/boomvideo/public_html/api/models/Globalpush.php:37
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'stream_socket_c...', '/var/www/html/b...', 37, Array)
+#1 /var/www/html/boomvideo/public_html/api/models/Globalpush.php(37): stream_socket_client('ssl://gateway.p...', 0, '', 60, 5, Resource id #5)
+#2 /var/www/html/boomvideo/public_html/api/controllers/UserController.php(3097): api\models\Globalpush->sendToIphone(Array, 'Smoothie the Ca...', '26 Jul '16 15:4...', 104)
+#3 [internal function]: api\controllers\UserController->actionGlobaliospush()
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('globaliospush', Array)
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/globaliosp...', Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/boomvideo/public_html/api/web/index.php(20): yii\base\Application->run()
+#10 {main}
+ ************************
+ Time : 2016-07-26 15:40:02
+ Message : exception 'yii\base\ErrorException' with message 'stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14094416:SSL routines:SSL3_READ_BYTES:sslv3 alert certificate unknown' in /var/www/html/boomvideo/public_html/api/models/Globalpush.php:37
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'stream_socket_c...', '/var/www/html/b...', 37, Array)
+#1 /var/www/html/boomvideo/public_html/api/models/Globalpush.php(37): stream_socket_client('ssl://gateway.p...', 0, '', 60, 5, Resource id #5)
+#2 /var/www/html/boomvideo/public_html/api/controllers/UserController.php(3097): api\models\Globalpush->sendToIphone(Array, 'Jailyne Ojeda h...', '26 Jul '16 15:4...', 109)
+#3 [internal function]: api\controllers\UserController->actionGlobaliospush()
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('globaliospush', Array)
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/globaliosp...', Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/boomvideo/public_html/api/web/index.php(20): yii\base\Application->run()
+#10 {main}
+ ************************
+ Time : 2016-07-26 15:36:03
+ Message : exception 'yii\base\ErrorException' with message 'stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14094416:SSL routines:SSL3_READ_BYTES:sslv3 alert certificate unknown' in /var/www/html/boomvideo/public_html/api/models/Globalpush.php:37
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'stream_socket_c...', '/var/www/html/b...', 37, Array)
+#1 /var/www/html/boomvideo/public_html/api/models/Globalpush.php(37): stream_socket_client('ssl://gateway.p...', 0, '', 60, 5, Resource id #5)
+#2 /var/www/html/boomvideo/public_html/api/controllers/UserController.php(3097): api\models\Globalpush->sendToIphone(Array, 'Jailyne Ojeda h...', '26 Jul '16 15:3...', 109)
+#3 [internal function]: api\controllers\UserController->actionGlobaliospush()
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('globaliospush', Array)
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/globaliosp...', Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/boomvideo/public_html/api/web/index.php(20): yii\base\Application->run()
+#10 {main}
+ ************************
+ Time : 2016-07-26 15:06:02
+ Message : exception 'yii\base\ErrorException' with message 'stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14094416:SSL routines:SSL3_READ_BYTES:sslv3 alert certificate unknown' in /var/www/html/boomvideo/public_html/api/models/Globalpush.php:37
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'stream_socket_c...', '/var/www/html/b...', 37, Array)
+#1 /var/www/html/boomvideo/public_html/api/models/Globalpush.php(37): stream_socket_client('ssl://gateway.p...', 0, '', 60, 5, Resource id #5)
+#2 /var/www/html/boomvideo/public_html/api/controllers/UserController.php(3097): api\models\Globalpush->sendToIphone(Array, 'E2logy Test Art...', '26 Jul '16 15:0...', 89)
+#3 [internal function]: api\controllers\UserController->actionGlobaliospush()
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('globaliospush', Array)
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/globaliosp...', Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/boomvideo/public_html/api/web/index.php(20): yii\base\Application->run()
+#10 {main}
+ ************************
+ Time : 2016-07-26 00:14:02
+ Message : exception 'yii\base\ErrorException' with message 'stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14094416:SSL routines:SSL3_READ_BYTES:sslv3 alert certificate unknown' in /var/www/html/boomvideo/public_html/api/models/Globalpush.php:37
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'stream_socket_c...', '/var/www/html/b...', 37, Array)
+#1 /var/www/html/boomvideo/public_html/api/models/Globalpush.php(37): stream_socket_client('ssl://gateway.p...', 0, '', 60, 5, Resource id #5)
+#2 /var/www/html/boomvideo/public_html/api/controllers/UserController.php(3097): api\models\Globalpush->sendToIphone(Array, 'Jailyne Ojeda h...', '26 Jul '16 00:1...', 109)
+#3 [internal function]: api\controllers\UserController->actionGlobaliospush()
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('globaliospush', Array)
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/globaliosp...', Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/boomvideo/public_html/api/web/index.php(20): yii\base\Application->run()
+#10 {main}
+ ************************
+ Time : 2016-07-26 00:12:02
+ Message : exception 'yii\base\ErrorException' with message 'stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14094416:SSL routines:SSL3_READ_BYTES:sslv3 alert certificate unknown' in /var/www/html/boomvideo/public_html/api/models/Globalpush.php:37
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'stream_socket_c...', '/var/www/html/b...', 37, Array)
+#1 /var/www/html/boomvideo/public_html/api/models/Globalpush.php(37): stream_socket_client('ssl://gateway.p...', 0, '', 60, 5, Resource id #5)
+#2 /var/www/html/boomvideo/public_html/api/controllers/UserController.php(3097): api\models\Globalpush->sendToIphone(Array, 'Jailyne Ojeda h...', '26 Jul '16 00:1...', 109)
+#3 [internal function]: api\controllers\UserController->actionGlobaliospush()
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('globaliospush', Array)
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/globaliosp...', Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/boomvideo/public_html/api/web/index.php(20): yii\base\Application->run()
+#10 {main}
+ ************************
+ Time : 2016-07-26 00:10:02
+ Message : exception 'yii\base\ErrorException' with message 'stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14094416:SSL routines:SSL3_READ_BYTES:sslv3 alert certificate unknown' in /var/www/html/boomvideo/public_html/api/models/Globalpush.php:37
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'stream_socket_c...', '/var/www/html/b...', 37, Array)
+#1 /var/www/html/boomvideo/public_html/api/models/Globalpush.php(37): stream_socket_client('ssl://gateway.p...', 0, '', 60, 5, Resource id #5)
+#2 /var/www/html/boomvideo/public_html/api/controllers/UserController.php(3097): api\models\Globalpush->sendToIphone(Array, 'Jailyne Ojeda h...', '26 Jul '16 00:1...', 109)
+#3 [internal function]: api\controllers\UserController->actionGlobaliospush()
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('globaliospush', Array)
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/globaliosp...', Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/boomvideo/public_html/api/web/index.php(20): yii\base\Application->run()
+#10 {main}
+ ************************
+ Time : 2016-07-26 00:08:02
+ Message : exception 'yii\base\ErrorException' with message 'stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14094416:SSL routines:SSL3_READ_BYTES:sslv3 alert certificate unknown' in /var/www/html/boomvideo/public_html/api/models/Globalpush.php:37
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'stream_socket_c...', '/var/www/html/b...', 37, Array)
+#1 /var/www/html/boomvideo/public_html/api/models/Globalpush.php(37): stream_socket_client('ssl://gateway.p...', 0, '', 60, 5, Resource id #5)
+#2 /var/www/html/boomvideo/public_html/api/controllers/UserController.php(3097): api\models\Globalpush->sendToIphone(Array, 'Jailyne Ojeda h...', '26 Jul '16 00:0...', 109)
+#3 [internal function]: api\controllers\UserController->actionGlobaliospush()
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('globaliospush', Array)
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/globaliosp...', Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/boomvideo/public_html/api/web/index.php(20): yii\base\Application->run()
+#10 {main}
+ ************************
+ Time : 2016-07-26 00:04:02
+ Message : exception 'yii\base\ErrorException' with message 'stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14094416:SSL routines:SSL3_READ_BYTES:sslv3 alert certificate unknown' in /var/www/html/boomvideo/public_html/api/models/Globalpush.php:37
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'stream_socket_c...', '/var/www/html/b...', 37, Array)
+#1 /var/www/html/boomvideo/public_html/api/models/Globalpush.php(37): stream_socket_client('ssl://gateway.p...', 0, '', 60, 5, Resource id #5)
+#2 /var/www/html/boomvideo/public_html/api/controllers/UserController.php(3097): api\models\Globalpush->sendToIphone(Array, 'Jailyne Ojeda h...', '26 Jul '16 00:0...', 109)
+#3 [internal function]: api\controllers\UserController->actionGlobaliospush()
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('globaliospush', Array)
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/globaliosp...', Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/boomvideo/public_html/api/web/index.php(20): yii\base\Application->run()
+#10 {main}
+ ************************
+ Time : 2016-07-26 00:02:02
+ Message : exception 'yii\base\ErrorException' with message 'stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14094416:SSL routines:SSL3_READ_BYTES:sslv3 alert certificate unknown' in /var/www/html/boomvideo/public_html/api/models/Globalpush.php:37
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'stream_socket_c...', '/var/www/html/b...', 37, Array)
+#1 /var/www/html/boomvideo/public_html/api/models/Globalpush.php(37): stream_socket_client('ssl://gateway.p...', 0, '', 60, 5, Resource id #5)
+#2 /var/www/html/boomvideo/public_html/api/controllers/UserController.php(3097): api\models\Globalpush->sendToIphone(Array, 'Jailyne Ojeda h...', '26 Jul '16 00:0...', 109)
+#3 [internal function]: api\controllers\UserController->actionGlobaliospush()
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('globaliospush', Array)
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/globaliosp...', Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/boomvideo/public_html/api/web/index.php(20): yii\base\Application->run()
+#10 {main}
+ ************************
+ Time : 2016-07-26 00:00:02
+ Message : exception 'yii\base\ErrorException' with message 'stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14094416:SSL routines:SSL3_READ_BYTES:sslv3 alert certificate unknown' in /var/www/html/boomvideo/public_html/api/models/Globalpush.php:37
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'stream_socket_c...', '/var/www/html/b...', 37, Array)
+#1 /var/www/html/boomvideo/public_html/api/models/Globalpush.php(37): stream_socket_client('ssl://gateway.p...', 0, '', 60, 5, Resource id #4)
+#2 /var/www/html/boomvideo/public_html/api/controllers/UserController.php(3097): api\models\Globalpush->sendToIphone(Array, 'Jailyne Ojeda h...', '26 Jul '16 00:0...', 109)
+#3 [internal function]: api\controllers\UserController->actionGlobaliospush()
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('globaliospush', Array)
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/globaliosp...', Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/boomvideo/public_html/api/web/index.php(20): yii\base\Application->run()
+#10 {main}

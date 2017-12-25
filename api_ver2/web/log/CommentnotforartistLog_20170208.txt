@@ -1,0 +1,320 @@
+
+
+ ************************
+ Start Send to Android push: 
+08 Feb '17 02:10 AM
+ Device Token: 610a3907c35791dceac377b4925b0b2ca404c2a8751a5611d349ff2860297551 
+
+ ArtistID: 165 
+
+ Message: Hello there there 
+
+ PostID: 3579 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_165/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+08 Feb '17 02:11 AM
+ Device Token: 610a3907c35791dceac377b4925b0b2ca404c2a8751a5611d349ff2860297551 
+
+ ArtistID: 165 
+
+ Message: Hello there there 
+
+ PostID: 3579 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_165/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+08 Feb '17 02:18 AM
+ Device Token: 610a3907c35791dceac377b4925b0b2ca404c2a8751a5611d349ff2860297551 
+
+ ArtistID: 165 
+
+ Message: Hello there there 
+
+ PostID: 3579 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_165/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+08 Feb '17 02:19 AM
+ Device Token: 610a3907c35791dceac377b4925b0b2ca404c2a8751a5611d349ff2860297551 
+
+ ArtistID: 165 
+
+ Message: Hello there there 
+
+ PostID: 3579 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_165/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+08 Feb '17 02:24 AM
+ Device Token: 610a3907c35791dceac377b4925b0b2ca404c2a8751a5611d349ff2860297551 
+
+ ArtistID: 165 
+
+ Message: Hello there there 
+
+ PostID: 3579 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_165/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+08 Feb '17 02:24 AM
+ Device Token: 610a3907c35791dceac377b4925b0b2ca404c2a8751a5611d349ff2860297551 
+
+ ArtistID: 165 
+
+ Message: Hello there there 
+
+ PostID: 3579 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_165/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+08 Feb '17 02:25 AM
+ Device Token: 610a3907c35791dceac377b4925b0b2ca404c2a8751a5611d349ff2860297551 
+
+ ArtistID: 165 
+
+ Message: Hello there there 
+
+ PostID: 3579 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_165/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+08 Feb '17 02:25 AM
+ Device Token: 610a3907c35791dceac377b4925b0b2ca404c2a8751a5611d349ff2860297551 
+
+ ArtistID: 165 
+
+ Message: Hello there there 
+
+ PostID: 3579 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_165/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+08 Feb '17 02:25 AM
+ Device Token: 610a3907c35791dceac377b4925b0b2ca404c2a8751a5611d349ff2860297551 
+
+ ArtistID: 165 
+
+ Message: Hello there there 
+
+ PostID: 3579 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_165/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+08 Feb '17 02:25 AM
+ Device Token: 610a3907c35791dceac377b4925b0b2ca404c2a8751a5611d349ff2860297551 
+
+ ArtistID: 165 
+
+ Message: Hello there there 
+
+ PostID: 3579 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_165/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+08 Feb '17 02:26 AM
+ Device Token: 610a3907c35791dceac377b4925b0b2ca404c2a8751a5611d349ff2860297551 
+
+ ArtistID: 165 
+
+ Message: Hello there there 
+
+ PostID: 3579 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_165/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+08 Feb '17 02:26 AM
+ Device Token: 610a3907c35791dceac377b4925b0b2ca404c2a8751a5611d349ff2860297551 
+
+ ArtistID: 165 
+
+ Message: Hello there there 
+
+ PostID: 3579 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_165/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+08 Feb '17 02:26 AM
+ Device Token: 610a3907c35791dceac377b4925b0b2ca404c2a8751a5611d349ff2860297551 
+
+ ArtistID: 165 
+
+ Message: Hello there there 
+
+ PostID: 3579 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_165/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+08 Feb '17 02:27 AM
+ Device Token: 610a3907c35791dceac377b4925b0b2ca404c2a8751a5611d349ff2860297551 
+
+ ArtistID: 165 
+
+ Message: Hello there there 
+
+ PostID: 3579 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_165/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+08 Feb '17 02:28 AM
+ Device Token: 610a3907c35791dceac377b4925b0b2ca404c2a8751a5611d349ff2860297551 
+
+ ArtistID: 165 
+
+ Message: Hello there there 
+
+ PostID: 3579 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_165/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+08 Feb '17 02:35 AM
+ Device Token: 610a3907c35791dceac377b4925b0b2ca404c2a8751a5611d349ff2860297551 
+
+ ArtistID: 165 
+
+ Message: Hello there there 
+
+ PostID: 3579 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_165/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+08 Feb '17 03:16 AM
+ Device Token: 610a3907c35791dceac377b4925b0b2ca404c2a8751a5611d349ff2860297551 
+
+ ArtistID: 165 
+
+ Message: Hello there there 
+
+ PostID: 3579 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_165/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+08 Feb '17 03:16 AM
+ Device Token: 610a3907c35791dceac377b4925b0b2ca404c2a8751a5611d349ff2860297551 
+
+ ArtistID: 165 
+
+ Message: Hello there there 
+
+ PostID: 3579 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_165/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+08 Feb '17 03:16 AM
+ Device Token: 610a3907c35791dceac377b4925b0b2ca404c2a8751a5611d349ff2860297551 
+
+ ArtistID: 165 
+
+ Message: Hello there there 
+
+ PostID: 3579 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_165/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+08 Feb '17 03:17 AM
+ Device Token: 610a3907c35791dceac377b4925b0b2ca404c2a8751a5611d349ff2860297551 
+
+ ArtistID: 165 
+
+ Message: Hello there there 
+
+ PostID: 3579 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_165/android_api_key_user.txt 

@@ -1,0 +1,19 @@
+
+ ************************
+ DateTime : 2017-08-01 04:28:00
+ Message : exception 'yii\base\ErrorException' with message 'file_get_contents(http://d1k9hpqb4as18m.cloudfront.net/boom-187/profileimages/profile_69573_1501561348755.png): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+' in /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php:2195
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'file_get_conten...', '/var/www/html/b...', 2195, Array)
+#1 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(2195): file_get_contents('http://d1k9hpqb...')
+#2 [internal function]: api_ver2\controllers\UserController->actionEditprofile()
+#3 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('editprofile', Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/editprofil...', Array)
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#9 {main}
+ Data: 
+ Params : {"ProfileID":289344,"UserID":289548,"ArtistID":187,"Name":"Lara4747","Email":"jl87552@yahoo.com","Birthdate":"1994-05-11","Gender":"1","Zipcode":"90602","Mobile":"","Password":"","Image":"profile_69573_1501561348755.png","Language":"english","ShowNotification":1}\n
+ Member Edit Profile : CALL Member_Edit_Profile_new('','Lara4747','profile_69573_1501561348755.png','jl87552@yahoo.com','','11-05-1994','90602','','1','187','289344','289548',1,'boom@123')\n

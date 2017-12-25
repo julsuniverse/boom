@@ -1,0 +1,16 @@
+
+
+ ************************
+ Start Send to Android push: 
+19 Nov '17 09:03 AM
+ Device Token: c18ocH7qt_w:APA91bHRSWQ2YFbwWWuat0FL1J8DsGBXeWO2zIo54noQzpxl-ZY1GkzmkkPLS8hLXfnXmtQ2CpDB6-735-RbF4xuUfM2pERAA5P3ACKaplMfTWurzFbWd5hRkg7hc9Mcx5oH33Jh4JnN 
+
+ ArtistID: 139 
+
+ Message: PRIYAMANI has answered your question 
+
+ PostID: 27375 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_139/android_api_key_user.txt 

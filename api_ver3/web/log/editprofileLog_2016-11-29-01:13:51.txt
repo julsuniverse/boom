@@ -1,0 +1,22 @@
+
+ ************************
+ DateTime : 2016-11-29 01:13:51
+ Message : exception 'yii\base\ErrorException' with message 'getimagesize(): Read error!' in /var/www/html/boomvideo/public_html/vendor/yurkinx/yii2-image/yii/image/drivers/Kohana/Image.php:104
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'getimagesize():...', '/var/www/html/b...', 104, Array)
+#1 /var/www/html/boomvideo/public_html/vendor/yurkinx/yii2-image/yii/image/drivers/Kohana/Image.php(104): getimagesize('/var/www/html/b...')
+#2 /var/www/html/boomvideo/public_html/vendor/yurkinx/yii2-image/yii/image/drivers/Kohana/Image/GD.php(93): yii\image\drivers\Kohana_Image->__construct('/var/www/html/b...')
+#3 /var/www/html/boomvideo/public_html/vendor/yurkinx/yii2-image/yii/image/drivers/Kohana/Image.php(60): yii\image\drivers\Kohana_Image_GD->__construct('/var/www/html/b...')
+#4 /var/www/html/boomvideo/public_html/vendor/yurkinx/yii2-image/yii/image/ImageDriver.php(43): yii\image\drivers\Kohana_Image::factory('/var/www/html/b...', 'GD')
+#5 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(1779): yii\image\ImageDriver->load('/var/www/html/b...')
+#6 [internal function]: api_ver2\controllers\UserController->actionEditprofile()
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#9 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('editprofile', Array)
+#10 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/editprofil...', Array)
+#11 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#13 {main}
+ Data: 
+ Params : {"ProfileID":2204,"UserID":2357,"ArtistID":148,"Name":"William edwards","Email":"bound4ncc@gmail.com","Birthdate":"22 Nov, 1984","Gender":"1","Zipcode":"42101","Mobile":"","Password":"","Image":"profile_2357_1479217708402.png","Language":"english","ShowNotification":0}\n
+ Member Edit Profile : CALL Member_Edit_Profile_new('William edwards','profile_2357_1479217708402.png','bound4ncc@gmail.com','','22-11-1984','42101','','1','148','2204','2357',0,'boom@123')\n

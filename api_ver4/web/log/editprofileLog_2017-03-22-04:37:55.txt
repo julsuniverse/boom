@@ -1,0 +1,20 @@
+
+ ************************
+ DateTime : 2017-03-22 04:37:55
+ Message : exception 'yii\base\ErrorException' with message 'file_get_contents(http://d1k9hpqb4as18m.cloudfront.net/boom-110/profileimages/profile_14120_2017220343732 AM.jpg): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+' in /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php:2176
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'file_get_conten...', '/var/www/html/b...', 2176, Array)
+#1 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(2176): file_get_contents('http://d1k9hpqb...')
+#2 [internal function]: api_ver2\controllers\UserController->actionEditprofile()
+#3 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('editprofile', Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/editprofil...', Array)
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#9 {main}
+ Data: 
+ Params : {"Mobile":"","Birthdate":"27-01-1981","ShowNotification":1,"Email":"sunilgurung621@gmail.com","Name":"Sunil","ProfileID":"13930","Password":"","Zipcode":"6211","Username":"1115390798606584","Language":"english","Gender":"1","Image":"profile_14120_2017220343732 AM.jpg","UserID":"14120","ArtistID":"110"}\n 
+ Check Username : CALL Check_Username('1115390798606584',0,3,'boom@123',1))n
+ Member Edit Profile : CALL Member_Edit_Profile_new('','Sunil','profile_14120_2017220343732 AM.jpg','sunilgurung621@gmail.com','','27-01-1981','6211','','1','110','13930','14120',1,'boom@123')\n

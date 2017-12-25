@@ -1,0 +1,81 @@
+
+Notification Message:
+
+Message
+{
+  "state" : "COMPLETED",
+  "version" : "2012-09-25",
+  "jobId" : "1510462623233-6f20r5",
+  "pipelineId" : "1508299918111-bmswsf",
+  "input" : {
+    "key" : "boom-185/postvideos/reply_38445_20171111225612.mp4"
+  },
+  "inputCount" : 1,
+  "outputs" : [ {
+    "id" : "1",
+    "presetId" : "1351620000001-000010",
+    "key" : "boom-185/streaming/mp4-post_reply_38445_20171111225612.mp4",
+    "thumbnailPattern" : "boom-185/streaming/thumb/thumb-post_reply_38445_20171111225612-{count}",
+    "status" : "Complete",
+    "duration" : 15,
+    "width" : 540,
+    "height" : 720
+  } ]
+}
+MessageId
+290ef754-b4e5-593b-ab64-a5d562031645
+SubscribeURL
+TimeStamp
+2017-11-12T04:57:10.576Z
+Token
+
+TopicArn
+arn:aws:sns:us-west-2:630949593304:AppbeatVIdeoComplete
+Type
+Notification
+Query: UPDATE post SET ReplyStreamURL = 'http://d1votgrx00p4vc.cloudfront.net/boom-185/streaming/mp4-post_reply_38445_20171111225612.mp4', ReplyImage = 'http://d1votgrx00p4vc.cloudfront.net/boom-185/streaming/thumb/thumb-post_reply_38445_20171111225612-00001.png'  WHERE Reply = 'boom-185/postvideos/reply_38445_20171111225612.mp4' 
+file name 
+boom-185/postvideos/reply_38445_20171111225612.mp4
+ Query: 
+SELECT a.ArtistName,p.ArtistID,a.DeviceToken,a.DeviceType,p.PostID,p.MobileStreamUrl,p.MemberID,p.PostType 
+                                                 FROM post p 
+                                                 JOIN artist a 
+                                                 ON (a.ArtistID=p.ArtistID)
+                                                 WHERE p.Reply='boom-185/postvideos/reply_38445_20171111225612.mp4'Number of records 
+
+1\nArtistID=185
+artist reply 
+eqZWho7QPP8:APA91bEcvjDyW4uB6mUBALJ78UZWqCBaSYIHIW75zJoPaI8aF6og-U4DXKqAdAiIEr4apsm8KR6FOiwTGtYIpbNOiokKlczTvfmPdfQLD59La-Cg4fQ4YlnV4lPiaMQjX07xDBfQFvEB
+ Video Member 
+stdClass Object
+(
+    [Type] => Notification
+    [MessageId] => 290ef754-b4e5-593b-ab64-a5d562031645
+    [TopicArn] => arn:aws:sns:us-west-2:630949593304:AppbeatVIdeoComplete
+    [Subject] => Amazon Elastic Transcoder has finished transcoding job 1510462623233-6f20r5.
+    [Message] => {
+  "state" : "COMPLETED",
+  "version" : "2012-09-25",
+  "jobId" : "1510462623233-6f20r5",
+  "pipelineId" : "1508299918111-bmswsf",
+  "input" : {
+    "key" : "boom-185/postvideos/reply_38445_20171111225612.mp4"
+  },
+  "inputCount" : 1,
+  "outputs" : [ {
+    "id" : "1",
+    "presetId" : "1351620000001-000010",
+    "key" : "boom-185/streaming/mp4-post_reply_38445_20171111225612.mp4",
+    "thumbnailPattern" : "boom-185/streaming/thumb/thumb-post_reply_38445_20171111225612-{count}",
+    "status" : "Complete",
+    "duration" : 15,
+    "width" : 540,
+    "height" : 720
+  } ]
+}
+    [Timestamp] => 2017-11-12T04:57:10.576Z
+    [SignatureVersion] => 1
+    [Signature] => ZXPU0QiDOZWFT3bxN798Q6yv/MGsdH6ePcJXLODl4X067w1z6uVnQm2kZ2VDcQfHaxKm9onbs/7uvuvWukygIZRz9J53QqcCBu+T33i0a4FVOmxSXy4BX5UnyQ2Xs8R1Pcm7ecdqHlW6Hk4RwOhDUq4nlPiVAIO29IDH/SCFSYCV9YHjKMGoXBb8F6bcwn/AdUxIGyP1Nk07MKC25tpQuP64Py34sjdLhcuOyDSvLgu1pqKCHtcvE+LaSM2OkF+zgS0n8DcsAfpoDem/YhWoYu8RpXyPEBkcYJTLlKRXigcrzzk1YUQdZhVm0QJ8OTCrSyS4E+jFXk5ybi3vKzjOkA==
+    [SigningCertURL] => https://sns.us-west-2.amazonaws.com/SimpleNotificationService-433026a4050d206028891664da859041.pem
+    [UnsubscribeURL] => https://sns.us-west-2.amazonaws.com/?Action=Unsubscribe&SubscriptionArn=arn:aws:sns:us-west-2:630949593304:AppbeatVIdeoComplete:84fa1330-982d-4880-b845-cc9795c152c7
+)

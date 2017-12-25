@@ -1,0 +1,89 @@
+
+
+ ************************
+ Start Send to Android push: 
+08 Jun '17 01:13 AM
+ Device Token: c8jW649N9WQ:APA91bH8cBX-UuCGGHFKPeRePcURDu0JxHI6NP_nzBu3B-l9EGgdKQrUWXnybKAoRvQokNknG1WPuVpu0UtDzipinVne4KaN-rHQ2qBaanvThNUkF-yu0E18cG8iY_CK1vzO4G5UXxsI 
+
+ ArtistID: 44 
+
+ Message: Jessica Canizales has answered your question 
+
+ PostID: 6870 
+
+ Notification Type: replyAns 
+
+ curl response <HTML>
+<HEAD>
+<TITLE>The request was missing an Authentication Key (FCM Token). Please, refer to section &quot;Authentication&quot; of the FCM documentation, at https://firebase.google.com/docs/cloud-messaging/server.</TITLE>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1>The request was missing an Authentication Key (FCM Token). Please, refer to section &quot;Authentication&quot; of the FCM documentation, at https://firebase.google.com/docs/cloud-messaging/server.</H1>
+<H2>Error 401</H2>
+</BODY>
+</HTML>
+ 
+
+
+ ************************
+ Start Send to Android push: 
+08 Jun '17 14:36 PM
+ Device Token: cjdxlgzYLMc:APA91bEj0mzL79jVCf8DQw66V3NMgTXEXApLEKsEuIRBIkZrJrfyDIAS56Ou7lfvh5Y62aWdQlymdB7s3dorFaCZeTVNlEWZIg9mkQuAF4J4WeGJfUdG0nhXvfiyZE2NqFIBUVT6X4qE 
+
+ ArtistID: 110 
+
+ Message: Brittanya has answered your question 
+
+ PostID: 6879 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_110/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+08 Jun '17 14:36 PM
+ Device Token: e_mXN096Un8:APA91bEcdEGtRK9nzGIx4i0DyKo8qKwIy1NKf5vtylsrJ9QL74UC-j6AKdCeJN51uQhO97T8A4JDuYZAwKREckyhQoOSBtwGMIkzZnVdsOqcdRtCKmyxK9jZ0IjzyRDIKBl_8qjlM0XG 
+
+ ArtistID: 110 
+
+ Message: Brittanya has answered your question 
+
+ PostID: 6880 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_110/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+08 Jun '17 14:36 PM
+ Device Token: fRmjoQmVXB0:APA91bF8ABRtA2kxb80ryxDGWdnAeOjzKu1--jp92IwBYhuNrGXpBw5Zg07Ws8GH0NMwySZYoUOXg3_5qtwDr41RhUrzHd1AFteZSmTBCQFIE_YslOLMFxH37MwatXRfaI8xMfg88i2e 
+
+ ArtistID: 110 
+
+ Message: Brittanya has answered your question 
+
+ PostID: 6881 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_110/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+08 Jun '17 14:36 PM
+ Device Token: fRmjoQmVXB0:APA91bF8ABRtA2kxb80ryxDGWdnAeOjzKu1--jp92IwBYhuNrGXpBw5Zg07Ws8GH0NMwySZYoUOXg3_5qtwDr41RhUrzHd1AFteZSmTBCQFIE_YslOLMFxH37MwatXRfaI8xMfg88i2e 
+
+ ArtistID: 110 
+
+ Message: Brittanya has answered your question 
+
+ PostID: 6882 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_110/android_api_key_user.txt 

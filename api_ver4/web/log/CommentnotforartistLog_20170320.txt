@@ -1,0 +1,1098 @@
+
+
+ ************************
+ Start Send to Iphone push: 
+20 Mar '17 01:12 AM
+ Device Token: d4f8e29a827228e41e6a6fdb2682ea399bdf10c8df059feb7a65c71e87f5fc55 
+
+ ArtistID: 110 
+
+ Message: Brittanya has answered your question 
+
+ PostID: 4161 
+
+ Notification Type: replyAns 
+
+ Exception: Gateway not connected 
+exception 'yii\base\ErrorException' with message 'stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14094410:SSL routines:SSL3_READ_BYTES:sslv3 alert handshake failure' in /var/www/html/boomvideo/public_html/api/models/Commentnotforartist.php:68
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'stream_socket_c...', '/var/www/html/b...', 68, Array)
+#1 /var/www/html/boomvideo/public_html/api/models/Commentnotforartist.php(68): stream_socket_client('ssl://gateway.p...', 0, '', 60, 5, Resource id #16)
+#2 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(3455): api\models\Commentnotforartist->sendToIphone('110', 'user')
+#3 [internal function]: api_ver2\controllers\UserController->actionAddpost()
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('addpost', Array)
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/addpost', Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#10 {main}
+
+ ************************
+ Start Send to Android push: 
+20 Mar '17 01:15 AM
+ Device Token: cbGOOJeG8Hw:APA91bHW8eAu-9kxS-FXNM_hGFstEOK6DeE6qZlSZGLchNZC-JNptUsc32S2nSmaBrMSxn-CTL7XDiq8nFLDc2w4L2rt8HfNHTEmXTCEzeonlNH18hUdqiu4TS3apNcrVPNqVMnv7Y64 
+
+ ArtistID: 110 
+
+ Message: Brittanya has answered your question 
+
+ PostID: 4160 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_110/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+20 Mar '17 01:15 AM
+ Device Token: f-RMrvOgdK8:APA91bEFSpdahv3t6Azcg_88JA1fGbANScI1qJNIz2GANSRg9XDPzGrp6CPxoEY0m4wcg0sB_pOvu2UHy7M_cnZT3ndCINPclicVg7oVO-95TkfG9FGDJGUaUJnQlOgPQMzdIrn2IWNO 
+
+ ArtistID: 110 
+
+ Message: Brittanya has answered your question 
+
+ PostID: 4153 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_110/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+20 Mar '17 01:15 AM
+ Device Token: etfNyRvGCiU:APA91bHWzOiB0wV1WYR3DeTGoc7B_HQTQFG4V4A7KkWD0siGIELiBrpcGi1lmDKPq9fs8RlkJHUsKxuhUtDiHbeVRJR2P5vT_s6sEnHEHUIYsdttNvwgcsqnhG9JGN7phErPwKr15fIs 
+
+ ArtistID: 110 
+
+ Message: Brittanya has answered your question 
+
+ PostID: 4143 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_110/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Iphone push: 
+20 Mar '17 01:15 AM
+ Device Token: 568435a7944cf678039e3c7f8965b69a96e26eafc43e7e2daa811bf045b532e6 
+
+ ArtistID: 110 
+
+ Message: Brittanya has answered your question 
+
+ PostID: 4144 
+
+ Notification Type: replyAns 
+
+ Exception: Gateway not connected 
+exception 'yii\base\ErrorException' with message 'stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14094410:SSL routines:SSL3_READ_BYTES:sslv3 alert handshake failure' in /var/www/html/boomvideo/public_html/api/models/Commentnotforartist.php:68
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'stream_socket_c...', '/var/www/html/b...', 68, Array)
+#1 /var/www/html/boomvideo/public_html/api/models/Commentnotforartist.php(68): stream_socket_client('ssl://gateway.p...', 0, '', 60, 5, Resource id #17)
+#2 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(3455): api\models\Commentnotforartist->sendToIphone('110', 'user')
+#3 [internal function]: api_ver2\controllers\UserController->actionAddpost()
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('addpost', Array)
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/addpost', Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#10 {main}
+
+ ************************
+ Start Send to Iphone push: 
+20 Mar '17 01:16 AM
+ Device Token: 568435a7944cf678039e3c7f8965b69a96e26eafc43e7e2daa811bf045b532e6 
+
+ ArtistID: 110 
+
+ Message: Brittanya has answered your question 
+
+ PostID: 4146 
+
+ Notification Type: replyAns 
+
+ Exception: Gateway not connected 
+exception 'yii\base\ErrorException' with message 'stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14094410:SSL routines:SSL3_READ_BYTES:sslv3 alert handshake failure' in /var/www/html/boomvideo/public_html/api/models/Commentnotforartist.php:68
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'stream_socket_c...', '/var/www/html/b...', 68, Array)
+#1 /var/www/html/boomvideo/public_html/api/models/Commentnotforartist.php(68): stream_socket_client('ssl://gateway.p...', 0, '', 60, 5, Resource id #17)
+#2 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(3455): api\models\Commentnotforartist->sendToIphone('110', 'user')
+#3 [internal function]: api_ver2\controllers\UserController->actionAddpost()
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('addpost', Array)
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/addpost', Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#10 {main}
+
+ ************************
+ Start Send to Android push: 
+20 Mar '17 01:16 AM
+ Device Token: f0b9toEmsIw:APA91bHzKngOtXInuyiRFEzB6yj9LEjuYbxYhquw6EPw96GSUeVTCjnr9p2MaGppWvoyawyQS-Kq9ftZXile_3qGwrQqf27XUDKwr722QMErhEQmQUOillEI4DxyyszT0YLbvFD4-rdS 
+
+ ArtistID: 110 
+
+ Message: Brittanya has answered your question 
+
+ PostID: 4150 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_110/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+20 Mar '17 01:17 AM
+ Device Token: f0b9toEmsIw:APA91bHzKngOtXInuyiRFEzB6yj9LEjuYbxYhquw6EPw96GSUeVTCjnr9p2MaGppWvoyawyQS-Kq9ftZXile_3qGwrQqf27XUDKwr722QMErhEQmQUOillEI4DxyyszT0YLbvFD4-rdS 
+
+ ArtistID: 110 
+
+ Message: Brittanya has answered your question 
+
+ PostID: 4152 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_110/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+20 Mar '17 01:17 AM
+ Device Token: f-RMrvOgdK8:APA91bEFSpdahv3t6Azcg_88JA1fGbANScI1qJNIz2GANSRg9XDPzGrp6CPxoEY0m4wcg0sB_pOvu2UHy7M_cnZT3ndCINPclicVg7oVO-95TkfG9FGDJGUaUJnQlOgPQMzdIrn2IWNO 
+
+ ArtistID: 110 
+
+ Message: Brittanya has answered your question 
+
+ PostID: 4155 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_110/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+20 Mar '17 01:18 AM
+ Device Token: cjfKU3WwjRQ:APA91bGYvUX5fnPqBGXQc9rSuQGkDezH75cd633KtNzG_8Ia0FX9aMFNQbylSam_MVMeocoyazSBF8atUU3VPDbyL1tkQP5qoZtuTkpB7IR15TLDogl_4hiXbfR4HXt8FkFA55KTw5-d 
+
+ ArtistID: 110 
+
+ Message: Brittanya has answered your question 
+
+ PostID: 4166 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_110/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+20 Mar '17 01:18 AM
+ Device Token: f-RMrvOgdK8:APA91bEFSpdahv3t6Azcg_88JA1fGbANScI1qJNIz2GANSRg9XDPzGrp6CPxoEY0m4wcg0sB_pOvu2UHy7M_cnZT3ndCINPclicVg7oVO-95TkfG9FGDJGUaUJnQlOgPQMzdIrn2IWNO 
+
+ ArtistID: 110 
+
+ Message: Brittanya has answered your question 
+
+ PostID: 4154 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_110/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+20 Mar '17 01:18 AM
+ Device Token: f0b9toEmsIw:APA91bHzKngOtXInuyiRFEzB6yj9LEjuYbxYhquw6EPw96GSUeVTCjnr9p2MaGppWvoyawyQS-Kq9ftZXile_3qGwrQqf27XUDKwr722QMErhEQmQUOillEI4DxyyszT0YLbvFD4-rdS 
+
+ ArtistID: 110 
+
+ Message: Brittanya has answered your question 
+
+ PostID: 4156 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_110/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+20 Mar '17 16:02 PM
+ Device Token: f0b9toEmsIw:APA91bHzKngOtXInuyiRFEzB6yj9LEjuYbxYhquw6EPw96GSUeVTCjnr9p2MaGppWvoyawyQS-Kq9ftZXile_3qGwrQqf27XUDKwr722QMErhEQmQUOillEI4DxyyszT0YLbvFD4-rdS 
+
+ ArtistID: 110 
+
+ Message: Brittanya has answered your question 
+
+ PostID: 4226 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_110/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Iphone push: 
+20 Mar '17 16:03 PM
+ Device Token: 6524f8fdae7190dce335aea56c5aab3964505a91fd4b5612469671a48152315f 
+
+ ArtistID: 110 
+
+ Message: Brittanya has answered your question 
+
+ PostID: 4225 
+
+ Notification Type: replyAns 
+
+ Exception: Gateway not connected 
+exception 'yii\base\ErrorException' with message 'stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14094410:SSL routines:SSL3_READ_BYTES:sslv3 alert handshake failure' in /var/www/html/boomvideo/public_html/api/models/Commentnotforartist.php:68
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'stream_socket_c...', '/var/www/html/b...', 68, Array)
+#1 /var/www/html/boomvideo/public_html/api/models/Commentnotforartist.php(68): stream_socket_client('ssl://gateway.p...', 0, '', 60, 5, Resource id #17)
+#2 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(3455): api\models\Commentnotforartist->sendToIphone('110', 'user')
+#3 [internal function]: api_ver2\controllers\UserController->actionAddpost()
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('addpost', Array)
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/addpost', Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#10 {main}
+
+ ************************
+ Start Send to Android push: 
+20 Mar '17 16:06 PM
+ Device Token: c024S-NDz1A:APA91bExvcbeObAYG0aZ4rSw2ix7bnSO9vwLvmO7uWE3vM9qPAUW5vnQ4aC55PGsz1SMCN1taYBaZyLOcwY7v4iAg7MSVVCwVwsmw3tm1sOpwHtXqA5531euIC0Rzsp8DZVGHbjoHYfA 
+
+ ArtistID: 110 
+
+ Message: Brittanya has answered your question 
+
+ PostID: 4223 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_110/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+20 Mar '17 16:07 PM
+ Device Token: dAzri2xzYsc:APA91bEoVxlWlMTJam3VYtp0W9qxXfJgmDyJZs5KH2zW5oCcLzY04gaD5hRZ7oIqFMQ9M2OLNdNvincEcZYovjXZxQb4_DVAoUpluYkY_GURWTDsFpNQ-s4T-_flKfQSAkhhOg3QOQ7V 
+
+ ArtistID: 110 
+
+ Message: Brittanya has answered your question 
+
+ PostID: 4218 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_110/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+20 Mar '17 16:07 PM
+ Device Token: dAzri2xzYsc:APA91bEoVxlWlMTJam3VYtp0W9qxXfJgmDyJZs5KH2zW5oCcLzY04gaD5hRZ7oIqFMQ9M2OLNdNvincEcZYovjXZxQb4_DVAoUpluYkY_GURWTDsFpNQ-s4T-_flKfQSAkhhOg3QOQ7V 
+
+ ArtistID: 110 
+
+ Message: Brittanya has answered your question 
+
+ PostID: 4219 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_110/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+20 Mar '17 16:08 PM
+ Device Token: dAzri2xzYsc:APA91bEoVxlWlMTJam3VYtp0W9qxXfJgmDyJZs5KH2zW5oCcLzY04gaD5hRZ7oIqFMQ9M2OLNdNvincEcZYovjXZxQb4_DVAoUpluYkY_GURWTDsFpNQ-s4T-_flKfQSAkhhOg3QOQ7V 
+
+ ArtistID: 110 
+
+ Message: Brittanya has answered your question 
+
+ PostID: 4221 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_110/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+20 Mar '17 16:13 PM
+ Device Token: dc3Ao9jHEAI:APA91bEZ8NsqB1s4wynqkjGyK54VJ_cOB-YWSzNcxWLAuKA39ALSwuMWBuamZgLCWtpkmJooUpu9Ckq9QXvDS9MslkvMBi9FBO2gVj4wWEf8AAmOWvpBrsF4DZMffZ_3T_VmZWn6_O-0 
+
+ ArtistID: 110 
+
+ Message: Brittanya has answered your question 
+
+ PostID: 4220 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_110/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Iphone push: 
+20 Mar '17 16:37 PM
+ Device Token: 35ce62f3c3cf02ccd9c87e4bb0f38159d5a96967ea954791743551a9c945ac18 
+
+ ArtistID: 110 
+
+ Message: Brittanya has answered your question 
+
+ PostID: 4158 
+
+ Notification Type: replyAns 
+
+ Exception: Gateway not connected 
+exception 'yii\base\ErrorException' with message 'stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14094410:SSL routines:SSL3_READ_BYTES:sslv3 alert handshake failure' in /var/www/html/boomvideo/public_html/api/models/Commentnotforartist.php:68
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'stream_socket_c...', '/var/www/html/b...', 68, Array)
+#1 /var/www/html/boomvideo/public_html/api/models/Commentnotforartist.php(68): stream_socket_client('ssl://gateway.p...', 0, '', 60, 5, Resource id #17)
+#2 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(3455): api\models\Commentnotforartist->sendToIphone('110', 'user')
+#3 [internal function]: api_ver2\controllers\UserController->actionAddpost()
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('addpost', Array)
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/addpost', Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#10 {main}
+
+ ************************
+ Start Send to Iphone push: 
+20 Mar '17 16:38 PM
+ Device Token: 1fd054c5648defe3705aac99239f3abb2373908bde49983e6c72057244fb705a 
+
+ ArtistID: 110 
+
+ Message: Brittanya has answered your question 
+
+ PostID: 4159 
+
+ Notification Type: replyAns 
+
+ Exception: Gateway not connected 
+exception 'yii\base\ErrorException' with message 'stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14094410:SSL routines:SSL3_READ_BYTES:sslv3 alert handshake failure' in /var/www/html/boomvideo/public_html/api/models/Commentnotforartist.php:68
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'stream_socket_c...', '/var/www/html/b...', 68, Array)
+#1 /var/www/html/boomvideo/public_html/api/models/Commentnotforartist.php(68): stream_socket_client('ssl://gateway.p...', 0, '', 60, 5, Resource id #17)
+#2 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(3455): api\models\Commentnotforartist->sendToIphone('110', 'user')
+#3 [internal function]: api_ver2\controllers\UserController->actionAddpost()
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('addpost', Array)
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/addpost', Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#10 {main}
+
+ ************************
+ Start Send to Android push: 
+20 Mar '17 16:39 PM
+ Device Token: cXdZMlAvFuo:APA91bHm8972mlS1Rw7rWVP05MXdlWF-F30P9EQOn8Pw-0-gVqENFmPqoNRU35F_kpgGU1oGAFK_-0yLYvMJLCKXpRoGwnUfkLti1ZpWcs-9_gwe4krWa2LmcXTv9TlryG0eulWphTGk 
+
+ ArtistID: 110 
+
+ Message: Brittanya has answered your question 
+
+ PostID: 4170 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_110/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Iphone push: 
+20 Mar '17 16:40 PM
+ Device Token: 9c152aa1ba7ac7c2fcbf9afb3cb2a56c039e186685410d72e896165067a5421f 
+
+ ArtistID: 110 
+
+ Message: Brittanya has answered your question 
+
+ PostID: 4172 
+
+ Notification Type: replyAns 
+
+ Exception: Gateway not connected 
+exception 'yii\base\ErrorException' with message 'stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14094410:SSL routines:SSL3_READ_BYTES:sslv3 alert handshake failure' in /var/www/html/boomvideo/public_html/api/models/Commentnotforartist.php:68
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'stream_socket_c...', '/var/www/html/b...', 68, Array)
+#1 /var/www/html/boomvideo/public_html/api/models/Commentnotforartist.php(68): stream_socket_client('ssl://gateway.p...', 0, '', 60, 5, Resource id #17)
+#2 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(3455): api\models\Commentnotforartist->sendToIphone('110', 'user')
+#3 [internal function]: api_ver2\controllers\UserController->actionAddpost()
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('addpost', Array)
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/addpost', Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#10 {main}
+
+ ************************
+ Start Send to Android push: 
+20 Mar '17 16:40 PM
+ Device Token: cjfKU3WwjRQ:APA91bGYvUX5fnPqBGXQc9rSuQGkDezH75cd633KtNzG_8Ia0FX9aMFNQbylSam_MVMeocoyazSBF8atUU3VPDbyL1tkQP5qoZtuTkpB7IR15TLDogl_4hiXbfR4HXt8FkFA55KTw5-d 
+
+ ArtistID: 110 
+
+ Message: Brittanya has answered your question 
+
+ PostID: 4173 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_110/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+20 Mar '17 16:40 PM
+ Device Token: cjfKU3WwjRQ:APA91bGYvUX5fnPqBGXQc9rSuQGkDezH75cd633KtNzG_8Ia0FX9aMFNQbylSam_MVMeocoyazSBF8atUU3VPDbyL1tkQP5qoZtuTkpB7IR15TLDogl_4hiXbfR4HXt8FkFA55KTw5-d 
+
+ ArtistID: 110 
+
+ Message: Brittanya has answered your question 
+
+ PostID: 4174 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_110/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Iphone push: 
+20 Mar '17 16:41 PM
+ Device Token: 9f569e1e3faae61922dcfb7285c9eda33661615b32eded2c3db3d1949a442219 
+
+ ArtistID: 110 
+
+ Message: Brittanya has answered your question 
+
+ PostID: 4193 
+
+ Notification Type: replyAns 
+
+ Exception: Gateway not connected 
+exception 'yii\base\ErrorException' with message 'stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14094410:SSL routines:SSL3_READ_BYTES:sslv3 alert handshake failure' in /var/www/html/boomvideo/public_html/api/models/Commentnotforartist.php:68
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'stream_socket_c...', '/var/www/html/b...', 68, Array)
+#1 /var/www/html/boomvideo/public_html/api/models/Commentnotforartist.php(68): stream_socket_client('ssl://gateway.p...', 0, '', 60, 5, Resource id #17)
+#2 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(3455): api\models\Commentnotforartist->sendToIphone('110', 'user')
+#3 [internal function]: api_ver2\controllers\UserController->actionAddpost()
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('addpost', Array)
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/addpost', Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#10 {main}
+
+ ************************
+ Start Send to Android push: 
+20 Mar '17 16:42 PM
+ Device Token: fWNcIUlP9cc:APA91bEhimlX7OljdkKMP27sU3LORT7ZthlrcLK_AdeVeZcW0dqUtkc3hB1-ni23opEy9ZVMwxo7oTkuCjFgX7WYbEHQ0sHBZ6G4Tt7i1eqf5bsjW2WhIrnwBFQpVBif6c3i4U7LewrW 
+
+ ArtistID: 110 
+
+ Message: Brittanya has answered your question 
+
+ PostID: 4195 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_110/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Iphone push: 
+20 Mar '17 16:43 PM
+ Device Token: 6e01e0c931757cc7dfa610e73d20f3c2de0ab875daac00165cbd492f9708b76e 
+
+ ArtistID: 110 
+
+ Message: Brittanya has answered your question 
+
+ PostID: 4205 
+
+ Notification Type: replyAns 
+
+ Exception: Gateway not connected 
+exception 'yii\base\ErrorException' with message 'stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14094410:SSL routines:SSL3_READ_BYTES:sslv3 alert handshake failure' in /var/www/html/boomvideo/public_html/api/models/Commentnotforartist.php:68
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'stream_socket_c...', '/var/www/html/b...', 68, Array)
+#1 /var/www/html/boomvideo/public_html/api/models/Commentnotforartist.php(68): stream_socket_client('ssl://gateway.p...', 0, '', 60, 5, Resource id #17)
+#2 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(3455): api\models\Commentnotforartist->sendToIphone('110', 'user')
+#3 [internal function]: api_ver2\controllers\UserController->actionAddpost()
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('addpost', Array)
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/addpost', Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#10 {main}
+
+ ************************
+ Start Send to Android push: 
+20 Mar '17 16:43 PM
+ Device Token: f0b9toEmsIw:APA91bHzKngOtXInuyiRFEzB6yj9LEjuYbxYhquw6EPw96GSUeVTCjnr9p2MaGppWvoyawyQS-Kq9ftZXile_3qGwrQqf27XUDKwr722QMErhEQmQUOillEI4DxyyszT0YLbvFD4-rdS 
+
+ ArtistID: 110 
+
+ Message: Brittanya has answered your question 
+
+ PostID: 4206 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_110/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+20 Mar '17 16:43 PM
+ Device Token: f0b9toEmsIw:APA91bHzKngOtXInuyiRFEzB6yj9LEjuYbxYhquw6EPw96GSUeVTCjnr9p2MaGppWvoyawyQS-Kq9ftZXile_3qGwrQqf27XUDKwr722QMErhEQmQUOillEI4DxyyszT0YLbvFD4-rdS 
+
+ ArtistID: 110 
+
+ Message: Brittanya has answered your question 
+
+ PostID: 4207 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_110/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+20 Mar '17 16:43 PM
+ Device Token: f0b9toEmsIw:APA91bHzKngOtXInuyiRFEzB6yj9LEjuYbxYhquw6EPw96GSUeVTCjnr9p2MaGppWvoyawyQS-Kq9ftZXile_3qGwrQqf27XUDKwr722QMErhEQmQUOillEI4DxyyszT0YLbvFD4-rdS 
+
+ ArtistID: 110 
+
+ Message: Brittanya has answered your question 
+
+ PostID: 4208 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_110/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+20 Mar '17 16:43 PM
+ Device Token: f0b9toEmsIw:APA91bHzKngOtXInuyiRFEzB6yj9LEjuYbxYhquw6EPw96GSUeVTCjnr9p2MaGppWvoyawyQS-Kq9ftZXile_3qGwrQqf27XUDKwr722QMErhEQmQUOillEI4DxyyszT0YLbvFD4-rdS 
+
+ ArtistID: 110 
+
+ Message: Brittanya has answered your question 
+
+ PostID: 4209 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_110/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+20 Mar '17 16:44 PM
+ Device Token: f0b9toEmsIw:APA91bHzKngOtXInuyiRFEzB6yj9LEjuYbxYhquw6EPw96GSUeVTCjnr9p2MaGppWvoyawyQS-Kq9ftZXile_3qGwrQqf27XUDKwr722QMErhEQmQUOillEI4DxyyszT0YLbvFD4-rdS 
+
+ ArtistID: 110 
+
+ Message: Brittanya has answered your question 
+
+ PostID: 4210 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_110/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+20 Mar '17 16:44 PM
+ Device Token: f0b9toEmsIw:APA91bHzKngOtXInuyiRFEzB6yj9LEjuYbxYhquw6EPw96GSUeVTCjnr9p2MaGppWvoyawyQS-Kq9ftZXile_3qGwrQqf27XUDKwr722QMErhEQmQUOillEI4DxyyszT0YLbvFD4-rdS 
+
+ ArtistID: 110 
+
+ Message: Brittanya has answered your question 
+
+ PostID: 4211 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_110/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+20 Mar '17 16:44 PM
+ Device Token: fwu_ITmRTpk:APA91bF4a0ErYaBXOaPr46Ly3YmD9tP7HpXLXHWb9VcgUB4h8F_FV1qL0topye2zC4BhluOJ2KbB80q9TABG9wNCRSHQT256TAiYugLLhGl7JZCW3UoLhLLaFDb-TlyoVy_QW0s0XXaU 
+
+ ArtistID: 110 
+
+ Message: Brittanya has answered your question 
+
+ PostID: 4212 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_110/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+20 Mar '17 16:44 PM
+ Device Token: c9eTpgslEuY:APA91bE_neyhyYr5haANlLe9MdHFY_5k-aoBByYUmKWcZH0rMIwI4hn2-I_FZrDPYspptQnFBsIlDkT0byuWL7f9tzw-610PGT0OoXM3tIYAET3gDSl8cDQoiiGfcniVuD13z3sMBDbk 
+
+ ArtistID: 110 
+
+ Message: Brittanya has answered your question 
+
+ PostID: 4213 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_110/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Iphone push: 
+20 Mar '17 16:45 PM
+ Device Token: 35ce62f3c3cf02ccd9c87e4bb0f38159d5a96967ea954791743551a9c945ac18 
+
+ ArtistID: 110 
+
+ Message: Brittanya has answered your question 
+
+ PostID: 4214 
+
+ Notification Type: replyAns 
+
+ Exception: Gateway not connected 
+exception 'yii\base\ErrorException' with message 'stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14094410:SSL routines:SSL3_READ_BYTES:sslv3 alert handshake failure' in /var/www/html/boomvideo/public_html/api/models/Commentnotforartist.php:68
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'stream_socket_c...', '/var/www/html/b...', 68, Array)
+#1 /var/www/html/boomvideo/public_html/api/models/Commentnotforartist.php(68): stream_socket_client('ssl://gateway.p...', 0, '', 60, 5, Resource id #17)
+#2 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(3455): api\models\Commentnotforartist->sendToIphone('110', 'user')
+#3 [internal function]: api_ver2\controllers\UserController->actionAddpost()
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('addpost', Array)
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/addpost', Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#10 {main}
+
+ ************************
+ Start Send to Android push: 
+20 Mar '17 16:45 PM
+ Device Token: dc3Ao9jHEAI:APA91bEZ8NsqB1s4wynqkjGyK54VJ_cOB-YWSzNcxWLAuKA39ALSwuMWBuamZgLCWtpkmJooUpu9Ckq9QXvDS9MslkvMBi9FBO2gVj4wWEf8AAmOWvpBrsF4DZMffZ_3T_VmZWn6_O-0 
+
+ ArtistID: 110 
+
+ Message: Brittanya has answered your question 
+
+ PostID: 4222 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_110/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+20 Mar '17 16:46 PM
+ Device Token: f0b9toEmsIw:APA91bHzKngOtXInuyiRFEzB6yj9LEjuYbxYhquw6EPw96GSUeVTCjnr9p2MaGppWvoyawyQS-Kq9ftZXile_3qGwrQqf27XUDKwr722QMErhEQmQUOillEI4DxyyszT0YLbvFD4-rdS 
+
+ ArtistID: 110 
+
+ Message: Brittanya has answered your question 
+
+ PostID: 4232 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_110/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+20 Mar '17 16:46 PM
+ Device Token: f0b9toEmsIw:APA91bHzKngOtXInuyiRFEzB6yj9LEjuYbxYhquw6EPw96GSUeVTCjnr9p2MaGppWvoyawyQS-Kq9ftZXile_3qGwrQqf27XUDKwr722QMErhEQmQUOillEI4DxyyszT0YLbvFD4-rdS 
+
+ ArtistID: 110 
+
+ Message: Brittanya has answered your question 
+
+ PostID: 4233 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_110/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+20 Mar '17 16:46 PM
+ Device Token: caOGcstg9Ds:APA91bFmRzPPbo84Fa6pQzyya2xHoqkdO3Hj_tfWPcfZxRhnACWFhopm90C7_UMBtF96O2lTGGyMG5_OmOKuppiE0jzBfARiB-zgd9dThtC1tP00cY7ClaIx9sDr125Nci04nClntstA 
+
+ ArtistID: 110 
+
+ Message: Brittanya has answered your question 
+
+ PostID: 4157 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_110/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+20 Mar '17 17:09 PM
+ Device Token: f0b9toEmsIw:APA91bHzKngOtXInuyiRFEzB6yj9LEjuYbxYhquw6EPw96GSUeVTCjnr9p2MaGppWvoyawyQS-Kq9ftZXile_3qGwrQqf27XUDKwr722QMErhEQmQUOillEI4DxyyszT0YLbvFD4-rdS 
+
+ ArtistID: 110 
+
+ Message: Brittanya has answered your question 
+
+ PostID: 4242 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_110/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+20 Mar '17 17:09 PM
+ Device Token: f0b9toEmsIw:APA91bHzKngOtXInuyiRFEzB6yj9LEjuYbxYhquw6EPw96GSUeVTCjnr9p2MaGppWvoyawyQS-Kq9ftZXile_3qGwrQqf27XUDKwr722QMErhEQmQUOillEI4DxyyszT0YLbvFD4-rdS 
+
+ ArtistID: 110 
+
+ Message: Brittanya has answered your question 
+
+ PostID: 4243 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_110/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+20 Mar '17 17:09 PM
+ Device Token: f0b9toEmsIw:APA91bHzKngOtXInuyiRFEzB6yj9LEjuYbxYhquw6EPw96GSUeVTCjnr9p2MaGppWvoyawyQS-Kq9ftZXile_3qGwrQqf27XUDKwr722QMErhEQmQUOillEI4DxyyszT0YLbvFD4-rdS 
+
+ ArtistID: 110 
+
+ Message: Brittanya has answered your question 
+
+ PostID: 4244 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_110/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+20 Mar '17 17:35 PM
+ Device Token: f0b9toEmsIw:APA91bHzKngOtXInuyiRFEzB6yj9LEjuYbxYhquw6EPw96GSUeVTCjnr9p2MaGppWvoyawyQS-Kq9ftZXile_3qGwrQqf27XUDKwr722QMErhEQmQUOillEI4DxyyszT0YLbvFD4-rdS 
+
+ ArtistID: 110 
+
+ Message: Brittanya has answered your question 
+
+ PostID: 4245 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_110/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+20 Mar '17 17:35 PM
+ Device Token: f0b9toEmsIw:APA91bHzKngOtXInuyiRFEzB6yj9LEjuYbxYhquw6EPw96GSUeVTCjnr9p2MaGppWvoyawyQS-Kq9ftZXile_3qGwrQqf27XUDKwr722QMErhEQmQUOillEI4DxyyszT0YLbvFD4-rdS 
+
+ ArtistID: 110 
+
+ Message: Brittanya has answered your question 
+
+ PostID: 4246 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_110/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+20 Mar '17 17:35 PM
+ Device Token: f0b9toEmsIw:APA91bHzKngOtXInuyiRFEzB6yj9LEjuYbxYhquw6EPw96GSUeVTCjnr9p2MaGppWvoyawyQS-Kq9ftZXile_3qGwrQqf27XUDKwr722QMErhEQmQUOillEI4DxyyszT0YLbvFD4-rdS 
+
+ ArtistID: 110 
+
+ Message: Brittanya has answered your question 
+
+ PostID: 4247 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_110/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+20 Mar '17 17:51 PM
+ Device Token: cj8Se1_xQfY:APA91bHwZkn-xXlNAmUdsml68t_UierX8iCy85n74_0jeooeia7syWKmA6J2-2wgf8gc-u_Mh5_FbePh4Q31x404PScqxiCsvHIbO3iFqbdb8WCLU1FdfYyfhfxAKeg9X3Yxy-px4ZS6 
+
+ ArtistID: 110 
+
+ Message: Brittanya is ignoring this question as it may be in breach of the Ask Me a Question policy 
+
+ PostID: 4227 
+
+ Notification Type: ignoreQue 
+
+ File not exists: ../../api/web/pushkey/artist_110/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+20 Mar '17 17:51 PM
+ Device Token: cj8Se1_xQfY:APA91bHwZkn-xXlNAmUdsml68t_UierX8iCy85n74_0jeooeia7syWKmA6J2-2wgf8gc-u_Mh5_FbePh4Q31x404PScqxiCsvHIbO3iFqbdb8WCLU1FdfYyfhfxAKeg9X3Yxy-px4ZS6 
+
+ ArtistID: 110 
+
+ Message: Brittanya will reply to you 
+
+ PostID: 4227 
+
+ Notification Type: ignoreQue 
+
+ File not exists: ../../api/web/pushkey/artist_110/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+20 Mar '17 18:03 PM
+ Device Token: f0b9toEmsIw:APA91bHzKngOtXInuyiRFEzB6yj9LEjuYbxYhquw6EPw96GSUeVTCjnr9p2MaGppWvoyawyQS-Kq9ftZXile_3qGwrQqf27XUDKwr722QMErhEQmQUOillEI4DxyyszT0YLbvFD4-rdS 
+
+ ArtistID: 110 
+
+ Message: Brittanya has answered your question 
+
+ PostID: 4249 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_110/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+20 Mar '17 18:04 PM
+ Device Token: f0b9toEmsIw:APA91bHzKngOtXInuyiRFEzB6yj9LEjuYbxYhquw6EPw96GSUeVTCjnr9p2MaGppWvoyawyQS-Kq9ftZXile_3qGwrQqf27XUDKwr722QMErhEQmQUOillEI4DxyyszT0YLbvFD4-rdS 
+
+ ArtistID: 110 
+
+ Message: Brittanya has answered your question 
+
+ PostID: 4248 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_110/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+20 Mar '17 18:04 PM
+ Device Token: f0b9toEmsIw:APA91bHzKngOtXInuyiRFEzB6yj9LEjuYbxYhquw6EPw96GSUeVTCjnr9p2MaGppWvoyawyQS-Kq9ftZXile_3qGwrQqf27XUDKwr722QMErhEQmQUOillEI4DxyyszT0YLbvFD4-rdS 
+
+ ArtistID: 110 
+
+ Message: Brittanya has answered your question 
+
+ PostID: 4250 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_110/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+20 Mar '17 18:04 PM
+ Device Token: f0b9toEmsIw:APA91bHzKngOtXInuyiRFEzB6yj9LEjuYbxYhquw6EPw96GSUeVTCjnr9p2MaGppWvoyawyQS-Kq9ftZXile_3qGwrQqf27XUDKwr722QMErhEQmQUOillEI4DxyyszT0YLbvFD4-rdS 
+
+ ArtistID: 110 
+
+ Message: Brittanya has answered your question 
+
+ PostID: 4251 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_110/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+20 Mar '17 18:42 PM
+ Device Token: eKUq8OyEa5A:APA91bEK89lMET8WLneS3V_ML2FwbUjFF5_Sg4oTOpBCUPPKIuOX0WF4XkBt029LNCjYIbNJiorp9eFRdRpBVsYYYG89Qc4hU1dm1NfJ5DyaUAZjBKfA14cWlK5Go3oyvp3yMB-ZjS2_ 
+
+ ArtistID: 110 
+
+ Message: Brittanya has answered your question 
+
+ PostID: 4252 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_110/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+20 Mar '17 18:44 PM
+ Device Token: c38TN7-lPvg:APA91bExFv2zCQjx3Yj5NOOOw-DdPj21hA-Lr1KrLRIRT3d1QPwew9OFI6RYD4BfwTeHAtUDNnn5KigUizs835-fKn0xXX1nO2IIpVNbr6PdrIh7mRU5EcdVjlEOqCqN1We87B5eC-SD 
+
+ ArtistID: 110 
+
+ Message: Brittanya has answered your question 
+
+ PostID: 4255 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_110/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Iphone push: 
+20 Mar '17 22:31 PM
+ Device Token: ae50648ffdde7781bdecf1416fc8ce2495251abf864280ed8b61a5fbf9e8da40 
+
+ ArtistID: 164 
+
+ Message: Adam Ray has answered your question 
+
+ PostID: 3937 
+
+ Notification Type: replyAns 
+
+ Exception: Gateway not connected 
+exception 'yii\base\ErrorException' with message 'stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14094410:SSL routines:SSL3_READ_BYTES:sslv3 alert handshake failure' in /var/www/html/boomvideo/public_html/api/models/Commentnotforartist.php:68
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'stream_socket_c...', '/var/www/html/b...', 68, Array)
+#1 /var/www/html/boomvideo/public_html/api/models/Commentnotforartist.php(68): stream_socket_client('ssl://gateway.p...', 0, '', 60, 5, Resource id #17)
+#2 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(3455): api\models\Commentnotforartist->sendToIphone('164', 'user')
+#3 [internal function]: api_ver2\controllers\UserController->actionAddpost()
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('addpost', Array)
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/addpost', Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#10 {main}
+
+ ************************
+ Start Send to Iphone push: 
+20 Mar '17 22:35 PM
+ Device Token: 4eea4ac03ed13dc108193cb690d1e5a2c716690395653f262b1eca6a246e75fd 
+
+ ArtistID: 164 
+
+ Message: Adam Ray has answered your question 
+
+ PostID: 3938 
+
+ Notification Type: replyAns 
+
+ Exception: Gateway not connected 
+exception 'yii\base\ErrorException' with message 'stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14094410:SSL routines:SSL3_READ_BYTES:sslv3 alert handshake failure' in /var/www/html/boomvideo/public_html/api/models/Commentnotforartist.php:68
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'stream_socket_c...', '/var/www/html/b...', 68, Array)
+#1 /var/www/html/boomvideo/public_html/api/models/Commentnotforartist.php(68): stream_socket_client('ssl://gateway.p...', 0, '', 60, 5, Resource id #17)
+#2 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(3455): api\models\Commentnotforartist->sendToIphone('164', 'user')
+#3 [internal function]: api_ver2\controllers\UserController->actionAddpost()
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('addpost', Array)
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/addpost', Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#10 {main}
+
+ ************************
+ Start Send to Iphone push: 
+20 Mar '17 23:47 PM
+ Device Token: 94a14192187db9d8ec397e398f9a339a2b55710ceae22336da5f1f1b33443691 
+
+ ArtistID: 110 
+
+ Message: Brittanya has answered your question 
+
+ PostID: 4278 
+
+ Notification Type: replyAns 
+
+ Exception: Gateway not connected 
+exception 'yii\base\ErrorException' with message 'stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14094410:SSL routines:SSL3_READ_BYTES:sslv3 alert handshake failure' in /var/www/html/boomvideo/public_html/api/models/Commentnotforartist.php:68
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'stream_socket_c...', '/var/www/html/b...', 68, Array)
+#1 /var/www/html/boomvideo/public_html/api/models/Commentnotforartist.php(68): stream_socket_client('ssl://gateway.p...', 0, '', 60, 5, Resource id #17)
+#2 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(3455): api\models\Commentnotforartist->sendToIphone('110', 'user')
+#3 [internal function]: api_ver2\controllers\UserController->actionAddpost()
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('addpost', Array)
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/addpost', Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#10 {main}

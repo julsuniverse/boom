@@ -1,0 +1,25 @@
+
+ ************************
+ DateTime : 2016-09-05 15:34:00
+ Message : exception 'yii\base\ErrorException' with message 'Undefined property: stdClass::$body' in /var/www/html/boomvideo/public_html/common/config/S3.php:877
+Stack trace:
+#0 /var/www/html/boomvideo/public_html/common/config/S3.php(877): yii\base\ErrorHandler->handleError(8, 'Undefined prope...', '/var/www/html/b...', 877, Array)
+#1 [internal function]: S3Request->__responseWriteCallback(Resource id #16, '<?xml version="...')
+#2 /var/www/html/boomvideo/public_html/common/config/S3.php(830): curl_exec(Resource id #16)
+#3 /var/www/html/boomvideo/public_html/common/config/S3.php(305): S3Request->getResponse()
+#4 /var/www/html/boomvideo/public_html/common/config/S3.php(331): S3::putObject(Array, 'boomvideo-in', 'boom-72/profile...', 'public-read', Array, NULL)
+#5 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(1802): S3::putObjectFile('/var/www/html/b...', 'boomvideo-in', 'boom-72/profile...', 'public-read')
+#6 [internal function]: api_ver2\controllers\UserController->actionArtisteditprofile()
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#9 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('artisteditprofi...', Array)
+#10 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/artistedit...', Array)
+#11 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#13 {main}
+ Data: 
+ Params : {"UserID":"161","ArtistID":"72","Website":"https:\/\/www.instagram.com\/adrianajuicy\/","ArtistName":"Adriana Larina","Nationality":"russian","FacebookPageUrl":"","Password":"","Language":"english","DeleteMediaIDs":["517"],"ProfileThumb":"profile_1461222831_Juicy_app-1024.jpg","Email":"adrianalarina13@gmail.com","ArtistImages":["profile_161_20160509183051.png"],"TwitterPageUrl":"","AboutMe":"Hello & thanks for downloading my app. I'm Adriana, travel blogger, sunshine seeker, beach lover, bikini obsessed and foodie muncher :) Based between Bali & Dubai. Loving & living life to the fullest! ","YouTubeChannelName":"","YearsActive":"2016","Birthdate":"1991-10-13","Genre":"Blogger","YouTubePageUrl":"","InstagramPageUrl":"https:\/\/www.instagram.com\/adrianajuicy\/","Residence":"Dubai"}\n
+ Artist Edit Profile : CALL Artist_Edit_Profile(72,161,'Adriana Larina','profile_1461222831_Juicy_app-1024.jpg',
+				       'adrianalarina13@gmail.com','13-10-1991','russian','Dubai','https://www.instagram.com/adrianajuicy/','',
+				       '2016','Blogger','Hello & thanks for downloading my app. Im Adriana, travel blogger, sunshine seeker, beach lover, bikini obsessed and foodie muncher :) Based between Bali & Dubai. Loving & living life to the fullest! ','','https://www.instagram.com/adrianajuicy/',
+				       '','','','boom@123')\n

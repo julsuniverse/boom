@@ -1,0 +1,25 @@
+
+ ************************
+ DateTime : 2017-11-14 07:14:42
+ Message : exception 'yii\base\ErrorException' with message 'Undefined property: stdClass::$body' in /var/www/html/boomvideo/public_html/common/config/S3.php:877
+Stack trace:
+#0 /var/www/html/boomvideo/public_html/common/config/S3.php(877): yii\base\ErrorHandler->handleError(8, 'Undefined prope...', '/var/www/html/b...', 877, Array)
+#1 [internal function]: S3Request->__responseWriteCallback(Resource id #18, '<?xml version="...')
+#2 /var/www/html/boomvideo/public_html/common/config/S3.php(830): curl_exec(Resource id #18)
+#3 /var/www/html/boomvideo/public_html/common/config/S3.php(305): S3Request->getResponse()
+#4 /var/www/html/boomvideo/public_html/common/config/S3.php(331): S3::putObject(Array, 'appbeatvideo-in', 'boom-198/profil...', 'public-read', Array, NULL)
+#5 /var/www/html/boomvideo/public_html/api_ver3/controllers/UserController.php(2327): S3::putObjectFile('/var/www/html/b...', 'appbeatvideo-in', 'boom-198/profil...', 'public-read')
+#6 [internal function]: api_ver3\controllers\UserController->actionArtisteditprofile()
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#9 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('artisteditprofi...', Array)
+#10 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/artistedit...', Array)
+#11 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /var/www/html/boomvideo/public_html/api_ver3/web/index.php(21): yii\base\Application->run()
+#13 {main}
+ Data: 
+ Params : {"UserID":"329474","ArtistID":"198","Website":"https:\/\/www.youtube.com\/user\/JodyHighRoller","ArtistName":"RiFF RaFF","Nationality":"us","FacebookPageUrl":"https:\/\/www.facebook.com\/RiffRaffOfficial\/","Password":"","Language":"english","DeleteMediaIDs":["4814"],"ProfileThumb":"profile_1510635732.jpg","Email":"Booking@JodyHighroller.com","ArtistImages":["profile_329474_20171311231353.png"],"TwitterPageUrl":"https:\/\/twitter.com\/JODYHiGHROLLER?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor","AboutMe":"RiFF RaFF JODY HiGHROLLER","YouTubeChannelName":"","YearsActive":"2017","Birthdate":"2017-11-13","Genre":"Artist","YouTubePageUrl":"https:\/\/www.youtube.com\/user\/JodyHighRoller","InstagramPageUrl":"https:\/\/www.instagram.com\/jodyhighroller\/?hl=en","Residence":"us"}\n
+ Artist Edit Profile : CALL Artist_Edit_Profile(198,329474,'RiFF RaFF','profile_1510635732.jpg',
+				       'Booking@JodyHighroller.com','13-11-2017','us','us','https://www.youtube.com/user/JodyHighRoller','',
+				       '2017','Artist','RiFF RaFF JODY HiGHROLLER','https://www.youtube.com/user/JodyHighRoller','https://www.instagram.com/jodyhighroller/?hl=en',
+				       'https://twitter.com/JODYHiGHROLLER?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor','https://www.facebook.com/RiffRaffOfficial/','','boom@123')\n

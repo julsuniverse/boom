@@ -1,0 +1,32 @@
+
+
+ ************************
+ Start Send to Android push: 
+17 Jun '17 14:40 PM
+ Device Token: dHmYATaDaw4:APA91bGoynlUnRtz8TDKPagra0BZuqrTqFhS9Dr8N3eHrOywfXsOxHXQCPE4tmn-_9gvLWqo_oAfy1oDDFRMAu_L7miwjQxcpi0ZdmzEj3PHl6atsdEMB9w__Q6qM8GAOtaaKLeR-hHJ 
+
+ ArtistID: 110 
+
+ Message: Brittanya has answered your question 
+
+ PostID: 6945 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_110/android_api_key_user.txt 
+
+
+ ************************
+ Start Send to Android push: 
+17 Jun '17 14:40 PM
+ Device Token: e_mXN096Un8:APA91bEcdEGtRK9nzGIx4i0DyKo8qKwIy1NKf5vtylsrJ9QL74UC-j6AKdCeJN51uQhO97T8A4JDuYZAwKREckyhQoOSBtwGMIkzZnVdsOqcdRtCKmyxK9jZ0IjzyRDIKBl_8qjlM0XG 
+
+ ArtistID: 110 
+
+ Message: Brittanya has answered your question 
+
+ PostID: 6952 
+
+ Notification Type: replyAns 
+
+ File not exists: ../../api/web/pushkey/artist_110/android_api_key_user.txt 

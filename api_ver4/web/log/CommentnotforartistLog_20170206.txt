@@ -1,0 +1,84 @@
+
+
+ ************************
+ Start Send to Android push: 
+06 Feb '17 12:58 PM
+ Device Token: eT25LK-_3qI:APA91bFZ-f7n_wcy9X08Car8JbZBXmwOiO-e-C87HUiiHyZ5kWE1LI5XvSAAN6wPq2y1LbTb_9c-JuW4uQDisukLmd60HFemnPdOd0TQT411Kc04s4bI8ccf2Z928q60YcaEFCS2Abjh 
+
+ ArtistID: 1 
+
+ Message: Test Message 
+
+ PostID: 3574 
+
+ Notification Type: replyAns 
+
+ curl response {"multicast_id":6510094219299757885,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1486385762974537%05e5ac3ef9fd7ecd"}]} 
+
+
+ ************************
+ Start Send to Android push: 
+06 Feb '17 13:18 PM
+ Device Token: eT25LK-_3qI:APA91bFZ-f7n_wcy9X08Car8JbZBXmwOiO-e-C87HUiiHyZ5kWE1LI5XvSAAN6wPq2y1LbTb_9c-JuW4uQDisukLmd60HFemnPdOd0TQT411Kc04s4bI8ccf2Z928q60YcaEFCS2Abjh 
+
+ ArtistID: 1 
+
+ Message: Test Message 
+
+ PostID: 3574 
+
+ Notification Type: replyAns 
+
+ curl response {"multicast_id":6664031243221527898,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1486386974930244%05e5ac3ef9fd7ecd"}]} 
+
+
+ ************************
+ Start Send to Android push: 
+06 Feb '17 13:21 PM
+ Device Token: eT25LK-_3qI:APA91bFZ-f7n_wcy9X08Car8JbZBXmwOiO-e-C87HUiiHyZ5kWE1LI5XvSAAN6wPq2y1LbTb_9c-JuW4uQDisukLmd60HFemnPdOd0TQT411Kc04s4bI8ccf2Z928q60YcaEFCS2Abjh 
+
+ ArtistID: 1 
+
+ Message: Test Message 
+
+ PostID: 3574 
+
+ Notification Type: replyAns 
+
+ curl response {"multicast_id":8339759543940220339,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1486387111524288%05e5ac3ef9fd7ecd"}]} 
+
+
+ ************************
+ Start Send to Iphone push: 
+06 Feb '17 13:21 PM
+ Device Token: 012b19c45d1e9680bb675802ee7e7665ac8c4d40b9fca7927fb752f2cca32867 
+
+ ArtistID: 1 
+
+ Message: Test Message iPhone 
+
+ PostID: 3574 
+
+ Notification Type: replyAns 
+
+ Connection established 
+
+ Result: sent 222 bytes 
+
+ Message successfully delivered 
+
+
+ ************************
+ Start Send to Android push: 
+06 Feb '17 15:01 PM
+ Device Token: eT25LK-_3qI:APA91bFZ-f7n_wcy9X08Car8JbZBXmwOiO-e-C87HUiiHyZ5kWE1LI5XvSAAN6wPq2y1LbTb_9c-JuW4uQDisukLmd60HFemnPdOd0TQT411Kc04s4bI8ccf2Z928q60YcaEFCS2Abjh 
+
+ ArtistID: 1 
+
+ Message: Boom Influencer App is ignoring this question as it may be in breach of the Ask Me a Question policy 
+
+ PostID: 3589 
+
+ Notification Type: ignoreQue 
+
+ curl response {"multicast_id":7188735011425097710,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1486393163527321%05e5ac3ef9fd7ecd"}]} 

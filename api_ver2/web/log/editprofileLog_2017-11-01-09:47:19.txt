@@ -1,0 +1,19 @@
+
+ ************************
+ DateTime : 2017-11-01 09:47:19
+ Message : exception 'yii\base\ErrorException' with message 'file_get_contents(http://d1t89cp2y0xf79.cloudfront.net/boom-187/profileimages/profile_95214_1504728200330.png): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+' in /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php:2196
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'file_get_conten...', '/var/www/html/b...', 2196, Array)
+#1 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(2196): file_get_contents('http://d1t89cp2...')
+#2 [internal function]: api_ver2\controllers\UserController->actionEditprofile()
+#3 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#4 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('editprofile', Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/editprofil...', Array)
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#9 {main}
+ Data: 
+ Params : {"ProfileID":95011,"UserID":95214,"ArtistID":187,"Name":"Davi de Souza","Email":"davidesouza@outlook.com","Birthdate":"1988-12-16","Gender":"1","Zipcode":"23040270","Mobile":"","Password":"202gl915h32","Image":"profile_95214_1504728200330.png","Language":"english","ShowNotification":1}\n
+ Member Edit Profile : CALL Member_Edit_Profile_new('','Davi de Souza','profile_95214_1504728200330.png','davidesouza@outlook.com','202gl915h32','16-12-1988','23040270','','1','187','95011','95214',1,'boom@123')\n

@@ -1,0 +1,18 @@
+
+ ************************
+ DateTime : 2017-02-08 04:24:22
+ Message : exception 'yii\base\ErrorException' with message 'XMLReader::read(): /var/www/html/boomvideo/public_html/api_ver2/web/:30: parser error : Entity 'hellip' not defined' in /var/www/html/boomvideo/public_html/api/models/User.php:142
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'XMLReader::read...', '/var/www/html/b...', 142, Array)
+#1 /var/www/html/boomvideo/public_html/api/models/User.php(142): XMLReader->read()
+#2 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(4855): api\models\User->xmlparsingDan('http://www.cvip...')
+#3 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(678): api_ver2\controllers\UserController->getBlogFeeds('http://www.cvip...', '1')
+#4 [internal function]: api_ver2\controllers\UserController->actionLogin()
+#5 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#6 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('login', Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/login', Array)
+#9 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#11 {main}
+ Data: 

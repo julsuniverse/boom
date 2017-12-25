@@ -1,0 +1,52 @@
+
+Notification Message:
+
+Message
+{
+  "state" : "COMPLETED",
+  "version" : "2012-09-25",
+  "jobId" : "1509780569438-w8f5rx",
+  "pipelineId" : "1508299918111-bmswsf",
+  "input" : {
+    "key" : "boom-188/postvideos/reply_23325_1509780570155.mp4"
+  },
+  "inputCount" : 1,
+  "outputs" : [ {
+    "id" : "1",
+    "presetId" : "1351620000001-000010",
+    "key" : "boom-188/streaming/mp4-post_reply_23325_1509780570155.mp4",
+    "thumbnailPattern" : "boom-188/streaming/thumb/thumb-post_reply_23325_1509780570155-{count}",
+    "status" : "Complete",
+    "duration" : 7,
+    "width" : 576,
+    "height" : 720
+  } ]
+}
+MessageId
+c9a555ff-a709-5579-a91b-0788c9a832f7
+SubscribeURL
+TimeStamp
+2017-11-04T07:29:37.038Z
+Token
+
+TopicArn
+arn:aws:sns:us-west-2:630949593304:AppbeatVIdeoComplete
+Type
+Notification
+Query: UPDATE post SET ReplyStreamURL = 'http://d1votgrx00p4vc.cloudfront.net/boom-188/streaming/mp4-post_reply_23325_1509780570155.mp4', ReplyImage = 'http://d1votgrx00p4vc.cloudfront.net/boom-188/streaming/thumb/thumb-post_reply_23325_1509780570155-00001.png'  WHERE Reply = 'boom-188/postvideos/reply_23325_1509780570155.mp4' 
+file name 
+boom-188/postvideos/reply_23325_1509780570155.mp4
+ Query: 
+SELECT a.ArtistName,p.ArtistID,a.DeviceToken,a.DeviceType,p.PostID,p.MobileStreamUrl,p.MemberID,p.PostType 
+                                                 FROM post p 
+                                                 JOIN artist a 
+                                                 ON (a.ArtistID=p.ArtistID)
+                                                 WHERE p.Reply='boom-188/postvideos/reply_23325_1509780570155.mp4'Number of records 
+
+1\nArtistID=188
+artist reply 
+73b5358ff56e25442b269848b0f1c2644730f14c708e7f654b84af973a9e7354
+Token 73b5358ff56e25442b269848b0f1c2644730f14c708e7f654b84af973a9e7354
+Message:Alejandra Trevino has answered your question
+NotificationType:replyAns
+Type:member

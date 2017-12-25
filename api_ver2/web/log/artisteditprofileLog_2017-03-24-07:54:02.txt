@@ -1,0 +1,30 @@
+
+ ************************
+ DateTime : 2017-03-24 07:54:02
+ Message : exception 'yii\base\ErrorException' with message 'Undefined property: stdClass::$body' in /var/www/html/boomvideo/public_html/common/config/S3.php:877
+Stack trace:
+#0 /var/www/html/boomvideo/public_html/common/config/S3.php(877): yii\base\ErrorHandler->handleError(8, 'Undefined prope...', '/var/www/html/b...', 877, Array)
+#1 [internal function]: S3Request->__responseWriteCallback(Resource id #18, '<?xml version="...')
+#2 /var/www/html/boomvideo/public_html/common/config/S3.php(830): curl_exec(Resource id #18)
+#3 /var/www/html/boomvideo/public_html/common/config/S3.php(305): S3Request->getResponse()
+#4 /var/www/html/boomvideo/public_html/common/config/S3.php(331): S3::putObject(Array, 'boomvideo-in', 'boom-179/profil...', 'public-read', Array, NULL)
+#5 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(2306): S3::putObjectFile('/var/www/html/b...', 'boomvideo-in', 'boom-179/profil...', 'public-read')
+#6 [internal function]: api_ver2\controllers\UserController->actionArtisteditprofile()
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#9 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('artisteditprofi...', Array)
+#10 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/artistedit...', Array)
+#11 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#13 {main}
+ Data: 
+ Params : {"UserID":"24820","ArtistID":"179","Website":"http:\/\/www.MeetHolli.com","ArtistName":"Holli Berri","Nationality":"Caucasian","FacebookPageUrl":"","Password":"","Language":"english","DeleteMediaIDs":[],"ProfileThumb":"profile_1490144675.jpg","Email":"holliberri4u@gmail.com","ArtistImages":[],"TwitterPageUrl":"twitter.com\/meetholli","AboutMe":"My name is ✨ Holli Berri✨  and I am so glad that you have found me! If you desire the best life has to offer, a sweet escape, and a true connection, you have come to the right place.\r\n\r\nI am a master of seduction. You will be lost in my sparkling green eyes and captivated by my athletic, hourglass figure. The power of good company and conversation is so amazing. I am intrigued by the human mind. I thrive on building lasting relationships and feel so blessed to do what I do.\r\n\r\nExcited for you to subscribe and ask me questions so we can build that relationship :)\r\n","YouTubeChannelName":"","YearsActive":"2017","Birthdate":"1985-01-19","Genre":"Lifestyle","YouTubePageUrl":"","InstagramPageUrl":"imstagram.con\/itsholliberri","Residence":"San Francisco"}\n
+ Artist Edit Profile : CALL Artist_Edit_Profile(179,24820,'Holli Berri','profile_1490144675.jpg',
+				       'holliberri4u@gmail.com','19-01-1985','Caucasian','San Francisco','http://www.MeetHolli.com','',
+				       '2017','Lifestyle','My name is ✨ Holli Berri✨  and I am so glad that you have found me! If you desire the best life has to offer, a sweet escape, and a true connection, you have come to the right place.
+
+I am a master of seduction. You will be lost in my sparkling green eyes and captivated by my athletic, hourglass figure. The power of good company and conversation is so amazing. I am intrigued by the human mind. I thrive on building lasting relationships and feel so blessed to do what I do.
+
+Excited for you to subscribe and ask me questions so we can build that relationship :)
+','','imstagram.con/itsholliberri',
+				       'twitter.com/meetholli','','','boom@123')\n

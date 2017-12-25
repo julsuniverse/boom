@@ -1,0 +1,47 @@
+
+ ************************
+ DateTime : 2017-03-14 05:17:32
+ Message : exception 'yii\base\ErrorException' with message 'Undefined property: stdClass::$body' in /var/www/html/boomvideo/public_html/common/config/S3.php:877
+Stack trace:
+#0 /var/www/html/boomvideo/public_html/common/config/S3.php(877): yii\base\ErrorHandler->handleError(8, 'Undefined prope...', '/var/www/html/b...', 877, Array)
+#1 [internal function]: S3Request->__responseWriteCallback(Resource id #16, '<?xml version="...')
+#2 /var/www/html/boomvideo/public_html/common/config/S3.php(830): curl_exec(Resource id #16)
+#3 /var/www/html/boomvideo/public_html/common/config/S3.php(305): S3Request->getResponse()
+#4 /var/www/html/boomvideo/public_html/common/config/S3.php(331): S3::putObject(Array, 'boomvideo-in', 'boom-110/profil...', 'public-read', Array, NULL)
+#5 /var/www/html/boomvideo/public_html/api_ver2/controllers/UserController.php(2306): S3::putObjectFile('/var/www/html/b...', 'boomvideo-in', 'boom-110/profil...', 'public-read')
+#6 [internal function]: api_ver2\controllers\UserController->actionArtisteditprofile()
+#7 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#8 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#9 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('artisteditprofi...', Array)
+#10 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/artistedit...', Array)
+#11 /var/www/html/boomvideo/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /var/www/html/boomvideo/public_html/api_ver2/web/index.php(21): yii\base\Application->run()
+#13 {main}
+ Data: 
+ Params : {"UserID":"747","ArtistID":"110","Website":"http:\/\/www.meowgang.com\/TShirts\/cat383373_2884201.aspx","ArtistName":"Brittanya","Nationality":"Mexican","FacebookPageUrl":"","Password":"meowgang123$","Language":"english","DeleteMediaIDs":[],"ProfileThumb":"profile_1467791690.png","Email":"louis@diigso.com","ArtistImages":[],"TwitterPageUrl":"https:\/\/twitter.com\/brittanya187187","AboutMe":"Brittanya Razavi is an American model and actress. She is also the co-owner of the international clothing company 187 Avenue. She is best known for her appearances on reality TV shows like VH1’s Rock of Love Bus and Charm School 3.\r\nRazavi’s career as a model was fueled by her appearance on reality television in 2009 with VH1’s Rock of Love Bus and Charm School 3. \r\nThe same year as her reality TV debut, she was featured in seven magazines in an eight-month period, including cover features for MMA Sports Magazine, Spire Magazine, Rebel Ink, Savage Tattoo, and Tattoo Energy.[5] She currently lives in Los Angeles, California.\r\n\r\nAbout Artist Subscription :\r\n\r\nUsers can Subscribe to Brittanya to access her content without the interruption of ads. \r\n\r\nSubscription Charges: \r\n- For Subscription users pay $9.99 for month\r\n- Payment will be charged to iTunes Account at confirmation of purchase\r\n- Subscription automatically renews unless auto-renew is turned off at least 24-hours before the end of the current period\r\n- Subscriptions may be managed by the user and auto-renewal may be turned off by going to the user's Account Settings after purchase\r\n- No cancellation of the current subscription is allowed during active subscription period\r\n\r\nTERMS & CONDITION \r\nhttp:\/\/appbeat.us\/terms.php\r\n\r\nPRIVACY POLICY\r\nhttp:\/\/appbeat.us\/privacy.php\r\n\r\nSUPPORT EMAIL\r\ncontact@appbeat.us","YouTubeChannelName":"","YearsActive":"2016","Birthdate":"1985-07-07","Genre":"Model","YouTubePageUrl":"","InstagramPageUrl":"https:\/\/www.instagram.com\/brittanya187l","Residence":"California"}\n
+ Artist Edit Profile : CALL Artist_Edit_Profile(110,747,'Brittanya','profile_1467791690.png',
+				       'louis@diigso.com','07-07-1985','Mexican','California','http://www.meowgang.com/TShirts/cat383373_2884201.aspx','',
+				       '2016','Model','Brittanya Razavi is an American model and actress. She is also the co-owner of the international clothing company 187 Avenue. She is best known for her appearances on reality TV shows like VH1’s Rock of Love Bus and Charm School 3.
+Razavi’s career as a model was fueled by her appearance on reality television in 2009 with VH1’s Rock of Love Bus and Charm School 3. 
+The same year as her reality TV debut, she was featured in seven magazines in an eight-month period, including cover features for MMA Sports Magazine, Spire Magazine, Rebel Ink, Savage Tattoo, and Tattoo Energy.[5] She currently lives in Los Angeles, California.
+
+About Artist Subscription :
+
+Users can Subscribe to Brittanya to access her content without the interruption of ads. 
+
+Subscription Charges: 
+- For Subscription users pay $9.99 for month
+- Payment will be charged to iTunes Account at confirmation of purchase
+- Subscription automatically renews unless auto-renew is turned off at least 24-hours before the end of the current period
+- Subscriptions may be managed by the user and auto-renewal may be turned off by going to the users Account Settings after purchase
+- No cancellation of the current subscription is allowed during active subscription period
+
+TERMS & CONDITION 
+http://appbeat.us/terms.php
+
+PRIVACY POLICY
+http://appbeat.us/privacy.php
+
+SUPPORT EMAIL
+contact@appbeat.us','','https://www.instagram.com/brittanya187l',
+				       'https://twitter.com/brittanya187187','','meowgang123$','boom@123')\n
