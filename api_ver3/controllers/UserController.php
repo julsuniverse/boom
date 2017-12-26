@@ -1555,8 +1555,7 @@ class UserController extends Controller {
         }
     }
 
-    public
-            function actionShare() {
+    public function actionShare() {
         $logString  = "";
         try
         {
@@ -1623,8 +1622,7 @@ class UserController extends Controller {
         }
     }
 
-    public
-            function actionLikecomment() {
+    public function actionLikecomment() {
         $logString  = "";
         try
         {
@@ -1698,8 +1696,7 @@ class UserController extends Controller {
         }
     }
 
-    public
-            function actionAddcomment() {
+    public function actionAddcomment() {
         $logString  = "";
         try
         {
@@ -1810,8 +1807,7 @@ class UserController extends Controller {
         }
     }
 
-    public
-            function actionSignup() {
+    public function actionSignup() {
         /************** Member Signup *****************/
         $logString  = "";
         try
@@ -1997,8 +1993,7 @@ class UserController extends Controller {
     }
 
 
-	public
-            function actionUpdateusername() {
+	public function actionUpdateusername() {
         /************** Update username of an existing user *****************/
         $logString  = "";
         try
@@ -2129,7 +2124,7 @@ class UserController extends Controller {
         return $result;
     }
 
-public function actionEditprofile() {
+    public function actionEditprofile() {
         /*************** Update profile ********************/
         $logString  = "";
         try
@@ -2276,8 +2271,7 @@ public function actionEditprofile() {
         }
     }
 
-    public
-            function actionArtisteditprofile() {
+    public function actionArtisteditprofile() {
         $logString  = "";
         try
         {
@@ -2424,8 +2418,7 @@ public function actionEditprofile() {
         }
     }
     
-    public
-            function actionNewcommentlist() {
+    public function actionNewcommentlist() {
         $logString  = "";
         try
         {
@@ -2491,8 +2484,7 @@ public function actionEditprofile() {
         }
     }
 
-    public
-            function actionCommentlist() {
+    public function actionCommentlist() {
         $logString  = "";
         try
         {
@@ -2558,7 +2550,7 @@ public function actionEditprofile() {
         }
     }
 	
-	    public function actionDeletecomment() {
+    public function actionDeletecomment() {
         $logString = "";
         try {    
             $arrParams = Yii::$app->request->post();
@@ -2612,8 +2604,7 @@ public function actionEditprofile() {
     }
 	
 
-    public
-            function actionLatestcommentlist() {
+    public function actionLatestcommentlist() {
         $logString  = "";
         try
         {
@@ -2673,8 +2664,7 @@ public function actionEditprofile() {
         }
     }
 
-    public
-            function actionAddfeed() {
+    public function actionAddfeed() {
         $logString  = "";
         try
         {
@@ -2705,8 +2695,7 @@ public function actionEditprofile() {
         }
     }
 
-    public
-            function actionPostlist() {
+    public function actionPostlist() {
         $logString  = "";
         try
         {
@@ -2945,8 +2934,7 @@ public function actionEditprofile() {
         }
     }
 
-    public
-            function actionQuestionanswerlist() {
+    public function actionQuestionanswerlist() {
         /*****************  Get QA list ***************/
         $logString  = "";
         try
