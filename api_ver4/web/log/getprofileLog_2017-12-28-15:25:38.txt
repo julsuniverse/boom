@@ -1,0 +1,18 @@
+
+ ************************
+ DateTime : 2017-12-28 15:25:38
+ Message : yii\base\ErrorException: Undefined variable: finalData in /app/api_ver4/controllers/SiteController.php:289
+Stack trace:
+#0 /app/api_ver4/controllers/SiteController.php(289): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', '/app/api_ver4/c...', 289, Array)
+#1 [internal function]: api_ver4\controllers\SiteController->actionGetprofile()
+#2 /app/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#3 /app/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 /app/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('getprofile', Array)
+#5 /app/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('site/getprofile', Array)
+#6 /app/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /app/api_ver4/web/index.php(21): yii\base\Application->run()
+#8 {main}
+ Data: 
+ Params : {"UserID":3,"UserType":3,"ProfileID":1,"Language":"en"}\n
+ Member Get Profile : CALL Member_GetProfile('3','3','1','boom@123','http://d1t89cp2y0xf79.cloudfront.net/boom-','/profileimages/thumb/')\n
+ Post image List : CALL Post_Image_List(2,0,1,'http://d1t89cp2y0xf79.cloudfront.net/boom-','/artistimages/','/postimages/thumb/','/postimages/medium/')\n

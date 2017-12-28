@@ -7,7 +7,7 @@ return [
             'username' => 'root',
             'password' => '',
             'charset' => 'utf8',
-        ],*/
+        ],
         /*'db' => [
             'class' => 'yii\db\Connection',
             'dsn' => 'mysql:host=192.168.1.44;dbname=boom',
@@ -28,6 +28,14 @@ return [
             'username' => 'boomvideo',
             'password' => 'G9J4g00xiMSFakXQ',
             'charset' => 'utf8',
+            'enableSchemaCache' => true,
+            // Продолжительность кеширования схемы.
+            'schemaCacheDuration' => 3600,
+            // Название компонента кеша, используемого для хранения информации о схеме
+            'schemaCache' => 'cache',
+            'enableQueryCache' => true,
+            'queryCache' => 'redis',
+            'queryCacheDuration' => 3600,
         ],
         /*'db' => [
             'class' => 'yii\db\Connection',

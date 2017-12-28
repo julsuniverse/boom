@@ -143,13 +143,13 @@ class UserController extends Controller {
     const
             Postblurthumbvideos = POST_BLURTHUMBIMAGE_VIDEOS;
 
-    private
-            $arrSkipAction = ['create',
+    private $arrSkipAction = [
+        'create',
         'login',
-        'addfeed'];
+        'addfeed'
+    ];
 
-    public
-            function behaviors() {
+    public function behaviors() {
         $behaviors = parent::behaviors();
         $behaviors['authenticator'] = [
             'class' => HttpBasicAuth::className(),
@@ -1246,17 +1246,24 @@ class UserController extends Controller {
 
     public function actionGetprofile() {
         $logString  = "";
+
         try
         {
             $arrParams = Yii::$app->request->post();
-            $logString.="\n Params : ".$arrParams['params'].'\n';	
+
+            //print_r($arrParams);exit;
+            //print_r(json_encode(['UserID' => 3, 'UserType' => 3, 'ProfileID' => 1, 'Language' => 'en']));
+            $logString.="\n Params : ".$arrParams['params'].'\n';
+            //print_r(json_decode($arrParams['params'])); exit;
             $data = json_decode($arrParams['params']);
+
             $availableParams = array(
                 'UserID',
                 'UserType',
                 'ProfileID',
                 'Language');
             $compareField = array_diff_key(array_keys($arrParams), $availableParams);
+
             if (count($compareField) == 0)
             {
                 $userID = $data->UserID;
@@ -1315,7 +1322,9 @@ class UserController extends Controller {
         }
         catch (ErrorException $e)
         { 
-            $this->addLog($logString,$e); 
+            $this->addLog($logString,$e);
+            echo json_encode(['Status' => 0,
+            "Message" => $e->getMessage()], JSON_PRETTY_PRINT);
         }
     }
 

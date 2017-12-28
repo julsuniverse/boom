@@ -14,4 +14,8 @@ $config = yii\helpers\ArrayHelper::merge(
     require __DIR__ . '/../config/main-local.php'
 );
 
+require(__DIR__ . '/../../common/config/S3.php');
+require(__DIR__ . '/../../common/config/common.php');
+require_once( dirname(__FILE__) . '/../components/helper/Commonfunctions.php');
+
 (new yii\web\Application($config))->run();
