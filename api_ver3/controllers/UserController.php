@@ -4425,8 +4425,7 @@ class UserController extends Controller {
         }
     }
 
-    public
-            function actionArtisthomescreen() {
+    public function actionArtisthomescreen() {
         $logString  = "";
         try
         {
