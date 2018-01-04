@@ -6,6 +6,7 @@ use backend\models\Feedarticles;
 use backend\models\PostPages;
 use ErrorException;
 use Yii;
+use yii\caching\DbDependency;
 use yii\filters\auth\HttpBasicAuth;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
@@ -132,6 +133,9 @@ class UserController extends Controller
                 'addpost',
                 'applist',
                 'artisthomescreen',
+                'getqasettings',
+                'getdpinfo',
+                'login',
 
             ],
         ];
@@ -143,6 +147,9 @@ class UserController extends Controller
                 'addpost' => ['post','get'],
                 'applist' => ['post'],
                 'artisthomescreen' => ['get'],
+                'getqasettings' => ['post'],
+                'getdpinfo' => ['post'],
+                'login' => ['post'],
 
             ]
         ];
@@ -853,9 +860,9 @@ class UserController extends Controller
         }
     }
 
+    //+
     public function actionPostlist() {
-        Yii::$app->controller->layout = '1';
-        $connection = Yii::$app->db;
+
         $logString  = "";
         try
         {
@@ -886,7 +893,7 @@ class UserController extends Controller
                 $language = $data->Language;
                 if(isset($data->ComID)){ $ComID=$data->ComID;} // Boom Native app--Kate
                 else $ComID=0;
-                //$connection = Yii::$app->db;
+                $connection = Yii::$app->db;
 
                 // //boom Native App --Kate
                 if($artistID==0 && $ComID!=0){ // Boom Native app--Kate
@@ -897,16 +904,15 @@ class UserController extends Controller
                 $logString.="\n Post Image List : ".$procedure.'\n';
                 $command = $connection->createCommand($procedure);
 
-                //$postData = $command->queryAll();
+                $dependency = \Yii::createObject([
+                    'class'=>'\yii\caching\DbDependency',
+                    'sql' => 'SELECT MAX(Updated), MAX(Created), SUM(IsDelete) FROM post WHERE artistID='.$artistID
+                ]);
 
-                try {
-                    $postData = $connection->cache(function ($db) use ($command) {
-                        $postData = $command->queryAll();
-                        return $postData;
-                    });
-                } catch (\Exception $e) {
-                }
+                $postData = $connection->cache(function ($db) use ($command){
+                    return $command->queryAll();
 
+                }, $connection->queryCacheDuration, $dependency);
                 foreach ($postData as $key => $value)
                 {
                     if (isset($value['PostID']) && $value['PostID'] != '')
@@ -1006,15 +1012,6 @@ class UserController extends Controller
                    } catch (\Exception $e) {
 
                    }
-
-                    //$artist2 = Artist::find()->where(['ArtistId' => $artistID])->one();
-
-                   /* echo "<pre>";
-                        print_r($artist);
-                        print_r($artist2);
-                    echo "</pre>";*/
-
-
 
                     $instaUrl = $artist['InstagramPageURL'];
                     $blogUrl = $artist['BlogFeedUrl'];
@@ -1150,14 +1147,6 @@ class UserController extends Controller
                         //"RecordCount" => $recordcnt,
                         "Result" => $postData,
                         'UnreadQA' => $unreadQAData], JSON_PRETTY_PRINT);
-                   /*$res = json_encode(['Status' => $status,
-                       "Message" => $lngmsg,
-                       //"RecordCount" => $recordcnt,
-                       "Result" => $postData,
-                       'UnreadQA' => $unreadQAData], JSON_PRETTY_PRINT);
-                    return $this->render('user', [
-                        'res' => $res,
-                    ]);*/
                 }
             }
             else
@@ -1706,7 +1695,6 @@ class UserController extends Controller
         }
     }
 
-    /* !!! */
     public function actionArtisthomescreen()
     {
         Yii::$app->controller->layout = '1';
@@ -1732,7 +1720,10 @@ class UserController extends Controller
 
                 $logString.="\n Artist Home News Feed : ".$procedure.'\n';
                 $command = $connection->createCommand($procedure);
-                $postData = $command->queryAll();
+                $postData = $connection->cache(function ($db) use($command) {
+                    return $command->queryAll();
+
+                });
 
                 foreach ($postData as $key => $value)
                 {
@@ -1742,13 +1733,22 @@ class UserController extends Controller
                         $postID = $value['PostID'];
                         $postimageproc = "CALL Post_Image_List(1," . $postID . "," . $artistID . ",'" . self::S3BucketPath . "','" . self::S3BucketPostImages . "','" . self::S3BucketPostThumbImage . "','" . self::S3BucketPostMediumImage . "')";
                         $commandForImage = $connection->createCommand($postimageproc);
-                        $imageData = $commandForImage->queryAll();
+                        //$imageData = $commandForImage->queryAll();
 
-                        //SELECT * FROM memberactivity WHERE artistID = $artistID AND PostID = $postData->PostID
-                        // циклом заполнить данные
+                        $imageData = $connection->cache(function ($db) use($commandForImage) {
+                            return $commandForImage->queryAll();
+
+                        });
+
                         $latestcmntsproc = "CALL Latest_Post_CommentList(" . $postID . "," . $artistID . "," . $artistID . ",2,'" . self::S3BucketAbsolutePath . "','" . self::S3BucketPath . "','" . self::S3BucketProfileThumbImages . "','" . self::S3BucketStickers . "','" . self::S3BucketStickersSmall . "','" . self::S3BucketStickersMedium . "')";
                         $commandForCmnts = $connection->createCommand($latestcmntsproc);
-                        $cmntsData = $commandForCmnts->queryAll();
+                        //$cmntsData = $commandForCmnts->queryAll();
+
+                        $cmntsData = $connection->cache(function ($db) use($commandForCmnts) {
+                            return $commandForCmnts->queryAll();
+
+
+                        });
                         if (count($cmntsData) > 0)
                         {
                             $postData[$key]['LatestComments'] = $cmntsData;
@@ -1768,10 +1768,6 @@ class UserController extends Controller
 
                     }
                 }
-                echo "<pre>";
-                print_r($postData);
-                echo "</pre>";
-                die;
 
                 if (count($postData) > 0)
                 {
@@ -2149,13 +2145,21 @@ class UserController extends Controller
             //$unreadQAData = $modelPost->find()->where("ArtistID=" . $artistID . " AND PostType = 4 AND Reply IS NULL AND (QAIgnore IS NULL  OR QAIgnore='2')  ")->asArray()->all();
             //return count($unreadQAData);
             $command = $query->createCommand();
-            $unreadQAData = $command->queryAll();
+            //$unreadQAData = $command->queryAll();
+
+            try {
+                $unreadQAData = \Yii::$app->db->cache(function ($db) use ($command)  {
+                    $unreadQAData = $command->queryAll();
+                    return $unreadQAData;
+                });
+            } catch (\Exception $e) {
+            }
+
             return $unreadQAData[0]['total'];
         } catch (ErrorException $e) {
             $this->addLog($logString,$e);
         }
     }
-
 
     protected function getInstagramFeeds($url, $artistId){
         $res = array();
@@ -2437,7 +2441,6 @@ class UserController extends Controller
 
         return $res;
     }
-
 
     public function addLog($logString,$e) {
         if($this->logWrite) {
