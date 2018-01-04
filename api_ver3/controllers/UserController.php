@@ -149,6 +149,8 @@ class UserController extends Controller {
         'addfeed'
     ];
 
+
+
     public function behaviors() {
         $behaviors = parent::behaviors();
         $behaviors['authenticator'] = [
@@ -2746,7 +2748,6 @@ class UserController extends Controller {
                 $logString.="\n Post Image List : ".$procedure.'\n';  
                 $command = $connection->createCommand($procedure);
                 $postData = $command->queryAll();
-
                 foreach ($postData as $key => $value)
                 {
                     if (isset($value['PostID']) && $value['PostID'] != '')
@@ -3171,8 +3172,7 @@ class UserController extends Controller {
         }
     }
 
-    public
-            function actionApplist() {
+    public function actionApplist() {
         $logString  = "";
         try
         {
@@ -3225,8 +3225,7 @@ class UserController extends Controller {
         }
     }
 
-    public
-            function actionAddpost() {
+    public function actionAddpost() {
         $logString  = "";
         try
         {
@@ -4425,8 +4424,7 @@ class UserController extends Controller {
         }
     }
 
-    public
-            function actionArtisthomescreen() {
+    public function actionArtisthomescreen() {
         $logString  = "";
         try
         {

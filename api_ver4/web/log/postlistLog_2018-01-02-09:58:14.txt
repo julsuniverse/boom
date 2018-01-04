@@ -1,0 +1,16 @@
+
+ ************************
+ DateTime : 2018-01-02 09:58:14
+ Message : yii\base\ErrorException: Undefined variable: unreadQAData in /app/api_ver4/controllers/UserController.php:632
+Stack trace:
+#0 /app/api_ver4/controllers/UserController.php(632): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', '/app/api_ver4/c...', 632, Array)
+#1 /app/api_ver4/controllers/UserController.php(556): api_ver4\controllers\UserController->unreadQA('1')
+#2 [internal function]: api_ver4\controllers\UserController->actionPostlist()
+#3 /app/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#4 /app/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#5 /app/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('postlist', Array)
+#6 /app/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/postlist', Array)
+#7 /app/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 /app/api_ver4/web/index.php(21): yii\base\Application->run()
+#9 {main}
+ Data: 
