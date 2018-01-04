@@ -186,10 +186,6 @@ class TestController extends Controller
         header('Content-Type: text/html; charset=utf-8');
     }
 
-    /*
-    {"Username":"kate","Password":"boom2012","DeviceType":2,"DeviceToken":"fkCqdprxNds:APA91bHYAj2fNpiQXORXoAg6_xymhJ_RwR-LjH4uIHCknJ5oUfA86vSxTk3fVrKa3ADFiZSbK5boK3VdjLNqkuH_PTaGmQpP5QNRGTTNBS8w5syt3ddbFUXP-XJ7-sG-_YFJ5xbGVKv5","UserType":3,"ArtistID":1,"LoginType":1,"MemberName":"","Email":"","Language":"english","IsQa":0,"QaName":"","QaType":"","ComID":0}
-    {"Username":"kate","Password":"boom2012","DeviceType":2,"DeviceToken":"fkCqdprxNds:APA91bHYAj2fNpiQXORXoAg6_xymhJ_RwR-LjH4uIHCknJ5oUfA86vSxTk3fVrKa3ADFiZSbK5boK3VdjLNqkuH_PTaGmQpP5QNRGTTNBS8w5syt3ddbFUXP-XJ7-sG-_YFJ5xbGVKv5","UserType":3,"ArtistID":1,"LoginType":1,"MemberName":"","Email":"","Language":"english","IsQa":1,"QaName":"","QaType":"","ComID":0}
-    */
     public function actionLogin() {
         $logString  = "";
         try
@@ -753,8 +749,6 @@ class TestController extends Controller
         }
     }
 
-
-    /*{"ArtistID":1,"UserType":2,"PageIndex":1,"Language":"english"} */
     public function actionArtisthomescreen() {
         Yii::$app->controller->layout = 'test';
         $logString  = "";
@@ -861,7 +855,6 @@ class TestController extends Controller
         }
     }
 
-    /* {"ArtistID":1,"Language":"english"} */
     public function actionGetqasettings() {
         /************* Get QA Settings data ****************/
         $logString  = "";
@@ -1012,16 +1005,6 @@ class TestController extends Controller
         }
     }
 
-    /*
-    APIType
-    1 - Member (artist)
-    2 - Post
-    3 - sticker
-
-     {"ReqID":2,"APIType":1,"DeviceType":2,"ArtistID":1}
-     {"ReqID":2,"APIType":2,"DeviceType":2,"ArtistID":1}
-
-    */
     public function actionGetdpinfo() {
         $logString  = "";
         try

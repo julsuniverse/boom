@@ -110,18 +110,6 @@ class UserController extends Controller
     const
         Postblurthumbvideos = POST_BLURTHUMBIMAGE_VIDEOS;
 
-    private $cache;
-    public function __construct(
-        $id,
-        $module,
-        Connection $cache,
-        array $config = []
-    )
-    {
-        $this->cache = $cache;
-        parent::__construct($id, $module, $config);
-    }
-
     /**
      * @inheritdoc
      */
@@ -195,6 +183,569 @@ class UserController extends Controller
         header($statusHeader);
         // header('Content-type: ' . $contentType);
         header('Content-Type: text/html; charset=utf-8');
+    }
+
+    public function actionLogin() {
+        $logString  = "";
+        try
+        {
+            $arrParams = Yii::$app->request->post();
+            $logString.="\n Params : ".$arrParams['params'].'\n';
+            $data = json_decode($arrParams['params']);
+            //print_r($data); die;
+            $availableParams = array(
+                'Username',
+                'Password',
+                'DeviceType',
+                'DeviceToken',
+                'UserType',
+                'ArtistID',
+                'LoginType',
+                'MemberName',
+                'Email',
+                'Language',
+                'IsQa',
+                'QaName',
+                'QaType',
+                'ComID' // Boom Native app--Kate
+            );
+            $compareField = array_diff_key(array_keys($arrParams), $availableParams);
+
+            if (count($compareField) == 0)
+            {
+
+                $fbmembername = "";
+                $fbEmail = "";
+                $password = "";
+                $username = "";
+                if(isset($data->Username)) {
+                    $username = str_replace("'", "", $data->Username);
+                }
+
+                if (isset($data->Password))
+                {
+                    $password = str_replace("'", "", $data->Password);
+                }
+                $devicetype = $data->DeviceType;
+                $devicetoken = $data->DeviceToken;
+                $usertype = $data->UserType;
+                $artistID = $data->ArtistID;
+                $loginType = $data->LoginType;
+
+                //OnesignalAppID for artist app only, for fan app, there is another api to update it's os app id
+                if (isset($data->OnesignalAppID)) {
+                    $OnesignalAppID = $data->OnesignalAppID;
+                } else {
+                    $OnesignalAppID = "";
+                }
+                // Boom Native app--Kate
+                if (isset($data->ComID))
+                    $ComID=$data->ComID;
+                else
+                    $ComID=0;
+                if($loginType == "0") {
+                    $loginType = "1";
+                }
+                $language = $data->Language;
+                if (isset($data->MemberName))
+                {
+                    $fbmembername = $data->MemberName;
+                }
+                if (isset($data->Email))
+                {
+                    $fbEmail = $data->Email;
+                }
+                //added for show free content ---Kate
+                if(isset($data->IsExclusive)){
+                    $isExclusive = $data->IsExclusive;
+                }else $isExclusive=0;
+                $connection = Yii::$app->db;
+                $procedure = "CALL Member_Login_API3('" . $username . "','" . $fbmembername . "','" . $fbEmail . "','" . $password . "','" . $devicetype . "','" . $devicetoken . "'," . $usertype . "," . $artistID . "," . $loginType . ",'" . self::EncryptKey . "','" . self::S3BucketPath . "','" . self::S3BucketProfileImages . "','".$OnesignalAppID."',@UserID,@ProfileID,@UserType,@ErrorCode)";
+                $logString.="\n SP : ".$procedure.'\n';
+
+                $command = $connection->createCommand($procedure);
+                $loginData = $command->queryAll();
+                $resultCode = $loginData[0]['ErrorCode'];
+                //$resultMessage = 	$loginData[0]['Message'];
+                $resultMessage = _getStatusCodeMessageForUser($resultCode);
+                $userID = $loginData[0]['UserID'];
+                $artistUserID = $loginData[0]['ArtistUserID'];
+
+                //added for migrate user--Kate--17-06-2017
+                $loginData[0]['Is_migrate']=0;
+                if($resultCode=="404") {
+                    $query="select * from user where Username=AES_ENCRYPT('".$username."',PASSWORD('boom@123')) and ArtistID=".$artistID." and Is_migrate=1 and UserType=3";
+                    $result= Yii::$app->db->createCommand($query)->execute();
+                    if($result) {
+                        $loginData[0]['Is_migrate']=1;
+                    }
+                }
+
+                if ($artistID > 0)
+                {
+                    $artistProfileID = $artistID;
+                }else if($ComID!="0"&&$usertype=="3"){ // Boom Native app--Kate
+                    $artists=UserArtist::find()->where(" UserID=".$userID." and isSub=1")->all(); // For Native App need artist to subscribe
+
+                    $artistProfileID=0;
+                    if(count($artists)>0){
+                        $ndx=0;
+                        foreach($artists as $art){
+                            $artist=Artist::find()->where(['ArtistID' => $art->ArtistID])->one();
+                            if($artist->CompanyID != $ComID){
+                                unset($artists[$ndx]);
+                            }else{
+                                $ndx++;
+                                $artistID=$art->ArtistID;
+                                $artistProfileID = $art->ArtistID;
+                                $artistUserID = $artist->UserID;
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    $artistProfileID = $loginData[0]['ProfileID'];
+                }
+
+                //For user to get login info
+                $profileID = $loginData[0]['ProfileID'];
+                $user_profile_proc = "CALL Member_GetProfile('" . $userID . "','3','" . $profileID . "','" . self::EncryptKey . "','" . self::S3BucketPath . "','" . self::S3BucketProfileThumbImages . "')";
+                $logString.="\n Member Profile : ".$user_profile_proc.'\n';
+                $command2 = $connection->createCommand($user_profile_proc);
+                $user_profileData = $command2->queryAll();
+
+                if($artistProfileID!=0){
+
+                    /************* Get Member Profile Data *************/
+
+                    $artist_profile_proc = "CALL Member_GetProfile('" . $artistUserID . "','2','" . $artistProfileID . "','" . self::EncryptKey . "','" . self::S3BucketPath . "','" . self::S3BucketProfileThumbImages . "')";
+                    $logString.="\n Artist Profile : ".$artist_profile_proc.'\n';
+                    /*echo $artist_profile_proc;
+                    echo '<br>';
+                    echo $user_profile_proc; die;*/
+
+                    $command3 = $connection->createCommand($artist_profile_proc);
+                    //$artist_profileData = $command3->queryAll();
+
+                    $artist_profileData = $connection->cache(function ($db) use ($command3) {
+                        return $command3->queryAll();
+                    });
+
+                    if (count($artist_profileData) > 0)
+                    {
+                        /*************** Get Artist Image List **************/
+                        $postimagesprocedure = "CALL Artist_Image_List(2,0," . $artistProfileID . ",'" . self::S3BucketPath . "','" . self::S3BucketArtistImages . "','" . self::S3BucketArtistThumb . "','" . self::S3BucketArtistMedium . "','" . self::S3BucketPostThumbImage . "','" . self::S3BucketPostMediumImage . "')";
+                        $commandForImage = $connection->createCommand($postimagesprocedure);
+                        //$artistimages = $commandForImage->queryAll();
+
+                        $artistimages = $connection->cache(function ($db) use ($commandForImage) {
+                            return $commandForImage->queryAll();
+                        });
+
+                        $artist_profileData[0]['ArtistImage'] = $artistimages;
+                    }
+                    //echo $postimagesprocedure; die;
+
+                    /******************* Get Post List if Member **************/
+                    //Boom Native App --Kate
+                    if($ComID==0) {
+                        //$isExclusive=0;
+                        $logString.="\n Fan";  // added by Kate
+                        //added by Kate--deeplinking
+                        $postData_proc = "CALL Post_List_API3(0," .  $artistID . "," . $userID . "," . $profileID . "," . $ComID . "," . $isExclusive . ",'" . self::S3BucketPath . "','" . self::Postvideosthumb . "','" . self::Postblurthumbvideos . "',1,20)";//Daniele
+                    }else { //For Native App to get multiple artist Post
+                        $isExclusive=1;
+                        $logString.="\n Native";
+                        $postData_proc = "CALL Post_List(0, 0," . $userID . "," . $profileID . "," . $ComID . "," . $isExclusive . ",'" . self::S3BucketPath . "','" . self::Postvideosthumb . "','" . self::Postblurthumbvideos . "','','',@o_RecCount)";
+                    }
+
+
+                    $logString.="\n Post List : ".$postData_proc.'\n';
+
+                    //echo $postData_proc; die;
+                    $command4 = $connection->createCommand($postData_proc);
+
+                    $postData = $connection->cache(function ($db) use ($command4) {
+                        return $command4->queryAll();
+                    });
+
+                    $reccommand = $connection->createCommand('SELECT @o_RecCount')->queryOne();
+                    $recordcnt = $reccommand['@o_RecCount'];
+
+                    /*************** Get Similarapp list ****************/
+                    $similarApp_proc = "CALL SimilarApp_List(" . $artistProfileID . ",'" . self::S3BucketAbsolutePath . "','" . self::S3BucketAppIcons . "')";
+                    //echo $similarApp_proc; die;
+                    $command5 = $connection->createCommand($similarApp_proc);
+                    $similarApp = $command5->queryAll();
+
+                    /* * ******************************* Bundle Data For Artist **************************** */
+
+                    $modelSetting = new \backend\models\Setting();
+                    $bundleData = $modelSetting->find()->where(array(
+                        'ArtistID' => $artistID))->asArray()->all();
+
+                    /*                 * ******************************* Unread QA **************************** */
+                    $unreadQAData = $this->unreadQA($artistID);
+                    /*                 * ********************************************************************************** */
+
+                    if (count($postData) > 0)
+                    {
+                        foreach ($postData as $key => $value)
+                        {
+                            if (isset($value['PostID']) && $value['PostID'] != '')
+                            {
+                                $imageData = array();
+                                $postID = $value['PostID'];
+                                if ($usertype == "3")
+                                    $artistID = $value['ArtistID'];
+                                /************ Get Post Images **************/
+                                $postimageproc = "CALL Post_Image_List(1," . $postID . "," . $artistID . ",'" . self::S3BucketPath . "','" . self::S3BucketPostImages . "','" . self::S3BucketPostThumbImage . "','" . self::S3BucketPostMediumImage . "')";
+                                $commandForImage = $connection->createCommand($postimageproc);;
+                                $imageData = $connection->cache(function ($db) use ($commandForImage) {
+                                    return $commandForImage->queryAll();
+                                });
+                                //post pages
+                                $postData[$key]['Pages'] = array();
+                                if($value['PostType'] == 5){
+                                    $pages = PostPages::find()->where('PostID='.$postID)->all();
+                                    foreach($pages as $page){
+                                        $pagel = ['Number' => $page->PageNumber, 'Type' => $page->Type,
+                                            'Text' => $page->Text,'VideoUrl' => $page->VideoUrl,
+                                            'ImageUrl' => $page->ImageUrl, 'ImageWidth' => $page->ImageWidth, 'ImageHeight' => $page->ImageHeight,
+                                            'VideoThumbnailImage' => $page->VideoThumbnailImage, 'VideoThumbnailImageWidth' => $page->VideoThumbnailImageWidth, 'VideoThumbnailImageHeight' => $page->VideoThumbnailImageHeight];
+                                        array_push($postData[$key]['Pages'], $pagel);
+                                    }
+                                }
+
+                                if (count($imageData) > 0)
+                                {
+                                    $postData[$key]['PostImage'] = $imageData;
+                                }
+                                else
+                                {
+                                    $postData[$key]['PostImage'] = $imageData;
+                                }
+
+                                /*if (count($cmntsData) > 0)
+                                {
+                                    $postData[$key]['LatestComments'] = $cmntsData;
+                                }
+                                else
+                                {
+                                    $postData[$key]['LatestComments'] = array();
+                                }*/
+                                $postData[$key]['LatestComments'] = array();
+                            }
+                        }
+                    }
+
+                    \Yii::$app->language = $language;
+                    $lngmsg = \Yii::t('api', $resultMessage);
+                    $this->setHeader(400);
+                    $userData = (object) array();
+                    if (!empty($user_profileData) && isset($user_profileData[0]))
+                    {
+                        $userData = $user_profileData[0];
+                        if (isset($userData['DOB']) && ($userData['DOB'] == "01-01-1970" || $userData['DOB'] == "0000-00-00"))
+                        {
+                            $userData['DOB'] = "";
+                        }
+                    }
+
+                    $artistData = (object) array();
+                    if (!empty($artist_profileData) && isset($artist_profileData[0]))
+                    {
+                        $artistData = $artist_profileData[0];
+                    }
+                    /*                 * ********************** Sticker List ************************** */
+                    $stickersData = array();
+                    //added by Kate--deeplinking
+                    $procedure = "CALL Sticker_List(0," . $artistID . "," . $data->DeviceType . ",'" . self::S3BucketAbsolutePath . "/','" . self::BoomFolder . $artistID . self::S3BucketStickers . "','" . self::BoomFolder . $artistID . self::S3BucketStickersSmall . "','" . self::BoomFolder . $artistID . self::S3BucketStickersMedium . "')";
+                    $logString.="\n Sticker_List : ".$procedure.'\n';
+                    $command = $connection->createCommand($procedure);
+                    $stickersData = $command->queryAll();
+                    if(count($stickersData)>0) :
+                        foreach ($stickersData as $key => $value)
+                        {
+                            $stickerImages = explode(',', $stickersData[$key]['StickerImage']);
+                            $stickerThumbImages = explode(',', $stickersData[$key]['StickerThumbImage']);
+                            $stickerMediumImages = explode(',', $stickersData[$key]['StickerMediumImage']);
+                            $stickerImagesID = explode(',', $stickersData[$key]['StickerImageID']);
+                            $stickerImage = array();
+                            for ($n = 0; $n < count($stickerImagesID); $n++)
+                            {
+                                $stickerImage[$n]['StickerImageID'] = $stickerImagesID[$n];
+                                $stickerImage[$n]['StickerImage'] = $stickerImages[$n];
+                                $stickerImage[$n]['StickerThumbImage'] = $stickerThumbImages[$n];
+                                $stickerImage[$n]['StickerMediumImage'] = $stickerMediumImages[$n];
+                            }
+                            $stickersData[$key]['StickerImage'] = $stickerImage;
+                            unset($stickersData[$key]['StickerThumbImage']);
+                            unset($stickersData[$key]['StickerMediumImage']);
+                            unset($stickersData[$key]['StickerImageID']);
+                        }
+                    endif;
+                    /*                 * ********************** QA Flag ***************** */
+                    $QAData = array();
+                    $procedure = "SELECT SettingID,ArtistID,QAModuleName,IsQAEnable,QaType,TextPrice,TextProductSKUID,VideoPrice,VideoProductSKUID,
+                                    PhotoPrice,PhotoProductSKUID,ProductType,ProductPrice,ProductSKUID,AndroidPrice,AndroidSKUID  FROM setting WHERE ArtistID =" . $artistProfileID;
+                    $command = $connection->createCommand($procedure);
+                    $QAData = $command->queryAll();
+                    $QAModuleName = "Q&A";
+                    $IsQAEnable = "0"; // 1-Enable, 0-Disable
+                    $QAType = "0"; // 1-Video, 2-Text,3-Both
+                    $productPrice = "0";
+                    $productSKUID = "";
+                    $productType = "1";
+                    $androidPrice = "0";
+                    $androidSKUID = "";
+                    if (!empty($QAData))
+                    {
+                        if (isset($QAData["0"]["QAModuleName"]) && $QAData["0"]["QAModuleName"] != "")
+                            $QAModuleName = $QAData["0"]["QAModuleName"];
+                        if (isset($QAData["0"]["IsQAEnable"]) && $QAData["0"]["IsQAEnable"] != "")
+                            $IsQAEnable = $QAData["0"]["IsQAEnable"];
+                        if (isset($QAData["0"]["QaType"]) && $QAData["0"]["QaType"] != "")
+                            $QAType = $QAData["0"]["QaType"];
+                        if (isset($QAData["0"]["ProductType"]) && $QAData["0"]["ProductType"] != "")
+                            $productType = $QAData["0"]["ProductType"];
+                        if (isset($QAData["0"]["ProductPrice"]) && $QAData["0"]["ProductPrice"] != "" && $devicetype == "1")
+                            $productPrice = $QAData["0"]["ProductPrice"];
+                        if (isset($QAData["0"]["ProductSKUID"]) && $QAData["0"]["ProductSKUID"] != ""  && $devicetype == "1")
+                            $productSKUID = $QAData["0"]["ProductSKUID"];
+                        if (isset($QAData["0"]["AndroidPrice"]) && $QAData["0"]["AndroidPrice"] != "" && $devicetype == "2")
+                            $productPrice = $QAData["0"]["AndroidPrice"];
+                        if (isset($QAData["0"]["AndroidSKUID"]) && $QAData["0"]["AndroidSKUID"] != ""  && $devicetype == "2")
+                            $productSKUID = $QAData["0"]["AndroidSKUID"];
+
+                        //fixes issue when AndroidSKUID is empty in DB but ProductSKUID is set. It will use ProductSKUID.
+                        if ($devicetype == "2" && $productSKUID == "" && isset($QAData["0"]["ProductSKUID"]) && $QAData["0"]["ProductSKUID"] != "") {
+                            $productSKUID = $QAData["0"]["ProductSKUID"];
+                        }
+                    }
+                    /*************************************************** */
+
+                    //$modelPost = new \backend\models\Post();
+                    //$modelSticker = new \backend\models\Sticker();
+                    //$postSKUData = $modelPost->find()->select('ProductSKUID')->where(array('ArtistID' => $artistProfileID))->asArray()->all();
+                    //$stickerSKUData = $modelSticker->find()->select('IOSSKUID')->where(array('ArtistID' => $artistProfileID))->asArray()->all();
+
+                    $productSKUdata = array();
+
+                    if(isset($QAData["0"]["ProductSKUID"]) && $QAData["0"]["ProductSKUID"]!="") {
+                        $productSKUdata[] = $QAData["0"]["ProductSKUID"];
+                    }
+                    foreach($postData as $key => $value) {
+                        if(isset($value['ProductID']) && $value['ProductID']!='') {
+                            $productSKUdata[] = $value['ProductID'];
+                        }
+                    }
+                    foreach($stickersData as $key => $value) {
+                        if(isset($value['ProductID']) && $value['ProductID']!='') {
+                            $productSKUdata[] = $value['ProductID'];
+                        }
+                    }
+
+
+
+                    //Added by Daniele: append Instagram & Blog images from RSS feed: TEST
+                    $companyID = 0; $companyName = "";
+                    if($artistID > 0 && $ComID==0){
+                        $artist = Artist::find()->where(['ArtistId' => $artistID])->one();
+
+                        if($artist->CompanyID != null){
+                            $companyID = $artist->CompanyID;
+                            $company = Artist_company::find()->where(['Id' => $companyID])->one();
+                            $companyName = $company->Name;
+                        }
+
+                        if($artistData != null){
+                            $artistData = (object) array_merge((array)$artistData, ['CompanyID' => $companyID, 'CompanyName' => $companyName]);
+                        }
+
+                        $instaUrl = $artist->InstagramPageURL;
+                        $blogUrl = $artist->BlogFeedUrl;
+                        $Feeds = null;
+                        $instaFeeds = null;
+
+                        if($artist->SocialPostEnabled){
+                            //Instagram feed: extract username and generates feed using rssbridge service
+                            if($instaUrl != null && $instaUrl != ""){
+
+                                $spliurl = explode('/', $instaUrl);
+                                $instaUserName = "";
+                                if($spliurl[count($spliurl)-1] != ""){ $instaUserName = $spliurl[count($spliurl)-1];}else{ $instaUserName = $spliurl[count($spliurl)-2];}
+
+
+                                if($instaUserName != ""){
+                                    $instaFeeds = $this->getInstagramFeeds('http://rssbridge.buddylist.co/?action=display&bridge=InstagramBridge&u='.$instaUserName.'&format=MrssFormat', $artistID);
+                                }
+
+                            }
+                            //Blog feed: get feed url from database and get feed
+                            if($blogUrl != null && $blogUrl != ""){
+                                $Feeds = $this->getBlogFeeds($blogUrl, $artistID);
+                            }else{
+                                $articles = Feedarticles::find()->where(['ArtistID' => $artistID])->all();
+                                if(count($articles) > 0){
+                                    $Feeds = array();
+                                    foreach($articles as $art){
+                                        $feed = $this->getBlogFeeds($art->FeedUrl, $artistID);
+                                        $Feeds = array_merge($Feeds, $feed);
+                                    }
+                                }
+                            }
+
+                            //Added by Daniele: append instagram and blog feeds to $postData if available
+                            if($instaFeeds != null){
+                                $recordcnt += count($instaFeeds);
+                                foreach ($instaFeeds as $instaEl){
+                                    //if(count($postData) < (self::Limit)){
+                                    array_push($postData, $instaEl);
+                                    //}
+                                }
+                            }
+                            if($Feeds != null){
+                                $recordcnt += count($Feeds);
+                                foreach ($Feeds as $feedEl){
+                                    //if(count($postData) < (self::Limit)){
+                                    array_push($postData, $feedEl);
+                                    //}
+                                }
+                            }
+                        }
+
+                        //If 24h flag enabled, only the last 24h posts are filtered
+                        if($artist->Display24h){
+                            $curDate = time();
+                            $startDate = date('Y-m-d H:i:s', strtotime('-1 day', $curDate));
+                            $postData24 = array();
+                            foreach ($postData as $post){
+                                $date;
+                                if(is_array($post)){
+                                    $date = $post['DateTime'];
+                                }else{
+                                    $date = $post->DateTime;
+                                }
+                                if($date > $startDate){
+                                    array_push($postData24, $post);
+                                }
+                            }
+                            $postData = $postData24;
+                            $recordcnt = count($postData);
+                        }
+                    }
+
+                    //Sort based on DateTime
+                    usort($postData, function($a, $b)
+                    {
+                        $ao = get_object_vars((object)$a);
+                        $bo = get_object_vars((object)$b);
+                        $date1=$ao['DateTime']; $date2=$bo['DateTime'];
+
+                        return strtotime($date1)<strtotime($date2);
+                    });
+                    $postData = array_slice($postData, 0, self::Limit);
+
+                    //Daniele
+
+                    if ($resultCode == "200")
+                    {
+                        echo json_encode(['Status' => 1,
+                            "Message" => $lngmsg,
+                            'Result' => $loginData,
+                            'RecordCount' => $recordcnt,
+                            'productSKUdata'=>$productSKUdata,
+                            'MemberProfile' => $userData,
+                            'ArtistProfile' => $artistData,
+                            'PostList' => $postData,
+                            'SimilarApp' => $similarApp,
+                            'stickersData' => $stickersData,
+                            'IsQa' => $IsQAEnable,
+                            'QaName' => $QAModuleName,
+                            'QaType' => $QAType,
+                            'BucketName'=>self::S3Bucket."/",
+                            'CognitoPoolId'=>self::COGNITOID,
+                            'paymetInfoQA' => $bundleData,
+                            'UnreadQA' => $unreadQAData,
+                            'ProductType_Subscription' => $productType,
+                            'ProductPrice_Subscription' => $productPrice,
+                            "ProductSKUID_Subscription" => $productSKUID], JSON_PRETTY_PRINT);
+                    }
+                    else
+                    {
+                        echo json_encode(['Status' => 0,
+                            "Message" => $lngmsg,
+                            'Result' => $loginData,
+                            'RecordCount' => $recordcnt,
+                            'productSKUdata'=>$productSKUdata,
+                            'MemberProfile' => $userData,
+                            'ArtistProfile' => $artistData,
+                            'PostList' => $postData,
+                            'SimilarApp' => $similarApp,
+                            'stickersData' => $stickersData,
+                            'IsQa' => $IsQAEnable,
+                            'QaName' => $QAModuleName,
+                            'QaType' => $QAType,
+                            'BucketName'=>self::S3Bucket."/",
+                            'CognitoPoolId'=>self::COGNITOID,
+                            'paymetInfoQA' => $bundleData,
+                            'UnreadQA' => $unreadQAData,
+                            'ProductType_Subscription' => $productType,
+                            'ProductPrice_Subscription' => $productPrice,
+                            "ProductSKUID_Subscription" => $productSKUID], JSON_PRETTY_PRINT);
+                    }
+
+                }
+                else { //$artistProfileID is 0
+                    $userData = (object) array();
+                    if (!empty($user_profileData) && isset($user_profileData[0]))
+                    {
+                        $userData = $user_profileData[0];
+                        if (isset($userData['DOB']) && ($userData['DOB'] == "01-01-1970" || $userData['DOB'] == "0000-00-00"))
+                        {
+                            $userData['DOB'] = "";
+                        }
+                    }
+
+
+                    if ($resultCode == "200")
+                    {
+                        echo json_encode(['Status' => 1,
+                            "Message" => "User haven't subsribe artist yet",
+                            'Result' => $loginData,
+                            'BucketName'=>self::S3Bucket."/",
+                            'CognitoPoolId'=>self::COGNITOID,
+                            'MemberProfile' => $userData], JSON_PRETTY_PRINT);
+                    }else{
+                        $lngmsg = \Yii::t('api', $resultMessage);
+                        echo json_encode(['Status' => 0,
+                            "Message" => $lngmsg,
+                            'Result' => $loginData,
+                            'BucketName'=>self::S3Bucket."/",
+                            'CognitoPoolId'=>self::COGNITOID,
+                            'MemberProfile' => $userData], JSON_PRETTY_PRINT);
+                    }
+                }
+            }
+            else
+            {
+                //$this->setHeader(502);
+                $resultMessage = _getStatusCodeMessageForUser(502);
+                \Yii::$app->language = $language;
+                $lngmsg = \Yii::t('api', $resultMessage);
+                $this->setHeader(400);
+                echo json_encode(['Status' => 0,
+                    "Message" => $lngmsg], JSON_PRETTY_PRINT);
+            }
+        }
+        catch (ErrorException $e)
+        {
+            //echo $e; die;
+            $this->addLog($logString,$e);
+            //echo $logString;
+        }
     }
 
     public function actionGetprofile() {
@@ -1155,6 +1706,7 @@ class UserController extends Controller
         }
     }
 
+    /* !!! */
     public function actionArtisthomescreen()
     {
         Yii::$app->controller->layout = '1';
@@ -1268,6 +1820,323 @@ class UserController extends Controller
         }
     }
 
+    public function actionGetqasettings() {
+        /************* Get QA Settings data ****************/
+        $logString  = "";
+        try
+        {
+            $arrParams = Yii::$app->request->post();
+            $logString.="\n Params : ".$arrParams['params'].'\n';
+            $data = json_decode($arrParams['params']);
+            $availableParams = array(
+                'ArtistID',
+                'Language');
+            $compareField = array_diff_key(array_keys($arrParams), $availableParams);
+            if (count($compareField) == 0)
+            {
+                $artistID = $data->ArtistID;
+                $language = $data->Language;
+                if(isset($data->ComID)&&$data->ComID!=""){
+                    $ComID=$data->ComID;
+                }else $ComID=0;
+                $defaultRes = false;
+                if($ComID=="0"){
+                    $modelSetting = new \backend\models\Setting();
+
+                    $bundleData = $modelSetting::getDb()->cache(function ($db) use ($modelSetting, $artistID){
+                        return $modelSetting->find()->where(array(
+                            'ArtistID' => $artistID))->asArray()->all();
+                    });
+
+                    if(count($bundleData) == 0){ $defaultRes = true;}
+                    else{
+                        if($bundleData[0]["QAModuleName"]==null) :
+                            $bundleData[0]["QAModuleName"] = "";
+                        endif;
+                        if($bundleData[0]["IsQAEnable"]==null) :
+                            $bundleData[0]["IsQAEnable"] = "";
+                        endif;
+                        if($bundleData[0]["QaType"]==null) :
+                            $bundleData[0]["QaType"] = "";
+                        endif;
+                        if($bundleData[0]["TextProductSKUID"]==null) :
+                            $bundleData[0]["TextProductSKUID"] = "";
+                        endif;
+                        if($bundleData[0]["VideoProductSKUID"]==null) :
+                            $bundleData[0]["VideoProductSKUID"] = "";
+                        endif;
+                        if($bundleData[0]["ProductPrice"]==null) :
+                            $bundleData[0]["ProductPrice"] = "0";
+                        endif;
+                        unset($bundleData[0]["Created"]);
+                        unset($bundleData[0]["CreatedBy"]);
+                        unset($bundleData[0]["Updated"]);
+                        unset($bundleData[0]["UpdatedBy"]);
+                    }
+                }else if($ComID!=0){
+                    $logString.="For native products".$ComID;
+                    //For native Question and Answer product ID
+                    $products=array();$pricelist=array();
+                    $products[0]=Nativeproducts::find()->where(" Status=1 And Type=2 and ComID=".$ComID )->asArray()->all();
+                    $products[1]=Nativeproducts::find()->where(" Status=1 And Type=3 and ComID=".$ComID )->asArray()->all();
+                    $products[2]=Nativeproducts::find()->where(" Status=1 And Type=4 and ComID=".$ComID)->asArray()->all();
+
+                    foreach ($products as $key => $product) {
+                        if(count($product)>0) {
+                            $products[$key]=$product[0]['ProductSKUIOS'];
+                            $pricelist[$key]=$product[0]['Price'];
+                        }else{
+                            $products[$key]="";
+                            $pricelist[$key]=0;
+                        }
+                    }
+                    //get Artist QA setting
+                    $modelSetting = new \backend\models\Setting();
+                    $bundleData = $modelSetting->find()->where(array(
+                        'ArtistID' => $artistID))->asArray()->all();
+                    if(count($bundleData) == 0){ $defaultRes = true;}
+                    else{
+                        if($bundleData[0]["QAModuleName"]==null) $bundleData[0]["QAModuleName"] = "";
+                        if($bundleData[0]["IsQAEnable"]==null) $bundleData[0]["IsQAEnable"] = "";
+                        if($bundleData[0]["QaType"]==null)   $bundleData[0]["QaType"] = "";
+                        if($bundleData[0]["ProductPrice"]==null) $bundleData[0]["ProductPrice"] = "0";
+
+                        if($bundleData[0]["TextProductSKUID"]!=null) {
+                            $bundleData[0]["TextProductSKUID"]=$products[0];
+                            $bundleData[0]["TextPrice"]=$pricelist[0];
+                        }else $bundleData[0]["TextProductSKUID"] = "";
+                        if($bundleData[0]["VideoProductSKUID"]!=null){
+                            $bundleData[0]["VideoProductSKUID"] =$products[1];
+                            $bundleData[0]["VideoPrice"] =$pricelist[1];
+                        }else $bundleData[0]["VideoProductSKUID"] = "";
+                        if($bundleData[0]["PhotoProductSKUID"]!=null){
+                            $bundleData[0]["PhotoProductSKUID"] =$products[2];
+                            $bundleData[0]["PhotoPrice"] =$pricelist[2];
+                        }else $bundleData[0]["PhotoProductSKUID"] = "";
+
+                        unset($bundleData[0]["Created"]);
+                        unset($bundleData[0]["CreatedBy"]);
+                        unset($bundleData[0]["Updated"]);
+                        unset($bundleData[0]["UpdatedBy"]);
+                    }
+
+                }
+
+                //QASetting not found: set default response
+                if($defaultRes){
+                    $defQA = ["SettingID"=> "0",
+                        "ArtistID"=> $artistID,
+                        "QAModuleName"=> "",
+                        "IsQAEnable"=> "0",
+                        "QaType"=> "0",
+                        "TextPrice"=> null,
+                        "TextProductSKUID"=> null,
+                        "VideoPrice"=> null,
+                        "VideoProductSKUID"=> null,
+                        "ProductType"=> null,
+                        "ProductPrice"=> null,
+                        "ProductSKUID"=> null,
+                        "AndroidPrice"=> null,
+                        "AndroidSKUID"=> null,
+                        "PhotoPrice"=> null,
+                        "PhotoProductSKUID"=> null];
+                    array_push($bundleData, $defQA);
+                }
+
+
+                $resultMessage = _getStatusCodeMessageForUser(200);
+                \Yii::$app->language = $language;
+                $lngmsg = \Yii::t('api', $resultMessage);
+                $this->setHeader(200);
+                echo json_encode(['Status' => 0,
+                    "Message" => $lngmsg,
+                    'QAData' => $bundleData], JSON_PRETTY_PRINT);
+
+
+            }
+            else
+            {
+                $resultMessage = _getStatusCodeMessageForUser(502);
+                \Yii::$app->language = $language;
+                $lngmsg = \Yii::t('api', $resultMessage);
+                $this->setHeader(400);
+                echo json_encode(['Status' => 0,
+                    "Message" => $lngmsg], JSON_PRETTY_PRINT);
+            }
+        }
+        catch (ErrorException $e)
+        {
+            $this->addLog($logString,$e);
+        }
+    }
+
+    public function actionGetdpinfo() {
+        $logString  = "";
+        try
+        {
+            $arrParams = Yii::$app->request->post();
+            $logString.="\n Params : ".$arrParams['params'].'\n';
+            $data = json_decode($arrParams['params']);
+            $availableParams = array(
+                'ReqID',
+                'APIType',
+                'DeviceType',
+                'ArtistID');
+            $compareField = array_diff_key(array_keys($arrParams), $availableParams);
+            if (count($compareField) == 0)
+            {
+                $artistID = $data->ArtistID;
+                $reqID = $data->ReqID;
+                $APIType = $data->APIType;
+                $deviceType=$data->DeviceType;
+
+                $connection = Yii::$app->db;
+
+                $artistData = (object) array();
+                $postData = (object) array();
+                $stickersData = (object) array();
+
+                if($APIType=='2'){
+                    $procedure = "CALL Member_GetProfile('" . $reqID . "','2','" . $artistID . "','" . self::EncryptKey . "','" . self::S3BucketPath . "','" . self::S3BucketProfileThumbImages . "')";
+                    $logString.="\n Artist Profile : ".$procedure.'\n';
+                    $command = $connection->createCommand($procedure);
+
+                    $artist_profileData = $connection->cache(function ($db) use ($command) {
+                        return $command->queryAll();
+                    });
+
+                    if (count($artist_profileData) > 0)
+                    {
+                        /*************** Get Artist Image List **************/
+                        $postimagesprocedure = "CALL Artist_Image_List(2,0," . $artistID . ",'" . self::S3BucketPath . "','" . self::S3BucketArtistImages . "','" . self::S3BucketArtistThumb . "','" . self::S3BucketArtistMedium . "','" . self::S3BucketPostThumbImage . "','" . self::S3BucketPostMediumImage . "')";
+                        $commandForImage = $connection->createCommand($postimagesprocedure);
+
+                        $artistimages = $connection->cache(function ($db) use ($commandForImage) {
+                            return $commandForImage->queryAll();
+                        });
+
+                        $artist_profileData[0]['ArtistImage'] = $artistimages;
+
+                        $resultCode = 200;
+                        $status = "1";
+                    }else{
+                        $resultCode = 404;
+                        $status = "0";
+                    }
+
+                    $artistData = (object) array();
+                    if (!empty($artist_profileData) && isset($artist_profileData[0]))
+                    {
+                        $artistData = $artist_profileData[0];
+                    }
+                }else if($APIType=='1'){
+                    $userID=0;
+                    $profileID=0;
+                    $postData_proc = "CALL Post_List(" . $reqID . "," . $artistID . "," . $userID . "," . $profileID . ",0,0,'" . self::S3BucketPath . "','" . self::Postvideosthumb . "','" . self::Postblurthumbvideos . "','','',@o_RecCount)";
+                    $logString.="\n Post List : ".$postData_proc.'\n';
+                    $command = $connection->createCommand($postData_proc);;
+
+                    $postData = $connection->cache(function ($db) use ($command) {
+                        return $command->queryAll();
+                    });
+
+                    if (count($postData) > 0)
+                    {
+                        /*************** Get Image List **************/
+                        $imageData = array();
+                        /************* Get Post images **************/
+                        $postimageproc = "CALL Post_Image_List(1," . $reqID . "," . $artistID . ",'" . self::S3BucketPath . "','" . self::S3BucketPostImages . "','" . self::S3BucketPostThumbImage . "','" . self::S3BucketPostMediumImage . "')";
+                        $logString.="\n Post Image List : ".$postimageproc.'\n';
+                        //echo $postimageproc; die;
+                        $commandForImage = $connection->createCommand($postimageproc);
+
+                        $imageData = $connection->cache(function ($db) use ($commandForImage) {
+                            return $commandForImage->queryAll();
+                        });
+
+                        if (count($imageData) > 0)
+                        {
+                            $postData[0]['PostImage'] = $imageData;
+                        }
+                        else
+                        {
+                            $postData[0]['PostImage'] = $imageData;
+                        }
+                        $postData[0]['LatestComments'] = array();
+
+                        $resultCode = 200;
+                        $status = "1";
+                    }else{
+                        $resultCode = 404;
+                        $status = "0";
+                    }
+                }
+                else if($APIType=='3'){
+
+                    $procedure = "CALL Sticker_List(" . $reqID . "," . $artistID . "," . $deviceType . ",'" . self::S3BucketAbsolutePath . "/','" . self::BoomFolder . $artistID . self::S3BucketStickers . "','" . self::BoomFolder . $artistID . self::S3BucketStickersSmall . "','" . self::BoomFolder . $artistID . self::S3BucketStickersMedium . "')";
+                    $logString.="\n Sticker List : ".$procedure.'\n';
+                    $command = $connection->createCommand($procedure);
+
+                    $stickersData = $connection->cache(function ($db) use ($command) {
+                        return $command->queryAll();
+                    });
+
+                    if (count($stickersData) > 0)
+                    {
+                        $stickerImages = explode(',', $stickersData[0]['StickerImage']);
+                        $stickerThumbImages = explode(',', $stickersData[0]['StickerThumbImage']);
+                        $stickerMediumImages = explode(',', $stickersData[0]['StickerMediumImage']);
+                        $stickerImagesID = explode(',', $stickersData[0]['StickerImageID']);
+                        $stickerImage = array();
+                        for ($n = 0; $n < count($stickerImagesID); $n++)
+                        {
+                            $stickerImage[$n]['StickerImageID'] = $stickerImagesID[$n];
+                            $stickerImage[$n]['StickerImage'] = $stickerImages[$n];
+                            $stickerImage[$n]['StickerThumbImage'] = $stickerThumbImages[$n];
+                            $stickerImage[$n]['StickerMediumImage'] = $stickerMediumImages[$n];
+                        }
+                        $stickersData[0]['StickerImage'] = $stickerImage;
+                        unset($stickersData[0]['StickerThumbImage']);
+                        unset($stickersData[0]['StickerMediumImage']);
+                        unset($stickersData[0]['StickerImageID']);
+
+                        $resultCode = 200;
+                        $status = "1";
+                    }else{
+                        $resultCode = 404;
+                        $status = "0";
+                    }
+
+                }else{
+                    $resultCode = 404;
+                    $status = "0";
+                }
+
+
+                $resultMessage = _getStatusCodeMessageCommon($resultCode);
+                echo json_encode(['Status' => $status,
+                    "Message" => $resultMessage,
+                    // 'Result' => $loginData,
+                    'PostData' => $postData,
+                    'ArtistProfile' => $artistData,
+                    'stickersData' => $stickersData
+                    // 'QaData' => $qaData,
+                ], JSON_PRETTY_PRINT);
+            }else{
+                $resultMessage = _getStatusCodeMessageForUser(502);
+                \Yii::$app->language = $language;
+                $lngmsg = \Yii::t('api', $resultMessage);
+                $this->setHeader(400);
+                echo json_encode(['Status' => 0,
+                    "Message" => $lngmsg], JSON_PRETTY_PRINT);
+            }
+        }
+        catch (ErrorException $e)
+        {
+            $this->addLog($logString,$e);
+        }
+    }
+
     public function unreadQA($artistID) {
         $logString  = "";
         try {
@@ -1280,22 +2149,13 @@ class UserController extends Controller
             //$unreadQAData = $modelPost->find()->where("ArtistID=" . $artistID . " AND PostType = 4 AND Reply IS NULL AND (QAIgnore IS NULL  OR QAIgnore='2')  ")->asArray()->all();
             //return count($unreadQAData);
             $command = $query->createCommand();
-
-            //$unreadQAData = $command->queryAll();
-
-            try {
-                $unreadQAData = \Yii::$app->db->cache(function ($db) use ($command)  {
-                    $unreadQAData = $command->queryAll();
-                    return $unreadQAData;
-                });
-            } catch (\Exception $e) {
-            }
-
+            $unreadQAData = $command->queryAll();
             return $unreadQAData[0]['total'];
         } catch (ErrorException $e) {
             $this->addLog($logString,$e);
         }
     }
+
 
     protected function getInstagramFeeds($url, $artistId){
         $res = array();
