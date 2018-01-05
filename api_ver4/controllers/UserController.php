@@ -2,11 +2,12 @@
 namespace api_ver4\controllers;
 
 use backend\models\Artist;
+use backend\models\Artist_company;
 use backend\models\Feedarticles;
 use backend\models\PostPages;
+use backend\models\UserArtist;
 use ErrorException;
 use Yii;
-use yii\caching\DbDependency;
 use yii\filters\auth\HttpBasicAuth;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
@@ -111,6 +112,13 @@ class UserController extends Controller
     const
         Postblurthumbvideos = POST_BLURTHUMBIMAGE_VIDEOS;
 
+    private $dp;
+    public function __construct($id, $module, array $config = [])
+    {
+        $this->dp = \yii\caching\DbDependency::className();
+        parent::__construct($id, $module, $config);
+    }
+
     /**
      * @inheritdoc
      */
@@ -143,7 +151,7 @@ class UserController extends Controller
             'class' => VerbFilter::className(),
             'actions' => [
                 'getprofile' => ['post'],
-                'postlist' => ['post'],
+                'postlist' => ['get'],
                 'addpost' => ['post','get'],
                 'applist' => ['post'],
                 'artisthomescreen' => ['get'],
@@ -755,6 +763,7 @@ class UserController extends Controller
         }
     }
 
+    //+
     public function actionGetprofile() {
         //Yii::$app->controller->layout = '1';
         $logString  = "";
@@ -783,20 +792,33 @@ class UserController extends Controller
                 $procedure = "CALL Member_GetProfile('" . $userID . "','" . $userType . "','" . $profileID . "','" . self::EncryptKey . "','" . self::S3BucketPath . "','" . self::S3BucketProfileThumbImages . "')";
                 $logString.="\n Member Get Profile : ".$procedure.'\n';
                 $command = $connection->createCommand($procedure);
+
+                $dependency = \Yii::createObject([
+                    'class'=>'\yii\caching\DbDependency',
+                    'sql' => 'SELECT MAX(Updated) FROM member',
+                    'reusable' => true,
+                ]);
+
                     try {
                         $profileData = $connection->cache(function ($db) use ($command) {
                             // Результат SQL запроса будет возвращен из кэша если
                             // кэширование запросов включено и результат запроса присутствует в кэше
                             $profileData = $command->queryAll();
                             return $profileData;
-                        });
+                        }, $connection->queryCacheDuration, $dependency);
                     } catch (\Exception $e) {
                     }
                 //$profileData = $command->queryAll();
                 if (count($profileData) > 0)
                 {
+                    $dependency_img = \Yii::createObject([
+                        'class'=>'\yii\caching\DbDependency',
+                        'sql' => 'SELECT MAX(Updated), COUNT(*) FROM gallery',
+                        'reusable' => true,
+                    ]);
                     if ($userType == "2")
                     {
+
                         $postimagesprocedure = "CALL Artist_Image_List(2,0," . $profileID . ",'" . self::S3BucketPath . "','" . self::S3BucketArtistImages . "','" . self::S3BucketArtistThumb . "','" . self::S3BucketArtistMedium . "','" . self::S3BucketPostThumbImage . "','" . self::S3BucketPostMediumImage . "')";
                     }
                     else
@@ -809,7 +831,7 @@ class UserController extends Controller
                         $imageData = $connection->cache(function ($db) use ($commandForImage) {
                             $imageData = $commandForImage->queryAll();
                             return $imageData;
-                        });
+                        }, $connection->queryCacheDuration, $dependency_img);
                     } catch (\Exception $e) {
                     }
                     //$imageData = $commandForImage->queryAll();
@@ -862,11 +884,11 @@ class UserController extends Controller
 
     //+
     public function actionPostlist() {
-
+        Yii::$app->controller->layout = '1';
         $logString  = "";
         try
         {
-            $arrParams = Yii::$app->request->post();
+            $arrParams = Yii::$app->request->get();
             $logString.="\n Params : ".$arrParams['params'].'\n';
             $data = json_decode($arrParams['params']);
             $availableParams = array(
@@ -903,16 +925,26 @@ class UserController extends Controller
                 $procedure = "CALL Post_List_API3(0, " . $artistID . "," . $UserID . "," . $profileID . "," . $ComID . "," . $isExclusive . ",'" . self::S3BucketPath . "','" . self::Postvideosthumb . "','" . self::Postblurthumbvideos . "',$pageindex,20)";
                 $logString.="\n Post Image List : ".$procedure.'\n';
                 $command = $connection->createCommand($procedure);
+                //$postData = $command->queryAll();
+                /*$dependency = \Yii::createObject([
+                    'class'=>'\yii\caching\DbDependency',
+                    //'sql' => 'SELECT MAX(Updated), MAX(Created), SUM(IsDelete) FROM post WHERE artistID='.$artistID,
+                    'sql' => 'SELECT MAX(Created), MAX(Updated), SUM(IsDelete) FROM post WHERE artistID='.$artistID,
+                    'reusable' => true,
+                ]);*/
 
                 $dependency = \Yii::createObject([
                     'class'=>'\yii\caching\DbDependency',
-                    'sql' => 'SELECT MAX(Updated), MAX(Created), SUM(IsDelete) FROM post WHERE artistID='.$artistID
+                    //'sql' => 'SELECT MAX(Updated), MAX(Created), SUM(IsDelete) FROM post WHERE artistID='.$artistID,
+                    'sql' => 'SELECT MAX(Updated) FROM post WHERE artistID='.$artistID,
+                    'reusable' => true,
                 ]);
 
                 $postData = $connection->cache(function ($db) use ($command){
                     return $command->queryAll();
 
                 }, $connection->queryCacheDuration, $dependency);
+                print_r($dependency);
                 foreach ($postData as $key => $value)
                 {
                     if (isset($value['PostID']) && $value['PostID'] != '')
@@ -988,30 +1020,30 @@ class UserController extends Controller
                     //Added by Daniele: append Instagram & Blog images from RSS feed: TEST
                     //$artist = Artist::find()->where(['ArtistId' => $artistID])->one();
 
-                   /* try {
-                        $artist = Artist::getDb()->cache(function ($db) use ($artistID) {
-                            $artist = Artist::find()->where(['ArtistId' => $artistID])->one();
-                            return $artist;
-                        });
-                    } catch (\Exception $e) {
-                    }*/
+                    /* try {
+                         $artist = Artist::getDb()->cache(function ($db) use ($artistID) {
+                             $artist = Artist::find()->where(['ArtistId' => $artistID])->one();
+                             return $artist;
+                         });
+                     } catch (\Exception $e) {
+                     }*/
 
-                   $query = (new \yii\db\Query())
+                    $query = (new \yii\db\Query())
                         ->select(['*'])
                         ->from('artist')
                         ->where(['ArtistId' => $artistID])
                         ->limit(1);
 
-                   $command = $query->createCommand();
+                    $command = $query->createCommand();
 
-                   try {
+                    try {
                         $artist = $connection->cache(function ($db) use ($command)  {
                             $artist = $command->queryOne();
                             return $artist;
                         });
-                   } catch (\Exception $e) {
+                    } catch (\Exception $e) {
 
-                   }
+                    }
 
                     $instaUrl = $artist['InstagramPageURL'];
                     $blogUrl = $artist['BlogFeedUrl'];
@@ -1138,7 +1170,11 @@ class UserController extends Controller
                         'UnreadQA' => $unreadQAData);
 
                     $encodedArray = str_replace("\\", "\\\\", $encodedArray);
-                    echo json_encode($encodedArray, JSON_PRETTY_PRINT); //JSON_PRETTY_PRINT
+                    //echo json_encode($encodedArray, JSON_PRETTY_PRINT); //JSON_PRETTY_PRINT
+                    $res = json_encode($encodedArray, JSON_PRETTY_PRINT);
+                    return $this->render('user', [
+                        'res' => $res,
+                    ]);
                 }
                 else
                 {
@@ -1697,7 +1733,7 @@ class UserController extends Controller
 
     public function actionArtisthomescreen()
     {
-        Yii::$app->controller->layout = '1';
+        //Yii::$app->controller->layout = '1';
         $logString  = "";
         try
         {
