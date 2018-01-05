@@ -1193,7 +1193,7 @@ class UserController extends Controller
             //echo $logString;
         }
     }
-    //*
+    //+
     public function actionApplist() {
         $logString  = "";
         try
@@ -1380,7 +1380,7 @@ class UserController extends Controller
             $this->addLog($logString,$e);
         }
     }
-
+    //+
     public function actionGetqasettings() {
         /************* Get QA Settings data ****************/
         $logString  = "";
@@ -1404,10 +1404,20 @@ class UserController extends Controller
                 if($ComID=="0"){
                     $modelSetting = new \backend\models\Setting();
 
-                    $bundleData = $modelSetting::getDb()->cache(function ($db) use ($modelSetting, $artistID){
-                        return $modelSetting->find()->where(array(
-                            'ArtistID' => $artistID))->asArray()->all();
-                    });
+                    $dependency = \Yii::createObject([
+                        'class' => '\yii\caching\DbDependency',
+                        'sql' => 'SELECT MAX(Created), MAX(Updated) FROM setting WHERE ArtistID='.$artistID,
+                        'reusable' => true,
+                    ]);
+
+                    try {
+                        $bundleData = $modelSetting::getDb()->cache(function ($db) use ($modelSetting, $artistID) {
+                            return $modelSetting->find()->where(array(
+                                'ArtistID' => $artistID
+                            ))->asArray()->all();
+                        }, Yii::$app->db->queryCacheDuration, $dependency);
+                    } catch (\Exception $e) {
+                    }
 
                     if(count($bundleData) == 0){ $defaultRes = true;}
                     else{
