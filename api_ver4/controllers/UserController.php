@@ -8,6 +8,7 @@ use backend\models\PostPages;
 use backend\models\UserArtist;
 use ErrorException;
 use Yii;
+use yii\base\InvalidConfigException;
 use yii\filters\auth\HttpBasicAuth;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
@@ -765,7 +766,6 @@ class UserController extends Controller
 
     //+
     public function actionGetprofile() {
-        //Yii::$app->controller->layout = '1';
         $logString  = "";
         $language = "";
         try
@@ -801,14 +801,11 @@ class UserController extends Controller
 
                     try {
                         $profileData = $connection->cache(function ($db) use ($command) {
-                            // Результат SQL запроса будет возвращен из кэша если
-                            // кэширование запросов включено и результат запроса присутствует в кэше
                             $profileData = $command->queryAll();
                             return $profileData;
                         }, $connection->queryCacheDuration, $dependency);
                     } catch (\Exception $e) {
                     }
-                //$profileData = $command->queryAll();
                 if (count($profileData) > 0)
                 {
                     $dependency_img = \Yii::createObject([
@@ -856,12 +853,6 @@ class UserController extends Controller
                 echo json_encode(['Status' => $status,
                     "Message" => $lngmsg,
                     'Result' => $profileData], JSON_PRETTY_PRINT);
-                /*$res = json_encode(['Status' => $status,
-                    "Message" => $lngmsg,
-                    'Result' => $profileData], JSON_PRETTY_PRINT);
-                return $this->render('user', [
-                    'res' => $res,
-                ]);*/
             }
             else
             {
@@ -882,7 +873,7 @@ class UserController extends Controller
         }
     }
 
-    //+
+    //-
     public function actionPostlist() {
         Yii::$app->controller->layout = '1';
         $logString  = "";
@@ -1202,472 +1193,7 @@ class UserController extends Controller
             //echo $logString;
         }
     }
-
-    public function actionAddpost() {
-        $logString  = "";
-        try
-        {
-            $arrParams = Yii::$app->request->post();
-            $logString.="\n Params : ".$arrParams['params'].'\n';
-            $data = json_decode($arrParams['params']);
-            $availableParams = array(
-                'PostTitle',
-                'PostType',
-                'Language',
-                'Description',
-                'ArtistID',
-                'IsExclusive',
-                'IsShared',
-                'Media',
-                'VideoThumbImage',
-                'scheduled' //added for scheduled
-            );
-            $compareField = array_diff_key(array_keys($arrParams), $availableParams);
-            $s3 = new \S3(AWSACCESSKEY, AWSSECRETKEY);
-
-            if (count($compareField) == 0)
-            {
-                $postTitle = $data->PostTitle;
-                $postType = $data->PostType;
-                $description = $data->Description;
-                $artistID = $data->ArtistID;
-                $isExclusive = $data->IsExclusive;
-                $isShared = $data->IsShared;
-                //$price 		= 	$data->Price;
-                $media = $data->Media;
-                $videothumb = $data->VideoThumbImage;
-                $replyThumbImage = "";
-                $language = $data->Language;
-                $price = '0.00';
-                $productID = "";
-                $userID = "";
-                $reqisPublic = "2";
-                $qatype = "";
-                $reply = "";
-                $postID = "";
-                $ignore = "2";
-                $memberID = "0";
-                $time = date("d M 'y H:i A");
-                $token = "";
-                $transactionDetail = "";
-                $width = "";
-                $height = "";
-                $vidoePostWidth = "";
-                $vidoePostHeight = "";
-                $ReplyWidth = "";
-                $ReplyHeight = "";
-                $TextReply = "";
-                //add for video post with link not upload videos
-                $viedolink_u="";
-                if (isset($data->mobilevideolink) && $data->mobilevideolink != ""){
-                    $viedolink_u=$data->mobilevideolink;
-
-                }else
-                    $viedolink_u="";
-                if (isset($data->Width) && $data->Width != "")
-                {
-                    $width = $data->Width;
-                    if (isset($width[0]) && $width[0] != '')
-                    {
-                        $vidoePostWidth = $width[0];
-                    }
-                    //$vidoePostWidth = $width;
-                }
-                if (isset($data->Height) && $data->Height != "")
-                {
-                    $height = $data->Height;
-                    if (isset($height[0]) && $height[0] != '')
-                    {
-                        $vidoePostHeight = $height[0];
-                    }
-                    //$vidoePostHeight = $height;
-                }
-                if (isset($data->TransactionDetail) && $data->TransactionDetail)
-                {
-                    $transactionDetail = json_encode($data->TransactionDetail);
-                }
-                if (isset($data->Token) && $data->Token)
-                {
-                    $token = $data->Token;
-                }
-                if (isset($data->Price) && $data->Price)
-                {
-                    $price = $data->Price;
-                }
-                if (isset($data->ReplyThumbImage) && $data->ReplyThumbImage)
-                {
-                    $replyThumbImage = $data->ReplyThumbImage;
-                }
-                if (isset($data->ProductID) && $data->ProductID)
-                {
-                    $productID = $data->ProductID;
-                }
-                if (isset($data->MemberID) && $data->MemberID)
-                {
-                    $memberID = $data->MemberID;
-                }
-                if (isset($data->IsPublic) && $data->IsPublic)
-                {
-                    $reqisPublic = $data->IsPublic;
-                }
-                if (isset($data->QAType) && $data->QAType)
-                {
-                    $qatype = $data->QAType;
-                }
-                if (isset($data->PostID) && $data->PostID != "")
-                {
-                    $postID = $data->PostID;
-                }
-                if (isset($data->Reply) && $data->Reply != "")
-                {
-                    $reply = str_replace("'", "", $data->Reply);
-                }
-                if (isset($data->Ignore) && $data->Ignore != "")
-                {
-                    $ignore = $data->Ignore;
-                }
-                if (isset($data->ReplyWidth) && $data->ReplyWidth != "")
-                {
-                    $ReplyWidth = $data->ReplyWidth;
-                }
-                if (isset($data->ReplyHeight) && $data->ReplyHeight != "")
-                {
-                    $ReplyHeight = $data->ReplyHeight;
-                }
-                if (isset($data->TextReply) && $data->TextReply != "")
-                {
-                    $TextReply = $data->TextReply;
-                }
-                //added for scheduled
-                if(isset($data->scheduled)&& $data->scheduled != ""){
-                    $scheduled=$data->scheduled;
-                }else $scheduled=Date("Y-m-d H:i:s",time() - 5 * 60);
-
-                //added conditions for Article type
-                if($postType == "5"){
-                    $description = "";
-                }
-
-                $QAData = array();
-                if($postType == "4") {
-                    $connection = Yii::$app->db;
-                    $procedure = "SELECT IsQAEnable,QaType FROM setting WHERE ArtistID =".$artistID;
-                    $command = $connection->createCommand($procedure);
-                    $QAData = $command->queryAll();
-                    if(isset($QAData[0]['IsQAEnable']) && $QAData[0]['IsQAEnable'] == "1") {
-                        if(isset($QAData[0]['QaType']) && ($QAData[0]['QaType'] == "1" && $qatype == "2")) {
-                            $resultCode = 504;
-                            $status = "1";
-                            $this->setHeader(400);
-                            $resultMessage = _getStatusCodeMessageCommon($resultCode);
-                            \Yii::$app->language = $language;
-                            $lngmsg = \Yii::t('api', $resultMessage);
-                            echo json_encode(['Status' => $status,"Message" => $lngmsg], JSON_PRETTY_PRINT);
-                            exit;
-                        }
-                        if(isset($QAData[0]['QaType']) && ($QAData[0]['QaType'] == "2" && $qatype == "1")) {
-                            $resultCode = 503;
-                            $status = "1";
-                            $this->setHeader(400);
-                            $resultMessage = _getStatusCodeMessageCommon($resultCode);
-                            \Yii::$app->language = $language;
-                            $lngmsg = \Yii::t('api', $resultMessage);
-                            echo json_encode(['Status' => $status,"Message" => $lngmsg], JSON_PRETTY_PRINT);
-                            exit;
-                        }
-                    } else {
-                        $resultCode = 505;
-                        $status = "1";
-                        $this->setHeader(400);
-                        $resultMessage = _getStatusCodeMessageCommon($resultCode);
-                        \Yii::$app->language = $language;
-                        $lngmsg = \Yii::t('api', $resultMessage);
-                        echo json_encode(['Status' => $status,"Message" => $lngmsg], JSON_PRETTY_PRINT);
-                        exit;
-                    }
-                }
-
-                $memberObj = new \backend\models\Member();
-                /*if ($postID == "")
-                {
-                    $memberObj = new \backend\models\Member();
-                    $memberDeviceType = $memberObj->getMemberDeviceType($memberID);
-                }*/
-
-                $connection = Yii::$app->db;
-                //$proc = "CALL Post_Add('".$postTitle."','" . $postType . "','".$description."','" . $artistID . "','" . $isExclusive . "','" . $isShared . "','" . $price . "','" . $productID . "'," . $memberID . ",'" . $reqisPublic . "','" . $qatype . "','" . $postID . "','" . $reply . "','" . $replyThumbImage . "','" . $ignore . "','" . $transactionDetail . "','" . $token . "','".$vidoePostWidth."','".$vidoePostHeight."')";
-                $proc = "CALL Post_Add(:PostTitle,:PostType,:Description,:ArtistID,:IsExclusive,:IsShared,:price,:productID,:memberID,:reqisPublic,:qatype,:postID,:reply,:replyThumbImage,:ignore,:transactionDetail,:token,:vidoePostWidth,:vidoePostHeight,:ReplyWidth,:ReplyHeight,:TextReply,:scheduled)"; //add by schedule
-                $bindPostParams = [':PostTitle' => $postTitle,':PostType'=>$postType,':Description'=>$description,':ArtistID'=>$artistID,':IsExclusive'=>$isExclusive,':IsShared'=>$isShared,':price'=>$price,':productID'=>$productID,':memberID'=>$memberID,':reqisPublic'=>$reqisPublic,':qatype'=>$qatype,':postID'=>$postID,':reply'=>$reply,':replyThumbImage'=>$replyThumbImage,':ignore'=>$ignore,':transactionDetail'=>$transactionDetail,':token'=>$token,':vidoePostWidth'=>$vidoePostWidth,':vidoePostHeight'=>$vidoePostHeight,':ReplyWidth'=>$ReplyWidth,':ReplyHeight'=>$ReplyHeight,':TextReply'=>$TextReply,':scheduled'=>$scheduled];
-                $logString.="\n Post Add : ".$proc.'\n';
-                $command = $connection->createCommand($proc)->bindValues($bindPostParams);
-                $postData = $command->queryAll();
-                if (count($postData) > 0)
-                {
-                    if ($postType == '4')
-                    {
-                        $artistobj = Artist::findOne(["ArtistID"=>$artistID]);
-
-                        $ignoreStatus = "";
-
-                        //Onesignal push
-                        $onesignal=new OneSignalPushNotification();
-                        if ($postID == "")
-                        {
-                            //fan asked question
-                            $msgforartist=$artistobj->getNotificationMessageForPost($memberID,$artistID,"",$ignoreStatus);
-                            //send message to artist
-                            $osartistappid=$artistobj->OSArtistAppID;
-                            $onesignal->sendMessageToUserID($osartistappid,$artistobj->UserID,$msgforartist,"",$postID,"addQue",$time);
-
-                        }
-                        else
-                        {
-                            //artist interacted with the question
-                            if (isset($data->Ignore) && $data->Ignore != "")
-                            {
-                                $ignoreStatus = $ignore;
-                            }
-                            $msgforfan = $artistobj->getNotificationMessageForPost($memberID, $artistID, $postID, $ignoreStatus);
-
-                            if (isset($data->Ignore) && $data->Ignore != "")
-                            {
-                                $notificationType = "ignoreQue";
-                            }
-                            else
-                            {
-                                $notificationType = "replyAns";
-                            }
-                            //send message to that user
-                            $osfanappid=$artistobj->OSFanAppID;
-                            $memberObj=Member::findOne(["MemberID"=>$memberID]);
-                            $onesignal->sendMessageToUserID($osfanappid,$memberObj->UserID,$msgforfan,"",$postID,$notificationType,$time);
-
-                        }
-                    }
-
-
-                    $postID = $postData[0]['PostID'];
-                    //for video upload only--Kate--22 Aug 2017
-                    if($postType == "3"&&$viedolink_u!=""){
-                        if (isset($data->mobilevideoThumbImage) && $data->mobilevideoThumbImage != ""){
-                            $VideoThumbImage_u=$data->mobilevideoThumbImage; //echo $VideoThumbImage_u;
-                        }else
-                            $VideoThumbImage_u="";
-
-                        $connection2 = \Yii::$app->db;
-                        $r2=$connection2->createCommand()->update('post', array("MobileStreamUrl"=>$viedolink_u, "VideoThumbImage"=>$VideoThumbImage_u),'PostID = '.$postID)->execute();
-                        //$r2=$connection2->createCommand()->update('post', array("Description"=>"Updatre"),'PostID = '.$postID)->execute();
-                        $resultCode = 200;
-                        $status = "1";
-
-                    }else
-                        if ($postType == "2" || $postType == "3" || $postType == "4")
-                        {
-                            //In gallery table Type 1- Image,2-Video, so here type is passed one for image
-                            if (!empty($media))
-                            {
-                                foreach ($media as $key => $value)
-                                {
-                                    if ($key == 0)
-                                    {
-                                        $thumbvalue = $value;
-                                    }
-                                    else
-                                    {
-                                        $thumbvalue = "";
-                                    }
-                                    $postWidth = "";
-                                    $postHeight = "";
-                                    if (isset($width[$key]) && $width[$key] != '') $postWidth = $width[$key];
-                                    if (isset($height[$key]) && $height[$key] != '') $postHeight = $height[$key];
-                                    $gallComm = "CALL Post_Add_Media(" . $artistID . "," . $postID . "," . $postType . ",'" . $value . "','" . $thumbvalue . "','" . $videothumb . "','" . self::BoomPath . "','" . self::S3BucketPostVideos . "','" . $postWidth . "','" . $postHeight . "')";
-                                    //echo $gallComm; die;
-                                    $gallcommand = $connection->createCommand($gallComm);
-                                    $mediadata = $gallcommand->queryAll();
-
-                                    if ($postType == "2")
-                                    {
-                                        $content = file_get_contents(self::S3BucketAbsolutePath . '/' . self::BoomFolder . $artistID . self::S3BucketPostImages . $value);
-                                        $thumbcontent = file_get_contents(self::S3BucketAbsolutePath . '/' . self::BoomFolder . $artistID . self::S3BucketPostThumbImage . $value);
-                                        $commonthumb = self::Documentroot . self::Project . self::Uploads . self::Postlarge . $value;
-                                        $createthumb = self::Documentroot . self::Project . self::Uploads . self::Postthumb . $value;
-                                        //$blurthumb      =   self::Documentroot.self::Project.self::Uploads.self::Blurthumb.$value;
-                                        $createmedium = self::Documentroot . self::Project . self::Uploads . self::Postmedium . $value;
-                                        file_put_contents($commonthumb, $content);
-                                        file_put_contents($createthumb, $thumbcontent);
-
-                                        //$thumbimage=Yii::$app->image->load($createthumb);
-                                        //$thumbimage->resize("",100);
-                                        //$thumbimage->save($blurthumb,10);
-
-                                        $mediumimage = Yii::$app->image->load($commonthumb);
-                                        $mediumimage->resize(self::Mediumwidth, self::Mediumheight);
-                                        $mediumimage->save($createmedium, 100);
-
-                                        //\S3::putObjectFile($blurthumb,self::S3Bucket,self::BoomFolder.$artistID.self::Postblurthumb.$value, \S3::ACL_PUBLIC_READ);
-                                        \S3::putObjectFile($createmedium, self::S3Bucket, self::BoomFolder . $artistID . self::S3BucketPostMediumImage . $value, \S3::ACL_PUBLIC_READ);
-                                    }
-                                }
-                            }
-                            if ($postType == "3" || $postType == "4")
-                            {
-                                if ($videothumb != "")
-                                {
-
-                                    //Added by Dan: if QAType = image, save url for Thumbimage too
-                                    $thumburl = S3_VIDEO_BUCKETPATH.$artistID.POST_THUMBIMAGE_VIDEOS.$videothumb;
-                                    if($postType == "4" && $qatype == "1"){ $thumburl = S3_BUCKETPATH.$artistID.POST_THUMBIMAGE_VIDEOS.$videothumb; }
-                                    $connection = \Yii::$app->db;
-                                    $connection->createCommand()->update('post', array("ThumbImage"=>$thumburl),'PostID = '.$postID)->execute();
-
-                                    //echo self::S3BucketAbsolutePath.'/'.self::BoomFolder.$artistID.self::Postvideosthumb.$videothumb; die;
-                                    $content = file_get_contents(self::S3BucketAbsolutePath . '/' . self::BoomFolder . $artistID . self::Postvideosthumb . $videothumb);
-                                    $createthumb = self::Documentroot . self::Project . self::Uploads . self::Postthumb . $videothumb;
-                                    $blurthumb = self::Documentroot . self::Project . self::Uploads . self::Blurthumb . $videothumb;
-
-                                    file_put_contents($createthumb, $content);
-
-                                    $thumbimage = Yii::$app->image->load($createthumb);
-                                    //$thumbimage->resize("",self::PostThumbheight);
-                                    $thumbimage->resize("", 100);
-                                    $thumbimage->save($blurthumb, 10);
-
-
-                                    \S3::putObjectFile($blurthumb, self::S3Bucket, self::BoomFolder . $artistID . self::Postblurthumbvideos . $videothumb, \S3::ACL_PUBLIC_READ);
-                                }
-                            }
-
-                            if (count($mediadata) > 0)
-                            {
-                                $resultCode = 200;
-                                $status = "1";
-                            }
-                            else
-                            {
-                                $resultCode = 404;
-                                $status = "0";
-                            }
-                        }
-
-
-
-
-                    //Article
-                    if($postType == "5"){
-                        if (isset($data->PostID) && $data->PostID != ""){
-                            //Edit Post
-                            if (isset($data->PageNumber) && $data->PageNumber != ""){
-                                //Edit existing page
-                                //get the page using number
-                                $page = PostPages::find()->where('PostID='.$data->PostID.' AND PageNumber='.$data->PageNumber)->one();
-                                if(isset($data->Description)){ $page->Text = $data->Description; }
-                                $page->Type = 1;
-                                if(isset($data->VideoThumbImage) && $data->VideoThumbImage != ''){
-                                    $page->Type = 2;
-                                    $page->ImageUrl = $data->VideoThumbImage;
-                                }
-                                if(!empty($media)){
-                                    $page->Type = 3;
-                                    $page->VideoUrl = $media[0];
-                                }
-                                $page->save(false);
-                            }else{
-                                //Add new page
-                                $newpage = new PostPages();
-                                $newpage->PostID = $data->PostID;
-                                //get the existing pages to calculate the page number
-                                $pages = PostPages::find()->where('PostID='.$data->PostID)->all();
-                                $numpage = count($pages)+1;
-                                $newpage->PageNumber = $numpage;
-                                if(isset($data->Description)){ $newpage->Text = $data->Description; }
-                                $newpage->Type = 1;
-                                if(isset($data->VideoThumbImage) && $data->VideoThumbImage != ''){
-                                    $newpage->Type = 2;
-                                    $newpage->ImageUrl = $data->VideoThumbImage;
-                                }
-                                if(!empty($media)){
-                                    $newpage->Type = 3;
-                                    $newpage->VideoUrl = $media[0];
-                                }
-                                $newpage->save(false);
-                            }
-                        }else{
-                            //New Post
-                            $newpage = new PostPages();
-                            $newpage->PostID = $postID;
-                            $newpage->PageNumber = 1;
-                            if(isset($data->Description)){ $newpage->Text = $data->Description; }
-                            $newpage->Type = 1;
-                            if(isset($data->VideoThumbImage) && $data->VideoThumbImage != ''){
-                                $newpage->Type = 2;
-                                $newpage->ImageUrl = $data->VideoThumbImage;
-                            }
-                            if(!empty($media)){
-                                $newpage->Type = 3;
-                                $newpage->VideoUrl = $media[0];
-                            }
-                            $newpage->save(false);
-                        }
-
-                        $resultCode = 200;
-                        $status = "1";
-                    }
-                    else
-                    {
-                        $resultCode = 200;
-                        $status = "1";
-
-                        //send push to fan app (to all users) to tell that artist added a new post
-                        if ($postType!="4") {
-                            $artistobj=Artist::findOne(["ArtistID"=>$artistID]);
-                            $msg=$artistobj->ArtistName." added a new post.";
-                            $osfanappid=$artistobj->OSFanAppID;
-                            $onesignal=new OneSignalPushNotification();
-                            $onesignal->sendMessageToAll($osfanappid,$msg,"","","addPost","");
-                        }
-                    }
-                }
-                else
-                {
-                    $resultCode = 404;
-                    $status = "0";
-                }
-
-                //set the push notification flag to false(means push notification needs to be scheduled for this post)
-                if ($postType == "1" || $postType == "2" || $postType == "3"){
-                    $post = \backend\models\Post::findOne($postID);
-                    $post->PushNotification_Sched = 0;
-                    $post->save(false);
-                }
-
-                $unreadQAData = $this->unreadQA($artistID);
-                $resultMessage = _getStatusCodeMessageCommon($resultCode);
-                \Yii::$app->language = $language;
-                $lngmsg = \Yii::t('api', $resultMessage);
-                $this->setHeader(400);
-
-
-                echo json_encode(['Status' => $status,
-                    "Message" => $lngmsg,
-                    'UnreadQA' => $unreadQAData,
-                    "Result" => $postData], JSON_PRETTY_PRINT);
-            }
-            else
-            {
-                $this->setHeader(400);
-                $resultMessage = _getStatusCodeMessageCommon(502);
-                \Yii::$app->language = $language;
-                $lngmsg = \Yii::t('api', $resultMessage);
-                echo json_encode(['Status' => 0,
-                    "Message" => $lngmsg], JSON_PRETTY_PRINT);
-            }
-        }
-        catch (ErrorException $e)
-        {
-            $this->addLog($logString,$e);
-        }
-    }
-
+    //*
     public function actionApplist() {
         $logString  = "";
         try
@@ -1685,17 +1211,20 @@ class UserController extends Controller
                 $language = $data->Language;
                 $connection = Yii::$app->db;
                 $command = $connection->createCommand("CALL SimilarApp_List(" . $artistID . ",'" . self::S3BucketAbsolutePath . "','" . self::S3BucketAppIcons . "')");
-
+                try {
+                    $dependency = \Yii::createObject([
+                        'class' => '\yii\caching\DbDependency',
+                        'sql' => 'SELECT COUNT(*) FROM similarapp',
+                        'reusable' => true,
+                    ]);
+                } catch (InvalidConfigException $e) {
+                }
                 try {
                     $appData = $connection->cache(function ($db) use ($command) {
-
                         return $command->queryAll();
-
-                    });
+                    }, $connection->queryCacheDuration, $dependency);
                 } catch (\Exception $e) {
                 }
-
-                //$appData = $command->queryAll();
 
                 if (count($appData) > 0)
                 {
