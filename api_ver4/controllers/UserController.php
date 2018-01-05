@@ -155,7 +155,7 @@ class UserController extends Controller
                 'postlist' => ['get'],
                 'addpost' => ['post','get'],
                 'applist' => ['post'],
-                'artisthomescreen' => ['get'],
+                'artisthomescreen' => ['post'],
                 'getqasettings' => ['post'],
                 'getdpinfo' => ['post'],
                 'login' => ['post'],
@@ -342,11 +342,16 @@ class UserController extends Controller
                     echo $user_profile_proc; die;*/
 
                     $command3 = $connection->createCommand($artist_profile_proc);
-                    //$artist_profileData = $command3->queryAll();
+
+                    $dependency = \Yii::createObject([
+                        'class'=>'\yii\caching\DbDependency',
+                        'sql' => 'SELECT MAX(Updated) FROM artist',
+                        'reusable' => true,
+                    ]);
 
                     $artist_profileData = $connection->cache(function ($db) use ($command3) {
                         return $command3->queryAll();
-                    });
+                    }, $connection->queryCacheDuration, $dependency);
 
                     if (count($artist_profileData) > 0)
                     {
@@ -355,9 +360,15 @@ class UserController extends Controller
                         $commandForImage = $connection->createCommand($postimagesprocedure);
                         //$artistimages = $commandForImage->queryAll();
 
+                        $dependency_img = \Yii::createObject([
+                            'class'=>'\yii\caching\DbDependency',
+                            'sql' => 'SELECT MAX(Updated), COUNT(*) FROM gallery',
+                            'reusable' => true,
+                        ]);
+
                         $artistimages = $connection->cache(function ($db) use ($commandForImage) {
                             return $commandForImage->queryAll();
-                        });
+                        }, $connection->queryCacheDuration, $dependency);
 
                         $artist_profileData[0]['ArtistImage'] = $artistimages;
                     }
@@ -1260,9 +1271,9 @@ class UserController extends Controller
         }
     }
 
-    public function actionArtisthomescreen()
+    /*public function actionArtisthomescreen()
     {
-        //Yii::$app->controller->layout = '1';
+        Yii::$app->controller->layout = '1';
         $logString  = "";
         try
         {
@@ -1285,11 +1296,31 @@ class UserController extends Controller
 
                 $logString.="\n Artist Home News Feed : ".$procedure.'\n';
                 $command = $connection->createCommand($procedure);
+
+                /*$dependency = \Yii::createObject([
+                    'class' => 'yii\caching\ChainedDependency',
+                    'dependencies' => [$dependency_activity, $dependency_post],
+                    'dependOnAll' => true,
+                    'reusable' => true,
+                ]);
+
+                $dependency_activity = \Yii::createObject([
+                    'class' => '\yii\caching\DbDependency',
+                    'sql' => 'SELECT COUNT(*) FROM memberactivity where ArtistID='.$artistID,
+                    'reusable' => true,
+                ]);
+
+                $dependency_post = \Yii::createObject([
+                    'class' => '\yii\caching\DbDependency',
+                    'sql' => 'SELECT MAX(Updated), MAX(Created) FROM post WHERE IsDeleted=0 AND ArtistID='.$artistID,
+                    'reusable' => true,
+                ]);
+
                 $postData = $connection->cache(function ($db) use($command) {
                     return $command->queryAll();
-
                 });
-
+                print_r($dependency);
+                print_r($postData);
                 foreach ($postData as $key => $value)
                 {
                     if (isset($value['PostID']) && $value['PostID'] != '')
@@ -1356,13 +1387,158 @@ class UserController extends Controller
                 $this->setHeader(400);
                 /*echo json_encode(["Status" => $status,
                     "Message" => $lngmsg,
-                    "Result" => $postData], JSON_PRETTY_PRINT);*/
+                    "Result" => $postData], JSON_PRETTY_PRINT);*/ /*
                 $res = json_encode(["Status" => $status,
                     "Message" => $lngmsg,
                     "Result" => $postData], JSON_PRETTY_PRINT);
                 return $this->render('user', [
                     'res' => $res,
                 ]);
+            }
+            else
+            {
+                //$this->setHeader(502);
+                $resultMessage = _getStatusCodeMessageArtistHomescreen(502);
+                \Yii::$app->language = $language;
+                $lngmsg = \Yii::t('api', $resultMessage);
+                $this->setHeader(400);
+                echo json_encode(['Status' => 0,
+                    "Message" => $lngmsg], JSON_PRETTY_PRINT);
+            }
+        }
+        catch (ErrorException $e)
+        {
+            $this->addLog($logString,$e);
+        }
+    }*/
+
+    //-
+    public function actionArtisthomescreen()
+    {
+        //Yii::$app->controller->layout = '1';
+        $logString  = "";
+        try
+        {
+            $arrParams = Yii::$app->request->post();
+            $logString.="\n Params : ".$arrParams['params'].'\n';
+            $data = json_decode($arrParams['params']);
+            $availableParams = array(
+                'ArtistID',
+                'UserType',
+                'PageIndex',
+                'Language');
+            $compareField = array_diff_key(array_keys($arrParams), $availableParams);
+            if (count($compareField) == 0)
+            {
+                $artistID = $data->ArtistID;
+                $pageindex = $data->PageIndex;
+                $language = $data->Language;
+                $connection = Yii::$app->db;
+                $procedure = "CALL Artist_Home_News_Feed_API3(" . $artistID . ",'" . self::S3BucketAbsolutePath . "','" . self::S3BucketPath . "','" . self::S3BucketProfileThumbImages . "','" . self::S3BucketStickers . "'," . $pageindex . "," . self::Limit . ")";
+
+                $logString.="\n Artist Home News Feed : ".$procedure.'\n';
+                $command = $connection->createCommand($procedure);
+
+                $dependency_activity = \Yii::createObject([
+                    'class' => '\yii\caching\DbDependency',
+                    'sql' => 'SELECT COUNT(*) FROM memberactivity where ArtistID='.$artistID,
+                    'reusable' => true,
+                ]);
+
+                $dependency_post = \Yii::createObject([
+                    'class' => '\yii\caching\DbDependency',
+                    'sql' => 'SELECT MAX(Updated), MAX(Created) FROM post WHERE IsDelete=0 AND ArtistID='.$artistID,
+                    'reusable' => true,
+                ]);
+
+                $dependency = \Yii::createObject([
+                    'class' => 'yii\caching\ChainedDependency',
+                    'dependencies' => [
+                        $dependency_activity,
+                        //$dependency_post,
+                    ],
+                    'dependOnAll' => true,
+                    'reusable' => true,
+                ]);
+
+                $postData = $connection->cache(function ($db) use($command) {
+                    return $command->queryAll();
+                }, $connection->queryCacheDuration, $dependency_activity);
+                print_r($dependency_activity);
+                echo isset($postData);
+                foreach ($postData as $key => $value)
+                {
+                    if (isset($value['PostID']) && $value['PostID'] != '')
+                    {
+                        $imageData = array();
+                        $postID = $value['PostID'];
+                        $postimageproc = "CALL Post_Image_List(1," . $postID . "," . $artistID . ",'" . self::S3BucketPath . "','" . self::S3BucketPostImages . "','" . self::S3BucketPostThumbImage . "','" . self::S3BucketPostMediumImage . "')";
+                        $commandForImage = $connection->createCommand($postimageproc);
+                        //$imageData = $commandForImage->queryAll();
+
+                        $imageData = $connection->cache(function ($db) use($commandForImage) {
+                            return $commandForImage->queryAll();
+
+                        });
+
+                        $latestcmntsproc = "CALL Latest_Post_CommentList(" . $postID . "," . $artistID . "," . $artistID . ",2,'" . self::S3BucketAbsolutePath . "','" . self::S3BucketPath . "','" . self::S3BucketProfileThumbImages . "','" . self::S3BucketStickers . "','" . self::S3BucketStickersSmall . "','" . self::S3BucketStickersMedium . "')";
+                        $commandForCmnts = $connection->createCommand($latestcmntsproc);
+                        //$cmntsData = $commandForCmnts->queryAll();
+
+                        $cmntsData = $connection->cache(function ($db) use($commandForCmnts) {
+                            return $commandForCmnts->queryAll();
+
+
+                        });
+                        if (count($cmntsData) > 0)
+                        {
+                            $postData[$key]['LatestComments'] = $cmntsData;
+                        }
+                        else
+                        {
+                            $postData[$key]['LatestComments'] = array();
+                        }
+                        if (count($imageData) > 0)
+                        {
+                            $postData[$key]['PostImage'] = $imageData;
+                        }
+                        else
+                        {
+                            $postData[$key]['PostImage'] = $imageData;
+                        }
+
+                    }
+                }
+
+                if (count($postData) > 0)
+                {
+                    $resultCode = 200;
+                    $status = "1";
+                }
+                else if ($pageindex==1)
+                {
+                    $resultCode = 404;
+                    $status = "0";
+                }
+                else
+                {
+                    $resultCode = 200;
+                    $status = "1";
+                }
+
+                $resultMessage = _getStatusCodeMessageArtistHomescreen($resultCode);
+                \Yii::$app->language = $language;
+                $lngmsg = \Yii::t('api', $resultMessage);
+                $this->setHeader(400);
+                echo json_encode(["Status" => $status,
+                    "Message" => $lngmsg,
+                    "Result" => $postData], JSON_PRETTY_PRINT);
+                /*$res = json_encode(["Status" => $status,
+                    "Message" => $lngmsg,
+                    "Result" => $postData], JSON_PRETTY_PRINT);
+                return $this->render('user', [
+                    'res' => $res,
+                ]);*/
             }
             else
             {
