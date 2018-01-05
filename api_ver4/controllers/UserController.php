@@ -1707,7 +1707,7 @@ class UserController extends Controller
             $this->addLog($logString,$e);
         }
     }
-
+    //+
     public function unreadQA($artistID) {
         $logString  = "";
         try {
@@ -1721,12 +1721,17 @@ class UserController extends Controller
             //return count($unreadQAData);
             $command = $query->createCommand();
             //$unreadQAData = $command->queryAll();
-
+            $dependency = \Yii::createObject([
+                'class' => '\yii\caching\DbDependency',
+                'sql' => 'SELECT COUNT(*) from post WHERE (MemberID NOT IN ( SELECT MemberID FROM blockuser AS mp WHERE ArtistID='.$artistID.')) AND PostType=4 AND Reply IS NULL AND (QAIgnore IS NULL  OR QAIgnore=2) AND IsDelete=0 AND ArtistID='.$artistID,
+                'reusable' => true,
+            ]);
+            print_r($dependency);
             try {
                 $unreadQAData = \Yii::$app->db->cache(function ($db) use ($command)  {
                     $unreadQAData = $command->queryAll();
                     return $unreadQAData;
-                });
+                },  Yii::$app->db->queryCacheDuration, $dependency);
             } catch (\Exception $e) {
             }
 
