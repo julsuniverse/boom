@@ -1540,7 +1540,7 @@ class UserController extends Controller
             $this->addLog($logString,$e);
         }
     }
-
+    //+/-/+
     public function actionGetdpinfo() {
         $logString  = "";
         try
@@ -1572,9 +1572,15 @@ class UserController extends Controller
                     $logString.="\n Artist Profile : ".$procedure.'\n';
                     $command = $connection->createCommand($procedure);
 
+                    $dependency = \Yii::createObject([
+                        'class'=>'\yii\caching\DbDependency',
+                        'sql' => 'SELECT MAX(Updated) FROM artist',
+                        'reusable' => true,
+                    ]);
+
                     $artist_profileData = $connection->cache(function ($db) use ($command) {
                         return $command->queryAll();
-                    });
+                    }, $connection->queryCacheDuration, $dependency);
 
                     if (count($artist_profileData) > 0)
                     {
@@ -1582,9 +1588,15 @@ class UserController extends Controller
                         $postimagesprocedure = "CALL Artist_Image_List(2,0," . $artistID . ",'" . self::S3BucketPath . "','" . self::S3BucketArtistImages . "','" . self::S3BucketArtistThumb . "','" . self::S3BucketArtistMedium . "','" . self::S3BucketPostThumbImage . "','" . self::S3BucketPostMediumImage . "')";
                         $commandForImage = $connection->createCommand($postimagesprocedure);
 
+                        $dependency_img = \Yii::createObject([
+                            'class'=>'\yii\caching\DbDependency',
+                            'sql' => 'SELECT MAX(Updated), COUNT(*) FROM gallery',
+                            'reusable' => true,
+                        ]);
+
                         $artistimages = $connection->cache(function ($db) use ($commandForImage) {
                             return $commandForImage->queryAll();
-                        });
+                        }, $connection->queryCacheDuration, $dependency_img);
 
                         $artist_profileData[0]['ArtistImage'] = $artistimages;
 
@@ -1607,10 +1619,18 @@ class UserController extends Controller
                     $logString.="\n Post List : ".$postData_proc.'\n';
                     $command = $connection->createCommand($postData_proc);;
 
+                    $dependency = \Yii::createObject([
+                        'class'=>'\yii\caching\DbDependency',
+                        'sql' => 'SELECT Updated FROM post WHERE PostID='.$reqID,
+                        'reusable' => true,
+                    ]);
+                    $postDataTest = $command->queryAll();
                     $postData = $connection->cache(function ($db) use ($command) {
                         return $command->queryAll();
-                    });
-
+                    }, $connection->queryCacheDuration, $dependency);
+                    print_r($dependency);
+                    print_r($postData);
+                    print_r($postDataTest);
                     if (count($postData) > 0)
                     {
                         /*************** Get Image List **************/
@@ -1648,9 +1668,14 @@ class UserController extends Controller
                     $logString.="\n Sticker List : ".$procedure.'\n';
                     $command = $connection->createCommand($procedure);
 
+                    $dependency = \Yii::createObject([
+                        'class'=>'\yii\caching\DbDependency',
+                        'sql' => 'SELECT Updated FROM sticker WHERE IsDelete=0',
+                        'reusable' => true,
+                    ]);
                     $stickersData = $connection->cache(function ($db) use ($command) {
                         return $command->queryAll();
-                    });
+                    }, $connection->queryCacheDuration, $dependency);
 
                     if (count($stickersData) > 0)
                     {
@@ -1720,13 +1745,13 @@ class UserController extends Controller
             //$unreadQAData = $modelPost->find()->where("ArtistID=" . $artistID . " AND PostType = 4 AND Reply IS NULL AND (QAIgnore IS NULL  OR QAIgnore='2')  ")->asArray()->all();
             //return count($unreadQAData);
             $command = $query->createCommand();
-            //$unreadQAData = $command->queryAll();
+
             $dependency = \Yii::createObject([
                 'class' => '\yii\caching\DbDependency',
                 'sql' => 'SELECT COUNT(*) from post WHERE (MemberID NOT IN ( SELECT MemberID FROM blockuser AS mp WHERE ArtistID='.$artistID.')) AND PostType=4 AND Reply IS NULL AND (QAIgnore IS NULL  OR QAIgnore=2) AND IsDelete=0 AND ArtistID='.$artistID,
                 'reusable' => true,
             ]);
-            print_r($dependency);
+
             try {
                 $unreadQAData = \Yii::$app->db->cache(function ($db) use ($command)  {
                     $unreadQAData = $command->queryAll();
