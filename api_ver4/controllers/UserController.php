@@ -362,7 +362,7 @@ class UserController extends Controller
 
                         $dependency_img = \Yii::createObject([
                             'class'=>'\yii\caching\DbDependency',
-                            'sql' => 'SELECT MAX(Updated), COUNT(*) FROM gallery',
+                            'sql' => 'SELECT MAX(Updated), MAX(Created) COUNT(*) FROM gallery',
                             'reusable' => true,
                         ]);
 
@@ -1430,10 +1430,9 @@ class UserController extends Controller
         }
     }*/
 
-    //-
+    //+
     public function actionArtisthomescreen()
     {
-        //Yii::$app->controller->layout = '1';
         $logString  = "";
         try
         {
@@ -1477,16 +1476,16 @@ class UserController extends Controller
                         $commandForImage = $connection->createCommand($postimageproc);
                         //$imageData = $commandForImage->queryAll();
 
-                        /*$dependency_comments = \Yii::createObject([
-                            'class' => '\yii\caching\DbDependency',
-                            'sql' => 'SELECT COUNT(*) FROM gallery where PostID='.$postID,
+                        $dependency_post_image = \Yii::createObject([
+                            'class'=>'\yii\caching\DbDependency',
+                            'sql' => 'SELECT MAX(Updated), MAX(Created), COUNT(*) FROM gallery WHERE RefTableID='.$postID,
                             'reusable' => true,
-                        ]);*/
+                        ]);
 
                         $imageData = $connection->cache(function ($db) use($commandForImage) {
                             return $commandForImage->queryAll();
 
-                        });
+                        }, $connection->queryCacheDuration, $dependency_post_image);
 
                         $latestcmntsproc = "CALL Latest_Post_CommentList(" . $postID . "," . $artistID . "," . $artistID . ",2,'" . self::S3BucketAbsolutePath . "','" . self::S3BucketPath . "','" . self::S3BucketProfileThumbImages . "','" . self::S3BucketStickers . "','" . self::S3BucketStickersSmall . "','" . self::S3BucketStickersMedium . "')";
                         $commandForCmnts = $connection->createCommand($latestcmntsproc);
@@ -1544,12 +1543,6 @@ class UserController extends Controller
                 echo json_encode(["Status" => $status,
                     "Message" => $lngmsg,
                     "Result" => $postData], JSON_PRETTY_PRINT);
-                /*$res = json_encode(["Status" => $status,
-                    "Message" => $lngmsg,
-                    "Result" => $postData], JSON_PRETTY_PRINT);
-                return $this->render('user', [
-                    'res' => $res,
-                ]);*/
             }
             else
             {
@@ -1727,7 +1720,7 @@ class UserController extends Controller
             $this->addLog($logString,$e);
         }
     }
-    //+/-/+
+    //+/+/+
     public function actionGetdpinfo() {
         $logString  = "";
         try
@@ -1768,7 +1761,7 @@ class UserController extends Controller
                     $artist_profileData = $connection->cache(function ($db) use ($command) {
                         return $command->queryAll();
                     }, $connection->queryCacheDuration, $dependency);
-
+                    //print_r($artist_profileData);
                     if (count($artist_profileData) > 0)
                     {
                         /*************** Get Artist Image List **************/
@@ -1803,6 +1796,7 @@ class UserController extends Controller
                     $userID=0;
                     $profileID=0;
                     $postData_proc = "CALL Post_List(" . $reqID . "," . $artistID . "," . $userID . "," . $profileID . ",0,0,'" . self::S3BucketPath . "','" . self::Postvideosthumb . "','" . self::Postblurthumbvideos . "','','',@o_RecCount)";
+
                     $logString.="\n Post List : ".$postData_proc.'\n';
                     $command = $connection->createCommand($postData_proc);;
 
