@@ -1,0 +1,23 @@
+
+ ************************
+ DateTime : 2018-01-09 09:20:02
+ Message : yii\base\ErrorException: Cannot modify header information - headers already sent by (output started at /app/api_ver4/controllers/UserController.php:449) in /app/api_ver4/controllers/UserController.php:199
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'Cannot modify h...', '/app/api_ver4/c...', 199, Array)
+#1 /app/api_ver4/controllers/UserController.php(199): header('HTTP/1.1400 ')
+#2 /app/api_ver4/controllers/UserController.php(490): api_ver4\controllers\UserController->setHeader(400)
+#3 [internal function]: api_ver4\controllers\UserController->actionLogin()
+#4 /app/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /app/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /app/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('login', Array)
+#7 /app/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/login', Array)
+#8 /app/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /app/api_ver4/web/index.php(21): yii\base\Application->run()
+#10 {main}
+ Data: 
+ Params : {"Username":"kate","Password":"boom2012","DeviceType":2,"DeviceToken":"fkCqdprxNds:APA91bHYAj2fNpiQXORXoAg6_xymhJ_RwR-LjH4uIHCknJ5oUfA86vSxTk3fVrKa3ADFiZSbK5boK3VdjLNqkuH_PTaGmQpP5QNRGTTNBS8w5syt3ddbFUXP-XJ7-sG-_YFJ5xbGVKv5","UserType":3,"ArtistID":1,"LoginType":1,"MemberName":"","Email":"","Language":"english","IsQa":1,"QaName":"","QaType":"","ComID":"0"}\n
+ SP : CALL Member_Login_API3('kate','','','boom2012','2','fkCqdprxNds:APA91bHYAj2fNpiQXORXoAg6_xymhJ_RwR-LjH4uIHCknJ5oUfA86vSxTk3fVrKa3ADFiZSbK5boK3VdjLNqkuH_PTaGmQpP5QNRGTTNBS8w5syt3ddbFUXP-XJ7-sG-_YFJ5xbGVKv5',3,1,1,'boom@123','http://d1t89cp2y0xf79.cloudfront.net/boom-','/profileimages/','',@UserID,@ProfileID,@UserType,@ErrorCode)\n
+ Member Profile : CALL Member_GetProfile('23','3','21','boom@123','http://d1t89cp2y0xf79.cloudfront.net/boom-','/profileimages/thumb/')\n
+ Artist Profile : CALL Member_GetProfile('2','2','1','boom@123','http://d1t89cp2y0xf79.cloudfront.net/boom-','/profileimages/thumb/')\n
+ Fan
+ Post List : CALL Post_List_API3(0,1,23,21,0,0,'http://d1t89cp2y0xf79.cloudfront.net/boom-','/thumb/','/postvideos/blurthumb/',1,20)\n

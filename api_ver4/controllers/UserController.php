@@ -152,7 +152,7 @@ class UserController extends Controller
             'class' => VerbFilter::className(),
             'actions' => [
                 'getprofile' => ['post'],
-                'postlist' => ['get'],
+                'postlist' => ['post'],
                 'addpost' => ['post','get'],
                 'applist' => ['post'],
                 'artisthomescreen' => ['post'],
@@ -200,7 +200,7 @@ class UserController extends Controller
         // header('Content-type: ' . $contentType);
         header('Content-Type: text/html; charset=utf-8');
     }
-
+    //+
     public function actionLogin() {
         $logString  = "";
         try
@@ -380,10 +380,20 @@ class UserController extends Controller
                         //$isExclusive=0;
                         $logString.="\n Fan";  // added by Kate
                         //added by Kate--deeplinking
+                        $dependency_post = \Yii::createObject([
+                            'class'=>'\yii\caching\DbDependency',
+                            'sql' => 'SELECT MAX(Updated), MAX(Created), SUM(IsDelete) FROM post WHERE artistID='.$artistID,
+                            'reusable' => true,
+                        ]);
                         $postData_proc = "CALL Post_List_API3(0," .  $artistID . "," . $userID . "," . $profileID . "," . $ComID . "," . $isExclusive . ",'" . self::S3BucketPath . "','" . self::Postvideosthumb . "','" . self::Postblurthumbvideos . "',1,20)";//Daniele
                     }else { //For Native App to get multiple artist Post
                         $isExclusive=1;
                         $logString.="\n Native";
+                        $dependency_post = \Yii::createObject([
+                            'class'=>'\yii\caching\DbDependency',
+                            'sql' => 'SELECT MAX(Updated), MAX(Created), SUM(IsDelete) FROM post WHERE artistID='.$artistID.'AND IsExclusive=1',
+                            'reusable' => true,
+                        ]);
                         $postData_proc = "CALL Post_List(0, 0," . $userID . "," . $profileID . "," . $ComID . "," . $isExclusive . ",'" . self::S3BucketPath . "','" . self::Postvideosthumb . "','" . self::Postblurthumbvideos . "','','',@o_RecCount)";
                     }
 
@@ -395,11 +405,11 @@ class UserController extends Controller
 
                     $postData = $connection->cache(function ($db) use ($command4) {
                         return $command4->queryAll();
-                    });
+                    }, $connection->queryCacheDuration, $dependency_post);
 
                     $reccommand = $connection->createCommand('SELECT @o_RecCount')->queryOne();
                     $recordcnt = $reccommand['@o_RecCount'];
-
+                    print_r($dependency_post);
                     /*************** Get Similarapp list ****************/
                     $similarApp_proc = "CALL SimilarApp_List(" . $artistProfileID . ",'" . self::S3BucketAbsolutePath . "','" . self::S3BucketAppIcons . "')";
                     //echo $similarApp_proc; die;
@@ -427,11 +437,19 @@ class UserController extends Controller
                                 if ($usertype == "3")
                                     $artistID = $value['ArtistID'];
                                 /************ Get Post Images **************/
+
                                 $postimageproc = "CALL Post_Image_List(1," . $postID . "," . $artistID . ",'" . self::S3BucketPath . "','" . self::S3BucketPostImages . "','" . self::S3BucketPostThumbImage . "','" . self::S3BucketPostMediumImage . "')";
-                                $commandForImage = $connection->createCommand($postimageproc);;
+                                $commandForImage = $connection->createCommand($postimageproc);
+
+                                $dependency_post_image = \Yii::createObject([
+                                    'class'=>'\yii\caching\DbDependency',
+                                    'sql' => 'SELECT MAX(Updated), MAX(Created), COUNT(*) FROM gallery WHERE RefTableID='.$postID,
+                                    'reusable' => true,
+                                ]);
+                                //print_r($dependency_post_image);
                                 $imageData = $connection->cache(function ($db) use ($commandForImage) {
                                     return $commandForImage->queryAll();
-                                });
+                                }, $connection->queryCacheDuration, $dependency_post_image);
                                 //post pages
                                 $postData[$key]['Pages'] = array();
                                 if($value['PostType'] == 5){
@@ -884,13 +902,13 @@ class UserController extends Controller
         }
     }
 
-    //-
+    //+
     public function actionPostlist() {
-        Yii::$app->controller->layout = '1';
+        //Yii::$app->controller->layout = '1';
         $logString  = "";
         try
         {
-            $arrParams = Yii::$app->request->get();
+            $arrParams = Yii::$app->request->post();
             $logString.="\n Params : ".$arrParams['params'].'\n';
             $data = json_decode($arrParams['params']);
             $availableParams = array(
@@ -937,8 +955,8 @@ class UserController extends Controller
 
                 $dependency = \Yii::createObject([
                     'class'=>'\yii\caching\DbDependency',
-                    //'sql' => 'SELECT MAX(Updated), MAX(Created), SUM(IsDelete) FROM post WHERE artistID='.$artistID,
-                    'sql' => 'SELECT MAX(Updated) FROM post WHERE artistID='.$artistID,
+                    'sql' => 'SELECT MAX(Updated), MAX(Created), SUM(IsDelete) FROM post WHERE artistID='.$artistID,
+                    //'sql' => 'SELECT MAX(Updated) FROM post WHERE artistID='.$artistID,
                     'reusable' => true,
                 ]);
 
@@ -946,7 +964,7 @@ class UserController extends Controller
                     return $command->queryAll();
 
                 }, $connection->queryCacheDuration, $dependency);
-                print_r($dependency);
+                //print_r($postData);
                 foreach ($postData as $key => $value)
                 {
                     if (isset($value['PostID']) && $value['PostID'] != '')
@@ -1172,11 +1190,11 @@ class UserController extends Controller
                         'UnreadQA' => $unreadQAData);
 
                     $encodedArray = str_replace("\\", "\\\\", $encodedArray);
-                    //echo json_encode($encodedArray, JSON_PRETTY_PRINT); //JSON_PRETTY_PRINT
-                    $res = json_encode($encodedArray, JSON_PRETTY_PRINT);
+                    echo json_encode($encodedArray, JSON_PRETTY_PRINT); //JSON_PRETTY_PRINT
+                    /*$res = json_encode($encodedArray, JSON_PRETTY_PRINT);
                     return $this->render('user', [
                         'res' => $res,
-                    ]);
+                    ]);*/
                 }
                 else
                 {
@@ -1445,26 +1463,9 @@ class UserController extends Controller
                     'reusable' => true,
                 ]);
 
-                $dependency_post = \Yii::createObject([
-                    'class' => '\yii\caching\DbDependency',
-                    'sql' => 'SELECT MAX(Updated), MAX(Created) FROM post WHERE IsDelete=0 AND ArtistID='.$artistID,
-                    'reusable' => true,
-                ]);
-
-                $dependency = \Yii::createObject([
-                    'class' => 'yii\caching\ChainedDependency',
-                    'dependencies' => [
-                        $dependency_activity,
-                        //$dependency_post,
-                    ],
-                    'dependOnAll' => true,
-                    'reusable' => true,
-                ]);
-
                 $postData = $connection->cache(function ($db) use($command) {
                     return $command->queryAll();
                 }, $connection->queryCacheDuration, $dependency_activity);
-                print_r($dependency_activity);
                 echo isset($postData);
                 foreach ($postData as $key => $value)
                 {
@@ -1476,6 +1477,12 @@ class UserController extends Controller
                         $commandForImage = $connection->createCommand($postimageproc);
                         //$imageData = $commandForImage->queryAll();
 
+                        /*$dependency_comments = \Yii::createObject([
+                            'class' => '\yii\caching\DbDependency',
+                            'sql' => 'SELECT COUNT(*) FROM gallery where PostID='.$postID,
+                            'reusable' => true,
+                        ]);*/
+
                         $imageData = $connection->cache(function ($db) use($commandForImage) {
                             return $commandForImage->queryAll();
 
@@ -1485,11 +1492,15 @@ class UserController extends Controller
                         $commandForCmnts = $connection->createCommand($latestcmntsproc);
                         //$cmntsData = $commandForCmnts->queryAll();
 
+                        $dependency_comments = \Yii::createObject([
+                            'class' => '\yii\caching\DbDependency',
+                            'sql' => 'SELECT COUNT(*) FROM memberactivity where ArtistID='.$artistID,
+                            'reusable' => true,
+                        ]);
+
                         $cmntsData = $connection->cache(function ($db) use($commandForCmnts) {
                             return $commandForCmnts->queryAll();
-
-
-                        });
+                        }, $connection->queryCacheDuration, $dependency_comments);
                         if (count($cmntsData) > 0)
                         {
                             $postData[$key]['LatestComments'] = $cmntsData;
@@ -1800,13 +1811,13 @@ class UserController extends Controller
                         'sql' => 'SELECT Updated FROM post WHERE PostID='.$reqID,
                         'reusable' => true,
                     ]);
-                    $postDataTest = $command->queryAll();
+                    //$postDataTest = $command->queryAll();
                     $postData = $connection->cache(function ($db) use ($command) {
                         return $command->queryAll();
                     }, $connection->queryCacheDuration, $dependency);
-                    print_r($dependency);
+                    /*print_r($dependency);
                     print_r($postData);
-                    print_r($postDataTest);
+                    print_r($postDataTest);*/
                     if (count($postData) > 0)
                     {
                         /*************** Get Image List **************/
