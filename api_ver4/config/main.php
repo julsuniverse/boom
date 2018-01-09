@@ -11,7 +11,22 @@ return [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'api_ver4\controllers',
+    'modules' => [
+        'v1' => [
+            'basePath' => '@app/modules/v1',
+            'class' => 'api\modules\v1\Module'
+        ],
+        'v2' => [
+            'basePath' => '@app/modules/v2',
+            'class'=>'api\modules\v2\Module'
+        ],
+    ],
     'components' => [
+        'user' => [
+            'identityClass' => 'api\models\User',
+            'enableAutoLogin' => false,
+            'loginUrl' => null
+        ],
         'request' => [
             'csrfParam' => '_csrf-api4',
         ],
@@ -39,8 +54,23 @@ return [
 
         'urlManager' => [
             'enablePrettyUrl' => true,
+            'enableStrictParsing' => true,
             'showScriptName' => false,
+            'class' => 'yii\web\UrlManager',
             'rules' => [
+                [
+                    'class' => 'yii\rest\UrlRule',
+                    'controller' => [
+                        'v2/post',
+                        'v1/country',
+                        'user'
+                    ],
+                    'tokens' => [
+                        '{id}' => '<id:\\w+>'
+                    ]
+
+                ],
+                '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
             ],
         ],
     ],

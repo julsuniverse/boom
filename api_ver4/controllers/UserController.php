@@ -2,6 +2,7 @@
 namespace api_ver4\controllers;
 
 use api_v4\models\OneSignalPushNotification;
+use api_ver4\models\User;
 use backend\models\Artist;
 use backend\models\Artist_company;
 use backend\models\Feedarticles;
@@ -13,7 +14,6 @@ use yii\base\InvalidConfigException;
 use yii\filters\auth\HttpBasicAuth;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
-use api\models\User;
 use backend\models\Rssfeed;
 use backend\models\Setting;
 use backend\models\Sticker;
@@ -219,7 +219,7 @@ class UserController extends Controller
                 'signup' => ['post'],
                 'editprofile' => ['post'],
                 'commentlist' => ['post'],
-                'postlist' => ['post'],
+                'postlist' => ['get'],
                 'checkusername' => ['post'],
                 'likepost' => ['post'],
                 'addcomment' => ['post'],
@@ -323,7 +323,7 @@ class UserController extends Controller
             $arrParams = Yii::$app->request->post();
             $logString.="\n Params : ".$arrParams['params'].'\n';
             $data = json_decode($arrParams['params']);
-            //print_r($data); die;
+
             $availableParams = array(
                 'Username',
                 'Password',
@@ -545,7 +545,7 @@ class UserController extends Controller
 
                     $reccommand = $connection->createCommand('SELECT @o_RecCount')->queryOne();
                     $recordcnt = $reccommand['@o_RecCount'];
-                    print_r($dependency_post);
+
                     /*************** Get Similarapp list ****************/
                     $similarApp_proc = "CALL SimilarApp_List(" . $artistProfileID . ",'" . self::S3BucketAbsolutePath . "','" . self::S3BucketAppIcons . "')";
                     //echo $similarApp_proc; die;
@@ -972,13 +972,11 @@ class UserController extends Controller
                 } catch (InvalidConfigException $e) {
                 }
 
-                try {
-                        $profileData = $connection->cache(function ($db) use ($command) {
-                            $profileData = $command->queryAll();
-                            return $profileData;
-                        }, $connection->queryCacheDuration, $dependency);
-                    } catch (\Exception $e) {
-                    }
+                $profileData = $connection->cache(function ($db) use ($command) {
+                    $profileData = $command->queryAll();
+                    return $profileData;
+                }, $connection->queryCacheDuration, $dependency);
+
                 if (count($profileData) > 0)
                 {
                     try {
@@ -1050,11 +1048,11 @@ class UserController extends Controller
     }
 
     public function actionPostlist() {
-        //Yii::$app->controller->layout = '1';
+        Yii::$app->controller->layout = 'l';
         $logString  = "";
         try
         {
-            $arrParams = Yii::$app->request->post();
+            $arrParams = Yii::$app->request->get();
             $logString.="\n Params : ".$arrParams['params'].'\n';
             $data = json_decode($arrParams['params']);
             $availableParams = array(
@@ -1091,32 +1089,21 @@ class UserController extends Controller
                 $procedure = "CALL Post_List_API3(0, " . $artistID . "," . $UserID . "," . $profileID . "," . $ComID . "," . $isExclusive . ",'" . self::S3BucketPath . "','" . self::Postvideosthumb . "','" . self::Postblurthumbvideos . "',$pageindex,20)";
                 $logString.="\n Post Image List : ".$procedure.'\n';
                 $command = $connection->createCommand($procedure);
-                //$postData = $command->queryAll();
-                /*$dependency = \Yii::createObject([
-                    'class'=>'\yii\caching\DbDependency',
-                    //'sql' => 'SELECT MAX(Updated), MAX(Created), SUM(IsDelete) FROM post WHERE artistID='.$artistID,
-                    'sql' => 'SELECT MAX(Created), MAX(Updated), SUM(IsDelete) FROM post WHERE artistID='.$artistID,
+
+                //$postData = $command->queryAll();;
+                $dependency = \Yii::createObject([
+                    'class' => '\yii\caching\DbDependency',
+                    'sql' => 'SELECT MAX(Updated), MAX(Created), SUM(IsDelete) FROM post WHERE artistID=' . $artistID,
+                    //'sql' => 'SELECT MAX(Updated) FROM post WHERE artistID='.$artistID,
                     'reusable' => true,
-                ]);*/
+                ]);
 
-                try {
-                    $dependency = \Yii::createObject([
-                        'class' => '\yii\caching\DbDependency',
-                        'sql' => 'SELECT MAX(Updated), MAX(Created), SUM(IsDelete) FROM post WHERE artistID=' . $artistID,
-                        //'sql' => 'SELECT MAX(Updated) FROM post WHERE artistID='.$artistID,
-                        'reusable' => true,
-                    ]);
-                } catch (InvalidConfigException $e) {
-                }
 
-                try {
-                    $postData = $connection->cache(function ($db) use ($command) {
-                        return $command->queryAll();
+                $postData = $connection->cache(function ($db) use ($command) {
+                    return $command->queryAll();
 
-                    }, $connection->queryCacheDuration, $dependency);
-                } catch (\Exception $e) {
-                }
-                //print_r($postData);
+                }, $connection->queryCacheDuration, $dependency);
+                print_r($postData);
                 foreach ($postData as $key => $value)
                 {
                     if (isset($value['PostID']) && $value['PostID'] != '')
@@ -1192,37 +1179,19 @@ class UserController extends Controller
                     //Added by Daniele: append Instagram & Blog images from RSS feed: TEST
                     //$artist = Artist::find()->where(['ArtistId' => $artistID])->one();
 
-                    /* try {
-                         $artist = Artist::getDb()->cache(function ($db) use ($artistID) {
-                             $artist = Artist::find()->where(['ArtistId' => $artistID])->one();
-                             return $artist;
-                         });
-                     } catch (\Exception $e) {
-                     }*/
 
-                    $query = (new \yii\db\Query())
-                        ->select(['*'])
-                        ->from('artist')
-                        ->where(['ArtistId' => $artistID])
-                        ->limit(1);
+                    $artist = Artist::getDb()->cache(function ($db) use ($artistID)  {
+                        $artist = Artist::find()->where(['ArtistId' => $artistID])->one();
+                        return $artist;
+                    });
 
-                    $command = $query->createCommand();
 
-                    try {
-                        $artist = $connection->cache(function ($db) use ($command)  {
-                            $artist = $command->queryOne();
-                            return $artist;
-                        });
-                    } catch (\Exception $e) {
-
-                    }
-
-                    $instaUrl = $artist['InstagramPageURL'];
-                    $blogUrl = $artist['BlogFeedUrl'];
+                    $instaUrl = $artist->InstagramPageURL;
+                    $blogUrl = $artist->BlogFeedUrl;
                     $Feeds = null;
                     $instaFeeds = null;
 
-                    if($artist['SocialPostEnabled']){
+                    if($artist->SocialPostEnabled){
                         //Instagram feed: extract username and generates feed using rssbridge service
                         if($instaUrl != null && $instaUrl != "" && $isExclusive != "1"){
 
@@ -1272,6 +1241,7 @@ class UserController extends Controller
                                 //}
                             }
                         }
+
                         if($Feeds != null){
                             //$recordcnt += count($Feeds);
                             foreach ($Feeds as $feedEl){
@@ -1280,6 +1250,7 @@ class UserController extends Controller
                                 //}
                             }
                         }
+
                     }
 
                     //Sort based on DateTime
@@ -1291,9 +1262,9 @@ class UserController extends Controller
 
                         return strtotime($date1)<strtotime($date2);
                     });
-
+;
                     //If 24h flag enabled, only the last 24h posts are filtered
-                    if($artist['Display24h']){
+                    if($artist->Display24h){
                         $curDate = time();
                         $startDate = date('Y-m-d H:i:s', strtotime('-1 day', $curDate));
                         $postData24 = array();
@@ -1312,8 +1283,8 @@ class UserController extends Controller
                         //$recordcnt = count($postData);
                     }
 
-                }
 
+                }
 
                 if ($pageindex<=1 && count($postData)<=0) {
                     $resultCode = 404;
@@ -1350,11 +1321,19 @@ class UserController extends Controller
                 }
                 else
                 {
-                    echo json_encode(['Status' => $status,
+                    /*echo json_encode(['Status' => $status,
                         "Message" => $lngmsg,
                         //"RecordCount" => $recordcnt,
-                        "Result" => $postData,
+                        "Result" =>$postData,
+                        'UnreadQA' => $unreadQAData], JSON_PRETTY_PRINT);*/
+                    $res = json_encode(['Status' => $status,
+                        "Message" => $lngmsg,
+                        //"RecordCount" => $recordcnt,
+                        "Result" =>$postData,
                         'UnreadQA' => $unreadQAData], JSON_PRETTY_PRINT);
+                    $this->render('user', [
+                        'res' => $res,
+                    ]);
                 }
             }
             else
