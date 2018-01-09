@@ -2003,7 +2003,6 @@ class UserController extends Controller {
         }
     }
 
-
 	public function actionUpdateusername() {
         /************** Update username of an existing user *****************/
         $logString  = "";
@@ -2613,7 +2612,6 @@ class UserController extends Controller {
             $this->addLog($logString,$e);
         }
     }
-	
 
     public function actionLatestcommentlist() {
         $logString  = "";
