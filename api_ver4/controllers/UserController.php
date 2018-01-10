@@ -219,7 +219,7 @@ class UserController extends Controller
                 'signup' => ['post'],
                 'editprofile' => ['post'],
                 'commentlist' => ['post'],
-                'postlist' => ['get'],
+                'postlist' => ['post'],
                 'checkusername' => ['post'],
                 'likepost' => ['post'],
                 'addcomment' => ['post'],
@@ -968,7 +968,7 @@ class UserController extends Controller
                         'class' => '\yii\caching\DbDependency',
                         'sql' => 'SELECT MAX(Updated) FROM member',
                         'reusable' => true,
-                    ]);
+                   ]);
                 } catch (InvalidConfigException $e) {
                 }
 
@@ -1048,11 +1048,11 @@ class UserController extends Controller
     }
 
     public function actionPostlist() {
-        Yii::$app->controller->layout = 'l';
+
         $logString  = "";
         try
         {
-            $arrParams = Yii::$app->request->get();
+            $arrParams = Yii::$app->request->post();
             $logString.="\n Params : ".$arrParams['params'].'\n';
             $data = json_decode($arrParams['params']);
             $availableParams = array(
@@ -1103,7 +1103,7 @@ class UserController extends Controller
                     return $command->queryAll();
 
                 }, $connection->queryCacheDuration, $dependency);
-                print_r($postData);
+
                 foreach ($postData as $key => $value)
                 {
                     if (isset($value['PostID']) && $value['PostID'] != '')
@@ -1262,7 +1262,7 @@ class UserController extends Controller
 
                         return strtotime($date1)<strtotime($date2);
                     });
-;
+
                     //If 24h flag enabled, only the last 24h posts are filtered
                     if($artist->Display24h){
                         $curDate = time();
@@ -1314,26 +1314,14 @@ class UserController extends Controller
 
                     $encodedArray = str_replace("\\", "\\\\", $encodedArray);
                     echo json_encode($encodedArray, JSON_PRETTY_PRINT); //JSON_PRETTY_PRINT
-                    /*$res = json_encode($encodedArray, JSON_PRETTY_PRINT);
-                    return $this->render('user', [
-                        'res' => $res,
-                    ]);*/
                 }
                 else
                 {
-                    /*echo json_encode(['Status' => $status,
-                        "Message" => $lngmsg,
-                        //"RecordCount" => $recordcnt,
-                        "Result" =>$postData,
-                        'UnreadQA' => $unreadQAData], JSON_PRETTY_PRINT);*/
-                    $res = json_encode(['Status' => $status,
+                   echo json_encode(['Status' => $status,
                         "Message" => $lngmsg,
                         //"RecordCount" => $recordcnt,
                         "Result" =>$postData,
                         'UnreadQA' => $unreadQAData], JSON_PRETTY_PRINT);
-                    $this->render('user', [
-                        'res' => $res,
-                    ]);
                 }
             }
             else
@@ -1445,22 +1433,16 @@ class UserController extends Controller
                 $logString.="\n Artist Home News Feed : ".$procedure.'\n';
                 $command = $connection->createCommand($procedure);
 
-                try {
-                    $dependency_activity = \Yii::createObject([
-                        'class' => '\yii\caching\DbDependency',
-                        'sql' => 'SELECT COUNT(*) FROM memberactivity where ArtistID=' . $artistID,
-                        'reusable' => true,
-                    ]);
-                } catch (InvalidConfigException $e) {
-                }
+                $dependency_activity = \Yii::createObject([
+                    'class' => '\yii\caching\DbDependency',
+                    'sql' => 'SELECT COUNT(*) FROM memberactivity where ArtistID=' . $artistID,
+                    'reusable' => true,
+                ]);
 
-                try {
-                    $postData = $connection->cache(function ($db) use ($command) {
-                        return $command->queryAll();
-                    }, $connection->queryCacheDuration, $dependency_activity);
-                } catch (\Exception $e) {
-                }
-                echo isset($postData);
+                $postData = $connection->cache(function ($db) use ($command) {
+                    return $command->queryAll();
+                }, $connection->queryCacheDuration, $dependency_activity);
+
                 foreach ($postData as $key => $value)
                 {
                     if (isset($value['PostID']) && $value['PostID'] != '')
@@ -2306,6 +2288,7 @@ class UserController extends Controller
                 $logString.="\n Member Add Activity : ".$procedure.'\n';
                 $command = $connection->createCommand($procedure);
                 $activityData = $command->queryAll();
+
                 if (count($activityData) > 0)
                 {
                     $resultCode = 200;

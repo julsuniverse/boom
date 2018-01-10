@@ -1,6 +1,9 @@
 <?php
 return [
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
+    'bootstrap' => [
+        'queue',
+    ],
     'components' => [
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -8,10 +11,17 @@ return [
         'redis' => [
             'class' => 'yii\redis\Cache',
             'redis' => [
-                'hostname' => 'localhost',
+                //'hostname' => 'artist-redis.nptsry.clustercfg.usw2.cache.amazonaws.com',
+                'hostname' => '172.31.21.26',
                 'port' => 6379,
                 'database' => 0,
             ]
+        ],
+        'queue' => [
+            'class' => '\yii\queue\redis\Queue',
+            'as log' => '\yii\queue\LogBehavior',
+            'redis' => 'redis',
+            //'channel' => 'queue',
         ],
         'urlManager' => [
             'enablePrettyUrl' => true,

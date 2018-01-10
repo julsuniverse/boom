@@ -155,4 +155,12 @@ return array (
                 '@yii/redis' => $vendorDir . '/yiisoft/yii2-redis',
             ),
     ),
+    array (
+        'name' => 'yiisoft/yii2-queue',
+        'version' => '2.0.2',
+        'alias' =>
+            array (
+                '@yii/queue' => $vendorDir . '/yiisoft/yii2-queue',
+            ),
+    ),
 );

@@ -29,11 +29,11 @@ return [
             'password' => 'G9J4g00xiMSFakXQ',
             'charset' => 'utf8',
             'enableSchemaCache' => true,
-            'schemaCacheDuration' => 3600,
+            'schemaCacheDuration' => 60 * 60 * 24 * 7,
             'schemaCache' => 'cache',
             'enableQueryCache' => true,
             'queryCache' => 'redis',
-            'queryCacheDuration' => 3600,
+            'queryCacheDuration' => 60 * 60 * 24 * 7 * 2, //2 weeks
         ],
         /*'db' => [
             'class' => 'yii\db\Connection',
