@@ -8,20 +8,20 @@
 namespace yii\queue\closure;
 
 use SuperClosure\Serializer;
-use yii\queue\JobInterface;
+use yii\base\Object;
+use yii\queue\Job as BaseJob;
 
 /**
  * Closure Job
  *
  * @author Roman Zhuravlev <zhuravljov@gmail.com>
  */
-class Job implements JobInterface
+class Job extends Object implements BaseJob
 {
     /**
      * @var string serialized closure
      */
     public $serialized;
-
 
     /**
      * Unserializes and executes a closure

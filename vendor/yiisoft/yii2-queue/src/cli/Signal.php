@@ -10,19 +10,14 @@ namespace yii\queue\cli;
 /**
  * Process Signal Helper
  *
- * @deprecated since 2.0.2 and will be removed in 2.1. Use SignalLoop instead.
- *
  * @author Roman Zhuravlev <zhuravljov@gmail.com>
  */
 class Signal
 {
     private static $exit = false;
 
-
     /**
      * Checks exit signals
-     * Used mainly by [[yii\queue\Queue]] to check, whether job execution
-     * loop can be continued.
      * @return bool
      */
     public static function isExit()
@@ -33,7 +28,7 @@ class Signal
             if (!$handled) {
                 foreach ([SIGTERM, SIGINT, SIGHUP] as $signal) {
                     pcntl_signal($signal, function () {
-                        static::setExitFlag();
+                        static::$exit = true;
                     });
                 }
                 $handled = true;
@@ -46,15 +41,5 @@ class Signal
         }
 
         return static::$exit;
-    }
-
-    /**
-     * Sets exit flag to `true`
-     * Method can be used to simulate exit signal for methods that use
-     * [[isExit()]] to check whether execution loop can be continued.
-     */
-    public static function setExitFlag()
-    {
-        static::$exit = true;
     }
 }

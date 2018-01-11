@@ -18,7 +18,6 @@ class M170307170300Later extends Migration
 {
     public $tableName = '{{%queue}}';
 
-
     public function up()
     {
         $this->addColumn($this->tableName, 'timeout', $this->integer()->defaultValue(0)->notNull()->after('created_at'));

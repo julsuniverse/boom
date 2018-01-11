@@ -24,7 +24,6 @@ class InfoAction extends Action
      */
     public $queue;
 
-
     /**
      * Info about queue status.
      */

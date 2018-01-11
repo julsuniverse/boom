@@ -19,7 +19,6 @@ class M161119140200Queue extends Migration
     public $tableName = '{{%queue}}';
     public $tableOptions;
 
-
     public function up()
     {
         $this->createTable($this->tableName, [

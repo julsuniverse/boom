@@ -18,7 +18,6 @@ class M170601155600Priority extends Migration
 {
     public $tableName = '{{%queue}}';
 
-
     public function up()
     {
         $this->addColumn($this->tableName, 'priority', $this->integer()->unsigned()->notNull()->defaultValue(1024)->after('delay'));

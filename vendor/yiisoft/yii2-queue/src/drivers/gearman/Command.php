@@ -21,34 +21,21 @@ class Command extends CliCommand
      */
     public $queue;
 
-
-    /**
-     * @inheritdoc
-     */
-    protected function isWorkerAction($actionID)
-    {
-        return in_array($actionID, ['run' ,'listen'], true);
-    }
-
     /**
      * Runs all jobs from gearman-queue.
      * It can be used as cron job.
-     *
-     * @return null|int exit code.
      */
     public function actionRun()
     {
-        return $this->queue->run(false);
+        $this->queue->run();
     }
 
     /**
      * Listens gearman-queue and runs new jobs.
-     * It can be used as daemon process.
-     *
-     * @return null|int exit code.
+     * It can be used as demon process.
      */
     public function actionListen()
     {
-        return $this->queue->run(true);
+        $this->queue->listen();
     }
 }

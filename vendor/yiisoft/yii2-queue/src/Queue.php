@@ -13,13 +13,10 @@ use yii\base\InvalidParamException;
 use yii\di\Instance;
 use yii\helpers\VarDumper;
 use yii\queue\serializers\PhpSerializer;
-use yii\queue\serializers\SerializerInterface;
+use yii\queue\serializers\Serializer;
 
 /**
  * Base Queue
- *
- * @property null|int $workerPid
- * @since 2.0.2
  *
  * @author Roman Zhuravlev <zhuravljov@gmail.com>
  */
@@ -59,13 +56,7 @@ abstract class Queue extends Component
     const STATUS_DONE = 3;
 
     /**
-     * @var bool whether to enable strict job type control.
-     * Note that in order to enable type control, a pushing job must be [[JobInterface]] instance.
-     * @since 2.0.1
-     */
-    public $strictJobType = true;
-    /**
-     * @var SerializerInterface|array
+     * @var Serializer|array
      */
     public $serializer = PhpSerializer::class;
     /**
@@ -81,14 +72,13 @@ abstract class Queue extends Component
     private $pushDelay;
     private $pushPriority;
 
-
     /**
      * @inheritdoc
      */
     public function init()
     {
         parent::init();
-        $this->serializer = Instance::ensure($this->serializer, SerializerInterface::class);
+        $this->serializer = Instance::ensure($this->serializer, Serializer::class);
     }
 
     /**
@@ -130,14 +120,14 @@ abstract class Queue extends Component
     /**
      * Pushes job into queue
      *
-     * @param JobInterface|mixed $job
+     * @param Job|mixed $job
      * @return string|null id of a job message
      */
     public function push($job)
     {
         $event = new PushEvent([
             'job' => $job,
-            'ttr' => $job instanceof RetryableJobInterface
+            'ttr' => $job instanceof RetryableJob
                 ? $job->getTtr()
                 : ($this->pushTtr ?: $this->ttr),
             'delay' => $this->pushDelay ?: 0,
@@ -152,10 +142,6 @@ abstract class Queue extends Component
             return null;
         }
 
-        if ($this->strictJobType && !($event->job instanceof JobInterface)) {
-            throw new InvalidParamException('Job must be instance of JobInterface.');
-        }
-
         $message = $this->serializer->serialize($event->job);
         $event->id = $this->pushMessage($message, $event->ttr, $event->delay, $event->priority);
         $this->trigger(self::EVENT_AFTER_PUSH, $event);
@@ -168,34 +154,25 @@ abstract class Queue extends Component
      * @param int $ttr time to reserve in seconds
      * @param int $delay
      * @param mixed $priority
-     * @return string id of a job message
+     * @return string|null id of a job message
      */
     abstract protected function pushMessage($message, $ttr, $delay, $priority);
 
     /**
-     * Uses for CLI drivers and gets process ID of a worker.
-     *
-     * @return null
-     * @since 2.0.2
-     */
-    public function getWorkerPid()
-    {
-        return null;
-    }
-
-    /**
-     * @param string $id of a job message
+     * @param string|null $id of a job message
      * @param string $message
      * @param int $ttr time to reserve
      * @param int $attempt number
-     * @return bool
+     * @return boolean
      */
     protected function handleMessage($id, $message, $ttr, $attempt)
     {
         $job = $this->serializer->unserialize($message);
-        if (!($job instanceof JobInterface)) {
-            $dump = VarDumper::dumpAsString($job);
-            throw new InvalidParamException("Job $id must be a JobInterface instance instead of $dump.");
+        if (!($job instanceof Job)) {
+            throw new InvalidParamException(strtr('Job must be {class} object instead of {dump}.', [
+                '{class}' => Job::class,
+                '{dump}' => VarDumper::dumpAsString($job),
+            ]));
         }
 
         $event = new ExecEvent([
@@ -213,8 +190,6 @@ abstract class Queue extends Component
             $event->job->execute($this);
         } catch (\Exception $error) {
             return $this->handleError($event->id, $event->job, $event->ttr, $event->attempt, $error);
-        } catch (\Throwable $error) {
-            return $this->handleError($event->id, $event->job, $event->ttr, $event->attempt, $error);
         }
         $this->trigger(self::EVENT_AFTER_EXEC, $event);
 
@@ -223,10 +198,10 @@ abstract class Queue extends Component
 
     /**
      * @param string|null $id
-     * @param JobInterface $job
+     * @param Job $job
      * @param int $ttr
      * @param int $attempt
-     * @param \Exception|\Throwable $error
+     * @param \Exception $error
      * @return bool
      * @internal
      */
@@ -238,7 +213,7 @@ abstract class Queue extends Component
             'ttr' => $ttr,
             'attempt' => $attempt,
             'error' => $error,
-            'retry' => $job instanceof RetryableJobInterface
+            'retry' => $job instanceof RetryableJob
                 ? $job->canRetry($attempt, $error)
                 : $attempt < $this->attempts,
         ]);
@@ -278,5 +253,5 @@ abstract class Queue extends Component
      * @param string $id of a job message
      * @return int status code
      */
-    abstract public function status($id);
+    abstract protected function status($id);
 }

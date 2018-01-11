@@ -1,10 +1,5 @@
-<p align="center">
-    <a href="https://github.com/yiisoft" target="_blank">
-        <img src="https://avatars0.githubusercontent.com/u/993323" height="100px">
-    </a>
-    <h1 align="center">Yii2 Queue Extension</h1>
-    <br>
-</p>
+Yii2 Queue Extension
+====================
 
 An extension for running tasks asyncronously via queues.
 
@@ -30,7 +25,7 @@ php composer.phar require --prefer-dist yiisoft/yii2-queue
 or add
 
 ```
-"yiisoft/yii2-queue": "~2.0.0"
+"yiisoft/yii2-queue": "*"
 ```
 
 to the require section of your `composer.json` file.
@@ -42,7 +37,7 @@ Each task which is sent to queue should be defined as a separate class.
 For example, if you need to download and save a file the class may look like the following:
 
 ```php
-class DownloadJob extends BaseObject implements \yii\queue\JobInterface
+class DownloadJob extends Object implements \yii\queue\Job
 {
     public $url;
     public $file;
@@ -91,7 +86,7 @@ See documentation for more details about driver console commands and their optio
 The component has ability to track status of a job which was pushed into queue.
 
 ```php
-// Push a job into queue and get message ID.
+// Push a job into queue and get massage ID.
 $id = Yii::$app->queue->push(new SomeJob());
 
 // The job is waiting for execute.

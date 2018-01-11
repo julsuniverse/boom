@@ -23,7 +23,6 @@ class Queue extends BaseQueue
      * @var bool
      */
     public $handle = false;
-
     /**
      * @var array of payloads
      */
@@ -40,7 +39,6 @@ class Queue extends BaseQueue
      * @var int last finished ID
      */
     private $finishedId = 0;
-
 
     /**
      * @inheritdoc
@@ -83,20 +81,16 @@ class Queue extends BaseQueue
     /**
      * @inheritdoc
      */
-    public function status($id)
+    protected function status($id)
     {
         if (!is_int($id) || $id <= 0 || $id > $this->pushedId) {
             throw new InvalidParamException("Unknown messages ID: $id.");
-        }
-
-        if ($id <= $this->finishedId) {
+        } elseif ($id <= $this->finishedId) {
             return Queue::STATUS_DONE;
-        }
-
-        if ($id === $this->startedId) {
+        } elseif ($id === $this->startedId) {
             return Queue::STATUS_RESERVED;
+        } else {
+            return Queue::STATUS_WAITING;
         }
-
-        return Queue::STATUS_WAITING;
     }
 }

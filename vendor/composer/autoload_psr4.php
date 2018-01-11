@@ -28,5 +28,5 @@ return array(
     'cebe\\markdown\\' => array($vendorDir . '/cebe/markdown'),
     'Faker\\' => array($vendorDir . '/fzaninotto/faker/src/Faker'),
     'yii\\redis\\' => array($vendorDir . '/yiisoft/yii2-redis'),
-    'yii\\queue\\' => array($vendorDir . '/yiisoft/yii2-queue'),
+    'yii\\queue\\' => array($vendorDir . '/yiisoft/yii2-queue/src'),
 );

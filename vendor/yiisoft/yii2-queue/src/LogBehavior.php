@@ -19,14 +19,12 @@ class LogBehavior extends Behavior
 {
     /**
      * @var Queue
-     * @inheritdoc
      */
     public $owner;
     /**
      * @var bool
      */
     public $autoFlush = true;
-
 
     /**
      * @inheritdoc
@@ -38,107 +36,48 @@ class LogBehavior extends Behavior
             Queue::EVENT_BEFORE_EXEC => 'beforeExec',
             Queue::EVENT_AFTER_EXEC => 'afterExec',
             Queue::EVENT_AFTER_ERROR => 'afterError',
-            cli\Queue::EVENT_WORKER_START => 'workerStart',
-            cli\Queue::EVENT_WORKER_STOP => 'workerStop',
         ];
     }
 
-    /**
-     * @param PushEvent $event
-     */
     public function afterPush(PushEvent $event)
     {
-        $title = $this->getJobTitle($event);
-        Yii::info("$title is pushed.", Queue::class);
+        Yii::info($this->getEventTitle($event) . ' pushed.', Queue::class);
     }
 
-    /**
-     * @param ExecEvent $event
-     */
     public function beforeExec(ExecEvent $event)
     {
-        $title = $this->getExecTitle($event);
-        Yii::info("$title is started.", Queue::class);
-        Yii::beginProfile($title, Queue::class);
+        Yii::info($this->getEventTitle($event) . ' started.', Queue::class);
+        Yii::beginProfile($this->getEventTitle($event), Queue::class);
     }
 
-    /**
-     * @param ExecEvent $event
-     */
     public function afterExec(ExecEvent $event)
     {
-        $title = $this->getExecTitle($event);
-        Yii::endProfile($title, Queue::class);
-        Yii::info("$title is finished.", Queue::class);
+        Yii::endProfile($this->getEventTitle($event), Queue::class);
+        Yii::info($this->getEventTitle($event) . ' finished.', Queue::class);
         if ($this->autoFlush) {
             Yii::getLogger()->flush(true);
         }
     }
 
-    /**
-     * @param ErrorEvent $event
-     */
-    public function afterError(ErrorEvent $event)
+    public function afterError(ExecEvent $event)
     {
-        $title = $this->getExecTitle($event);
-        Yii::endProfile($title, Queue::class);
-        Yii::error("$title is finished with error: $event->error.", Queue::class);
+        Yii::endProfile($this->getEventTitle($event), Queue::class);
+        Yii::error($this->getEventTitle($event) . ' error ' . $event->error, Queue::class);
         if ($this->autoFlush) {
             Yii::getLogger()->flush(true);
         }
     }
 
-    /**
-     * @param cli\WorkerEvent $event
-     * @since 2.0.2
-     */
-    public function workerStart(cli\WorkerEvent $event)
+    protected function getEventTitle(JobEvent $event)
     {
-        $title = 'Worker ' . $event->sender->getWorkerPid();
-        Yii::info("$title is started.", Queue::class);
-        Yii::beginProfile($title, Queue::class);
-        if ($this->autoFlush) {
-            Yii::getLogger()->flush(true);
+        $title = strtr('[id] name', [
+            'id' => $event->id,
+            'name' => $event->job instanceof Job ? get_class($event->job) : 'mixed data',
+        ]);
+        if ($event instanceof ExecEvent) {
+            $title .= " (attempt: $event->attempt)";
         }
-    }
 
-    /**
-     * @param cli\WorkerEvent $event
-     * @since 2.0.2
-     */
-    public function workerStop(cli\WorkerEvent $event)
-    {
-        $title = 'Worker ' . $event->sender->getWorkerPid();
-        Yii::endProfile($title, Queue::class);
-        Yii::info("$title is stopped.", Queue::class);
-        if ($this->autoFlush) {
-            Yii::getLogger()->flush(true);
-        }
-    }
-
-    /**
-     * @param JobEvent $event
-     * @return string
-     * @since 2.0.2
-     */
-    protected function getJobTitle(JobEvent $event)
-    {
-        $name = $event->job instanceof JobInterface ? get_class($event->job) : 'mixed data';
-        return "[$event->id] $name";
-    }
-
-    /**
-     * @param ExecEvent $event
-     * @return string
-     * @since 2.0.2
-     */
-    protected function getExecTitle(ExecEvent $event)
-    {
-        $title = $this->getJobTitle($event);
-        $extra = "attempt: $event->attempt";
-        if ($pid = $event->sender->getWorkerPid()) {
-            $extra .= ", PID: $pid";
-        }
-        return "$title ($extra)";
+        return $title;
     }
 }

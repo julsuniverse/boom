@@ -15,7 +15,7 @@ namespace yii\queue;
 class ErrorEvent extends ExecEvent
 {
     /**
-     * @var \Exception|\Throwable
+     * @var \Exception
      */
     public $error;
     /**

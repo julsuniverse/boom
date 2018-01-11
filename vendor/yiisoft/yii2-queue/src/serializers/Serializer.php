@@ -7,13 +7,24 @@
 
 namespace yii\queue\serializers;
 
+use yii\queue\Job;
+
 /**
- * Interface Serializer
- *
- * @deprecated Will be removed in 2.1.0. Use SerializerInterface instead of Serializer.
+ * Class Serializer
  *
  * @author Roman Zhuravlev <zhuravljov@gmail.com>
  */
-interface Serializer extends SerializerInterface
+interface Serializer
 {
+    /**
+     * @param Job|mixed $job
+     * @return string
+     */
+    public function serialize($job);
+
+    /**
+     * @param string $serialized
+     * @return Job
+     */
+    public function unserialize($serialized);
 }

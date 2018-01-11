@@ -17,16 +17,11 @@ use yii\base\Event;
 class JobEvent extends Event
 {
     /**
-     * @var Queue
-     * @inheritdoc
-     */
-    public $sender;
-    /**
      * @var string|null unique id of a job
      */
     public $id;
     /**
-     * @var JobInterface
+     * @var Job
      */
     public $job;
     /**

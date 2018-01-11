@@ -10,7 +10,6 @@ namespace yii\queue\cli;
 use Symfony\Component\Process\Exception\ProcessTimedOutException;
 use Symfony\Component\Process\Process;
 use yii\console\Controller;
-use yii\console\ExitCode;
 
 /**
  * Class Command
@@ -29,17 +28,9 @@ abstract class Command extends Controller
      */
     public $verbose = false;
     /**
-     * @var array additional options to the verbose behavior.
-     * @since 2.0.2
-     */
-    public $verboseConfig = [
-        'class' => VerboseBehavior::class,
-    ];
-    /**
      * @var bool isolate mode. It executes a job in a child process.
      */
     public $isolate = true;
-
 
     /**
      * @inheritdoc
@@ -47,10 +38,10 @@ abstract class Command extends Controller
     public function options($actionID)
     {
         $options = parent::options($actionID);
-        if ($this->canVerbose($actionID)) {
+        if ($this->useVerboseOption($actionID)) {
             $options[] = 'verbose';
         }
-        if ($this->canIsolate($actionID)) {
+        if ($this->useIsolateOption($actionID)) {
             $options[] = 'isolate';
         }
 
@@ -70,26 +61,19 @@ abstract class Command extends Controller
     /**
      * @param string $actionID
      * @return bool
-     * @since 2.0.2
      */
-    abstract protected function isWorkerAction($actionID);
-
-    /**
-     * @param string $actionID
-     * @return bool
-     */
-    protected function canVerbose($actionID)
+    protected function useVerboseOption($actionID)
     {
-        return $actionID === 'exec' || $this->isWorkerAction($actionID);
+        return in_array($actionID, ['exec', 'run', 'listen']);
     }
 
     /**
      * @param string $actionID
      * @return bool
      */
-    protected function canIsolate($actionID)
+    protected function useIsolateOption($actionID)
     {
-        return $this->isWorkerAction($actionID);
+        return in_array($actionID, ['run', 'listen']);
     }
 
     /**
@@ -97,11 +81,14 @@ abstract class Command extends Controller
      */
     public function beforeAction($action)
     {
-        if ($this->canVerbose($action->id) && $this->verbose) {
-            $this->queue->attachBehavior('verbose', ['command' => $this] + $this->verboseConfig);
+        if ($this->useVerboseOption($action->id) && $this->verbose) {
+            $this->queue->attachBehavior('verbose', [
+                'class' => Verbose::class,
+                'command' => $this,
+            ]);
         }
 
-        if ($this->canIsolate($action->id) && $this->isolate) {
+        if ($this->useIsolateOption($action->id) && $this->isolate) {
             $this->queue->messageHandler = function ($id, $message, $ttr, $attempt) {
                 return $this->handleMessage($id, $message, $ttr, $attempt);
             };
@@ -114,22 +101,19 @@ abstract class Command extends Controller
 
     /**
      * Executes a job.
-     * The command is internal, and used to isolate a job execution. Manual usage is not provided.
      *
      * @param string|null $id of a message
      * @param int $ttr time to reserve
      * @param int $attempt number
-     * @param int $pid of a worker
      * @return int exit code
-     * @internal It is used with isolate mode.
      */
-    public function actionExec($id, $ttr, $attempt, $pid)
+    public function actionExec($id, $ttr, $attempt)
     {
-        if ($this->queue->execute($id, file_get_contents('php://stdin'), $ttr, $attempt, $pid)) {
-            return ExitCode::OK;
+        if ($this->queue->execute($id, file_get_contents('php://stdin'), $ttr, $attempt)) {
+            return self::EXIT_CODE_NORMAL;
+        } else {
+            return self::EXIT_CODE_ERROR;
         }
-
-        return ExitCode::UNSPECIFIED_ERROR;
     }
 
     /**
@@ -143,30 +127,29 @@ abstract class Command extends Controller
      * @throws
      * @see actionExec()
      */
-    protected function handleMessage($id, $message, $ttr, $attempt)
+    private function handleMessage($id, $message, $ttr, $attempt)
     {
-        // Executes child process        
-        $cmd = strtr('php yii queue/exec "id" "ttr" "attempt" "pid"', [
-            'php' => PHP_BINARY,
-            'yii' => $_SERVER['SCRIPT_FILENAME'],
-            'queue' => $this->uniqueId,
-            'id' => $id,
-            'ttr' => $ttr,
-            'attempt' => $attempt,
-            'pid' => $this->queue->getWorkerPid(),
+        // Executes child process
+        $cmd = strtr('{php} {yii} {queue}/exec "{id}" "{ttr}" "{attempt}"', [
+            '{php}' => PHP_BINARY,
+            '{yii}' => $_SERVER['SCRIPT_FILENAME'],
+            '{queue}' => $this->id,
+            '{id}' => $id,
+            '{ttr}' => $ttr,
+            '{attempt}' => $attempt,
         ]);
         foreach ($this->getPassedOptions() as $name) {
-            if (in_array($name, $this->options('exec'), true)) {
+            if (in_array($name, $this->options('exec'))) {
                 $cmd .= ' --' . $name . '=' . $this->$name;
             }
         }
-        if (!in_array('color', $this->getPassedOptions(), true)) {
+        if (!in_array('color', $this->getPassedOptions())) {
             $cmd .= ' --color=' . $this->isColorEnabled();
         }
 
         $process = new Process($cmd, null, null, $message, $ttr);
         try {
-            $process->run(function ($type, $buffer) {
+            $exitCode = $process->run(function ($type, $buffer) {
                 if ($type === Process::ERR) {
                     $this->stderr($buffer);
                 } else {
@@ -174,10 +157,10 @@ abstract class Command extends Controller
                 }
             });
         } catch (ProcessTimedOutException $error) {
-            $job = $this->queue->serializer->unserialize($message);
+            $job = $this->serializer->unserialize($message);
             return $this->queue->handleError($id, $job, $ttr, $attempt, $error);
         }
 
-        return $process->isSuccessful();
+        return $exitCode == self::EXIT_CODE_NORMAL;
     }
 }

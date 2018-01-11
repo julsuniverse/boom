@@ -22,7 +22,6 @@ class InfoAction extends Action
      */
     public $queue;
 
-
     /**
      * Info about queue status.
      */
@@ -44,40 +43,48 @@ class InfoAction extends Action
     }
 
     /**
-     * @return int
+     * @return integer
      */
     protected function getWaitingCount()
     {
         $data = $this->getIndexData();
-        return !empty($data['waiting']) ? count($data['waiting']) : 0;
+        $count = !empty($data['waiting']) ? count($data['waiting']) : 0;
+
+        return $count;
     }
 
     /**
-     * @return int
+     * @return integer
      */
     protected function getDelayedCount()
     {
         $data = $this->getIndexData();
-        return !empty($data['delayed']) ? count($data['delayed']) : 0;
+        $count = !empty($data['delayed']) ? count($data['delayed']) : 0;
+
+        return $count;
     }
 
     /**
-     * @return int
+     * @return integer
      */
     protected function getReservedCount()
     {
         $data = $this->getIndexData();
-        return !empty($data['reserved']) ? count($data['reserved']) : 0;
+        $count = !empty($data['reserved']) ? count($data['reserved']) : 0;
+
+        return $count;
     }
 
     /**
-     * @return int
+     * @return integer
      */
     protected function getDoneCount()
     {
         $data = $this->getIndexData();
         $total = isset($data['lastId']) ? $data['lastId'] : 0;
-        return $total - $this->getDelayedCount() - $this->getWaitingCount();
+        $done = $total - $this->getDelayedCount() - $this->getWaitingCount();
+
+        return $done;
     }
 
     protected function getIndexData()
@@ -86,7 +93,7 @@ class InfoAction extends Action
         if ($data === null) {
             $fileName = $this->queue->path . '/index.data';
             if (file_exists($fileName)) {
-                $data = call_user_func($this->queue->indexDeserializer, file_get_contents($fileName));
+                $data = unserialize(file_get_contents($fileName));
             } else {
                 $data = [];
             }

@@ -2288,7 +2288,6 @@ class UserController extends Controller
                 $logString.="\n Member Add Activity : ".$procedure.'\n';
                 $command = $connection->createCommand($procedure);
                 $activityData = $command->queryAll();
-
                 if (count($activityData) > 0)
                 {
                     $resultCode = 200;

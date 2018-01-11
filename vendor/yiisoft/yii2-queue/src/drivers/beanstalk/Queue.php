@@ -11,8 +11,8 @@ use Pheanstalk\Exception\ServerException;
 use Pheanstalk\Pheanstalk;
 use Pheanstalk\PheanstalkInterface;
 use yii\base\InvalidParamException;
-use yii\queue\cli\LoopInterface;
 use yii\queue\cli\Queue as CliQueue;
+use yii\queue\cli\Signal;
 
 /**
  * Beanstalk Queue
@@ -33,86 +33,47 @@ class Queue extends CliQueue
      * @var string beanstalk tube
      */
     public $tube = 'queue';
+
     /**
      * @var string command class name
      */
     public $commandClass = Command::class;
 
+    /**
+     * Runs all jobs from queue.
+     */
+    public function run()
+    {
+        while ($payload = $this->getPheanstalk()->reserveFromTube($this->tube, 0)) {
+            $info = $this->getPheanstalk()->statsJob($payload);
+            if ($this->handleMessage(
+                $payload->getId(),
+                $payload->getData(),
+                $info->ttr,
+                $info->reserves
+            )) {
+                $this->getPheanstalk()->delete($payload);
+            }
+        }
+    }
 
     /**
-     * Listens queue and runs each job.
-     *
-     * @param bool $repeat whether to continue listening when queue is empty.
-     * @param int $timeout number of seconds to wait for next message.
-     * @return null|int exit code.
-     * @internal for worker command only.
-     * @since 2.0.2
+     * Listens queue and runs new jobs.
      */
-    public function run($repeat, $timeout = 0)
+    public function listen()
     {
-        return $this->runWorker(function (LoopInterface $loop) use ($repeat, $timeout) {
-            while ($loop->canContinue()) {
-                if ($payload = $this->getPheanstalk()->reserveFromTube($this->tube, $timeout)) {
-                    $info = $this->getPheanstalk()->statsJob($payload);
-                    if ($this->handleMessage(
-                        $payload->getId(),
-                        $payload->getData(),
-                        $info->ttr,
-                        $info->reserves
-                    )) {
-                        $this->getPheanstalk()->delete($payload);
-                    }
-                } elseif (!$repeat) {
-                    break;
+        while (!Signal::isExit()) {
+            if ($payload = $this->getPheanstalk()->reserveFromTube($this->tube, 3)) {
+                $info = $this->getPheanstalk()->statsJob($payload);
+                if ($this->handleMessage(
+                    $payload->getId(),
+                    $payload->getData(),
+                    $info->ttr,
+                    $info->reserves
+                )) {
+                    $this->getPheanstalk()->delete($payload);
                 }
             }
-        });
-    }
-
-    /**
-     * @inheritdoc
-     */
-    public function status($id)
-    {
-        if (!is_numeric($id) || $id <= 0) {
-            throw new InvalidParamException("Unknown message ID: $id.");
-        }
-
-        try {
-            $stats = $this->getPheanstalk()->statsJob($id);
-            if ($stats['state'] === 'reserved') {
-                return self::STATUS_RESERVED;
-            }
-
-            return self::STATUS_WAITING;
-        } catch (ServerException $e) {
-            if ($e->getMessage() === 'Server reported NOT_FOUND') {
-                return self::STATUS_DONE;
-            }
-
-            throw $e;
-        }
-    }
-
-    /**
-     * Removes a job by ID
-     *
-     * @param int $id of a job
-     * @return bool
-     * @since 2.0.1
-     */
-    public function remove($id)
-    {
-        try {
-            $job = $this->getPheanstalk()->peek($id);
-            $this->getPheanstalk()->delete($job);
-            return true;
-        } catch (ServerException $e) {
-            if (strpos($e->getMessage(), 'NOT_FOUND') === 0) {
-                return false;
-            }
-
-            throw $e;
         }
     }
 
@@ -131,7 +92,32 @@ class Queue extends CliQueue
     }
 
     /**
-     * @return object tube statistics
+     * @inheritdoc
+     */
+    protected function status($id)
+    {
+        if (!is_numeric($id) || $id <= 0) {
+            throw new InvalidParamException("Unknown messages ID: $id.");
+        }
+
+        try {
+            $stats = $this->getPheanstalk()->statsJob($id);
+            if ($stats['state'] === 'reserved') {
+                return self::STATUS_RESERVED;
+            } else {
+                return self::STATUS_WAITING;
+            }
+        } catch (ServerException $e) {
+            if ($e->getMessage() === 'Server reported NOT_FOUND') {
+                return self::STATUS_DONE;
+            } else {
+                throw $e;
+            }
+        }
+    }
+
+    /**
+     * @return array tube statistics
      */
     public function getStatsTube()
     {

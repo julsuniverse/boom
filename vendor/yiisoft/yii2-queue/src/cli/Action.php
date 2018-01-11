@@ -27,7 +27,6 @@ abstract class Action extends BaseAction
      */
     public $controller;
 
-
     /**
      * @inheritdoc
      */

@@ -10,7 +10,7 @@
  */
 
 if ($interfaces) {
-    $implements = 'implements ' . implode(', ', $interfaces);
+    $implements = 'implements ' . join(', ', $interfaces);
 } else {
     $implements = '';
 }
@@ -55,3 +55,5 @@ class <?= $jobClass ?> extends <?= $baseClass ?> <?= $implements ?>
     }
 <?php endif; ?>
 }
+
+

@@ -18,8 +18,6 @@ use yii\queue\cli\Queue as CliQueue;
 /**
  * Amqp Queue
  *
- * @deprecated since 2.0.2 and will be removed in 2.1. Consider using amqp_interop driver instead.
- *
  * @author Roman Zhuravlev <zhuravljov@gmail.com>
  */
 class Queue extends CliQueue
@@ -30,7 +28,7 @@ class Queue extends CliQueue
     public $password = 'guest';
     public $queueName = 'queue';
     public $exchangeName = 'exchange';
-    public $vhost = '/';
+
     /**
      * @var string command class name
      */
@@ -44,7 +42,6 @@ class Queue extends CliQueue
      * @var AMQPChannel
      */
     protected $channel;
-
 
     /**
      * @inheritdoc
@@ -64,9 +61,8 @@ class Queue extends CliQueue
     {
         $this->open();
         $callback = function(AMQPMessage $payload) {
-            $id = $payload->get('message_id');
             list($ttr, $message) = explode(';', $payload->body, 2);
-            if ($this->handleMessage($id, $message, $ttr, 1)) {
+            if ($this->handleMessage(null, $message, $ttr, 1)) {
                 $payload->delivery_info['channel']->basic_ack($payload->delivery_info['delivery_tag']);
             }
         };
@@ -90,22 +86,20 @@ class Queue extends CliQueue
         }
 
         $this->open();
-        $id = uniqid('', true);
         $this->channel->basic_publish(
             new AMQPMessage("$ttr;$message", [
                 'delivery_mode' => AMQPMessage::DELIVERY_MODE_PERSISTENT,
-                'message_id' => $id,
             ]),
             $this->exchangeName
         );
 
-        return $id;
+        return null;
     }
 
     /**
      * @inheritdoc
      */
-    public function status($id)
+    protected function status($id)
     {
         throw new NotSupportedException('Status is not supported in the driver.');
     }
@@ -115,10 +109,8 @@ class Queue extends CliQueue
      */
     protected function open()
     {
-        if ($this->channel) {
-            return;
-        }
-        $this->connection = new AMQPStreamConnection($this->host, $this->port, $this->user, $this->password, $this->vhost);
+        if ($this->channel) return;
+        $this->connection = new AMQPStreamConnection($this->host, $this->port, $this->user, $this->password);
         $this->channel = $this->connection->channel();
         $this->channel->queue_declare($this->queueName, false, true, false, false);
         $this->channel->exchange_declare($this->exchangeName, 'direct', false, true, false);
@@ -130,9 +122,7 @@ class Queue extends CliQueue
      */
     protected function close()
     {
-        if (!$this->channel) {
-            return;
-        }
+        if (!$this->channel) return;
         $this->channel->close();
         $this->connection->close();
     }

@@ -9,19 +9,16 @@ return [
             'class' => 'yii\caching\FileCache',
         ],
         'redis' => [
-            'class' => 'yii\redis\Cache',
-            'redis' => [
-                //'hostname' => 'artist-redis.nptsry.clustercfg.usw2.cache.amazonaws.com',
-                'hostname' => '172.31.21.26',
-                'port' => 6379,
-                'database' => 0,
-            ]
+            'class' => 'yii\redis\Connection',
+            'hostname' => '172.31.21.26',
+            //'hostname' => 'localhost',
+            'port' => 6379,
+            'database' => 0,
         ],
         'queue' => [
-            'class' => '\yii\queue\redis\Queue',
-            'as log' => '\yii\queue\LogBehavior',
+            'class' => \yii\queue\redis\Queue::class,
             'redis' => 'redis',
-            //'channel' => 'queue',
+            'channel' => 'queue',
         ],
         'urlManager' => [
             'enablePrettyUrl' => true,
