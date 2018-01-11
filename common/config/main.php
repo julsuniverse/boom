@@ -9,15 +9,25 @@ return [
             'class' => 'yii\caching\FileCache',
         ],
         'redis' => [
-            'class' => 'yii\redis\Connection',
-            'hostname' => '172.31.21.26',
-            //'hostname' => 'localhost',
-            'port' => 6379,
-            'database' => 0,
+            'class' => 'yii\redis\Cache',
+            /*'redis' => [
+                'hostname' => '127.0.0.1',
+                'port' => 6379,
+                'database' => 0,
+            ]*/
+            'redis' => 'redis_db'
+            /*'enableReplicas' => true,
+            'replicas' => [
+                'redis_db',//id of Redis [[Connection]] Component
+                ['hostname' => 'artist-redis.nptsry.clustercfg.usw2.cache.amazonaws.com'],
+            ],*/
         ],
         'queue' => [
             'class' => \yii\queue\redis\Queue::class,
-            'redis' => 'redis',
+            'as log' => \yii\queue\LogBehavior::class,
+            /*'class' => \zhuravljov\yii\queue\redis\Queue::class,
+            'as log' => \zhuravljov\yii\queue\LogBehavior::class,*/
+            'redis' => 'redis_db',
             'channel' => 'queue',
         ],
         'urlManager' => [

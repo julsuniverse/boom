@@ -29,4 +29,6 @@ return array(
     'Faker\\' => array($vendorDir . '/fzaninotto/faker/src/Faker'),
     'yii\\redis\\' => array($vendorDir . '/yiisoft/yii2-redis'),
     'yii\\queue\\' => array($vendorDir . '/yiisoft/yii2-queue/src'),
+    'zhuravljov\\yii\\queue\\' => array($vendorDir . '/zhuravljov/yii2-queue/src'),
+    'Symfony\\Component\\Process\\' => array($vendorDir . '/symfony/process'),
 );

@@ -1,11 +1,11 @@
 <?php
 /**
- * @link http://www.yiiframework.com/
- * @copyright Copyright (c) 2008 Yii Software LLC
- * @license http://www.yiiframework.com/license/
+ * @link https://github.com/zhuravljov/yii2-queue
+ * @copyright Copyright (c) 2017 Roman Zhuravlev
+ * @license http://opensource.org/licenses/BSD-3-Clause
  */
 
-namespace yii\queue\cli;
+namespace zhuravljov\yii\queue\cli;
 
 use Symfony\Component\Process\Exception\ProcessTimedOutException;
 use Symfony\Component\Process\Process;
@@ -138,15 +138,16 @@ abstract class Command extends Controller
             '{ttr}' => $ttr,
             '{attempt}' => $attempt,
         ]);
-        /*foreach ($this->getPassedOptions() as $name) {
+        /*
+        foreach ($this->getPassedOptions() as $name) {
             if (in_array($name, $this->options('exec'))) {
                 $cmd .= ' --' . $name . '=' . $this->$name;
             }
         }
         if (!in_array('color', $this->getPassedOptions())) {
             $cmd .= ' --color=' . $this->isColorEnabled();
-        }*/
-
+        }
+        */
         $process = new Process($cmd, null, null, $message, $ttr);
         try {
             $exitCode = $process->run(function ($type, $buffer) {
