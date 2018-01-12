@@ -2,6 +2,8 @@
 namespace api_ver4\controllers;
 
 use api_v4\models\OneSignalPushNotification;
+use api_ver4\helpers\ActivityHelper;
+use api_ver4\jobs\ActivityJob;
 use api_ver4\models\User;
 use backend\models\Artist;
 use backend\models\Artist_company;
@@ -221,7 +223,7 @@ class UserController extends Controller
                 'commentlist' => ['post'],
                 'postlist' => ['post'],
                 'checkusername' => ['post'],
-                'likepost' => ['post'],
+                'likepost' => ['get'],
                 'addcomment' => ['post'],
                 'likecomment' => ['post'],
                 'flag' => ['post'],
@@ -2252,10 +2254,11 @@ class UserController extends Controller
     }
 
     public function actionLikepost() {
+        \Yii::$app->controller->layout = 'l';
         $logString  = "";
         try
         {
-            $arrParams = Yii::$app->request->post();
+            $arrParams = Yii::$app->request->get();
             $logString.="\n Params : ".$arrParams['params'].'\n';
             $data = json_decode($arrParams['params']);
             $availableParams = array(
@@ -2287,7 +2290,12 @@ class UserController extends Controller
                 $procedure = "CALL Member_Add_Activity('" . $postID . "','" . $artistID . "','" . $profileID . "','" . $activityTypeID . "','" . $refTable . "','" . $refTableID . "','" . $comment . "','" . $activityID . "'," . $userType . ",0,'" . self::S3BucketPath . "','')";
                 $logString.="\n Member Add Activity : ".$procedure.'\n';
                 $command = $connection->createCommand($procedure);
-                $activityData = $command->queryAll();
+
+                Yii::$app->queue->push(new ActivityJob([
+                    'command' => $command,
+                ]));
+                $activityData = ActivityHelper::getLikes($artistID, $postID, $profileID, $activityTypeID);
+
                 if (count($activityData) > 0)
                 {
                     $resultCode = 200;
@@ -2303,9 +2311,15 @@ class UserController extends Controller
                 \Yii::$app->language = $language;
                 $lngmsg = \Yii::t('api', $resultMessage);
                 $this->setHeader(400);
-                echo json_encode(["Status" => $status,
+                /*echo json_encode(["Status" => $status,
+                    "Message" => $lngmsg,
+                    "Result" => $activityData], JSON_PRETTY_PRINT);*/
+                $res = json_encode(["Status" => $status,
                     "Message" => $lngmsg,
                     "Result" => $activityData], JSON_PRETTY_PRINT);
+                return $this->render('user', [
+                    'res' => $res,
+                ]);
             }
             else
             {
