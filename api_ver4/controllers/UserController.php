@@ -1,7 +1,7 @@
 <?php
 namespace api_ver4\controllers;
 
-use api_v4\models\OneSignalPushNotification;
+use api_ver4\models\OneSignalPushNotification;
 use api_ver4\helpers\ActivityHelper;
 use api_ver4\jobs\ActivityJob;
 use api_ver4\models\User;
@@ -223,8 +223,8 @@ class UserController extends Controller
                 'commentlist' => ['post'],
                 'postlist' => ['post'],
                 'checkusername' => ['post'],
-                'likepost' => ['get'],
-                'addcomment' => ['post'],
+                'likepost' => ['post'],
+                'addcomment' => ['get'],
                 'likecomment' => ['post'],
                 'flag' => ['post'],
                 'stickers' => ['post'],
@@ -2254,11 +2254,11 @@ class UserController extends Controller
     }
 
     public function actionLikepost() {
-        \Yii::$app->controller->layout = 'l';
+        //\Yii::$app->controller->layout = 'l';
         $logString  = "";
         try
         {
-            $arrParams = Yii::$app->request->get();
+            $arrParams = Yii::$app->request->post();
             $logString.="\n Params : ".$arrParams['params'].'\n';
             $data = json_decode($arrParams['params']);
             $availableParams = array(
@@ -2311,15 +2311,15 @@ class UserController extends Controller
                 \Yii::$app->language = $language;
                 $lngmsg = \Yii::t('api', $resultMessage);
                 $this->setHeader(400);
-                /*echo json_encode(["Status" => $status,
+                echo json_encode(["Status" => $status,
                     "Message" => $lngmsg,
-                    "Result" => $activityData], JSON_PRETTY_PRINT);*/
-                $res = json_encode(["Status" => $status,
+                    "Result" => $activityData], JSON_PRETTY_PRINT);
+                /*$res = json_encode(["Status" => $status,
                     "Message" => $lngmsg,
                     "Result" => $activityData], JSON_PRETTY_PRINT);
                 return $this->render('user', [
                     'res' => $res,
-                ]);
+                ]);*/
             }
             else
             {
@@ -2552,10 +2552,11 @@ class UserController extends Controller
     }
 
     public function actionAddcomment() {
+        \Yii::$app->controller->layout = 'l';
         $logString  = "";
         try
         {
-            $arrParams = Yii::$app->request->post();
+            $arrParams = Yii::$app->request->get();
             $logString.="\n Params : ".$arrParams['params'].'\n';
             $data = json_decode($arrParams['params']);
             $availableParams = array(
@@ -2594,7 +2595,12 @@ class UserController extends Controller
                 //echo $procedure; die;
                 $logString.="\n Member Add Activity : ".$procedure.'\n';
                 $command = $connection->createCommand($procedure)->bindValues($bindPostParams);
-                $activityData = $command->queryAll();
+                //$activityData = $command->queryAll();
+
+                Yii::$app->queue->push(new ActivityJob([
+                    'command' => $command,
+                ]));
+                $activityData = ActivityHelper::getComments($artistID, $postID, $userID, $activityTypeID);
 
                 if (count($activityData) > 0)
                 {
@@ -2602,8 +2608,8 @@ class UserController extends Controller
                     $status = "1";
 
                     $artistobj = Artist::findOne(["ArtistID"=>$artistID]);
-                    $commentactivityid = $activityData[0]['PostCommentActivityID'];
-
+                    //$commentactivityid = $activityData[0]['PostCommentActivityID'];
+                    $commentactivityid = $activityData['PostCommentActivityID'];
                     /*
                      * Onesignal Push Notification for Addcomment api
                      * 1. artist added comment, send push to fanapp
@@ -2641,9 +2647,15 @@ class UserController extends Controller
                 \Yii::$app->language = $language;
                 $lngmsg = \Yii::t('api', $resultMessage);
                 $this->setHeader(400);
-                echo json_encode(['Status' => $status,
+                /*echo json_encode(['Status' => $status,
+                    "Message" => $lngmsg,
+                    "Result" => $activityData], JSON_PRETTY_PRINT);*/
+                $res = json_encode(["Status" => $status,
                     "Message" => $lngmsg,
                     "Result" => $activityData], JSON_PRETTY_PRINT);
+                return $this->render('user', [
+                    'res' => $res,
+                ]);
             }
             else
             {

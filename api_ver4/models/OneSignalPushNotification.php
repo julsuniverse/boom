@@ -6,7 +6,7 @@
  * Time: 1:27 PM
  */
 
-namespace api_v4\models;
+namespace api_ver4\models;
 
 define("ONESIGNAL_USER_AUTH_KEY","NGE1ZjdlYTYtYjU5NS00ZGQxLWEzZjktOWY4OGM1YTBkYzY5");
 
