@@ -2347,6 +2347,7 @@ class UserController extends Controller
             $arrParams = Yii::$app->request->post();
             $logString.="\n Params : ".$arrParams['params'].'\n';
             $data = json_decode($arrParams['params']);
+            $activityData = "";
             $availableParams = array(
                 'PostID',
                 'ArtistID',
@@ -2372,17 +2373,23 @@ class UserController extends Controller
                 $userType = $data->UserType;
                 $language = $data->Language;
                 $connection = Yii::$app->db;
-                $procedure = "CALL Member_Add_Activity('" . $postID . "','" . $artistID . "','" . $userID . "','" . $activityTypeID . "','" . $refTable . "','" . $refTableID . "','" . $comment . "'," . $activityID . "," . $userType . ",0,'" . self::S3BucketPath . "','')";
+                $procedure = "CALL Member_Add_Activity('" . $postID . "','" . $artistID . "','" . $userID . "','" . $activityTypeID . "','" . $refTable . "','" . $refTableID . "','" . $comment . "','" . $activityID . "','" . $userType . "','0','" . self::S3BucketPath . "','')";
                 $logString.="\n Member Add Activity : ".$procedure.'\n';
                 $command = $connection->createCommand($procedure);
-                $activityData = $command->queryAll();
-                if (count($activityData) > 0)
+
+                $activityData = Yii::$app->queue->push(new ActivityJob([
+                    'command' => $command,
+                ]));
+
+                if (isset($activityData))
                 {
+                    $activityData = ActivityHelper::getSuccess();
                     $resultCode = 200;
                     $status = "1";
                 }
                 else
                 {
+                    $activityData = ActivityHelper::getError();
                     $resultCode = 404;
                     $status = "0";
                 }
@@ -2443,14 +2450,21 @@ class UserController extends Controller
                 $procedure = "CALL Member_Add_Activity('" . $postID . "','" . $artistID . "','" . $profileID . "','" . $activityTypeID . "','" . $refTable . "','" . $refTableID . "','" . $comment . "'," . $activityID . "," . $userType . ",0,'" . self::S3BucketPath . "','')";
                 $logString.="\n Member Add Activity : ".$procedure.'\n';
                 $command = $connection->createCommand($procedure);
-                $activityData = $command->queryAll();
-                if (count($activityData) > 0)
+
+                $activityData = Yii::$app->queue->push(new ActivityJob([
+                    'command' => $command,
+                ]));
+
+
+                if (isset($activityData))
                 {
+                    $activityData = ActivityHelper::getSuccess();
                     $resultCode = 200;
                     $status = "1";
                 }
                 else
                 {
+                    $activityData = ActivityHelper::getSuccess();
                     $resultCode = 404;
                     $status = "0";
                 }
@@ -2458,7 +2472,7 @@ class UserController extends Controller
                 \Yii::$app->language = $language;
                 $lngmsg = \Yii::t('api', $resultMessage);
                 $this->setHeader(400);
-                echo json_encode(["Status" => 1,
+                echo json_encode(["Status" => $status,
                     "Message" => $lngmsg,
                     "Result" => $activityData], JSON_PRETTY_PRINT);
             }
@@ -2468,7 +2482,7 @@ class UserController extends Controller
                 $resultMessage = _getStatusCodeMessageCommon(502);
                 \Yii::$app->language = $language;
                 $lngmsg = \Yii::t('api', $resultMessage);
-                echo json_encode(["Status" => 0,
+                echo json_encode(["Status" => $status,
                     "Message" => $lngmsg,
                     "Result" => $activityData], JSON_PRETTY_PRINT);
             }

@@ -31455,3 +31455,246 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1516011329.8049
     'REQUEST_TIME' => 1516011329
 ]
+2018-01-15 10:26:13 [192.168.83.1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '3,0,'http://d1t89cp2y0xf79.cloudfront.net/boom-','')' at line 1 in /app/vendor/yiisoft/yii2/db/Command.php:837
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/db/Command.php(837): PDOStatement->execute()
+#1 /app/vendor/yiisoft/yii2/db/Command.php(359): yii\db\Command->queryInternal('fetchAll', NULL)
+#2 /app/api_ver4/controllers/UserController.php(2378): yii\db\Command->queryAll()
+#3 [internal function]: api_ver4\controllers\UserController->actionFlag()
+#4 /app/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /app/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /app/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('flag', Array)
+#7 /app/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/flag', Array)
+#8 /app/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /app/api_ver4/web/index.php(21): yii\base\Application->run()
+#10 {main}
+
+Next yii\db\Exception: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '3,0,'http://d1t89cp2y0xf79.cloudfront.net/boom-','')' at line 1
+The SQL being executed was: CALL Member_Add_Activity('38301','1','21','1','2','967471','',,3,0,'http://d1t89cp2y0xf79.cloudfront.net/boom-','') in /app/vendor/yiisoft/yii2/db/Schema.php:628
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/db/Command.php(852): yii\db\Schema->convertException(Object(PDOException), 'CALL Member_Add...')
+#1 /app/vendor/yiisoft/yii2/db/Command.php(359): yii\db\Command->queryInternal('fetchAll', NULL)
+#2 /app/api_ver4/controllers/UserController.php(2378): yii\db\Command->queryAll()
+#3 [internal function]: api_ver4\controllers\UserController->actionFlag()
+#4 /app/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /app/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /app/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('flag', Array)
+#7 /app/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/flag', Array)
+#8 /app/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /app/api_ver4/web/index.php(21): yii\base\Application->run()
+#10 {main}
+Additional Information:
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '3,0,'http://d1t89cp2y0xf79.cloudfront.net/boom-','')' at line 1
+)
+
+2018-01-15 10:26:12 [192.168.83.1][-][-][info][application] $_POST = [
+    'params' => '{\"PostID\":\"38301\",\"ArtistID\":1,\"ActivityTypeID\":1,\"ProfileID\":21, \"RefTable\":2, \"RefTableID\":967471, \"Comment\":\"\", \"Language\":\"english\", \"ActivityID\":\"\",\"UserType\":3}'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'r1urgqn0rgl2ep3n3c9tgsh63q'
+    '_csrf-api4' => '26c5ed8b99b215aa9390d50ba2848f6b60bc11a0bc9c5f6ac93aeeb62919697ca:2:{i:0;s:10:\"_csrf-api4\";i:1;s:32:\"QtnamtNHQzaHdEUsiGs6CkItghz7Q6BE\";}'
+]
+
+$_SERVER = [
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate'
+    'HTTP_COOKIE' => 'PHPSESSID=r1urgqn0rgl2ep3n3c9tgsh63q; _csrf-api4=26c5ed8b99b215aa9390d50ba2848f6b60bc11a0bc9c5f6ac93aeeb62919697ca%3A2%3A%7Bi%3A0%3Bs%3A10%3A%22_csrf-api4%22%3Bi%3A1%3Bs%3A32%3A%22QtnamtNHQzaHdEUsiGs6CkItghz7Q6BE%22%3B%7D'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.2 (Java/1.8.0_152-release)'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_HOST' => 'api4.boom.test'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_CONTENT_LENGTH' => '271'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => '*/*'
+    'SCRIPT_FILENAME' => '/app/api_ver4/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'api4.boom.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.83.137'
+    'REMOTE_PORT' => '38852'
+    'REMOTE_ADDR' => '192.168.83.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/app/api_ver4/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/user/flag'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '271'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1516011972.5974
+    'REQUEST_TIME' => 1516011972
+]
+2018-01-15 10:28:52 [192.168.83.1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '3,0,'http://d1t89cp2y0xf79.cloudfront.net/boom-','')' at line 1 in /app/vendor/yiisoft/yii2/db/Command.php:837
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/db/Command.php(837): PDOStatement->execute()
+#1 /app/vendor/yiisoft/yii2/db/Command.php(359): yii\db\Command->queryInternal('fetchAll', NULL)
+#2 /app/api_ver4/controllers/UserController.php(2378): yii\db\Command->queryAll()
+#3 [internal function]: api_ver4\controllers\UserController->actionFlag()
+#4 /app/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /app/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /app/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('flag', Array)
+#7 /app/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/flag', Array)
+#8 /app/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /app/api_ver4/web/index.php(21): yii\base\Application->run()
+#10 {main}
+
+Next yii\db\Exception: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '3,0,'http://d1t89cp2y0xf79.cloudfront.net/boom-','')' at line 1
+The SQL being executed was: CALL Member_Add_Activity('38301','1','21','1','2','967471','',,3,0,'http://d1t89cp2y0xf79.cloudfront.net/boom-','') in /app/vendor/yiisoft/yii2/db/Schema.php:628
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/db/Command.php(852): yii\db\Schema->convertException(Object(PDOException), 'CALL Member_Add...')
+#1 /app/vendor/yiisoft/yii2/db/Command.php(359): yii\db\Command->queryInternal('fetchAll', NULL)
+#2 /app/api_ver4/controllers/UserController.php(2378): yii\db\Command->queryAll()
+#3 [internal function]: api_ver4\controllers\UserController->actionFlag()
+#4 /app/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /app/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /app/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('flag', Array)
+#7 /app/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/flag', Array)
+#8 /app/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /app/api_ver4/web/index.php(21): yii\base\Application->run()
+#10 {main}
+Additional Information:
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '3,0,'http://d1t89cp2y0xf79.cloudfront.net/boom-','')' at line 1
+)
+
+2018-01-15 10:28:51 [192.168.83.1][-][-][info][application] $_POST = [
+    'params' => '{\"PostID\":\"38301\",\"ArtistID\":1,\"ActivityTypeID\":1,\"ProfileID\":21, \"RefTable\":2, \"RefTableID\":967471, \"Comment\":\"\", \"Language\":\"english\", \"ActivityID\":\"\",\"UserType\":3}'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'r1urgqn0rgl2ep3n3c9tgsh63q'
+    '_csrf-api4' => '26c5ed8b99b215aa9390d50ba2848f6b60bc11a0bc9c5f6ac93aeeb62919697ca:2:{i:0;s:10:\"_csrf-api4\";i:1;s:32:\"QtnamtNHQzaHdEUsiGs6CkItghz7Q6BE\";}'
+]
+
+$_SERVER = [
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate'
+    'HTTP_COOKIE' => 'PHPSESSID=r1urgqn0rgl2ep3n3c9tgsh63q; _csrf-api4=26c5ed8b99b215aa9390d50ba2848f6b60bc11a0bc9c5f6ac93aeeb62919697ca%3A2%3A%7Bi%3A0%3Bs%3A10%3A%22_csrf-api4%22%3Bi%3A1%3Bs%3A32%3A%22QtnamtNHQzaHdEUsiGs6CkItghz7Q6BE%22%3B%7D'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.2 (Java/1.8.0_152-release)'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_HOST' => 'api4.boom.test'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_CONTENT_LENGTH' => '271'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => '*/*'
+    'SCRIPT_FILENAME' => '/app/api_ver4/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'api4.boom.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.83.137'
+    'REMOTE_PORT' => '38878'
+    'REMOTE_ADDR' => '192.168.83.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/app/api_ver4/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/user/flag'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '271'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1516012131.0783
+    'REQUEST_TIME' => 1516012131
+]
+2018-01-15 10:29:21 [192.168.83.1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '3,'0','http://d1t89cp2y0xf79.cloudfront.net/boom-','')' at line 1 in /app/vendor/yiisoft/yii2/db/Command.php:837
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/db/Command.php(837): PDOStatement->execute()
+#1 /app/vendor/yiisoft/yii2/db/Command.php(359): yii\db\Command->queryInternal('fetchAll', NULL)
+#2 /app/api_ver4/controllers/UserController.php(2378): yii\db\Command->queryAll()
+#3 [internal function]: api_ver4\controllers\UserController->actionFlag()
+#4 /app/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /app/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /app/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('flag', Array)
+#7 /app/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/flag', Array)
+#8 /app/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /app/api_ver4/web/index.php(21): yii\base\Application->run()
+#10 {main}
+
+Next yii\db\Exception: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '3,'0','http://d1t89cp2y0xf79.cloudfront.net/boom-','')' at line 1
+The SQL being executed was: CALL Member_Add_Activity('38301','1','21','1','2','967471','',','3,'0','http://d1t89cp2y0xf79.cloudfront.net/boom-','') in /app/vendor/yiisoft/yii2/db/Schema.php:628
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/db/Command.php(852): yii\db\Schema->convertException(Object(PDOException), 'CALL Member_Add...')
+#1 /app/vendor/yiisoft/yii2/db/Command.php(359): yii\db\Command->queryInternal('fetchAll', NULL)
+#2 /app/api_ver4/controllers/UserController.php(2378): yii\db\Command->queryAll()
+#3 [internal function]: api_ver4\controllers\UserController->actionFlag()
+#4 /app/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /app/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /app/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('flag', Array)
+#7 /app/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/flag', Array)
+#8 /app/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /app/api_ver4/web/index.php(21): yii\base\Application->run()
+#10 {main}
+Additional Information:
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '3,'0','http://d1t89cp2y0xf79.cloudfront.net/boom-','')' at line 1
+)
+
+2018-01-15 10:29:20 [192.168.83.1][-][-][info][application] $_POST = [
+    'params' => '{\"PostID\":\"38301\",\"ArtistID\":1,\"ActivityTypeID\":1,\"ProfileID\":21, \"RefTable\":2, \"RefTableID\":967471, \"Comment\":\"\", \"Language\":\"english\", \"ActivityID\":\"\",\"UserType\":3}'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'r1urgqn0rgl2ep3n3c9tgsh63q'
+    '_csrf-api4' => '26c5ed8b99b215aa9390d50ba2848f6b60bc11a0bc9c5f6ac93aeeb62919697ca:2:{i:0;s:10:\"_csrf-api4\";i:1;s:32:\"QtnamtNHQzaHdEUsiGs6CkItghz7Q6BE\";}'
+]
+
+$_SERVER = [
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate'
+    'HTTP_COOKIE' => 'PHPSESSID=r1urgqn0rgl2ep3n3c9tgsh63q; _csrf-api4=26c5ed8b99b215aa9390d50ba2848f6b60bc11a0bc9c5f6ac93aeeb62919697ca%3A2%3A%7Bi%3A0%3Bs%3A10%3A%22_csrf-api4%22%3Bi%3A1%3Bs%3A32%3A%22QtnamtNHQzaHdEUsiGs6CkItghz7Q6BE%22%3B%7D'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.2 (Java/1.8.0_152-release)'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_HOST' => 'api4.boom.test'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_CONTENT_LENGTH' => '271'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => '*/*'
+    'SCRIPT_FILENAME' => '/app/api_ver4/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'api4.boom.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.83.137'
+    'REMOTE_PORT' => '38884'
+    'REMOTE_ADDR' => '192.168.83.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/app/api_ver4/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/user/flag'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '271'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1516012160.4946
+    'REQUEST_TIME' => 1516012160
+]
