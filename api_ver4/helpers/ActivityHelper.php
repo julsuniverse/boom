@@ -37,4 +37,14 @@ class ActivityHelper extends Object
             'id' => $result[0]['id'],
         ];
     }
+
+    public static function getSuccess()
+    {
+        return "Query was sent to queue";
+    }
+
+    public static function getError()
+    {
+        return "Something went wrong. Query wasn't sent to queue";
+    }
 }

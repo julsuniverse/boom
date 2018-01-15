@@ -224,7 +224,7 @@ class UserController extends Controller
                 'postlist' => ['post'],
                 'checkusername' => ['post'],
                 'likepost' => ['post'],
-                'addcomment' => ['get'],
+                'addcomment' => ['post'],
                 'likecomment' => ['post'],
                 'flag' => ['post'],
                 'stickers' => ['post'],
@@ -2291,18 +2291,20 @@ class UserController extends Controller
                 $logString.="\n Member Add Activity : ".$procedure.'\n';
                 $command = $connection->createCommand($procedure);
 
-                Yii::$app->queue->push(new ActivityJob([
+                $activityData = Yii::$app->queue->push(new ActivityJob([
                     'command' => $command,
                 ]));
-                $activityData = ActivityHelper::getLikes($artistID, $postID, $profileID, $activityTypeID);
 
-                if (count($activityData) > 0)
+                //if (count($activityData) > 0)
+                if(isset($activityData))
                 {
+                    $activityData = ActivityHelper::getSuccess();
                     $resultCode = 200;
                     $status = "1";
                 }
                 else
                 {
+                    $activityData = ActivityHelper::getError();
                     $resultCode = 404;
                     $status = "0";
                 }
@@ -2484,6 +2486,7 @@ class UserController extends Controller
             $arrParams = Yii::$app->request->post();
             $logString.="\n Params : ".$arrParams['params'].'\n';
             $data = json_decode($arrParams['params']);
+            $activityData = "";
             $availableParams = array(
                 'PostID',
                 'ArtistID',
@@ -2510,18 +2513,25 @@ class UserController extends Controller
                 $userType = $data->UserType;
                 $language = $data->Language;
                 $connection = Yii::$app->db;
-                $procedure = "CALL Member_Add_Activity('" . $postID . "','" . $artistID . "','" . $userID . "','" . $activityTypeID . "','" . $refTable . "','" . $refTableID . "','" . $comment . "'," . $activityID . "," . $userType . ",0,'" . self::S3BucketPath . "','')";
+                $procedure = "CALL Member_Add_Activity('" . $postID . "','" . $artistID . "','" . $userID . "','" . $activityTypeID . "','" . $refTable . "','" . $refTableID . "','" . $comment . "','" . $activityID . "','" . $userType . "','0','" . self::S3BucketPath . "','')";
                 $logString.="\n Member Add Activity : ".$procedure.'\n';
                 //echo $procedure; die;
                 $command = $connection->createCommand($procedure);
-                $activityData = $command->queryAll();
-                if (count($activityData) > 0)
+                //$activityData = $command->queryAll();
+
+                $activityData = Yii::$app->queue->push(new ActivityJob([
+                    'command' => $command,
+                ]));
+
+                if (isset($activityData))
                 {
+                    $activityData = ActivityHelper::getSuccess();
                     $resultCode = 200;
                     $status = "1";
                 }
                 else
                 {
+                    $activityData = ActivityHelper::getError();
                     $resultCode = 404;
                     $status = "0";
                 }
@@ -2552,13 +2562,13 @@ class UserController extends Controller
     }
 
     public function actionAddcomment() {
-        \Yii::$app->controller->layout = 'l';
         $logString  = "";
         try
         {
-            $arrParams = Yii::$app->request->get();
+            $arrParams = Yii::$app->request->post();
             $logString.="\n Params : ".$arrParams['params'].'\n';
             $data = json_decode($arrParams['params']);
+            $activityData = "";
             $availableParams = array(
                 'PostID',
                 'ArtistID',
@@ -2592,37 +2602,32 @@ class UserController extends Controller
                 $connection = Yii::$app->db;
                 $procedure = "CALL Member_Add_Activity(:postID,:artistID,:userID,:activityTypeID,:refTable,:refTableID,:comment,:activityID,:userType,:stickerID,:buckerPath,:CustomStickerUrl)";
                 $bindPostParams = [':postID' => $postID,':artistID'=>$artistID,':userID'=>$userID,':activityTypeID'=>$activityTypeID,':refTable'=>$refTable,':refTableID'=>$refTableID,':comment'=>$comment,':activityID'=>$activityID,':userType'=>$userType,':stickerID'=>$stickerID,':buckerPath'=>self::S3BucketPath,':CustomStickerUrl'=>$customStickerUrl];
-                //echo $procedure; die;
+
                 $logString.="\n Member Add Activity : ".$procedure.'\n';
                 $command = $connection->createCommand($procedure)->bindValues($bindPostParams);
-                //$activityData = $command->queryAll();
 
-                Yii::$app->queue->push(new ActivityJob([
+                $activityData = Yii::$app->queue->push(new ActivityJob([
                     'command' => $command,
                 ]));
-                $activityData = ActivityHelper::getComments($artistID, $postID, $userID, $activityTypeID);
 
-                if (count($activityData) > 0)
+                if (isset($activityData))
                 {
+                    $activityData = ActivityHelper::getSuccess();
                     $resultCode = 200;
                     $status = "1";
-
                     $artistobj = Artist::findOne(["ArtistID"=>$artistID]);
                     //$commentactivityid = $activityData[0]['PostCommentActivityID'];
-                    $commentactivityid = $activityData['PostCommentActivityID'];
                     /*
                      * Onesignal Push Notification for Addcomment api
                      * 1. artist added comment, send push to fanapp
                      * 2. fan added comment send push to artist app (logged in artist, check ArtistID)
                      *
                      * */
-
                     /*                     * ************************ Push ********************* */
                     if($userType == "2") {
                         //artist added a comment, send a push notification to fan app
                         $onesignalpush=new OneSignalPushNotification();
                         $getmsgforartist = $artistobj->getNotificationMessageForComment(NULL, $artistID, $postID);
-
                         $osappid = $artistobj->OSFanAppID;
                         $onesignalpush->sendMessageToAll($osappid,$getmsgforartist,"",$postID,"comment",$time);
                     } else if ($userType == "3") {
@@ -2631,15 +2636,14 @@ class UserController extends Controller
                         $osartistappid=$artistobj->OSArtistAppID;
                         //send message to artist
                         $onesignal->sendMessageToUserID($osartistappid,$artistobj->UserID,$getmsgforartist,"",$postID,"comment",$time);
-
                         //send message to all fan except this fan who added comment
                         //$osfanappid=$artistobj->OSFanAppID;
                         //$onesignal->sendMessageExceptUserID($osfanappid,)
-
                     }
                 }
                 else
                 {
+                    $activityData = ActivityHelper::getError();
                     $resultCode = 404;
                     $status = "0";
                 }
@@ -2647,15 +2651,9 @@ class UserController extends Controller
                 \Yii::$app->language = $language;
                 $lngmsg = \Yii::t('api', $resultMessage);
                 $this->setHeader(400);
-                /*echo json_encode(['Status' => $status,
-                    "Message" => $lngmsg,
-                    "Result" => $activityData], JSON_PRETTY_PRINT);*/
-                $res = json_encode(["Status" => $status,
+                echo json_encode(['Status' => $status,
                     "Message" => $lngmsg,
                     "Result" => $activityData], JSON_PRETTY_PRINT);
-                return $this->render('user', [
-                    'res' => $res,
-                ]);
             }
             else
             {
