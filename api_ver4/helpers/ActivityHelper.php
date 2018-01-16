@@ -7,44 +7,61 @@ use yii\base\Object;
 
 class ActivityHelper extends Object
 {
-    public static function getLikes($artistID, $postID, $profileID, $activityTypeID)
+    /* ActivityTypeID:
+        1 - like
+        2 - Add Comment
+        3 - FB Share
+        4 - Twitter Share
+        5 - Flag
+        6 - Email Share
+        7 - Whatsapp Share
+        8 - Message Share
+        9 - FB Messenger Share
+    */
+    public static function getData($activityTypeID = false)
     {
-        $query = self::setQuery($artistID, $postID, $profileID, $activityTypeID);
-        $result = [
-            'PostLikeActivityID' => $query['id'],
-            'TotalLikes' => $query['total'],
-        ];
+        $result = array();
+        if($activityTypeID == 1)
+        {
+            $id = self::setQuery();
+            $result += ['PostLikeActivityID' => $id+1];
+            $result += ['TotalLikes' => 0];
+        }
+        else if($activityTypeID == 2)
+        {
+            $id = self::setQuery();
+            $result += ['PostCommentActivityID' => $id];
+            $result += ['TotalComments' => 0];
+        }
+        else if($activityTypeID == 3 || $activityTypeID == 4 || $activityTypeID == 6 || $activityTypeID == 7 || $activityTypeID == 8 || $activityTypeID == 9)
+        {
+            $result += ['TotalShares' => 0];
+        }
+        else if($activityTypeID == 5)
+        {
+            $id = self::setQuery();
+            $result += ['PostFlagActivityID' => $id];
+            $result += ['TotalFlags' => 0];
+        }
+
+        else
+            return self::getError();
+
         return $result;
     }
 
-    public static function getComments($artistID, $postID, $profileID, $activityTypeID)
+    private static function setQuery()
     {
-        $query = self::setQuery($artistID, $postID, $profileID, $activityTypeID);
-        $result = [
-            'PostCommentActivityID' => $query['id'],
-            'TotalComments' => $query['total'],
-        ];
-        return $result;
-    }
-
-    private static function setQuery($artistID, $postID, $profileID, $activityTypeID)
-    {
-        $sql = 'SELECT COUNT(*) as count, (SELECT MAX(ActivityID) FROM memberactivity WHERE ArtistID='.$artistID.' AND PostID='.$postID.' AND MemberID='.$profileID.' AND ActivityTypeID='.$activityTypeID.') as id FROM memberactivity WHERE ArtistID='.$artistID.' AND PostID='.$postID.' AND ActivityTypeID='.$activityTypeID;
-        $result = Yii::$app->db->createCommand($sql)->queryAll();
-
-        return [
-            'total' => $result[0]['count'],
-            'id' => $result[0]['id'],
-        ];
-    }
-
-    public static function getSuccess()
-    {
-        return "Query was sent to queue";
+        $sql = 'SELECT ActivityID as id FROM memberactivity ORDER BY id DESC LIMIT 1';
+        $result = Yii::$app->db->createCommand($sql)->queryOne();
+        return $result['id'];
     }
 
     public static function getError()
     {
-        return "Something went wrong. Query wasn't sent to queue";
+        return [
+            'PostLikeActivityID' => 0,
+            'TotalLikes' => 0,
+        ];
     }
 }

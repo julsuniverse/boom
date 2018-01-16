@@ -1,9 +1,9 @@
 
  ************************
- DateTime : 2018-01-12 16:07:17
- Message : yii\base\ErrorException: Undefined offset: 0 in /app/api_ver4/controllers/UserController.php:2610
+ DateTime : 2018-01-16 15:00:18
+ Message : yii\base\ErrorException: Undefined variable: activityTypeID in /app/api_ver4/controllers/UserController.php:2602
 Stack trace:
-#0 /app/api_ver4/controllers/UserController.php(2610): yii\base\ErrorHandler->handleError(8, 'Undefined offse...', '/app/api_ver4/c...', 2610, Array)
+#0 /app/api_ver4/controllers/UserController.php(2602): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', '/app/api_ver4/c...', 2602, Array)
 #1 [internal function]: api_ver4\controllers\UserController->actionAddcomment()
 #2 /app/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
 #3 /app/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
@@ -14,4 +14,3 @@ Stack trace:
 #8 {main}
  Data: 
  Params : {"PostID":"38301","ArtistID":1,"ActivityTypeID":2,"ProfileID":21, "RefTable":1, "RefTableID":38301, "Comment":"testing queue", "Language":"english", "ActivityID":"","UserType":3,"StickerID":"","CustomStickerUrl":""}\n
- Member Add Activity : CALL Member_Add_Activity(:postID,:artistID,:userID,:activityTypeID,:refTable,:refTableID,:comment,:activityID,:userType,:stickerID,:buckerPath,:CustomStickerUrl)\n
