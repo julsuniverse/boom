@@ -37862,3 +37862,399 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1516118487.522
     'REQUEST_TIME' => 1516118487
 ]
+2018-01-22 09:09:04 [192.168.83.1][-][-][error][ParseError] unserialize('O:10:"ParseError":7:{s:10:"' . "\0" . '*' . "\0" . 'message";s:68:"syntax error, unexpected \'=>\' (T_DOUBLE_ARROW), expecting \',\' or \')\'";s:13:"' . "\0" . 'Error' . "\0" . 'string";s:0:"";s:7:"' . "\0" . '*' . "\0" . 'code";i:0;s:7:"' . "\0" . '*' . "\0" . 'file";s:44:"/app/api_ver4/controllers/UserController.php";s:7:"' . "\0" . '*' . "\0" . 'line";i:3828;s:12:"' . "\0" . 'Error' . "\0" . 'trace";a:8:{i:0;a:4:{s:8:"function";s:8:"autoload";s:5:"class";s:11:"yii\\BaseYii";s:4:"type";s:2:"::";s:4:"args";a:1:{i:0;s:35:"api_ver4\\controllers\\UserController";}}i:1;a:2:{s:8:"function";s:17:"spl_autoload_call";s:4:"args";a:1:{i:0;s:35:"api_ver4\\controllers\\UserController";}}i:2;a:4:{s:4:"file";s:40:"/app/vendor/yiisoft/yii2/base/Module.php";s:4:"line";i:563;s:8:"function";s:12:"class_exists";s:4:"args";a:1:{i:0;s:35:"api_ver4\\controllers\\UserController";}}i:3;a:6:{s:4:"file";s:40:"/app/vendor/yiisoft/yii2/base/Module.php";s:4:"line";i:521;s:8:"function";s:20:"createControllerByID";s:5:"class";s:15:"yii\\base\\Module";s:4:"type";s:2:"->";s:4:"args";a:1:{i:0;s:4:"user";}}i:4;a:6:{s:4:"file";s:40:"/app/vendor/yiisoft/yii2/base/Module.php";s:4:"line";i:449;s:8:"function";s:16:"createController";s:5:"class";s:15:"yii\\base\\Module";s:4:"type";s:2:"->";s:4:"args";a:1:{i:0;s:7:"addpost";}}i:5;a:6:{s:4:"file";s:44:"/app/vendor/yiisoft/yii2/web/Application.php";s:4:"line";i:84;s:8:"function";s:9:"runAction";s:5:"class";s:15:"yii\\base\\Module";s:4:"type";s:2:"->";s:4:"args";a:2:{i:0;s:12:"user/addpost";i:1;a:1:{s:6:"params";s:170:"{"PostTitle":"","PostType":4,"Description":"text qa","ArtistID":"1","IsExclusive":"","IsShared":"1","Language":"english", "Media":"", "VideoThumbImage":"","scheduled":""}";}}}i:6;a:6:{s:4:"file";s:45:"/app/vendor/yiisoft/yii2/base/Application.php";s:4:"line";i:375;s:8:"function";s:13:"handleRequest";s:5:"class";s:19:"yii\\web\\Application";s:4:"type";s:2:"->";s:4:"args";a:1:{i:0;O:15:"yii\\web\\Request":28:{s:20:"enableCsrfValidation";b:1;s:9:"csrfParam";s:10:"_csrf-api4";s:10:"csrfCookie";a:1:{s:8:"httpOnly";b:1;}s:16:"enableCsrfCookie";b:1;s:22:"enableCookieValidation";b:1;s:19:"cookieValidationKey";s:32:"OvdYtsamRz5AqAYOuLc19OQvQ5Hk_wf8";s:11:"methodParam";s:7:"_method";s:7:"parsers";a:0:{}s:25:"' . "\0" . 'yii\\web\\Request' . "\0" . '_cookies";N;s:25:"' . "\0" . 'yii\\web\\Request' . "\0" . '_headers";N;s:25:"' . "\0" . 'yii\\web\\Request' . "\0" . '_rawBody";N;s:28:"' . "\0" . 'yii\\web\\Request' . "\0" . '_bodyParams";N;s:29:"' . "\0" . 'yii\\web\\Request' . "\0" . '_queryParams";N;s:26:"' . "\0" . 'yii\\web\\Request' . "\0" . '_hostInfo";N;s:25:"' . "\0" . 'yii\\web\\Request' . "\0" . '_baseUrl";s:0:"";s:27:"' . "\0" . 'yii\\web\\Request' . "\0" . '_scriptUrl";s:10:"/index.php";s:28:"' . "\0" . 'yii\\web\\Request' . "\0" . '_scriptFile";N;s:26:"' . "\0" . 'yii\\web\\Request' . "\0" . '_pathInfo";s:12:"user/addpost";s:21:"' . "\0" . 'yii\\web\\Request' . "\0" . '_url";s:309:"/user/addpost?params=%7B%22PostTitle%22%3A%22%22%2C%22PostType%22%3A4%2C%22Description%22%3A%22text+qa%22%2C%22ArtistID%22%3A%221%22%2C%22IsExclusive%22%3A%22%22%2C%22IsShared%22%3A%221%22%2C%22Language%22%3A%22english%22%2C+%22Media%22%3A%22%22%2C+%22VideoThumbImage%22%3A%22%22%2C%22scheduled%22%3A%22%22%7D";s:22:"' . "\0" . 'yii\\web\\Request' . "\0" . '_port";N;s:28:"' . "\0" . 'yii\\web\\Request' . "\0" . '_securePort";N;s:30:"' . "\0" . 'yii\\web\\Request' . "\0" . '_contentTypes";N;s:27:"' . "\0" . 'yii\\web\\Request' . "\0" . '_languages";N;s:27:"' . "\0" . 'yii\\web\\Request' . "\0" . '_csrfToken";N;s:35:"' . "\0" . 'yii\\base\\Request' . "\0" . '_isConsoleRequest";N;s:27:"' . "\0" . 'yii\\base\\Component' . "\0" . '_events";a:0:{}s:30:"' . "\0" . 'yii\\base\\Component' . "\0" . '_behaviors";N;s:29:"' . "\0" . 'yii\\base\\Request' . "\0" . '_scriptFile";N;}}}i:7;a:6:{s:4:"file";s:27:"/app/api_ver4/web/index.php";s:4:"line";i:21;s:8:"function";s:3:"run";s:5:"class";s:20:"yii\\base\\Application";s:4:"type";s:2:"->";s:4:"args";a:0:{}}}s:15:"' . "\0" . 'Error' . "\0" . 'previous";N;}')
+2018-01-22 09:09:04 [192.168.83.1][-][-][info][application] $_GET = [
+    'params' => '{\"PostTitle\":\"\",\"PostType\":4,\"Description\":\"text qa\",\"ArtistID\":\"1\",\"IsExclusive\":\"\",\"IsShared\":\"1\",\"Language\":\"english\", \"Media\":\"\", \"VideoThumbImage\":\"\",\"scheduled\":\"\"}'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'r1urgqn0rgl2ep3n3c9tgsh63q'
+    '_csrf-api4' => '26c5ed8b99b215aa9390d50ba2848f6b60bc11a0bc9c5f6ac93aeeb62919697ca:2:{i:0;s:10:\"_csrf-api4\";i:1;s:32:\"QtnamtNHQzaHdEUsiGs6CkItghz7Q6BE\";}'
+]
+
+$_SERVER = [
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate'
+    'HTTP_COOKIE' => 'PHPSESSID=r1urgqn0rgl2ep3n3c9tgsh63q; _csrf-api4=26c5ed8b99b215aa9390d50ba2848f6b60bc11a0bc9c5f6ac93aeeb62919697ca%3A2%3A%7Bi%3A0%3Bs%3A10%3A%22_csrf-api4%22%3Bi%3A1%3Bs%3A32%3A%22QtnamtNHQzaHdEUsiGs6CkItghz7Q6BE%22%3B%7D'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.2 (Java/1.8.0_152-release)'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_HOST' => 'api4.boom.test'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => '*/*'
+    'SCRIPT_FILENAME' => '/app/api_ver4/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'api4.boom.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.83.137'
+    'REMOTE_PORT' => '37216'
+    'REMOTE_ADDR' => '192.168.83.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/app/api_ver4/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/user/addpost?params=%7B%22PostTitle%22%3A%22%22%2C%22PostType%22%3A4%2C%22Description%22%3A%22text+qa%22%2C%22ArtistID%22%3A%221%22%2C%22IsExclusive%22%3A%22%22%2C%22IsShared%22%3A%221%22%2C%22Language%22%3A%22english%22%2C+%22Media%22%3A%22%22%2C+%22VideoThumbImage%22%3A%22%22%2C%22scheduled%22%3A%22%22%7D'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'params=%7B%22PostTitle%22%3A%22%22%2C%22PostType%22%3A4%2C%22Description%22%3A%22text+qa%22%2C%22ArtistID%22%3A%221%22%2C%22IsExclusive%22%3A%22%22%2C%22IsShared%22%3A%221%22%2C%22Language%22%3A%22english%22%2C+%22Media%22%3A%22%22%2C+%22VideoThumbImage%22%3A%22%22%2C%22scheduled%22%3A%22%22%7D'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1516612144.3061
+    'REQUEST_TIME' => 1516612144
+]
+2018-01-22 09:11:02 [192.168.83.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.83.1
+    in /app/api_ver4/views/layouts/l.php:39
+    in /app/api_ver4/controllers/UserController.php:3828
+2018-01-22 09:11:02 [192.168.83.1][-][-][info][application] $_GET = [
+    'params' => '{\"PostTitle\":\"\",\"PostType\":4,\"Description\":\"text qa\",\"ArtistID\":\"1\",\"IsExclusive\":\"\",\"IsShared\":\"1\",\"Language\":\"english\", \"Media\":\"\", \"VideoThumbImage\":\"\",\"scheduled\":\"\"}'
+]
+
+$_COOKIE = [
+    '_csrf' => '3c3293ae2753256229c45cea85883a15f72f248866facb6f654e4734496d9595a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"QoRVAgacC-Ges8L0sKvNy4rPP3SAnue_\";}'
+    '_csrf-api4' => 'a006404f2117f6512aa694243f034306c47da90379f0081d004170e51c21fb2ca:2:{i:0;s:10:\"_csrf-api4\";i:1;s:32:\"mPkJNMpIUtGJc6oXAbyO0XGxum-iRppL\";}'
+    'PHPSESSID' => 'vqjft4urmdgl3d4a0htrg55uhd'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'HTTP_COOKIE' => '_csrf=3c3293ae2753256229c45cea85883a15f72f248866facb6f654e4734496d9595a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22QoRVAgacC-Ges8L0sKvNy4rPP3SAnue_%22%3B%7D; _csrf-api4=a006404f2117f6512aa694243f034306c47da90379f0081d004170e51c21fb2ca%3A2%3A%7Bi%3A0%3Bs%3A10%3A%22_csrf-api4%22%3Bi%3A1%3Bs%3A32%3A%22mPkJNMpIUtGJc6oXAbyO0XGxum-iRppL%22%3B%7D; PHPSESSID=vqjft4urmdgl3d4a0htrg55uhd'
+    'HTTP_ACCEPT_LANGUAGE' => 'uk-UA,uk;q=0.9,ru;q=0.8,en-US;q=0.7,en;q=0.6'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'api4.boom.test'
+    'SCRIPT_FILENAME' => '/app/api_ver4/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'api4.boom.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.83.137'
+    'REMOTE_PORT' => '37264'
+    'REMOTE_ADDR' => '192.168.83.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/app/api_ver4/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/user/addpost?params={%22PostTitle%22:%22%22,%22PostType%22:4,%22Description%22:%22text%20qa%22,%22ArtistID%22:%221%22,%22IsExclusive%22:%22%22,%22IsShared%22:%221%22,%22Language%22:%22english%22,%20%22Media%22:%22%22,%20%22VideoThumbImage%22:%22%22,%22scheduled%22:%22%22}'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'params={%22PostTitle%22:%22%22,%22PostType%22:4,%22Description%22:%22text%20qa%22,%22ArtistID%22:%221%22,%22IsExclusive%22:%22%22,%22IsShared%22:%221%22,%22Language%22:%22english%22,%20%22Media%22:%22%22,%20%22VideoThumbImage%22:%22%22,%22scheduled%22:%22%22}'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1516612262.0836
+    'REQUEST_TIME' => 1516612262
+]
+2018-01-22 09:11:42 [192.168.83.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.83.1
+    in /app/api_ver4/views/layouts/l.php:39
+    in /app/api_ver4/controllers/UserController.php:3951
+2018-01-22 09:11:42 [192.168.83.1][-][-][info][application] $_GET = [
+    'params' => '{\"PostTitle\":\"\",\"PostType\":4,\"Description\":\"text qa\",\"ArtistID\":\"1\",\"IsExclusive\":\"\",\"IsShared\":\"1\",\"Language\":\"english\", \"Media\":\"\", \"VideoThumbImage\":\"\",\"scheduled\":\"\"}'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'r1urgqn0rgl2ep3n3c9tgsh63q'
+    '_csrf-api4' => '26c5ed8b99b215aa9390d50ba2848f6b60bc11a0bc9c5f6ac93aeeb62919697ca:2:{i:0;s:10:\"_csrf-api4\";i:1;s:32:\"QtnamtNHQzaHdEUsiGs6CkItghz7Q6BE\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate'
+    'HTTP_COOKIE' => 'PHPSESSID=r1urgqn0rgl2ep3n3c9tgsh63q; _csrf-api4=26c5ed8b99b215aa9390d50ba2848f6b60bc11a0bc9c5f6ac93aeeb62919697ca%3A2%3A%7Bi%3A0%3Bs%3A10%3A%22_csrf-api4%22%3Bi%3A1%3Bs%3A32%3A%22QtnamtNHQzaHdEUsiGs6CkItghz7Q6BE%22%3B%7D'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.2 (Java/1.8.0_152-release)'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_HOST' => 'api4.boom.test'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => '*/*'
+    'SCRIPT_FILENAME' => '/app/api_ver4/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'api4.boom.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.83.137'
+    'REMOTE_PORT' => '37340'
+    'REMOTE_ADDR' => '192.168.83.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/app/api_ver4/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/user/addpost?params=%7B%22PostTitle%22%3A%22%22%2C%22PostType%22%3A4%2C%22Description%22%3A%22text+qa%22%2C%22ArtistID%22%3A%221%22%2C%22IsExclusive%22%3A%22%22%2C%22IsShared%22%3A%221%22%2C%22Language%22%3A%22english%22%2C+%22Media%22%3A%22%22%2C+%22VideoThumbImage%22%3A%22%22%2C%22scheduled%22%3A%22%22%7D'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'params=%7B%22PostTitle%22%3A%22%22%2C%22PostType%22%3A4%2C%22Description%22%3A%22text+qa%22%2C%22ArtistID%22%3A%221%22%2C%22IsExclusive%22%3A%22%22%2C%22IsShared%22%3A%221%22%2C%22Language%22%3A%22english%22%2C+%22Media%22%3A%22%22%2C+%22VideoThumbImage%22%3A%22%22%2C%22scheduled%22%3A%22%22%7D'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1516612302.5836
+    'REQUEST_TIME' => 1516612302
+]
+2018-01-22 09:35:38 [192.168.83.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.83.1
+    in /app/api_ver4/views/layouts/l.php:39
+    in /app/api_ver4/controllers/UserController.php:4268
+2018-01-22 09:35:34 [192.168.83.1][-][-][info][application] $_GET = [
+    'params' => '{\"PostTitle\":\"\",\"PostType\":4,\"Description\":\"text qa\",\"ArtistID\":\"1\",\"IsExclusive\":\"\",\"IsShared\":\"1\",\"Language\":\"english\", \"Media\":\"\", \"VideoThumbImage\":\"\",\"scheduled\":\"\", \"MemberID\":17, \"QAType\":\"1\", \"IsShared\":\"1\"}'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'r1urgqn0rgl2ep3n3c9tgsh63q'
+    '_csrf-api4' => '26c5ed8b99b215aa9390d50ba2848f6b60bc11a0bc9c5f6ac93aeeb62919697ca:2:{i:0;s:10:\"_csrf-api4\";i:1;s:32:\"QtnamtNHQzaHdEUsiGs6CkItghz7Q6BE\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate'
+    'HTTP_COOKIE' => 'PHPSESSID=r1urgqn0rgl2ep3n3c9tgsh63q; _csrf-api4=26c5ed8b99b215aa9390d50ba2848f6b60bc11a0bc9c5f6ac93aeeb62919697ca%3A2%3A%7Bi%3A0%3Bs%3A10%3A%22_csrf-api4%22%3Bi%3A1%3Bs%3A32%3A%22QtnamtNHQzaHdEUsiGs6CkItghz7Q6BE%22%3B%7D'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.2 (Java/1.8.0_152-release)'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_HOST' => 'api4.boom.test'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => '*/*'
+    'SCRIPT_FILENAME' => '/app/api_ver4/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'api4.boom.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.83.137'
+    'REMOTE_PORT' => '37710'
+    'REMOTE_ADDR' => '192.168.83.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/app/api_ver4/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/user/addpost?params=%7B%22PostTitle%22%3A%22%22%2C%22PostType%22%3A4%2C%22Description%22%3A%22text+qa%22%2C%22ArtistID%22%3A%221%22%2C%22IsExclusive%22%3A%22%22%2C%22IsShared%22%3A%221%22%2C%22Language%22%3A%22english%22%2C+%22Media%22%3A%22%22%2C+%22VideoThumbImage%22%3A%22%22%2C%22scheduled%22%3A%22%22%2C+%22MemberID%22%3A17%2C+%22QAType%22%3A%221%22%2C+%22IsShared%22%3A%221%22%7D'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'params=%7B%22PostTitle%22%3A%22%22%2C%22PostType%22%3A4%2C%22Description%22%3A%22text+qa%22%2C%22ArtistID%22%3A%221%22%2C%22IsExclusive%22%3A%22%22%2C%22IsShared%22%3A%221%22%2C%22Language%22%3A%22english%22%2C+%22Media%22%3A%22%22%2C+%22VideoThumbImage%22%3A%22%22%2C%22scheduled%22%3A%22%22%2C+%22MemberID%22%3A17%2C+%22QAType%22%3A%221%22%2C+%22IsShared%22%3A%221%22%7D'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1516613734.8382
+    'REQUEST_TIME' => 1516613734
+]
+2018-01-22 09:36:08 [192.168.83.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.83.1
+    in /app/api_ver4/views/layouts/l.php:39
+    in /app/api_ver4/controllers/UserController.php:4268
+2018-01-22 09:36:04 [192.168.83.1][-][-][info][application] $_GET = [
+    'params' => '{\"PostTitle\":\"\",\"PostType\":4,\"Description\":\"text qa\",\"ArtistID\":\"1\",\"IsExclusive\":\"\",\"IsShared\":\"1\",\"Language\":\"english\", \"Media\":\"\", \"VideoThumbImage\":\"\",\"scheduled\":\"\", \"MemberID\":17, \"QAType\":\"1\", \"IsShared\":\"1\"}'
+]
+
+$_COOKIE = [
+    '_csrf' => '3c3293ae2753256229c45cea85883a15f72f248866facb6f654e4734496d9595a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"QoRVAgacC-Ges8L0sKvNy4rPP3SAnue_\";}'
+    '_csrf-api4' => 'a006404f2117f6512aa694243f034306c47da90379f0081d004170e51c21fb2ca:2:{i:0;s:10:\"_csrf-api4\";i:1;s:32:\"mPkJNMpIUtGJc6oXAbyO0XGxum-iRppL\";}'
+    'PHPSESSID' => 'vqjft4urmdgl3d4a0htrg55uhd'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'HTTP_COOKIE' => '_csrf=3c3293ae2753256229c45cea85883a15f72f248866facb6f654e4734496d9595a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22QoRVAgacC-Ges8L0sKvNy4rPP3SAnue_%22%3B%7D; _csrf-api4=a006404f2117f6512aa694243f034306c47da90379f0081d004170e51c21fb2ca%3A2%3A%7Bi%3A0%3Bs%3A10%3A%22_csrf-api4%22%3Bi%3A1%3Bs%3A32%3A%22mPkJNMpIUtGJc6oXAbyO0XGxum-iRppL%22%3B%7D; PHPSESSID=vqjft4urmdgl3d4a0htrg55uhd'
+    'HTTP_ACCEPT_LANGUAGE' => 'uk-UA,uk;q=0.9,ru;q=0.8,en-US;q=0.7,en;q=0.6'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'api4.boom.test'
+    'SCRIPT_FILENAME' => '/app/api_ver4/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'api4.boom.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.83.137'
+    'REMOTE_PORT' => '37718'
+    'REMOTE_ADDR' => '192.168.83.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/app/api_ver4/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/user/addpost?params={%22PostTitle%22:%22%22,%22PostType%22:4,%22Description%22:%22text%20qa%22,%22ArtistID%22:%221%22,%22IsExclusive%22:%22%22,%22IsShared%22:%221%22,%22Language%22:%22english%22,%20%22Media%22:%22%22,%20%22VideoThumbImage%22:%22%22,%22scheduled%22:%22%22,%20%22MemberID%22:17,%20%22QAType%22:%221%22,%20%22IsShared%22:%221%22}'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'params={%22PostTitle%22:%22%22,%22PostType%22:4,%22Description%22:%22text%20qa%22,%22ArtistID%22:%221%22,%22IsExclusive%22:%22%22,%22IsShared%22:%221%22,%22Language%22:%22english%22,%20%22Media%22:%22%22,%20%22VideoThumbImage%22:%22%22,%22scheduled%22:%22%22,%20%22MemberID%22:17,%20%22QAType%22:%221%22,%20%22IsShared%22:%221%22}'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1516613764.5094
+    'REQUEST_TIME' => 1516613764
+]
+2018-01-22 09:36:36 [192.168.83.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.83.1
+    in /app/api_ver4/views/layouts/l.php:39
+    in /app/api_ver4/controllers/UserController.php:4268
+2018-01-22 09:36:33 [192.168.83.1][-][-][info][application] $_GET = [
+    'params' => '{\"PostTitle\":\"\",\"PostType\":4,\"Description\":\"text qa\",\"ArtistID\":\"1\",\"IsExclusive\":\"\",\"IsShared\":\"1\",\"Language\":\"english\", \"Media\":\"\", \"VideoThumbImage\":\"\",\"scheduled\":\"\", \"MemberID\":17, \"QAType\":\"1\", \"IsShared\":\"1\"}'
+]
+
+$_COOKIE = [
+    '_csrf' => '3c3293ae2753256229c45cea85883a15f72f248866facb6f654e4734496d9595a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"QoRVAgacC-Ges8L0sKvNy4rPP3SAnue_\";}'
+    '_csrf-api4' => 'a006404f2117f6512aa694243f034306c47da90379f0081d004170e51c21fb2ca:2:{i:0;s:10:\"_csrf-api4\";i:1;s:32:\"mPkJNMpIUtGJc6oXAbyO0XGxum-iRppL\";}'
+    'PHPSESSID' => 'vqjft4urmdgl3d4a0htrg55uhd'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'HTTP_COOKIE' => '_csrf=3c3293ae2753256229c45cea85883a15f72f248866facb6f654e4734496d9595a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22QoRVAgacC-Ges8L0sKvNy4rPP3SAnue_%22%3B%7D; _csrf-api4=a006404f2117f6512aa694243f034306c47da90379f0081d004170e51c21fb2ca%3A2%3A%7Bi%3A0%3Bs%3A10%3A%22_csrf-api4%22%3Bi%3A1%3Bs%3A32%3A%22mPkJNMpIUtGJc6oXAbyO0XGxum-iRppL%22%3B%7D; PHPSESSID=vqjft4urmdgl3d4a0htrg55uhd'
+    'HTTP_ACCEPT_LANGUAGE' => 'uk-UA,uk;q=0.9,ru;q=0.8,en-US;q=0.7,en;q=0.6'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'api4.boom.test'
+    'SCRIPT_FILENAME' => '/app/api_ver4/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'api4.boom.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.83.137'
+    'REMOTE_PORT' => '37718'
+    'REMOTE_ADDR' => '192.168.83.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/app/api_ver4/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/user/addpost?params={%22PostTitle%22:%22%22,%22PostType%22:4,%22Description%22:%22text%20qa%22,%22ArtistID%22:%221%22,%22IsExclusive%22:%22%22,%22IsShared%22:%221%22,%22Language%22:%22english%22,%20%22Media%22:%22%22,%20%22VideoThumbImage%22:%22%22,%22scheduled%22:%22%22,%20%22MemberID%22:17,%20%22QAType%22:%221%22,%20%22IsShared%22:%221%22}'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'params={%22PostTitle%22:%22%22,%22PostType%22:4,%22Description%22:%22text%20qa%22,%22ArtistID%22:%221%22,%22IsExclusive%22:%22%22,%22IsShared%22:%221%22,%22Language%22:%22english%22,%20%22Media%22:%22%22,%20%22VideoThumbImage%22:%22%22,%22scheduled%22:%22%22,%20%22MemberID%22:17,%20%22QAType%22:%221%22,%20%22IsShared%22:%221%22}'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1516613793.0207
+    'REQUEST_TIME' => 1516613793
+]
+2018-01-22 09:57:40 [192.168.83.1][-][-][error][yii\i18n\PhpMessageSource::loadMessages] The message file for category 'api' does not exist: /app/common/messages//api.php
+    in /app/api_ver4/controllers/UserController.php:4250
+2018-01-22 09:57:36 [192.168.83.1][-][-][info][application] $_POST = [
+    'params' => '{\"PostTitle\":\"\",\"PostType\":4,\"Description\":\"text qa\",\"ArtistID\":\"1\",\"IsExclusive\":\"\",\"IsShared\":\"1\",\"Language\":\"\", \"Media\":\"\", \"VideoThumbImage\":\"\",\"scheduled\":\"\", \"MemberID\":17, \"QAType\":\"1\", \"IsShared\":\"1\"}'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'r1urgqn0rgl2ep3n3c9tgsh63q'
+    '_csrf-api4' => '26c5ed8b99b215aa9390d50ba2848f6b60bc11a0bc9c5f6ac93aeeb62919697ca:2:{i:0;s:10:\"_csrf-api4\";i:1;s:32:\"QtnamtNHQzaHdEUsiGs6CkItghz7Q6BE\";}'
+]
+
+$_SERVER = [
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate'
+    'HTTP_COOKIE' => 'PHPSESSID=r1urgqn0rgl2ep3n3c9tgsh63q; _csrf-api4=26c5ed8b99b215aa9390d50ba2848f6b60bc11a0bc9c5f6ac93aeeb62919697ca%3A2%3A%7Bi%3A0%3Bs%3A10%3A%22_csrf-api4%22%3Bi%3A1%3Bs%3A32%3A%22QtnamtNHQzaHdEUsiGs6CkItghz7Q6BE%22%3B%7D'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.2 (Java/1.8.0_152-release)'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_HOST' => 'api4.boom.test'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_CONTENT_LENGTH' => '365'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => '*/*'
+    'SCRIPT_FILENAME' => '/app/api_ver4/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'api4.boom.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.83.137'
+    'REMOTE_PORT' => '38026'
+    'REMOTE_ADDR' => '192.168.83.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/app/api_ver4/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/user/addpost'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '365'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1516615056.4595
+    'REQUEST_TIME' => 1516615056
+]
+2018-01-22 10:01:37 [192.168.83.1][-][-][error][ParseError] unserialize('O:10:"ParseError":7:{s:10:"' . "\0" . '*' . "\0" . 'message";s:40:"syntax error, unexpected \'else\' (T_ELSE)";s:13:"' . "\0" . 'Error' . "\0" . 'string";s:0:"";s:7:"' . "\0" . '*' . "\0" . 'code";i:0;s:7:"' . "\0" . '*' . "\0" . 'file";s:44:"/app/api_ver4/controllers/UserController.php";s:7:"' . "\0" . '*' . "\0" . 'line";i:4267;s:12:"' . "\0" . 'Error' . "\0" . 'trace";a:8:{i:0;a:4:{s:8:"function";s:8:"autoload";s:5:"class";s:11:"yii\\BaseYii";s:4:"type";s:2:"::";s:4:"args";a:1:{i:0;s:35:"api_ver4\\controllers\\UserController";}}i:1;a:2:{s:8:"function";s:17:"spl_autoload_call";s:4:"args";a:1:{i:0;s:35:"api_ver4\\controllers\\UserController";}}i:2;a:4:{s:4:"file";s:40:"/app/vendor/yiisoft/yii2/base/Module.php";s:4:"line";i:563;s:8:"function";s:12:"class_exists";s:4:"args";a:1:{i:0;s:35:"api_ver4\\controllers\\UserController";}}i:3;a:6:{s:4:"file";s:40:"/app/vendor/yiisoft/yii2/base/Module.php";s:4:"line";i:521;s:8:"function";s:20:"createControllerByID";s:5:"class";s:15:"yii\\base\\Module";s:4:"type";s:2:"->";s:4:"args";a:1:{i:0;s:4:"user";}}i:4;a:6:{s:4:"file";s:40:"/app/vendor/yiisoft/yii2/base/Module.php";s:4:"line";i:449;s:8:"function";s:16:"createController";s:5:"class";s:15:"yii\\base\\Module";s:4:"type";s:2:"->";s:4:"args";a:1:{i:0;s:7:"addpost";}}i:5;a:6:{s:4:"file";s:44:"/app/vendor/yiisoft/yii2/web/Application.php";s:4:"line";i:84;s:8:"function";s:9:"runAction";s:5:"class";s:15:"yii\\base\\Module";s:4:"type";s:2:"->";s:4:"args";a:2:{i:0;s:12:"user/addpost";i:1;a:0:{}}}i:6;a:6:{s:4:"file";s:45:"/app/vendor/yiisoft/yii2/base/Application.php";s:4:"line";i:375;s:8:"function";s:13:"handleRequest";s:5:"class";s:19:"yii\\web\\Application";s:4:"type";s:2:"->";s:4:"args";a:1:{i:0;O:15:"yii\\web\\Request":28:{s:20:"enableCsrfValidation";b:1;s:9:"csrfParam";s:10:"_csrf-api4";s:10:"csrfCookie";a:1:{s:8:"httpOnly";b:1;}s:16:"enableCsrfCookie";b:1;s:22:"enableCookieValidation";b:1;s:19:"cookieValidationKey";s:32:"OvdYtsamRz5AqAYOuLc19OQvQ5Hk_wf8";s:11:"methodParam";s:7:"_method";s:7:"parsers";a:0:{}s:25:"' . "\0" . 'yii\\web\\Request' . "\0" . '_cookies";N;s:25:"' . "\0" . 'yii\\web\\Request' . "\0" . '_headers";N;s:25:"' . "\0" . 'yii\\web\\Request' . "\0" . '_rawBody";N;s:28:"' . "\0" . 'yii\\web\\Request' . "\0" . '_bodyParams";N;s:29:"' . "\0" . 'yii\\web\\Request' . "\0" . '_queryParams";N;s:26:"' . "\0" . 'yii\\web\\Request' . "\0" . '_hostInfo";N;s:25:"' . "\0" . 'yii\\web\\Request' . "\0" . '_baseUrl";s:0:"";s:27:"' . "\0" . 'yii\\web\\Request' . "\0" . '_scriptUrl";s:10:"/index.php";s:28:"' . "\0" . 'yii\\web\\Request' . "\0" . '_scriptFile";N;s:26:"' . "\0" . 'yii\\web\\Request' . "\0" . '_pathInfo";s:12:"user/addpost";s:21:"' . "\0" . 'yii\\web\\Request' . "\0" . '_url";s:13:"/user/addpost";s:22:"' . "\0" . 'yii\\web\\Request' . "\0" . '_port";N;s:28:"' . "\0" . 'yii\\web\\Request' . "\0" . '_securePort";N;s:30:"' . "\0" . 'yii\\web\\Request' . "\0" . '_contentTypes";N;s:27:"' . "\0" . 'yii\\web\\Request' . "\0" . '_languages";N;s:27:"' . "\0" . 'yii\\web\\Request' . "\0" . '_csrfToken";N;s:35:"' . "\0" . 'yii\\base\\Request' . "\0" . '_isConsoleRequest";N;s:27:"' . "\0" . 'yii\\base\\Component' . "\0" . '_events";a:0:{}s:30:"' . "\0" . 'yii\\base\\Component' . "\0" . '_behaviors";N;s:29:"' . "\0" . 'yii\\base\\Request' . "\0" . '_scriptFile";N;}}}i:7;a:6:{s:4:"file";s:27:"/app/api_ver4/web/index.php";s:4:"line";i:21;s:8:"function";s:3:"run";s:5:"class";s:20:"yii\\base\\Application";s:4:"type";s:2:"->";s:4:"args";a:0:{}}}s:15:"' . "\0" . 'Error' . "\0" . 'previous";N;}')
+2018-01-22 10:01:37 [192.168.83.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.83.1
+2018-01-22 10:01:37 [192.168.83.1][-][-][info][application] $_POST = [
+    'params' => '{\"PostTitle\":\"\",\"PostType\":4,\"Description\":\"text qa\",\"ArtistID\":\"1\",\"IsExclusive\":\"\",\"IsShared\":\"1\", \"Media\":\"\", \"VideoThumbImage\":\"\",\"scheduled\":\"\", \"MemberID\":17, \"QAType\":\"1\", \"IsShared\":\"1\"}'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'r1urgqn0rgl2ep3n3c9tgsh63q'
+    '_csrf-api4' => '26c5ed8b99b215aa9390d50ba2848f6b60bc11a0bc9c5f6ac93aeeb62919697ca:2:{i:0;s:10:\"_csrf-api4\";i:1;s:32:\"QtnamtNHQzaHdEUsiGs6CkItghz7Q6BE\";}'
+]
+
+$_SERVER = [
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate'
+    'HTTP_COOKIE' => 'PHPSESSID=r1urgqn0rgl2ep3n3c9tgsh63q; _csrf-api4=26c5ed8b99b215aa9390d50ba2848f6b60bc11a0bc9c5f6ac93aeeb62919697ca%3A2%3A%7Bi%3A0%3Bs%3A10%3A%22_csrf-api4%22%3Bi%3A1%3Bs%3A32%3A%22QtnamtNHQzaHdEUsiGs6CkItghz7Q6BE%22%3B%7D'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.2 (Java/1.8.0_152-release)'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_HOST' => 'api4.boom.test'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_CONTENT_LENGTH' => '339'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => '*/*'
+    'SCRIPT_FILENAME' => '/app/api_ver4/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'api4.boom.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.83.137'
+    'REMOTE_PORT' => '38088'
+    'REMOTE_ADDR' => '192.168.83.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/app/api_ver4/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/user/addpost'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '339'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1516615297.7211
+    'REQUEST_TIME' => 1516615297
+]

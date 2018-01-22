@@ -123,6 +123,8 @@ class UserController extends Controller
     const
         Postblurthumbvideos = POST_BLURTHUMBIMAGE_VIDEOS;
 
+    private $defaultLang = 'english';
+
     /**
      * @inheritdoc
      */
@@ -140,7 +142,6 @@ class UserController extends Controller
         'login',
         'addfeed'
     ];
-
 
 
     public function behaviors() {
@@ -318,6 +319,14 @@ class UserController extends Controller
         return date(preg_replace('`(?<!\\\\)u`', $milliseconds, $format), $timestamp);
     }
 
+    private function checkLang($data = false)
+    {
+        if(!isset($data->Language) || !$data->Language)
+           return $this->defaultLang;
+        else
+            return $data->Language;
+    }
+
     public function actionLogin() {
         $logString  = "";
         try
@@ -336,7 +345,7 @@ class UserController extends Controller
                 'LoginType',
                 'MemberName',
                 'Email',
-                'Language',
+                //'Language',
                 'IsQa',
                 'QaName',
                 'QaType',
@@ -379,7 +388,8 @@ class UserController extends Controller
                 if($loginType == "0") {
                     $loginType = "1";
                 }
-                $language = $data->Language;
+                $language = $this->checkLang($data);
+
                 if (isset($data->MemberName))
                 {
                     $fbmembername = $data->MemberName;
@@ -951,7 +961,8 @@ class UserController extends Controller
                 'UserID',
                 'UserType',
                 'ProfileID',
-                'Language');
+                //'Language'
+            );
             $compareField = array_diff_key(array_keys($arrParams), $availableParams);
 
             if (count($compareField) == 0)
@@ -959,7 +970,7 @@ class UserController extends Controller
                 $userID = $data->UserID;
                 $profileID = $data->ProfileID;
                 $userType = $data->UserType;
-                $language = $data->Language;
+                $language = $this->checkLang($data);
                 $connection = Yii::$app->db;
                 $procedure = "CALL Member_GetProfile('" . $userID . "','" . $userType . "','" . $profileID . "','" . self::EncryptKey . "','" . self::S3BucketPath . "','" . self::S3BucketProfileThumbImages . "')";
                 $logString.="\n Member Get Profile : ".$procedure.'\n';
@@ -1065,6 +1076,7 @@ class UserController extends Controller
                 'PageIndex',
                 'UserType',
                 'Language');
+            $language = $this->checkLang($data);
             $compareField = array_diff_key(array_keys($arrParams), $availableParams);
             if (count($compareField) == 0)
             {
@@ -1078,7 +1090,7 @@ class UserController extends Controller
                 $isExclusive = $data->IsExclusive;
                 $pageindex = $data->PageIndex;
                 $usertype = $data->UserType;
-                $language = $data->Language;
+
                 if(isset($data->ComID)){ $ComID=$data->ComID;} // Boom Native app--Kate
                 else $ComID=0;
                 $connection = Yii::$app->db;
@@ -1353,12 +1365,14 @@ class UserController extends Controller
             $data = json_decode($arrParams['params']);
             $availableParams = array(
                 'ArtistID',
-                'Language');
+                //'Language'
+            );
+
+            $language = $this->checkLang($data);
             $compareField = array_diff_key(array_keys($arrParams), $availableParams);
             if (count($compareField) == 0)
             {
                 $artistID = $data->ArtistID;
-                $language = $data->Language;
                 $connection = Yii::$app->db;
                 $command = $connection->createCommand("CALL SimilarApp_List(" . $artistID . ",'" . self::S3BucketAbsolutePath . "','" . self::S3BucketAppIcons . "')");
                 try {
@@ -1422,13 +1436,16 @@ class UserController extends Controller
                 'ArtistID',
                 'UserType',
                 'PageIndex',
-                'Language');
+                //'Language'
+            );
+
+            $language = $this->checkLang($data);
+
             $compareField = array_diff_key(array_keys($arrParams), $availableParams);
             if (count($compareField) == 0)
             {
                 $artistID = $data->ArtistID;
                 $pageindex = $data->PageIndex;
-                $language = $data->Language;
                 $connection = Yii::$app->db;
                 $procedure = "CALL Artist_Home_News_Feed_API3(" . $artistID . ",'" . self::S3BucketAbsolutePath . "','" . self::S3BucketPath . "','" . self::S3BucketProfileThumbImages . "','" . self::S3BucketStickers . "'," . $pageindex . "," . self::Limit . ")";
 
@@ -1550,12 +1567,14 @@ class UserController extends Controller
             $data = json_decode($arrParams['params']);
             $availableParams = array(
                 'ArtistID',
-                'Language');
+                //'Language'
+            );
+            $language = $this->checkLang($data);
             $compareField = array_diff_key(array_keys($arrParams), $availableParams);
             if (count($compareField) == 0)
             {
                 $artistID = $data->ArtistID;
-                $language = $data->Language;
+
                 if(isset($data->ComID)&&$data->ComID!=""){
                     $ComID=$data->ComID;
                 }else $ComID=0;
@@ -1716,6 +1735,7 @@ class UserController extends Controller
                 'DeviceType',
                 'ArtistID');
             $compareField = array_diff_key(array_keys($arrParams), $availableParams);
+            $language = $this->checkLang();
             if (count($compareField) == 0)
             {
                 $artistID = $data->ArtistID;
@@ -2024,7 +2044,7 @@ class UserController extends Controller
             $data = json_decode($arrParams['params']);
             $availableParams = array(
                 'ArtistID',
-                'Language',
+                //'Language',
                 'TabName',
                 'QAType',
                 'TextPrice',
@@ -2033,11 +2053,11 @@ class UserController extends Controller
                 'VideoProductSKUID',
                 'PhotoPrice',
                 'PhotoProductSKUID');
+            $language = $this->checkLang($data);
             $compareField = array_diff_key(array_keys($arrParams), $availableParams);
             if (count($compareField) == 0)
             {
                 $artistID = $data->ArtistID;
-                $language = $data->Language;
                 $tabName = $data->TabName;
                 $QAType = $data->QAType;
                 $textPrice = $data->TextPrice;
@@ -2114,14 +2134,15 @@ class UserController extends Controller
                 'UserName',
                 'ArtistID',
                 'UserType',
-                'Language');
+                //'Language'
+            );
             $compareField = array_diff_key(array_keys($arrParams), $availableParams);
+            $language = $this->checkLang($data);
             if (count($compareField) == 0)
             {
                 $userName = str_replace("'", "", $data->UserName);
                 $artistID = $data->ArtistID;
                 $userType = $data->UserType;
-                $language = $data->Language;
                 $comID = 0;
                 if(isset($data->ComID)){ $comID = $data->ComID;}
                 $connection = Yii::$app->db;
@@ -2174,15 +2195,16 @@ class UserController extends Controller
                 'Username',
                 'UserType',
                 'ArtistID',
-                'Language');
+                //'Language'
+            );
             $compareField = array_diff_key(array_keys($arrParams), $availableParams);
-
+            $language = $this->checkLang($data);
             if (count($compareField) == 0)
             {
                 $username = str_replace("'", "", $data->Username);
                 $artistID = $data->ArtistID;
                 $userType = $data->UserType;
-                $language = $data->Language;
+
                 $appname = "Boom Video - Reset password link";
                 if (isset($data->MailSubject) && $data->MailSubject != "")
                 {
@@ -2254,7 +2276,6 @@ class UserController extends Controller
     }
 
     public function actionLikepost() {
-        //\Yii::$app->controller->layout = 'l';
         $logString  = "";
         try
         {
@@ -2269,11 +2290,11 @@ class UserController extends Controller
                 'RefTable',
                 'RefTableID',
                 'Comment',
-                'Language',
+                //'Language',
                 'ActivityID',
                 'UserType');
             $compareField = array_diff_key(array_keys($arrParams), $availableParams);
-
+            $language = $this->checkLang($data);
             if (count($compareField) == 0)
             {
                 $postID = $data->PostID;
@@ -2285,7 +2306,6 @@ class UserController extends Controller
                 $comment = $data->Comment;
                 $activityID = $data->ActivityID;
                 $userType = $data->UserType;
-                $language = $data->Language;
                 $connection = Yii::$app->db;
                 $procedure = "CALL Member_Add_Activity('" . $postID . "','" . $artistID . "','" . $profileID . "','" . $activityTypeID . "','" . $refTable . "','" . $refTableID . "','" . $comment . "','" . $activityID . "'," . $userType . ",0,'" . self::S3BucketPath . "','')";
                 $logString.="\n Member Add Activity : ".$procedure.'\n';
@@ -2355,11 +2375,12 @@ class UserController extends Controller
                 'ProfileID',
                 'RefTable',
                 'RefTableID',
-                'Language',
+                //'Language',
                 'Comment',
                 'ActivityID',
                 'UserType');
             $compareField = array_diff_key(array_keys($arrParams), $availableParams);
+            $language = $this->checkLang($data);
             if (count($compareField) == 0)
             {
                 $postID = $data->PostID;
@@ -2371,7 +2392,6 @@ class UserController extends Controller
                 $comment = $data->Comment;
                 $activityID = $data->ActivityID;
                 $userType = $data->UserType;
-                $language = $data->Language;
                 $connection = Yii::$app->db;
                 $procedure = "CALL Member_Add_Activity('" . $postID . "','" . $artistID . "','" . $userID . "','" . $activityTypeID . "','" . $refTable . "','" . $refTableID . "','" . $comment . "','" . $activityID . "','" . $userType . "','0','" . self::S3BucketPath . "','')";
                 $logString.="\n Member Add Activity : ".$procedure.'\n';
@@ -2433,9 +2453,10 @@ class UserController extends Controller
                 'ArtistID',
                 'ActivityTypeID',
                 'ProfileID',
-                'Language',
+                //'Language',
                 'UserType');
             $compareField = array_diff_key(array_keys($arrParams), $availableParams);
+            $language = $this->checkLang($data);
             if (count($compareField) == 0)
             {
                 $postID = $data->PostID;
@@ -2443,7 +2464,6 @@ class UserController extends Controller
                 $activityTypeID = $data->ActivityTypeID;
                 $profileID = $data->ProfileID;
                 $userType = $data->UserType;
-                $language = $data->Language;
                 $refTable = 1;
                 $refTableID = $postID;
                 $comment = "";
@@ -2509,13 +2529,13 @@ class UserController extends Controller
                 'ActivityTypeID',
                 'ProfileID',
                 'RefTable',
-                'Language',
+                //'Language',
                 'RefTableID',
                 'Comment',
                 'ActivityID',
                 'UserType');
             $compareField = array_diff_key(array_keys($arrParams), $availableParams);
-
+            $language = $this->checkLang($data);
             if (count($compareField) == 0)
             {
                 $postID = $data->PostID;
@@ -2527,7 +2547,6 @@ class UserController extends Controller
                 $comment = str_replace("'", "", $data->Comment);
                 $activityID = $data->ActivityID;
                 $userType = $data->UserType;
-                $language = $data->Language;
                 $connection = Yii::$app->db;
                 $procedure = "CALL Member_Add_Activity('" . $postID . "','" . $artistID . "','" . $userID . "','" . $activityTypeID . "','" . $refTable . "','" . $refTableID . "','" . $comment . "','" . $activityID . "','" . $userType . "','0','" . self::S3BucketPath . "','')";
                 $logString.="\n Member Add Activity : ".$procedure.'\n';
@@ -2592,7 +2611,7 @@ class UserController extends Controller
                 'ActivityTypeID',
                 'ProfileID',
                 'RefTable',
-                'Language',
+                //'Language',
                 'RefTableID',
                 'Comment',
                 'ActivityID',
@@ -2600,6 +2619,7 @@ class UserController extends Controller
                 'StickerID',
                 'CustomStickerUrl');
             $compareField = array_diff_key(array_keys($arrParams), $availableParams);
+            $language = $this->checkLang($data);
             if (count($compareField) == 0)
             {
                 $postID = $data->PostID;
@@ -2611,7 +2631,7 @@ class UserController extends Controller
                 $comment = $data->Comment;
                 $activityID = $data->ActivityID;
                 $userType = $data->UserType;
-                $language = $data->Language;
+
                 $stickerID = $data->StickerID;
                 $customStickerUrl = null;//Daniele
                 if(property_exists($data, 'CustomStickerUrl')){ $customStickerUrl = $data->CustomStickerUrl; }//Daniele
@@ -2701,8 +2721,9 @@ class UserController extends Controller
                 'Username',
                 'Email',
                 'Password',
-                'Language',
+                //'Language',
                 'ComID'); // Boom Native app--Kate
+            $language = $this->checkLang($data);
             $compareField = array_diff_key(array_keys($arrParams), $availableParams);
             if (count($compareField) == 0 && isset($data->Email))
             {
@@ -2794,7 +2815,7 @@ class UserController extends Controller
                 }
 
                 $password = $data->Password;
-                $language = $data->Language;
+
                 $connection = Yii::$app->db;
                 /************** Registr Member ****************/
                 $procedure="CALL Member_Registration('" . $name . "','" . $image . "','" . $email . "','" . $birthDate . "','" . $zipCode . "','" . $mobile . "','" . $gender . "','" . $artistID . "','" . $username . "','" . $devicetype . "','" . self::EncryptKey . "','" . $password . "', " . $ComID . ",'".$v_country."','".$v_city."')";
@@ -2883,14 +2904,14 @@ class UserController extends Controller
             $availableParams = array(
                 'UserID',
                 'UserName',
-                'Language');
+                //'Language'
+            );
+            $language = $this->checkLang($data);
             $compareField = array_diff_key(array_keys($arrParams), $availableParams);
             if (count($compareField) == 0)
             {
                 $userID = $data->UserID;
                 $userName = $data->UserName;
-                $language = $data->Language;
-
                 //validates username
                 $resultCode = ""; $resultMessage ="";
                 if(isset($userName) and $userName != ""){
@@ -3019,11 +3040,12 @@ class UserController extends Controller
                 'Email',
                 'Password',
                 'ShowNotification',
-                'Language',
+                //'Language',
                 'Mobile',
                 'Password',
                 'Image');
             $compareField = array_diff_key(array_keys($arrParams), $availableParams);
+            $language = $this->checkLang($data);
             $s3 = new \S3(AWSACCESSKEY, AWSSECRETKEY);
             if (count($compareField) == 0)
             {
@@ -3086,7 +3108,7 @@ class UserController extends Controller
                 $mobile = $data->Mobile;
                 $password = $data->Password;
                 $image = $data->Image;
-                $language = $data->Language;
+
                 $showNotification = $data->ShowNotification;
                 $connection = Yii::$app->db;
                 $procedure = "CALL Member_Edit_Profile_new('". $username . "','" . $name . "','" . $image . "','" . $email . "','" . $password . "','" . $birthDate . "','" . $zipCode . "','" . $mobile . "','" . $gender . "','" . $artistID . "','" . $profileID . "','" . $userID . "'," . $showNotification . ",'" . self::EncryptKey . "','".$v_Country."','".$v_City."')";
@@ -3175,11 +3197,12 @@ class UserController extends Controller
                 'InstagramPageUrl',
                 'TwitterPageUrl',
                 'FacebookPageUrl',
-                'Language',
+                //'Language',
                 'DeleteMediaIDs',
                 'ArtistImages',
                 'Password');
             $compareField = array_diff_key(array_keys($arrParams), $availableParams);
+            $language = $this->checkLang($data);
             $s3 = new \S3(AWSACCESSKEY, AWSSECRETKEY);
             if (count($compareField) == 0)
             {
@@ -3203,7 +3226,6 @@ class UserController extends Controller
                 $deleteMediaIDs = $data->DeleteMediaIDs;
                 $artistImages = $data->ArtistImages;
                 $password = $data->Password;
-                $language = $data->Language;
                 $connection = Yii::$app->db;
                 $procedure = "CALL Artist_Edit_Profile(" . $artistID . "," . $userID . ",'" . $artistName . "','" . $profileThumb . "',
 				       '" . $email . "','" . $birthDate . "','" . $nationality . "','" . $residence . "','" . $website . "','" . $youTubeChannelName . "',
@@ -3310,8 +3332,10 @@ class UserController extends Controller
                 'ProfileID',
                 'UserType',
                 'PageIndex',
-                'Language');
+                //'Language'
+            );
             $compareField = array_diff_key(array_keys($arrParams), $availableParams);
+            $language = $this->checkLang($data);
             if (count($compareField) == 0)
             {
                 $postID = $data->PostID;
@@ -3319,7 +3343,6 @@ class UserController extends Controller
                 $profileID = $data->ProfileID;
                 $userType = $data->UserType;
                 $pageindex = $data->PageIndex;
-                $language = $data->Language;
                 $connection = Yii::$app->db;
                 $procedure = "CALL Ver2_Post_CommentList(" . $postID . "," . $artistID . "," . $profileID . "," . $userType . ",'" . self::S3BucketAbsolutePath . "','" . self::S3BucketPath . "','" . self::S3BucketProfileThumbImages . "','" . self::S3BucketStickers . "','" . self::S3BucketStickersSmall . "','" . self::S3BucketStickersMedium . "',10," . $pageindex . ",@o_RecCount)";
                 //echo $procedure; die;
@@ -3376,7 +3399,9 @@ class UserController extends Controller
                 'ProfileID',
                 'UserType',
                 'PageIndex',
-                'Language');
+                //'Language'
+            );
+            $language = $this->checkLang($data);
             $compareField = array_diff_key(array_keys($arrParams), $availableParams);
             if (count($compareField) == 0)
             {
@@ -3385,7 +3410,6 @@ class UserController extends Controller
                 $profileID = $data->ProfileID;
                 $userType = $data->UserType;
                 $pageindex = $data->PageIndex;
-                $language = $data->Language;
                 $connection = Yii::$app->db;
                 $procedure = "CALL Post_CommentList(" . $postID . "," . $artistID . "," . $profileID . "," . $userType . ",'" . self::S3BucketAbsolutePath . "','" . self::S3BucketPath . "','" . self::S3BucketProfileThumbImages . "','" . self::S3BucketStickers . "','" . self::S3BucketStickersSmall . "','" . self::S3BucketStickersMedium . "'," . self::Limit . "," . $pageindex . ",@o_RecCount)";
                 //echo $procedure; die;
@@ -3438,13 +3462,15 @@ class UserController extends Controller
             $availableParams = array(
                 'ActivityID',
                 'PostID',
-                'Language');
+                //'Language'
+            );
             $compareField = array_diff_key(array_keys($arrParams), $availableParams);
+            $language = $this->checkLang($data);
             if(count($compareField) == 0)
             {
                 $activityID = $data->ActivityID;
                 $postID = $data->PostID;
-                $language = $data->Language;
+
                 $connection = Yii::$app->db;
                 $procedure = "CALL Delete_Comment(".$activityID.",".$postID.",@o_ErrorCode)";
                 $logString.="\n Delete Post Comment : ".$procedure.'\n';
@@ -3494,6 +3520,7 @@ class UserController extends Controller
                 'ArtistID',
                 'ProfileID',
                 'UserType');
+            $language = $this->checkLang($data);
             $compareField = array_diff_key(array_keys($arrParams), $availableParams);
             if (count($compareField) == 0)
             {
@@ -3501,7 +3528,6 @@ class UserController extends Controller
                 $artistID = $data->ArtistID;
                 $profileID = $data->ProfileID;
                 $userType = $data->UserType;
-                $language = $data->Language;
                 $connection = Yii::$app->db;
                 $latestcmntsproc = "CALL Latest_Post_CommentList(" . $postID . "," . $artistID . "," . $profileID . "," . $userType . ",'" . self::S3BucketAbsolutePath . "','" . self::S3BucketPath . "','" . self::S3BucketProfileThumbImages . "','" . self::S3BucketStickers . "','" . self::S3BucketStickersSmall . "','" . self::S3BucketStickersMedium . "')";
                 $logString.="\n Latest Post Comment List : ".$latestcmntsproc.'\n';
@@ -3588,7 +3614,9 @@ class UserController extends Controller
                 'ProfileID',
                 'PageIndex',
                 'UserType',
-                'Language');
+                //'Language'
+            );
+            $language = $this->checkLang($data);
             $compareField = array_diff_key(array_keys($arrParams), $availableParams);
             if (count($compareField) == 0)
             {
@@ -3598,7 +3626,6 @@ class UserController extends Controller
                 $artistID = $data->ArtistID;
                 $pageindex = $data->PageIndex;
                 $usertype = $data->UserType;
-                $language = $data->Language;
                 $unanswered = -1;
                 $MemberID = -1;
                 $comID = 0;
@@ -3722,8 +3749,9 @@ class UserController extends Controller
                 'ProfileID',
                 'StickerType',
                 'DeviceType',
-                'Language',
+                //'Language',
                 'ArtistID');
+            $language = $this->checkLang($data);
             $compareField = array_diff_key(array_keys($arrParams), $availableParams);
             $artistID = "";
             $type = "";
@@ -3733,7 +3761,6 @@ class UserController extends Controller
                 $memberID = $data->ProfileID;
                 $stickerType = $data->StickerType;
                 $deviceType = $data->DeviceType;
-                $language = $data->Language;
                 if (isset($data->Type)){ $type = $data->Type; }
                 if (isset($data->ArtistID) && $data->ArtistID != '') :
                     $artistID = $data->ArtistID;
@@ -3810,7 +3837,7 @@ class UserController extends Controller
             $availableParams = array(
                 'PostTitle',
                 'PostType',
-                'Language',
+                //'Language',
                 'Description',
                 'ArtistID',
                 'IsExclusive',
@@ -3820,6 +3847,7 @@ class UserController extends Controller
                 'scheduled' //added for scheduled
             );
             $compareField = array_diff_key(array_keys($arrParams), $availableParams);
+            $language = $this->checkLang($data);
             $s3 = new \S3(AWSACCESSKEY, AWSSECRETKEY);
 
             if (count($compareField) == 0)
@@ -3834,7 +3862,6 @@ class UserController extends Controller
                 $media = $data->Media;
                 $videothumb = $data->VideoThumbImage;
                 $replyThumbImage = "";
-                $language = $data->Language;
                 $price = '0.00';
                 $productID = "";
                 $userID = "";
@@ -3947,6 +3974,7 @@ class UserController extends Controller
 
                 $QAData = array();
                 if($postType == "4") {
+
                     $connection = Yii::$app->db;
                     $procedure = "SELECT IsQAEnable,QaType FROM setting WHERE ArtistID =".$artistID;
                     $command = $connection->createCommand($procedure);
@@ -3959,12 +3987,14 @@ class UserController extends Controller
                             $resultMessage = _getStatusCodeMessageCommon($resultCode);
                             \Yii::$app->language = $language;
                             $lngmsg = \Yii::t('api', $resultMessage);
+                            $res = json_encode(['Status' => $status,"Message" => $lngmsg], JSON_PRETTY_PRINT);
                             echo json_encode(['Status' => $status,"Message" => $lngmsg], JSON_PRETTY_PRINT);
                             exit;
                         }
                         if(isset($QAData[0]['QaType']) && ($QAData[0]['QaType'] == "2" && $qatype == "1")) {
                             $resultCode = 503;
                             $status = "1";
+
                             $this->setHeader(400);
                             $resultMessage = _getStatusCodeMessageCommon($resultCode);
                             \Yii::$app->language = $language;
@@ -4134,7 +4164,7 @@ class UserController extends Controller
                                 }
                             }
 
-                            if (count($mediadata) > 0)
+                            if (isset($mediadata) > 0)
                             {
                                 $resultCode = 200;
                                 $status = "1";
@@ -4248,6 +4278,13 @@ class UserController extends Controller
                     "Message" => $lngmsg,
                     'UnreadQA' => $unreadQAData,
                     "Result" => $postData], JSON_PRETTY_PRINT);
+                /*$res = json_encode(['Status' => $status,
+                    "Message" => $lngmsg,
+                    'UnreadQA' => $unreadQAData,
+                    "Result" => $postData], JSON_PRETTY_PRINT);
+                return $this->render('user', [
+                    'res' => $res,
+                ]);*/
             }
             else
             {
@@ -4257,6 +4294,9 @@ class UserController extends Controller
                 $lngmsg = \Yii::t('api', $resultMessage);
                 echo json_encode(['Status' => 0,
                     "Message" => $lngmsg], JSON_PRETTY_PRINT);
+                /*$res = json_encode(['Status' => 0,
+                    "Message" => $lngmsg], JSON_PRETTY_PRINT);
+                return $this->render('user', ['res' => $res]);*/
             }
         }
         catch (ErrorException $e)
@@ -4485,14 +4525,16 @@ class UserController extends Controller
                 'ProfileID',
                 'StickerID',
                 'DeviceType',
-                'Language');
+                //'Language'
+            );
+            $language = $this->checkLang($data);
             $compareField = array_diff_key(array_keys($arrParams), $availableParams);
             if (count($compareField) == 0)
             {
                 $memberID = $data->ProfileID;
                 $stickerID = $data->StickerID;
                 $deviceType = $data->DeviceType;
-                $language = $data->Language;
+
                 $connection = Yii::$app->db;
                 $procedure = "CALL Sticker_Purchase(" . $memberID . "," . $stickerID . "," . $deviceType . ")";
                 $logString.="\n Sticker Purchase : ".$procedure.'\n';
@@ -4544,7 +4586,9 @@ class UserController extends Controller
                 'ArtistID',
                 'ProfileID',
                 'PostID',
-                'Language');
+                //'Language'
+            );
+            $language = $this->checkLang($data);
             $compareField = array_diff_key(array_keys($arrParams), $availableParams);
 
             if (count($compareField) == 0)
@@ -4552,7 +4596,6 @@ class UserController extends Controller
                 $artistID = $data->ArtistID;
                 $memberID = $data->ProfileID;
                 $postID = $data->PostID;
-                $language = $data->Language;
                 $deviceType = "";
                 $productSKUDetails = "";
                 $productSKU=""; //added for purchase for Native
@@ -4666,7 +4709,7 @@ class UserController extends Controller
                 'MediaDeleteID',
                 'Media');
             $compareField = array_diff_key(array_keys($arrParams), $availableParams);
-
+            $language = $this->checkLang($data);
             if (count($compareField) == 0)
             {
                 $artistID = $data->ArtistID;
@@ -4681,7 +4724,6 @@ class UserController extends Controller
                 $price = $data->Price;
                 $mediaDeleteID = $data->MediaDeleteID;
                 $media = $data->Media;
-                $language = $data->Language;
                 //added for scheduled
                 if(isset($data->scheduled)&& $data->scheduled != ""){
                     $scheduled=$data->scheduled;
@@ -4758,14 +4800,13 @@ class UserController extends Controller
             $data = json_decode($arrParams['params']);
             $availableParams = array(
                 'PostID',
-                'Language');
+                //'Language'
+            );
             $compareField = array_diff_key(array_keys($arrParams), $availableParams);
-
+            $language = $this->checkLang($data);
             if (count($compareField) == 0)
             {
                 $postID = $data->PostID;
-                $language = $data->Language;
-
                 $connection = Yii::$app->db;
                 $procedure = "CALL Artist_Delete_Post(" . $postID . ",@o_ErrorCode)";
                 $logString.="\n Artist Delete Post : ".$procedure.'\n';
@@ -4816,16 +4857,16 @@ class UserController extends Controller
                 'ArtistID',
                 'RefTable',
                 'RefTableID',
-                'Language');
+                //'Language'
+            );
             $compareField = array_diff_key(array_keys($arrParams), $availableParams);
-
+            $language = $this->checkLang($data);
             if (count($compareField) == 0)
             {
                 $postID = $data->PostID;
                 $artistID = $data->ArtistID;
                 $reftable = $data->RefTable;
                 $reftableID = $data->RefTableID;
-                $language = $data->Language;
                 $connection = Yii::$app->db;
                 $procedure = "CALL Post_Like_Detail_List(" . $postID . "," . $artistID . "," . $reftable . "," . $reftableID . ",'" . self::S3BucketPath . "','" . self::S3BucketProfileThumbImages . "')";
                 $logString.="\n Post Like Detail : ".$procedure.'\n';
@@ -4875,14 +4916,14 @@ class UserController extends Controller
             $availableParams = array(
                 'PostID',
                 'ArtistID',
-                'Language');
+                //'Language'
+            );
             $compareField = array_diff_key(array_keys($arrParams), $availableParams);
-
+            $language = $this->checkLang($data);
             if (count($compareField) == 0)
             {
                 $postID = $data->PostID;
                 $artistID = $data->ArtistID;
-                $language = $data->Language;
                 $connection = Yii::$app->db;
                 $procedure = "CALL Post_Share_Detail_List(" . $postID . "," . $artistID . ",'" . self::S3BucketPath . "','" . self::S3BucketProfileThumbImages . "')";
                 $logString.="\n Post Share Detail List : ".$procedure.'\n';
@@ -4935,16 +4976,16 @@ class UserController extends Controller
                 'ArtistID',
                 'RefTable',
                 'RefTableID',
-                'Language');
+                //'Language'
+            );
             $compareField = array_diff_key(array_keys($arrParams), $availableParams);
-
+            $language = $this->checkLang($data);
             if (count($compareField) == 0)
             {
                 $postID = $data->PostID;
                 $artistID = $data->ArtistID;
                 $reftable = $data->RefTable;
                 $reftableID = $data->RefTableID;
-                $language = $data->Language;
                 $connection = Yii::$app->db;
                 $procedure = "CALL Post_Flag_Detail_List(" . $postID . "," . $artistID . "," . $reftable . "," . $reftableID . ",'" . self::S3BucketPath . "','" . self::S3BucketProfileThumbImages . "')";
                 $logString.="\n Post Flag Detail List : ".$procedure.'\n';
@@ -4996,13 +5037,14 @@ class UserController extends Controller
             $availableParams = array(
                 'ArtistID',
                 'PageIndex',
-                'Language');
+                //'Language'
+            );
+            $language = $this->checkLang($data);
             $compareField = array_diff_key(array_keys($arrParams), $availableParams);
             if (count($compareField) == 0)
             {
                 $artistID = $data->ArtistID;
                 $pageindex = $data->PageIndex;
-                $language = $data->Language;
                 $connection = Yii::$app->db;
                 $procedure = "CALL Mymusic_List(" . $artistID . "," . self::Limit . "," . $pageindex . ",@o_RecCount)";
                 $logString.="\n Mymusic List : ".$procedure.'\n';
@@ -5067,12 +5109,14 @@ class UserController extends Controller
             $data = json_decode($arrParams['params']);
             $availableParams = array(
                 'ArtistID',
-                'Language');
+                //'Language'
+            );
+            $language = $this->checkLang($data);
             $compareField = array_diff_key(array_keys($arrParams), $availableParams);
             if (count($compareField) == 0)
             {
                 $artistID = $data->ArtistID;
-                $language = $data->Language;
+
                 $connection = Yii::$app->db;
                 $procedure = "CALL Mymusictv_List(" . $artistID . ",'" . self::S3BucketPath . "','" . ALBUM_THUMB_IMAGES . "')";
                 $logString.="\n My music tv list : ".$procedure.'\n';
@@ -5129,7 +5173,9 @@ class UserController extends Controller
                 'UserType',
                 'Type',
                 'Status',
-                'Language');
+                //'Language'
+            );
+            $language = $this->checkLang($data);
             $compareField = array_diff_key(array_keys($arrParams), $availableParams);
             if (count($compareField) == 0)
             {
@@ -5140,7 +5186,6 @@ class UserController extends Controller
                 $postID = $data->PostID;
                 $usertype = $data->UserType;
                 $type = $data->Type;
-                $language = $data->Language;
                 $status = $data->Status;
                 $connection = Yii::$app->db;
                 $procedure = "CALL Block(" . $artistID . "," . $UserID . "," . $profileID . "," . $postID . "," . $usertype . "," . $type . "," . $status . ")";
@@ -5203,15 +5248,16 @@ class UserController extends Controller
                 'ActivityID',
                 'Block',
                 'BlockUserProfileID',
-                'Language');
+                //'Language'
+            );
             $compareField = array_diff_key(array_keys($arrParams), $availableParams);
+            $language = $this->checkLang($data);
             if (count($compareField) == 0)
             {
                 $postData = array();
                 $profileID = $data->ProfileID;
                 $artistID = $data->ArtistID;
                 $block = $data->Block;
-                $language = $data->Language;
                 $to = $data->BlockUserProfileID;
                 $activityID = $data->ActivityID;
                 $connection = Yii::$app->db;
@@ -5267,8 +5313,9 @@ class UserController extends Controller
                 'ProfileID',
                 'StickerType',
                 'DeviceType',
-                'Language',
+                //'Language',
                 'ArtistID');
+            $language = $this->checkLang($data);
             $compareField = array_diff_key(array_keys($arrParams), $availableParams);
             $artistID = "";
             $stickersData = array();
@@ -5277,7 +5324,7 @@ class UserController extends Controller
                 $memberID = $data->ProfileID;
                 $stickerType = $data->StickerType;
                 $deviceType = $data->DeviceType;
-                $language = $data->Language;
+
                 if (isset($data->ArtistID) && $data->ArtistID != '') :
                     $artistID = $data->ArtistID;
                     $connection = Yii::$app->db;
@@ -5646,7 +5693,9 @@ class UserController extends Controller
                 'IsExclusive',
                 'PageIndex',
                 'UserType',
-                'Language');
+                //'Language'
+            );
+            $language = $this->checkLang($data);
             $compareField = array_diff_key(array_keys($arrParams), $availableParams);
             if (count($compareField) == 0)
             {
@@ -5657,7 +5706,7 @@ class UserController extends Controller
                 $isExclusive = $data->IsExclusive;
                 $pageindex = $data->PageIndex;
                 $usertype = $data->UserType;
-                $language = $data->Language;
+
                 $recordcnt = 0;
 
 
@@ -5802,9 +5851,10 @@ class UserController extends Controller
                 'ProfileID',
                 'PageIndex',
                 'DeviceType',
-                'Language',
+                //'Language',
                 'ArtistID');
             $compareField = array_diff_key(array_keys($arrParams), $availableParams);
+            $language = $this->checkLang($data);
             $artistID = "";
             $stickersData = array();
             $totalNumber = 0;
@@ -5815,7 +5865,7 @@ class UserController extends Controller
             {
                 $memberID = $data->ProfileID;
                 $deviceType = $data->DeviceType;
-                $language = $data->Language;
+
                 $page = $data->PageIndex;
                 if (isset($data->ArtistID) && $data->ArtistID != '') :
                     $artistID = $data->ArtistID;
@@ -6026,13 +6076,14 @@ class UserController extends Controller
             $data = json_decode($arrParams['params']);
             $availableParams = array(
                 'CompanyID',
-                'Language',
+                //'Language',
                 'PageIndex');
             $compareField = array_diff_key(array_keys($arrParams), $availableParams);
+            $language = $this->checkLang($data);
             if (count($compareField) == 0)
             {
                 $cmpyID = $data->CompanyID;
-                $language = $data->Language;
+
                 $page = 1;
                 if(isset($data->PageIndex) && $data->PageIndex != ''){
                     $page = $data->PageIndex;
@@ -6133,13 +6184,14 @@ class UserController extends Controller
             $data = json_decode($arrParams['params']);
             $availableParams = array(
                 'ComID',
-                'Language',
+                //'Language',
                 'ArtistName');
             $compareField = array_diff_key(array_keys($arrParams), $availableParams);
+            $language = $this->checkLang($data);
             if (count($compareField) == 0)
             {
                 $cmpyID = $data->ComID;
-                $language = $data->Language;
+
                 $artistname = $data->ArtistName;
 
                 $bundleData = null;
@@ -6233,7 +6285,7 @@ class UserController extends Controller
                 'DeviceType',
                 'ComID');
             $compareField = array_diff_key(array_keys($arrParams), $availableParams);
-
+            $language = $this->checkLang($data);
             if (count($compareField) == 0)
             {
                 $UserID=0;
@@ -6313,14 +6365,14 @@ class UserController extends Controller
                 'ArtistID',
                 'ProfileID',
                 'ProductSKUID',
-                'Language');
+                //'Language'
+            );
             $compareField = array_diff_key(array_keys($arrParams), $availableParams);
-
+            $language = $this->checkLang($data);
             if (count($compareField) == 0)
             {
                 $artistID = $data->ArtistID;
                 $memberID = $data->ProfileID;
-                $language = $data->Language;
                 $productSKU=$data->ProductSKUID; //added for purchase for Native
                 $ua=UserArtist::find()->where(['and','MemberID ='.$memberID,'ArtistID='.$artistID,'isSub=1'])->one();
                 if(count($ua)>0){
