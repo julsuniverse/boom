@@ -2617,7 +2617,9 @@ class UserController extends Controller
                 'ActivityID',
                 'UserType',
                 'StickerID',
-                'CustomStickerUrl');
+                'CustomStickerUrl',
+                'parent_id'
+            );
             $compareField = array_diff_key(array_keys($arrParams), $availableParams);
             $language = $this->checkLang($data);
             if (count($compareField) == 0)
@@ -2631,21 +2633,25 @@ class UserController extends Controller
                 $comment = $data->Comment;
                 $activityID = $data->ActivityID;
                 $userType = $data->UserType;
-
                 $stickerID = $data->StickerID;
                 $customStickerUrl = null;//Daniele
+                $parent_id = $data->parent_id ?  $data->parent_id : null;
                 if(property_exists($data, 'CustomStickerUrl')){ $customStickerUrl = $data->CustomStickerUrl; }//Daniele
                 $time = date("d M 'y H:i A");
                 $connection = Yii::$app->db;
-                $procedure = "CALL Member_Add_Activity(:postID,:artistID,:userID,:activityTypeID,:refTable,:refTableID,:comment,:activityID,:userType,:stickerID,:buckerPath,:CustomStickerUrl)";
-                $bindPostParams = [':postID' => $postID,':artistID'=>$artistID,':userID'=>$userID,':activityTypeID'=>$activityTypeID,':refTable'=>$refTable,':refTableID'=>$refTableID,':comment'=>$comment,':activityID'=>$activityID,':userType'=>$userType,':stickerID'=>$stickerID,':buckerPath'=>self::S3BucketPath,':CustomStickerUrl'=>$customStickerUrl];
+                $procedure = "CALL Member_Add_Activity_api4(:postID,:artistID,:userID,:activityTypeID,:refTable,:refTableID,:comment,:activityID,:userType,:stickerID,:buckerPath,:CustomStickerUrl,:parent_id)";
+                $bindPostParams = [':postID' => $postID,':artistID'=>$artistID,':userID'=>$userID,':activityTypeID'=>$activityTypeID,':refTable'=>$refTable,':refTableID'=>$refTableID,':comment'=>$comment,':activityID'=>$activityID,':userType'=>$userType,':stickerID'=>$stickerID,':buckerPath'=>self::S3BucketPath,':CustomStickerUrl'=>$customStickerUrl,':parent_id'=>$parent_id];
                 $logString.="\n Member Add Activity : ".$procedure.'\n';
                 $command = $connection->createCommand($procedure)->bindValues($bindPostParams);
 
                 $queue = Yii::$app->queue->push(new ActivityJob([
                     'command' => $command,
                 ]));
+
+                //$activityData = $command->queryAll();
+
                 $activityData = ActivityHelper::getData($activityTypeID);
+
                 if (isset($queue))
                 {
                     $resultCode = 200;

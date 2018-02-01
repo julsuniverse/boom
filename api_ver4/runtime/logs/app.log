@@ -38258,3 +38258,1003 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1516615297.7211
     'REQUEST_TIME' => 1516615297
 ]
+2018-02-01 12:31:50 [192.168.83.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.83.1
+    in /app/api_ver4/views/layouts/l.php:39
+    in /app/api_ver4/controllers/UserController.php:2695
+2018-02-01 12:31:48 [192.168.83.1][-][-][info][application] $_GET = [
+    'params' => '{\"PostID\":\"39247\",\"ArtistID\":1,\"ActivityTypeID\":2,\"ProfileID\":21, \"RefTable\":1, \"RefTableID\":39247, \"Comment\":\"tree111\", \"Language\":\"english\", \"ActivityID\":\"\",\"UserType\":3,\"StickerID\":\"\",\"CustomStickerUrl\":\"\",\"parent_id\":1007128}'
+]
+
+$_COOKIE = [
+    '_csrf' => '3c3293ae2753256229c45cea85883a15f72f248866facb6f654e4734496d9595a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"QoRVAgacC-Ges8L0sKvNy4rPP3SAnue_\";}'
+    '_csrf-api4' => 'a006404f2117f6512aa694243f034306c47da90379f0081d004170e51c21fb2ca:2:{i:0;s:10:\"_csrf-api4\";i:1;s:32:\"mPkJNMpIUtGJc6oXAbyO0XGxum-iRppL\";}'
+    'PHPSESSID' => 'vqjft4urmdgl3d4a0htrg55uhd'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'HTTP_COOKIE' => '_csrf=3c3293ae2753256229c45cea85883a15f72f248866facb6f654e4734496d9595a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22QoRVAgacC-Ges8L0sKvNy4rPP3SAnue_%22%3B%7D; _csrf-api4=a006404f2117f6512aa694243f034306c47da90379f0081d004170e51c21fb2ca%3A2%3A%7Bi%3A0%3Bs%3A10%3A%22_csrf-api4%22%3Bi%3A1%3Bs%3A32%3A%22mPkJNMpIUtGJc6oXAbyO0XGxum-iRppL%22%3B%7D; PHPSESSID=vqjft4urmdgl3d4a0htrg55uhd'
+    'HTTP_ACCEPT_LANGUAGE' => 'uk-UA,uk;q=0.9,ru;q=0.8,en-US;q=0.7,en;q=0.6'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.119 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'api4.boom.test'
+    'SCRIPT_FILENAME' => '/app/api_ver4/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'api4.boom.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.83.137'
+    'REMOTE_PORT' => '50446'
+    'REMOTE_ADDR' => '192.168.83.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/app/api_ver4/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/user/addcomment?params={%22PostID%22:%2239247%22,%22ArtistID%22:1,%22ActivityTypeID%22:2,%22ProfileID%22:21,%20%22RefTable%22:1,%20%22RefTableID%22:39247,%20%22Comment%22:%22tree111%22,%20%22Language%22:%22english%22,%20%22ActivityID%22:%22%22,%22UserType%22:3,%22StickerID%22:%22%22,%22CustomStickerUrl%22:%22%22,%22parent_id%22:1007128}'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'params={%22PostID%22:%2239247%22,%22ArtistID%22:1,%22ActivityTypeID%22:2,%22ProfileID%22:21,%20%22RefTable%22:1,%20%22RefTableID%22:39247,%20%22Comment%22:%22tree111%22,%20%22Language%22:%22english%22,%20%22ActivityID%22:%22%22,%22UserType%22:3,%22StickerID%22:%22%22,%22CustomStickerUrl%22:%22%22,%22parent_id%22:1007128}'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1517488308.1366
+    'REQUEST_TIME' => 1517488308
+]
+2018-02-01 12:34:51 [192.168.83.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.83.1
+    in /app/api_ver4/views/layouts/l.php:39
+    in /app/api_ver4/controllers/UserController.php:2695
+2018-02-01 12:34:49 [192.168.83.1][-][-][info][application] $_GET = [
+    'params' => '{\"PostID\":\"39247\",\"ArtistID\":1,\"ActivityTypeID\":2,\"ProfileID\":21, \"RefTable\":1, \"RefTableID\":39247, \"Comment\":\"tree111\", \"Language\":\"english\", \"ActivityID\":\"\",\"UserType\":3,\"StickerID\":\"\",\"CustomStickerUrl\":\"\",\"parent_id\":1007128}'
+]
+
+$_COOKIE = [
+    '_csrf' => '3c3293ae2753256229c45cea85883a15f72f248866facb6f654e4734496d9595a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"QoRVAgacC-Ges8L0sKvNy4rPP3SAnue_\";}'
+    '_csrf-api4' => 'a006404f2117f6512aa694243f034306c47da90379f0081d004170e51c21fb2ca:2:{i:0;s:10:\"_csrf-api4\";i:1;s:32:\"mPkJNMpIUtGJc6oXAbyO0XGxum-iRppL\";}'
+    'PHPSESSID' => 'vqjft4urmdgl3d4a0htrg55uhd'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'HTTP_COOKIE' => '_csrf=3c3293ae2753256229c45cea85883a15f72f248866facb6f654e4734496d9595a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22QoRVAgacC-Ges8L0sKvNy4rPP3SAnue_%22%3B%7D; _csrf-api4=a006404f2117f6512aa694243f034306c47da90379f0081d004170e51c21fb2ca%3A2%3A%7Bi%3A0%3Bs%3A10%3A%22_csrf-api4%22%3Bi%3A1%3Bs%3A32%3A%22mPkJNMpIUtGJc6oXAbyO0XGxum-iRppL%22%3B%7D; PHPSESSID=vqjft4urmdgl3d4a0htrg55uhd'
+    'HTTP_ACCEPT_LANGUAGE' => 'uk-UA,uk;q=0.9,ru;q=0.8,en-US;q=0.7,en;q=0.6'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.119 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'api4.boom.test'
+    'SCRIPT_FILENAME' => '/app/api_ver4/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'api4.boom.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.83.137'
+    'REMOTE_PORT' => '50572'
+    'REMOTE_ADDR' => '192.168.83.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/app/api_ver4/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/user/addcomment?params={%22PostID%22:%2239247%22,%22ArtistID%22:1,%22ActivityTypeID%22:2,%22ProfileID%22:21,%20%22RefTable%22:1,%20%22RefTableID%22:39247,%20%22Comment%22:%22tree111%22,%20%22Language%22:%22english%22,%20%22ActivityID%22:%22%22,%22UserType%22:3,%22StickerID%22:%22%22,%22CustomStickerUrl%22:%22%22,%22parent_id%22:1007128}'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'params={%22PostID%22:%2239247%22,%22ArtistID%22:1,%22ActivityTypeID%22:2,%22ProfileID%22:21,%20%22RefTable%22:1,%20%22RefTableID%22:39247,%20%22Comment%22:%22tree111%22,%20%22Language%22:%22english%22,%20%22ActivityID%22:%22%22,%22UserType%22:3,%22StickerID%22:%22%22,%22CustomStickerUrl%22:%22%22,%22parent_id%22:1007128}'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1517488489.1873
+    'REQUEST_TIME' => 1517488489
+]
+2018-02-01 12:35:07 [192.168.83.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: user/5555 in /app/vendor/yiisoft/yii2/base/Controller.php:122
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('5555', Array)
+#1 /app/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/5555', Array)
+#2 /app/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /app/api_ver4/web/index.php(21): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /app/vendor/yiisoft/yii2/web/Application.php:96
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /app/api_ver4/web/index.php(21): yii\base\Application->run()
+#2 {main}
+2018-02-01 12:35:07 [192.168.83.1][-][-][info][application] $_COOKIE = [
+    '_csrf' => '3c3293ae2753256229c45cea85883a15f72f248866facb6f654e4734496d9595a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"QoRVAgacC-Ges8L0sKvNy4rPP3SAnue_\";}'
+    '_csrf-api4' => 'a006404f2117f6512aa694243f034306c47da90379f0081d004170e51c21fb2ca:2:{i:0;s:10:\"_csrf-api4\";i:1;s:32:\"mPkJNMpIUtGJc6oXAbyO0XGxum-iRppL\";}'
+    'PHPSESSID' => 'vqjft4urmdgl3d4a0htrg55uhd'
+]
+
+$_SERVER = [
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'HTTP_COOKIE' => '_csrf=3c3293ae2753256229c45cea85883a15f72f248866facb6f654e4734496d9595a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22QoRVAgacC-Ges8L0sKvNy4rPP3SAnue_%22%3B%7D; _csrf-api4=a006404f2117f6512aa694243f034306c47da90379f0081d004170e51c21fb2ca%3A2%3A%7Bi%3A0%3Bs%3A10%3A%22_csrf-api4%22%3Bi%3A1%3Bs%3A32%3A%22mPkJNMpIUtGJc6oXAbyO0XGxum-iRppL%22%3B%7D; PHPSESSID=vqjft4urmdgl3d4a0htrg55uhd'
+    'HTTP_ACCEPT_LANGUAGE' => 'uk-UA,uk;q=0.9,ru;q=0.8,en-US;q=0.7,en;q=0.6'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.119 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'api4.boom.test'
+    'SCRIPT_FILENAME' => '/app/api_ver4/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'api4.boom.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.83.137'
+    'REMOTE_PORT' => '50572'
+    'REMOTE_ADDR' => '192.168.83.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/app/api_ver4/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/user/5555'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1517488507.011
+    'REQUEST_TIME' => 1517488507
+]
+2018-02-01 12:35:24 [192.168.83.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.83.1
+    in /app/api_ver4/views/layouts/l.php:39
+    in /app/api_ver4/controllers/UserController.php:2695
+2018-02-01 12:35:22 [192.168.83.1][-][-][info][application] $_GET = [
+    'params' => '{\"PostID\":\"39247\",\"ArtistID\":1,\"ActivityTypeID\":2,\"ProfileID\":21, \"RefTable\":1, \"RefTableID\":39247, \"Comment\":\"tree111\", \"Language\":\"english\", \"ActivityID\":\"\",\"UserType\":3,\"StickerID\":\"\",\"CustomStickerUrl\":\"\",\"parent_id\":1007128}'
+]
+
+$_COOKIE = [
+    '_csrf' => '3c3293ae2753256229c45cea85883a15f72f248866facb6f654e4734496d9595a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"QoRVAgacC-Ges8L0sKvNy4rPP3SAnue_\";}'
+    '_csrf-api4' => 'a006404f2117f6512aa694243f034306c47da90379f0081d004170e51c21fb2ca:2:{i:0;s:10:\"_csrf-api4\";i:1;s:32:\"mPkJNMpIUtGJc6oXAbyO0XGxum-iRppL\";}'
+    'PHPSESSID' => 'vqjft4urmdgl3d4a0htrg55uhd'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'HTTP_COOKIE' => '_csrf=3c3293ae2753256229c45cea85883a15f72f248866facb6f654e4734496d9595a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22QoRVAgacC-Ges8L0sKvNy4rPP3SAnue_%22%3B%7D; _csrf-api4=a006404f2117f6512aa694243f034306c47da90379f0081d004170e51c21fb2ca%3A2%3A%7Bi%3A0%3Bs%3A10%3A%22_csrf-api4%22%3Bi%3A1%3Bs%3A32%3A%22mPkJNMpIUtGJc6oXAbyO0XGxum-iRppL%22%3B%7D; PHPSESSID=vqjft4urmdgl3d4a0htrg55uhd'
+    'HTTP_ACCEPT_LANGUAGE' => 'uk-UA,uk;q=0.9,ru;q=0.8,en-US;q=0.7,en;q=0.6'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.119 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'api4.boom.test'
+    'SCRIPT_FILENAME' => '/app/api_ver4/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'api4.boom.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.83.137'
+    'REMOTE_PORT' => '50572'
+    'REMOTE_ADDR' => '192.168.83.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/app/api_ver4/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/user/addcomment?params={%22PostID%22:%2239247%22,%22ArtistID%22:1,%22ActivityTypeID%22:2,%22ProfileID%22:21,%20%22RefTable%22:1,%20%22RefTableID%22:39247,%20%22Comment%22:%22tree111%22,%20%22Language%22:%22english%22,%20%22ActivityID%22:%22%22,%22UserType%22:3,%22StickerID%22:%22%22,%22CustomStickerUrl%22:%22%22,%22parent_id%22:1007128}'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'params={%22PostID%22:%2239247%22,%22ArtistID%22:1,%22ActivityTypeID%22:2,%22ProfileID%22:21,%20%22RefTable%22:1,%20%22RefTableID%22:39247,%20%22Comment%22:%22tree111%22,%20%22Language%22:%22english%22,%20%22ActivityID%22:%22%22,%22UserType%22:3,%22StickerID%22:%22%22,%22CustomStickerUrl%22:%22%22,%22parent_id%22:1007128}'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1517488522.3431
+    'REQUEST_TIME' => 1517488522
+]
+2018-02-01 12:36:48 [192.168.83.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.83.1
+    in /app/api_ver4/views/layouts/l.php:39
+    in /app/api_ver4/controllers/UserController.php:2695
+2018-02-01 12:36:46 [192.168.83.1][-][-][info][application] $_GET = [
+    'params' => '{\"PostID\":\"39247\",\"ArtistID\":1,\"ActivityTypeID\":2,\"ProfileID\":21, \"RefTable\":1, \"RefTableID\":39247, \"Comment\":\"tree111\", \"Language\":\"english\", \"ActivityID\":\"\",\"UserType\":3,\"StickerID\":\"\",\"CustomStickerUrl\":\"\",\"parent_id\":1007128}'
+]
+
+$_COOKIE = [
+    '_csrf' => '3c3293ae2753256229c45cea85883a15f72f248866facb6f654e4734496d9595a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"QoRVAgacC-Ges8L0sKvNy4rPP3SAnue_\";}'
+    '_csrf-api4' => 'a006404f2117f6512aa694243f034306c47da90379f0081d004170e51c21fb2ca:2:{i:0;s:10:\"_csrf-api4\";i:1;s:32:\"mPkJNMpIUtGJc6oXAbyO0XGxum-iRppL\";}'
+    'PHPSESSID' => 'vqjft4urmdgl3d4a0htrg55uhd'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'HTTP_COOKIE' => '_csrf=3c3293ae2753256229c45cea85883a15f72f248866facb6f654e4734496d9595a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22QoRVAgacC-Ges8L0sKvNy4rPP3SAnue_%22%3B%7D; _csrf-api4=a006404f2117f6512aa694243f034306c47da90379f0081d004170e51c21fb2ca%3A2%3A%7Bi%3A0%3Bs%3A10%3A%22_csrf-api4%22%3Bi%3A1%3Bs%3A32%3A%22mPkJNMpIUtGJc6oXAbyO0XGxum-iRppL%22%3B%7D; PHPSESSID=vqjft4urmdgl3d4a0htrg55uhd'
+    'HTTP_ACCEPT_LANGUAGE' => 'uk-UA,uk;q=0.9,ru;q=0.8,en-US;q=0.7,en;q=0.6'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.119 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'api4.boom.test'
+    'SCRIPT_FILENAME' => '/app/api_ver4/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'api4.boom.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.83.137'
+    'REMOTE_PORT' => '50632'
+    'REMOTE_ADDR' => '192.168.83.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/app/api_ver4/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/user/addcomment?params={%22PostID%22:%2239247%22,%22ArtistID%22:1,%22ActivityTypeID%22:2,%22ProfileID%22:21,%20%22RefTable%22:1,%20%22RefTableID%22:39247,%20%22Comment%22:%22tree111%22,%20%22Language%22:%22english%22,%20%22ActivityID%22:%22%22,%22UserType%22:3,%22StickerID%22:%22%22,%22CustomStickerUrl%22:%22%22,%22parent_id%22:1007128}'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'params={%22PostID%22:%2239247%22,%22ArtistID%22:1,%22ActivityTypeID%22:2,%22ProfileID%22:21,%20%22RefTable%22:1,%20%22RefTableID%22:39247,%20%22Comment%22:%22tree111%22,%20%22Language%22:%22english%22,%20%22ActivityID%22:%22%22,%22UserType%22:3,%22StickerID%22:%22%22,%22CustomStickerUrl%22:%22%22,%22parent_id%22:1007128}'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1517488606.1051
+    'REQUEST_TIME' => 1517488606
+]
+2018-02-01 13:47:05 [192.168.83.1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[42000]: Syntax error or access violation: 1318 Incorrect number of arguments for PROCEDURE boomvideo.Member_Add_Activity; expected 12, got 13 in /app/vendor/yiisoft/yii2/db/Command.php:837
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/db/Command.php(837): PDOStatement->execute()
+#1 /app/vendor/yiisoft/yii2/db/Command.php(359): yii\db\Command->queryInternal('fetchAll', NULL)
+#2 /app/api_ver4/controllers/UserController.php(2652): yii\db\Command->queryAll()
+#3 [internal function]: api_ver4\controllers\UserController->actionAddcomment()
+#4 /app/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /app/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /app/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('addcomment', Array)
+#7 /app/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/addcomment', Array)
+#8 /app/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /app/api_ver4/web/index.php(21): yii\base\Application->run()
+#10 {main}
+
+Next yii\db\Exception: SQLSTATE[42000]: Syntax error or access violation: 1318 Incorrect number of arguments for PROCEDURE boomvideo.Member_Add_Activity; expected 12, got 13
+The SQL being executed was: CALL Member_Add_Activity('39247',1,21,2,1,39247,'tree111','',3,0,'http://d1t89cp2y0xf79.cloudfront.net/boom-','',111) in /app/vendor/yiisoft/yii2/db/Schema.php:628
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/db/Command.php(852): yii\db\Schema->convertException(Object(PDOException), 'CALL Member_Add...')
+#1 /app/vendor/yiisoft/yii2/db/Command.php(359): yii\db\Command->queryInternal('fetchAll', NULL)
+#2 /app/api_ver4/controllers/UserController.php(2652): yii\db\Command->queryAll()
+#3 [internal function]: api_ver4\controllers\UserController->actionAddcomment()
+#4 /app/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /app/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /app/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('addcomment', Array)
+#7 /app/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/addcomment', Array)
+#8 /app/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /app/api_ver4/web/index.php(21): yii\base\Application->run()
+#10 {main}
+Additional Information:
+Array
+(
+    [0] => 42000
+    [1] => 1318
+    [2] => Incorrect number of arguments for PROCEDURE boomvideo.Member_Add_Activity; expected 12, got 13
+)
+
+2018-02-01 13:47:03 [192.168.83.1][-][-][info][application] $_GET = [
+    'params' => '{\"PostID\":\"39247\",\"ArtistID\":1,\"ActivityTypeID\":2,\"ProfileID\":21, \"RefTable\":1, \"RefTableID\":39247, \"Comment\":\"tree111\", \"Language\":\"english\", \"ActivityID\":\"\",\"UserType\":3,\"StickerID\":0,\"CustomStickerUrl\":\"\",\"parent_id\":111}'
+]
+
+$_COOKIE = [
+    '_csrf' => '3c3293ae2753256229c45cea85883a15f72f248866facb6f654e4734496d9595a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"QoRVAgacC-Ges8L0sKvNy4rPP3SAnue_\";}'
+    '_csrf-api4' => 'a006404f2117f6512aa694243f034306c47da90379f0081d004170e51c21fb2ca:2:{i:0;s:10:\"_csrf-api4\";i:1;s:32:\"mPkJNMpIUtGJc6oXAbyO0XGxum-iRppL\";}'
+    'PHPSESSID' => 'vqjft4urmdgl3d4a0htrg55uhd'
+]
+
+$_SERVER = [
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'HTTP_COOKIE' => '_csrf=3c3293ae2753256229c45cea85883a15f72f248866facb6f654e4734496d9595a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22QoRVAgacC-Ges8L0sKvNy4rPP3SAnue_%22%3B%7D; _csrf-api4=a006404f2117f6512aa694243f034306c47da90379f0081d004170e51c21fb2ca%3A2%3A%7Bi%3A0%3Bs%3A10%3A%22_csrf-api4%22%3Bi%3A1%3Bs%3A32%3A%22mPkJNMpIUtGJc6oXAbyO0XGxum-iRppL%22%3B%7D; PHPSESSID=vqjft4urmdgl3d4a0htrg55uhd'
+    'HTTP_ACCEPT_LANGUAGE' => 'uk-UA,uk;q=0.9,ru;q=0.8,en-US;q=0.7,en;q=0.6'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.119 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'api4.boom.test'
+    'SCRIPT_FILENAME' => '/app/api_ver4/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'api4.boom.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.83.137'
+    'REMOTE_PORT' => '52496'
+    'REMOTE_ADDR' => '192.168.83.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/app/api_ver4/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/user/addcomment?params={%22PostID%22:%2239247%22,%22ArtistID%22:1,%22ActivityTypeID%22:2,%22ProfileID%22:21,%20%22RefTable%22:1,%20%22RefTableID%22:39247,%20%22Comment%22:%22tree111%22,%20%22Language%22:%22english%22,%20%22ActivityID%22:%22%22,%22UserType%22:3,%22StickerID%22:0,%22CustomStickerUrl%22:%22%22,%22parent_id%22:111}'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'params={%22PostID%22:%2239247%22,%22ArtistID%22:1,%22ActivityTypeID%22:2,%22ProfileID%22:21,%20%22RefTable%22:1,%20%22RefTableID%22:39247,%20%22Comment%22:%22tree111%22,%20%22Language%22:%22english%22,%20%22ActivityID%22:%22%22,%22UserType%22:3,%22StickerID%22:0,%22CustomStickerUrl%22:%22%22,%22parent_id%22:111}'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1517492823.8257
+    'REQUEST_TIME' => 1517492823
+]
+2018-02-01 13:59:35 [192.168.83.1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[42000]: Syntax error or access violation: 1318 Incorrect number of arguments for PROCEDURE boomvideo.Member_Add_Activity; expected 12, got 13 in /app/vendor/yiisoft/yii2/db/Command.php:837
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/db/Command.php(837): PDOStatement->execute()
+#1 /app/vendor/yiisoft/yii2/db/Command.php(359): yii\db\Command->queryInternal('fetchAll', NULL)
+#2 /app/api_ver4/controllers/UserController.php(2652): yii\db\Command->queryAll()
+#3 [internal function]: api_ver4\controllers\UserController->actionAddcomment()
+#4 /app/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /app/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /app/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('addcomment', Array)
+#7 /app/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/addcomment', Array)
+#8 /app/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /app/api_ver4/web/index.php(21): yii\base\Application->run()
+#10 {main}
+
+Next yii\db\Exception: SQLSTATE[42000]: Syntax error or access violation: 1318 Incorrect number of arguments for PROCEDURE boomvideo.Member_Add_Activity; expected 12, got 13
+The SQL being executed was: CALL Member_Add_Activity('39247',1,21,2,1,39247,'tree111','',3,0,'http://d1t89cp2y0xf79.cloudfront.net/boom-','',111) in /app/vendor/yiisoft/yii2/db/Schema.php:628
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/db/Command.php(852): yii\db\Schema->convertException(Object(PDOException), 'CALL Member_Add...')
+#1 /app/vendor/yiisoft/yii2/db/Command.php(359): yii\db\Command->queryInternal('fetchAll', NULL)
+#2 /app/api_ver4/controllers/UserController.php(2652): yii\db\Command->queryAll()
+#3 [internal function]: api_ver4\controllers\UserController->actionAddcomment()
+#4 /app/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /app/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /app/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('addcomment', Array)
+#7 /app/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/addcomment', Array)
+#8 /app/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /app/api_ver4/web/index.php(21): yii\base\Application->run()
+#10 {main}
+Additional Information:
+Array
+(
+    [0] => 42000
+    [1] => 1318
+    [2] => Incorrect number of arguments for PROCEDURE boomvideo.Member_Add_Activity; expected 12, got 13
+)
+
+2018-02-01 13:59:34 [192.168.83.1][-][-][info][application] $_GET = [
+    'params' => '{\"PostID\":\"39247\",\"ArtistID\":1,\"ActivityTypeID\":2,\"ProfileID\":21, \"RefTable\":1, \"RefTableID\":39247, \"Comment\":\"tree111\", \"Language\":\"english\", \"ActivityID\":\"\",\"UserType\":3,\"StickerID\":0,\"CustomStickerUrl\":\"\",\"parent_id\":111}'
+]
+
+$_COOKIE = [
+    '_csrf' => '3c3293ae2753256229c45cea85883a15f72f248866facb6f654e4734496d9595a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"QoRVAgacC-Ges8L0sKvNy4rPP3SAnue_\";}'
+    '_csrf-api4' => 'a006404f2117f6512aa694243f034306c47da90379f0081d004170e51c21fb2ca:2:{i:0;s:10:\"_csrf-api4\";i:1;s:32:\"mPkJNMpIUtGJc6oXAbyO0XGxum-iRppL\";}'
+    'PHPSESSID' => 'vqjft4urmdgl3d4a0htrg55uhd'
+]
+
+$_SERVER = [
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'HTTP_COOKIE' => '_csrf=3c3293ae2753256229c45cea85883a15f72f248866facb6f654e4734496d9595a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22QoRVAgacC-Ges8L0sKvNy4rPP3SAnue_%22%3B%7D; _csrf-api4=a006404f2117f6512aa694243f034306c47da90379f0081d004170e51c21fb2ca%3A2%3A%7Bi%3A0%3Bs%3A10%3A%22_csrf-api4%22%3Bi%3A1%3Bs%3A32%3A%22mPkJNMpIUtGJc6oXAbyO0XGxum-iRppL%22%3B%7D; PHPSESSID=vqjft4urmdgl3d4a0htrg55uhd'
+    'HTTP_ACCEPT_LANGUAGE' => 'uk-UA,uk;q=0.9,ru;q=0.8,en-US;q=0.7,en;q=0.6'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.119 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'api4.boom.test'
+    'SCRIPT_FILENAME' => '/app/api_ver4/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'api4.boom.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.83.137'
+    'REMOTE_PORT' => '52636'
+    'REMOTE_ADDR' => '192.168.83.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/app/api_ver4/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/user/addcomment?params={%22PostID%22:%2239247%22,%22ArtistID%22:1,%22ActivityTypeID%22:2,%22ProfileID%22:21,%20%22RefTable%22:1,%20%22RefTableID%22:39247,%20%22Comment%22:%22tree111%22,%20%22Language%22:%22english%22,%20%22ActivityID%22:%22%22,%22UserType%22:3,%22StickerID%22:0,%22CustomStickerUrl%22:%22%22,%22parent_id%22:111}'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'params={%22PostID%22:%2239247%22,%22ArtistID%22:1,%22ActivityTypeID%22:2,%22ProfileID%22:21,%20%22RefTable%22:1,%20%22RefTableID%22:39247,%20%22Comment%22:%22tree111%22,%20%22Language%22:%22english%22,%20%22ActivityID%22:%22%22,%22UserType%22:3,%22StickerID%22:0,%22CustomStickerUrl%22:%22%22,%22parent_id%22:111}'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1517493574.4695
+    'REQUEST_TIME' => 1517493574
+]
+2018-02-01 14:02:18 [192.168.83.1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[42000]: Syntax error or access violation: 1318 Incorrect number of arguments for PROCEDURE boomvideo.Member_Add_Activity; expected 12, got 13 in /app/vendor/yiisoft/yii2/db/Command.php:837
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/db/Command.php(837): PDOStatement->execute()
+#1 /app/vendor/yiisoft/yii2/db/Command.php(359): yii\db\Command->queryInternal('fetchAll', NULL)
+#2 /app/api_ver4/controllers/UserController.php(2652): yii\db\Command->queryAll()
+#3 [internal function]: api_ver4\controllers\UserController->actionAddcomment()
+#4 /app/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /app/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /app/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('addcomment', Array)
+#7 /app/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/addcomment', Array)
+#8 /app/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /app/api_ver4/web/index.php(21): yii\base\Application->run()
+#10 {main}
+
+Next yii\db\Exception: SQLSTATE[42000]: Syntax error or access violation: 1318 Incorrect number of arguments for PROCEDURE boomvideo.Member_Add_Activity; expected 12, got 13
+The SQL being executed was: CALL Member_Add_Activity('39247',1,21,2,1,39247,'tree111','',3,0,'http://d1t89cp2y0xf79.cloudfront.net/boom-','',111) in /app/vendor/yiisoft/yii2/db/Schema.php:628
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/db/Command.php(852): yii\db\Schema->convertException(Object(PDOException), 'CALL Member_Add...')
+#1 /app/vendor/yiisoft/yii2/db/Command.php(359): yii\db\Command->queryInternal('fetchAll', NULL)
+#2 /app/api_ver4/controllers/UserController.php(2652): yii\db\Command->queryAll()
+#3 [internal function]: api_ver4\controllers\UserController->actionAddcomment()
+#4 /app/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /app/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /app/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('addcomment', Array)
+#7 /app/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/addcomment', Array)
+#8 /app/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /app/api_ver4/web/index.php(21): yii\base\Application->run()
+#10 {main}
+Additional Information:
+Array
+(
+    [0] => 42000
+    [1] => 1318
+    [2] => Incorrect number of arguments for PROCEDURE boomvideo.Member_Add_Activity; expected 12, got 13
+)
+
+2018-02-01 14:02:16 [192.168.83.1][-][-][info][application] $_GET = [
+    'params' => '{\"PostID\":\"39247\",\"ArtistID\":1,\"ActivityTypeID\":2,\"ProfileID\":21, \"RefTable\":1, \"RefTableID\":39247, \"Comment\":\"tree111\", \"Language\":\"english\", \"ActivityID\":\"\",\"UserType\":3,\"StickerID\":0,\"CustomStickerUrl\":\"\",\"parent_id\":111}'
+]
+
+$_COOKIE = [
+    '_csrf' => '3c3293ae2753256229c45cea85883a15f72f248866facb6f654e4734496d9595a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"QoRVAgacC-Ges8L0sKvNy4rPP3SAnue_\";}'
+    '_csrf-api4' => 'a006404f2117f6512aa694243f034306c47da90379f0081d004170e51c21fb2ca:2:{i:0;s:10:\"_csrf-api4\";i:1;s:32:\"mPkJNMpIUtGJc6oXAbyO0XGxum-iRppL\";}'
+    'PHPSESSID' => 'vqjft4urmdgl3d4a0htrg55uhd'
+]
+
+$_SERVER = [
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'HTTP_COOKIE' => '_csrf=3c3293ae2753256229c45cea85883a15f72f248866facb6f654e4734496d9595a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22QoRVAgacC-Ges8L0sKvNy4rPP3SAnue_%22%3B%7D; _csrf-api4=a006404f2117f6512aa694243f034306c47da90379f0081d004170e51c21fb2ca%3A2%3A%7Bi%3A0%3Bs%3A10%3A%22_csrf-api4%22%3Bi%3A1%3Bs%3A32%3A%22mPkJNMpIUtGJc6oXAbyO0XGxum-iRppL%22%3B%7D; PHPSESSID=vqjft4urmdgl3d4a0htrg55uhd'
+    'HTTP_ACCEPT_LANGUAGE' => 'uk-UA,uk;q=0.9,ru;q=0.8,en-US;q=0.7,en;q=0.6'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.119 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'api4.boom.test'
+    'SCRIPT_FILENAME' => '/app/api_ver4/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'api4.boom.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.83.137'
+    'REMOTE_PORT' => '52696'
+    'REMOTE_ADDR' => '192.168.83.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/app/api_ver4/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/user/addcomment?params={%22PostID%22:%2239247%22,%22ArtistID%22:1,%22ActivityTypeID%22:2,%22ProfileID%22:21,%20%22RefTable%22:1,%20%22RefTableID%22:39247,%20%22Comment%22:%22tree111%22,%20%22Language%22:%22english%22,%20%22ActivityID%22:%22%22,%22UserType%22:3,%22StickerID%22:0,%22CustomStickerUrl%22:%22%22,%22parent_id%22:111}'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'params={%22PostID%22:%2239247%22,%22ArtistID%22:1,%22ActivityTypeID%22:2,%22ProfileID%22:21,%20%22RefTable%22:1,%20%22RefTableID%22:39247,%20%22Comment%22:%22tree111%22,%20%22Language%22:%22english%22,%20%22ActivityID%22:%22%22,%22UserType%22:3,%22StickerID%22:0,%22CustomStickerUrl%22:%22%22,%22parent_id%22:111}'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1517493736.9326
+    'REQUEST_TIME' => 1517493736
+]
+2018-02-01 14:03:12 [192.168.83.1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[42000]: Syntax error or access violation: 1318 Incorrect number of arguments for PROCEDURE boomvideo.Member_Add_Activity; expected 12, got 13 in /app/vendor/yiisoft/yii2/db/Command.php:837
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/db/Command.php(837): PDOStatement->execute()
+#1 /app/vendor/yiisoft/yii2/db/Command.php(359): yii\db\Command->queryInternal('fetchAll', NULL)
+#2 /app/api_ver4/controllers/UserController.php(2652): yii\db\Command->queryAll()
+#3 [internal function]: api_ver4\controllers\UserController->actionAddcomment()
+#4 /app/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /app/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /app/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('addcomment', Array)
+#7 /app/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/addcomment', Array)
+#8 /app/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /app/api_ver4/web/index.php(21): yii\base\Application->run()
+#10 {main}
+
+Next yii\db\Exception: SQLSTATE[42000]: Syntax error or access violation: 1318 Incorrect number of arguments for PROCEDURE boomvideo.Member_Add_Activity; expected 12, got 13
+The SQL being executed was: CALL Member_Add_Activity('39247',1,21,2,1,39247,'tree111','',3,0,'http://d1t89cp2y0xf79.cloudfront.net/boom-','',111) in /app/vendor/yiisoft/yii2/db/Schema.php:628
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/db/Command.php(852): yii\db\Schema->convertException(Object(PDOException), 'CALL Member_Add...')
+#1 /app/vendor/yiisoft/yii2/db/Command.php(359): yii\db\Command->queryInternal('fetchAll', NULL)
+#2 /app/api_ver4/controllers/UserController.php(2652): yii\db\Command->queryAll()
+#3 [internal function]: api_ver4\controllers\UserController->actionAddcomment()
+#4 /app/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /app/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /app/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('addcomment', Array)
+#7 /app/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/addcomment', Array)
+#8 /app/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /app/api_ver4/web/index.php(21): yii\base\Application->run()
+#10 {main}
+Additional Information:
+Array
+(
+    [0] => 42000
+    [1] => 1318
+    [2] => Incorrect number of arguments for PROCEDURE boomvideo.Member_Add_Activity; expected 12, got 13
+)
+
+2018-02-01 14:03:11 [192.168.83.1][-][-][info][application] $_GET = [
+    'params' => '{\"PostID\":\"39247\",\"ArtistID\":1,\"ActivityTypeID\":2,\"ProfileID\":21, \"RefTable\":1, \"RefTableID\":39247, \"Comment\":\"tree111\", \"Language\":\"english\", \"ActivityID\":\"\",\"UserType\":3,\"StickerID\":0,\"CustomStickerUrl\":\"\",\"parent_id\":111}'
+]
+
+$_COOKIE = [
+    '_csrf' => '3c3293ae2753256229c45cea85883a15f72f248866facb6f654e4734496d9595a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"QoRVAgacC-Ges8L0sKvNy4rPP3SAnue_\";}'
+    '_csrf-api4' => 'a006404f2117f6512aa694243f034306c47da90379f0081d004170e51c21fb2ca:2:{i:0;s:10:\"_csrf-api4\";i:1;s:32:\"mPkJNMpIUtGJc6oXAbyO0XGxum-iRppL\";}'
+    'PHPSESSID' => 'vqjft4urmdgl3d4a0htrg55uhd'
+]
+
+$_SERVER = [
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'HTTP_COOKIE' => '_csrf=3c3293ae2753256229c45cea85883a15f72f248866facb6f654e4734496d9595a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22QoRVAgacC-Ges8L0sKvNy4rPP3SAnue_%22%3B%7D; _csrf-api4=a006404f2117f6512aa694243f034306c47da90379f0081d004170e51c21fb2ca%3A2%3A%7Bi%3A0%3Bs%3A10%3A%22_csrf-api4%22%3Bi%3A1%3Bs%3A32%3A%22mPkJNMpIUtGJc6oXAbyO0XGxum-iRppL%22%3B%7D; PHPSESSID=vqjft4urmdgl3d4a0htrg55uhd'
+    'HTTP_ACCEPT_LANGUAGE' => 'uk-UA,uk;q=0.9,ru;q=0.8,en-US;q=0.7,en;q=0.6'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.119 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'api4.boom.test'
+    'SCRIPT_FILENAME' => '/app/api_ver4/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'api4.boom.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.83.137'
+    'REMOTE_PORT' => '52696'
+    'REMOTE_ADDR' => '192.168.83.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/app/api_ver4/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/user/addcomment?params={%22PostID%22:%2239247%22,%22ArtistID%22:1,%22ActivityTypeID%22:2,%22ProfileID%22:21,%20%22RefTable%22:1,%20%22RefTableID%22:39247,%20%22Comment%22:%22tree111%22,%20%22Language%22:%22english%22,%20%22ActivityID%22:%22%22,%22UserType%22:3,%22StickerID%22:0,%22CustomStickerUrl%22:%22%22,%22parent_id%22:111}'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'params={%22PostID%22:%2239247%22,%22ArtistID%22:1,%22ActivityTypeID%22:2,%22ProfileID%22:21,%20%22RefTable%22:1,%20%22RefTableID%22:39247,%20%22Comment%22:%22tree111%22,%20%22Language%22:%22english%22,%20%22ActivityID%22:%22%22,%22UserType%22:3,%22StickerID%22:0,%22CustomStickerUrl%22:%22%22,%22parent_id%22:111}'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1517493791.3209
+    'REQUEST_TIME' => 1517493791
+]
+2018-02-01 14:03:55 [192.168.83.1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[42000]: Syntax error or access violation: 1318 Incorrect number of arguments for PROCEDURE boomvideo.Member_Add_Activity; expected 12, got 13 in /app/vendor/yiisoft/yii2/db/Command.php:837
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/db/Command.php(837): PDOStatement->execute()
+#1 /app/vendor/yiisoft/yii2/db/Command.php(359): yii\db\Command->queryInternal('fetchAll', NULL)
+#2 /app/api_ver4/controllers/UserController.php(2652): yii\db\Command->queryAll()
+#3 [internal function]: api_ver4\controllers\UserController->actionAddcomment()
+#4 /app/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /app/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /app/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('addcomment', Array)
+#7 /app/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/addcomment', Array)
+#8 /app/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /app/api_ver4/web/index.php(21): yii\base\Application->run()
+#10 {main}
+
+Next yii\db\Exception: SQLSTATE[42000]: Syntax error or access violation: 1318 Incorrect number of arguments for PROCEDURE boomvideo.Member_Add_Activity; expected 12, got 13
+The SQL being executed was: CALL Member_Add_Activity('39247',1,21,2,1,39247,'tree111','',3,0,'http://d1t89cp2y0xf79.cloudfront.net/boom-','',111) in /app/vendor/yiisoft/yii2/db/Schema.php:628
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/db/Command.php(852): yii\db\Schema->convertException(Object(PDOException), 'CALL Member_Add...')
+#1 /app/vendor/yiisoft/yii2/db/Command.php(359): yii\db\Command->queryInternal('fetchAll', NULL)
+#2 /app/api_ver4/controllers/UserController.php(2652): yii\db\Command->queryAll()
+#3 [internal function]: api_ver4\controllers\UserController->actionAddcomment()
+#4 /app/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /app/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /app/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('addcomment', Array)
+#7 /app/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/addcomment', Array)
+#8 /app/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /app/api_ver4/web/index.php(21): yii\base\Application->run()
+#10 {main}
+Additional Information:
+Array
+(
+    [0] => 42000
+    [1] => 1318
+    [2] => Incorrect number of arguments for PROCEDURE boomvideo.Member_Add_Activity; expected 12, got 13
+)
+
+2018-02-01 14:03:54 [192.168.83.1][-][-][info][application] $_GET = [
+    'params' => '{\"PostID\":\"39247\",\"ArtistID\":1,\"ActivityTypeID\":2,\"ProfileID\":21, \"RefTable\":1, \"RefTableID\":39247, \"Comment\":\"tree111\", \"Language\":\"english\", \"ActivityID\":\"\",\"UserType\":3,\"StickerID\":0,\"CustomStickerUrl\":\"\",\"parent_id\":111}'
+]
+
+$_COOKIE = [
+    '_csrf' => '3c3293ae2753256229c45cea85883a15f72f248866facb6f654e4734496d9595a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"QoRVAgacC-Ges8L0sKvNy4rPP3SAnue_\";}'
+    '_csrf-api4' => 'a006404f2117f6512aa694243f034306c47da90379f0081d004170e51c21fb2ca:2:{i:0;s:10:\"_csrf-api4\";i:1;s:32:\"mPkJNMpIUtGJc6oXAbyO0XGxum-iRppL\";}'
+    'PHPSESSID' => 'vqjft4urmdgl3d4a0htrg55uhd'
+]
+
+$_SERVER = [
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'HTTP_COOKIE' => '_csrf=3c3293ae2753256229c45cea85883a15f72f248866facb6f654e4734496d9595a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22QoRVAgacC-Ges8L0sKvNy4rPP3SAnue_%22%3B%7D; _csrf-api4=a006404f2117f6512aa694243f034306c47da90379f0081d004170e51c21fb2ca%3A2%3A%7Bi%3A0%3Bs%3A10%3A%22_csrf-api4%22%3Bi%3A1%3Bs%3A32%3A%22mPkJNMpIUtGJc6oXAbyO0XGxum-iRppL%22%3B%7D; PHPSESSID=vqjft4urmdgl3d4a0htrg55uhd'
+    'HTTP_ACCEPT_LANGUAGE' => 'uk-UA,uk;q=0.9,ru;q=0.8,en-US;q=0.7,en;q=0.6'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.119 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'api4.boom.test'
+    'SCRIPT_FILENAME' => '/app/api_ver4/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'api4.boom.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.83.137'
+    'REMOTE_PORT' => '52696'
+    'REMOTE_ADDR' => '192.168.83.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/app/api_ver4/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/user/addcomment?params={%22PostID%22:%2239247%22,%22ArtistID%22:1,%22ActivityTypeID%22:2,%22ProfileID%22:21,%20%22RefTable%22:1,%20%22RefTableID%22:39247,%20%22Comment%22:%22tree111%22,%20%22Language%22:%22english%22,%20%22ActivityID%22:%22%22,%22UserType%22:3,%22StickerID%22:0,%22CustomStickerUrl%22:%22%22,%22parent_id%22:111}'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'params={%22PostID%22:%2239247%22,%22ArtistID%22:1,%22ActivityTypeID%22:2,%22ProfileID%22:21,%20%22RefTable%22:1,%20%22RefTableID%22:39247,%20%22Comment%22:%22tree111%22,%20%22Language%22:%22english%22,%20%22ActivityID%22:%22%22,%22UserType%22:3,%22StickerID%22:0,%22CustomStickerUrl%22:%22%22,%22parent_id%22:111}'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1517493834.616
+    'REQUEST_TIME' => 1517493834
+]
+2018-02-01 14:05:57 [192.168.83.1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[42000]: Syntax error or access violation: 1318 Incorrect number of arguments for PROCEDURE boomvideo.Member_Add_Activity; expected 12, got 13 in /app/vendor/yiisoft/yii2/db/Command.php:837
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/db/Command.php(837): PDOStatement->execute()
+#1 /app/vendor/yiisoft/yii2/db/Command.php(359): yii\db\Command->queryInternal('fetchAll', NULL)
+#2 /app/api_ver4/controllers/UserController.php(2652): yii\db\Command->queryAll()
+#3 [internal function]: api_ver4\controllers\UserController->actionAddcomment()
+#4 /app/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /app/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /app/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('addcomment', Array)
+#7 /app/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/addcomment', Array)
+#8 /app/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /app/api_ver4/web/index.php(21): yii\base\Application->run()
+#10 {main}
+
+Next yii\db\Exception: SQLSTATE[42000]: Syntax error or access violation: 1318 Incorrect number of arguments for PROCEDURE boomvideo.Member_Add_Activity; expected 12, got 13
+The SQL being executed was: CALL Member_Add_Activity('39247',1,21,2,1,39247,'tree111','',3,0,'http://d1t89cp2y0xf79.cloudfront.net/boom-','',111) in /app/vendor/yiisoft/yii2/db/Schema.php:628
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/db/Command.php(852): yii\db\Schema->convertException(Object(PDOException), 'CALL Member_Add...')
+#1 /app/vendor/yiisoft/yii2/db/Command.php(359): yii\db\Command->queryInternal('fetchAll', NULL)
+#2 /app/api_ver4/controllers/UserController.php(2652): yii\db\Command->queryAll()
+#3 [internal function]: api_ver4\controllers\UserController->actionAddcomment()
+#4 /app/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /app/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /app/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('addcomment', Array)
+#7 /app/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/addcomment', Array)
+#8 /app/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /app/api_ver4/web/index.php(21): yii\base\Application->run()
+#10 {main}
+Additional Information:
+Array
+(
+    [0] => 42000
+    [1] => 1318
+    [2] => Incorrect number of arguments for PROCEDURE boomvideo.Member_Add_Activity; expected 12, got 13
+)
+
+2018-02-01 14:05:56 [192.168.83.1][-][-][info][application] $_GET = [
+    'params' => '{\"PostID\":\"39247\",\"ArtistID\":1,\"ActivityTypeID\":2,\"ProfileID\":21, \"RefTable\":1, \"RefTableID\":39247, \"Comment\":\"tree111\", \"Language\":\"english\", \"ActivityID\":\"\",\"UserType\":3,\"StickerID\":0,\"CustomStickerUrl\":\"\",\"parent_id\":111}'
+]
+
+$_COOKIE = [
+    '_csrf' => '3c3293ae2753256229c45cea85883a15f72f248866facb6f654e4734496d9595a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"QoRVAgacC-Ges8L0sKvNy4rPP3SAnue_\";}'
+    '_csrf-api4' => 'a006404f2117f6512aa694243f034306c47da90379f0081d004170e51c21fb2ca:2:{i:0;s:10:\"_csrf-api4\";i:1;s:32:\"mPkJNMpIUtGJc6oXAbyO0XGxum-iRppL\";}'
+    'PHPSESSID' => 'vqjft4urmdgl3d4a0htrg55uhd'
+]
+
+$_SERVER = [
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'HTTP_COOKIE' => '_csrf=3c3293ae2753256229c45cea85883a15f72f248866facb6f654e4734496d9595a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22QoRVAgacC-Ges8L0sKvNy4rPP3SAnue_%22%3B%7D; _csrf-api4=a006404f2117f6512aa694243f034306c47da90379f0081d004170e51c21fb2ca%3A2%3A%7Bi%3A0%3Bs%3A10%3A%22_csrf-api4%22%3Bi%3A1%3Bs%3A32%3A%22mPkJNMpIUtGJc6oXAbyO0XGxum-iRppL%22%3B%7D; PHPSESSID=vqjft4urmdgl3d4a0htrg55uhd'
+    'HTTP_ACCEPT_LANGUAGE' => 'uk-UA,uk;q=0.9,ru;q=0.8,en-US;q=0.7,en;q=0.6'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.119 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'api4.boom.test'
+    'SCRIPT_FILENAME' => '/app/api_ver4/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'api4.boom.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.83.137'
+    'REMOTE_PORT' => '52772'
+    'REMOTE_ADDR' => '192.168.83.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/app/api_ver4/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/user/addcomment?params={%22PostID%22:%2239247%22,%22ArtistID%22:1,%22ActivityTypeID%22:2,%22ProfileID%22:21,%20%22RefTable%22:1,%20%22RefTableID%22:39247,%20%22Comment%22:%22tree111%22,%20%22Language%22:%22english%22,%20%22ActivityID%22:%22%22,%22UserType%22:3,%22StickerID%22:0,%22CustomStickerUrl%22:%22%22,%22parent_id%22:111}'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'params={%22PostID%22:%2239247%22,%22ArtistID%22:1,%22ActivityTypeID%22:2,%22ProfileID%22:21,%20%22RefTable%22:1,%20%22RefTableID%22:39247,%20%22Comment%22:%22tree111%22,%20%22Language%22:%22english%22,%20%22ActivityID%22:%22%22,%22UserType%22:3,%22StickerID%22:0,%22CustomStickerUrl%22:%22%22,%22parent_id%22:111}'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1517493956.001
+    'REQUEST_TIME' => 1517493956
+]
+2018-02-01 14:14:35 [192.168.83.1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[42000]: Syntax error or access violation: 1318 Incorrect number of arguments for PROCEDURE boomvideo.Member_Add_Activity; expected 12, got 13 in /app/vendor/yiisoft/yii2/db/Command.php:837
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/db/Command.php(837): PDOStatement->execute()
+#1 /app/vendor/yiisoft/yii2/db/Command.php(359): yii\db\Command->queryInternal('fetchAll', NULL)
+#2 /app/api_ver4/controllers/UserController.php(2652): yii\db\Command->queryAll()
+#3 [internal function]: api_ver4\controllers\UserController->actionAddcomment()
+#4 /app/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /app/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /app/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('addcomment', Array)
+#7 /app/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/addcomment', Array)
+#8 /app/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /app/api_ver4/web/index.php(21): yii\base\Application->run()
+#10 {main}
+
+Next yii\db\Exception: SQLSTATE[42000]: Syntax error or access violation: 1318 Incorrect number of arguments for PROCEDURE boomvideo.Member_Add_Activity; expected 12, got 13
+The SQL being executed was: CALL Member_Add_Activity('39247',1,21,2,1,39247,'tree111','',3,0,'http://d1t89cp2y0xf79.cloudfront.net/boom-','',111) in /app/vendor/yiisoft/yii2/db/Schema.php:628
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/db/Command.php(852): yii\db\Schema->convertException(Object(PDOException), 'CALL Member_Add...')
+#1 /app/vendor/yiisoft/yii2/db/Command.php(359): yii\db\Command->queryInternal('fetchAll', NULL)
+#2 /app/api_ver4/controllers/UserController.php(2652): yii\db\Command->queryAll()
+#3 [internal function]: api_ver4\controllers\UserController->actionAddcomment()
+#4 /app/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /app/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /app/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('addcomment', Array)
+#7 /app/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/addcomment', Array)
+#8 /app/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /app/api_ver4/web/index.php(21): yii\base\Application->run()
+#10 {main}
+Additional Information:
+Array
+(
+    [0] => 42000
+    [1] => 1318
+    [2] => Incorrect number of arguments for PROCEDURE boomvideo.Member_Add_Activity; expected 12, got 13
+)
+
+2018-02-01 14:14:33 [192.168.83.1][-][-][info][application] $_GET = [
+    'params' => '{\"PostID\":\"39247\",\"ArtistID\":1,\"ActivityTypeID\":2,\"ProfileID\":21, \"RefTable\":1, \"RefTableID\":39247, \"Comment\":\"tree111\", \"Language\":\"english\", \"ActivityID\":\"\",\"UserType\":3,\"StickerID\":0,\"CustomStickerUrl\":\"\",\"parent_id\":111}'
+]
+
+$_COOKIE = [
+    '_csrf' => '3c3293ae2753256229c45cea85883a15f72f248866facb6f654e4734496d9595a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"QoRVAgacC-Ges8L0sKvNy4rPP3SAnue_\";}'
+    '_csrf-api4' => 'a006404f2117f6512aa694243f034306c47da90379f0081d004170e51c21fb2ca:2:{i:0;s:10:\"_csrf-api4\";i:1;s:32:\"mPkJNMpIUtGJc6oXAbyO0XGxum-iRppL\";}'
+    'PHPSESSID' => 'vqjft4urmdgl3d4a0htrg55uhd'
+]
+
+$_SERVER = [
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'HTTP_COOKIE' => '_csrf=3c3293ae2753256229c45cea85883a15f72f248866facb6f654e4734496d9595a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22QoRVAgacC-Ges8L0sKvNy4rPP3SAnue_%22%3B%7D; _csrf-api4=a006404f2117f6512aa694243f034306c47da90379f0081d004170e51c21fb2ca%3A2%3A%7Bi%3A0%3Bs%3A10%3A%22_csrf-api4%22%3Bi%3A1%3Bs%3A32%3A%22mPkJNMpIUtGJc6oXAbyO0XGxum-iRppL%22%3B%7D; PHPSESSID=vqjft4urmdgl3d4a0htrg55uhd'
+    'HTTP_ACCEPT_LANGUAGE' => 'uk-UA,uk;q=0.9,ru;q=0.8,en-US;q=0.7,en;q=0.6'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.119 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'api4.boom.test'
+    'SCRIPT_FILENAME' => '/app/api_ver4/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'api4.boom.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.83.137'
+    'REMOTE_PORT' => '53022'
+    'REMOTE_ADDR' => '192.168.83.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/app/api_ver4/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/user/addcomment?params={%22PostID%22:%2239247%22,%22ArtistID%22:1,%22ActivityTypeID%22:2,%22ProfileID%22:21,%20%22RefTable%22:1,%20%22RefTableID%22:39247,%20%22Comment%22:%22tree111%22,%20%22Language%22:%22english%22,%20%22ActivityID%22:%22%22,%22UserType%22:3,%22StickerID%22:0,%22CustomStickerUrl%22:%22%22,%22parent_id%22:111}'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'params={%22PostID%22:%2239247%22,%22ArtistID%22:1,%22ActivityTypeID%22:2,%22ProfileID%22:21,%20%22RefTable%22:1,%20%22RefTableID%22:39247,%20%22Comment%22:%22tree111%22,%20%22Language%22:%22english%22,%20%22ActivityID%22:%22%22,%22UserType%22:3,%22StickerID%22:0,%22CustomStickerUrl%22:%22%22,%22parent_id%22:111}'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1517494473.7253
+    'REQUEST_TIME' => 1517494473
+]
+2018-02-01 14:15:31 [192.168.83.1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /app/vendor/yiisoft/yii2/db/Command.php:837
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/db/Command.php(837): PDOStatement->execute()
+#1 /app/vendor/yiisoft/yii2/db/Command.php(359): yii\db\Command->queryInternal('fetchAll', NULL)
+#2 /app/api_ver4/controllers/UserController.php(2652): yii\db\Command->queryAll()
+#3 [internal function]: api_ver4\controllers\UserController->actionAddcomment()
+#4 /app/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /app/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /app/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('addcomment', Array)
+#7 /app/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/addcomment', Array)
+#8 /app/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /app/api_ver4/web/index.php(21): yii\base\Application->run()
+#10 {main}
+
+Next yii\db\Exception: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+The SQL being executed was: CALL Member_Add_Activity('39247',1,21,2,1,39247,'tree111','',3,0,'http://d1t89cp2y0xf79.cloudfront.net/boom-','') in /app/vendor/yiisoft/yii2/db/Schema.php:628
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/db/Command.php(852): yii\db\Schema->convertException(Object(PDOException), 'CALL Member_Add...')
+#1 /app/vendor/yiisoft/yii2/db/Command.php(359): yii\db\Command->queryInternal('fetchAll', NULL)
+#2 /app/api_ver4/controllers/UserController.php(2652): yii\db\Command->queryAll()
+#3 [internal function]: api_ver4\controllers\UserController->actionAddcomment()
+#4 /app/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /app/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /app/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('addcomment', Array)
+#7 /app/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/addcomment', Array)
+#8 /app/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /app/api_ver4/web/index.php(21): yii\base\Application->run()
+#10 {main}
+Additional Information:
+Array
+(
+    [0] => HY093
+    [1] => 0
+)
+
+2018-02-01 14:15:30 [192.168.83.1][-][-][info][application] $_GET = [
+    'params' => '{\"PostID\":\"39247\",\"ArtistID\":1,\"ActivityTypeID\":2,\"ProfileID\":21, \"RefTable\":1, \"RefTableID\":39247, \"Comment\":\"tree111\", \"Language\":\"english\", \"ActivityID\":\"\",\"UserType\":3,\"StickerID\":0,\"CustomStickerUrl\":\"\",\"parent_id\":111}'
+]
+
+$_COOKIE = [
+    '_csrf' => '3c3293ae2753256229c45cea85883a15f72f248866facb6f654e4734496d9595a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"QoRVAgacC-Ges8L0sKvNy4rPP3SAnue_\";}'
+    '_csrf-api4' => 'a006404f2117f6512aa694243f034306c47da90379f0081d004170e51c21fb2ca:2:{i:0;s:10:\"_csrf-api4\";i:1;s:32:\"mPkJNMpIUtGJc6oXAbyO0XGxum-iRppL\";}'
+    'PHPSESSID' => 'vqjft4urmdgl3d4a0htrg55uhd'
+]
+
+$_SERVER = [
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'HTTP_COOKIE' => '_csrf=3c3293ae2753256229c45cea85883a15f72f248866facb6f654e4734496d9595a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22QoRVAgacC-Ges8L0sKvNy4rPP3SAnue_%22%3B%7D; _csrf-api4=a006404f2117f6512aa694243f034306c47da90379f0081d004170e51c21fb2ca%3A2%3A%7Bi%3A0%3Bs%3A10%3A%22_csrf-api4%22%3Bi%3A1%3Bs%3A32%3A%22mPkJNMpIUtGJc6oXAbyO0XGxum-iRppL%22%3B%7D; PHPSESSID=vqjft4urmdgl3d4a0htrg55uhd'
+    'HTTP_ACCEPT_LANGUAGE' => 'uk-UA,uk;q=0.9,ru;q=0.8,en-US;q=0.7,en;q=0.6'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.119 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'api4.boom.test'
+    'SCRIPT_FILENAME' => '/app/api_ver4/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'api4.boom.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.83.137'
+    'REMOTE_PORT' => '53022'
+    'REMOTE_ADDR' => '192.168.83.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/app/api_ver4/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/user/addcomment?params={%22PostID%22:%2239247%22,%22ArtistID%22:1,%22ActivityTypeID%22:2,%22ProfileID%22:21,%20%22RefTable%22:1,%20%22RefTableID%22:39247,%20%22Comment%22:%22tree111%22,%20%22Language%22:%22english%22,%20%22ActivityID%22:%22%22,%22UserType%22:3,%22StickerID%22:0,%22CustomStickerUrl%22:%22%22,%22parent_id%22:111}'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'params={%22PostID%22:%2239247%22,%22ArtistID%22:1,%22ActivityTypeID%22:2,%22ProfileID%22:21,%20%22RefTable%22:1,%20%22RefTableID%22:39247,%20%22Comment%22:%22tree111%22,%20%22Language%22:%22english%22,%20%22ActivityID%22:%22%22,%22UserType%22:3,%22StickerID%22:0,%22CustomStickerUrl%22:%22%22,%22parent_id%22:111}'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1517494530.8697
+    'REQUEST_TIME' => 1517494530
+]
+2018-02-01 14:17:27 [192.168.83.1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[42000]: Syntax error or access violation: 1318 Incorrect number of arguments for PROCEDURE boomvideo.Member_Add_Activity; expected 12, got 13 in /app/vendor/yiisoft/yii2/db/Command.php:837
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/db/Command.php(837): PDOStatement->execute()
+#1 /app/vendor/yiisoft/yii2/db/Command.php(359): yii\db\Command->queryInternal('fetchAll', NULL)
+#2 /app/api_ver4/controllers/UserController.php(2652): yii\db\Command->queryAll()
+#3 [internal function]: api_ver4\controllers\UserController->actionAddcomment()
+#4 /app/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /app/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /app/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('addcomment', Array)
+#7 /app/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/addcomment', Array)
+#8 /app/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /app/api_ver4/web/index.php(21): yii\base\Application->run()
+#10 {main}
+
+Next yii\db\Exception: SQLSTATE[42000]: Syntax error or access violation: 1318 Incorrect number of arguments for PROCEDURE boomvideo.Member_Add_Activity; expected 12, got 13
+The SQL being executed was: CALL Member_Add_Activity('39247',1,21,2,1,39247,'tree111','',3,0,'http://d1t89cp2y0xf79.cloudfront.net/boom-','',111) in /app/vendor/yiisoft/yii2/db/Schema.php:628
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/db/Command.php(852): yii\db\Schema->convertException(Object(PDOException), 'CALL Member_Add...')
+#1 /app/vendor/yiisoft/yii2/db/Command.php(359): yii\db\Command->queryInternal('fetchAll', NULL)
+#2 /app/api_ver4/controllers/UserController.php(2652): yii\db\Command->queryAll()
+#3 [internal function]: api_ver4\controllers\UserController->actionAddcomment()
+#4 /app/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /app/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /app/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('addcomment', Array)
+#7 /app/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/addcomment', Array)
+#8 /app/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /app/api_ver4/web/index.php(21): yii\base\Application->run()
+#10 {main}
+Additional Information:
+Array
+(
+    [0] => 42000
+    [1] => 1318
+    [2] => Incorrect number of arguments for PROCEDURE boomvideo.Member_Add_Activity; expected 12, got 13
+)
+
+2018-02-01 14:17:26 [192.168.83.1][-][-][info][application] $_GET = [
+    'params' => '{\"PostID\":\"39247\",\"ArtistID\":1,\"ActivityTypeID\":2,\"ProfileID\":21, \"RefTable\":1, \"RefTableID\":39247, \"Comment\":\"tree111\", \"Language\":\"english\", \"ActivityID\":\"\",\"UserType\":3,\"StickerID\":0,\"CustomStickerUrl\":\"\",\"parent_id\":111}'
+]
+
+$_COOKIE = [
+    '_csrf' => '3c3293ae2753256229c45cea85883a15f72f248866facb6f654e4734496d9595a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"QoRVAgacC-Ges8L0sKvNy4rPP3SAnue_\";}'
+    '_csrf-api4' => 'a006404f2117f6512aa694243f034306c47da90379f0081d004170e51c21fb2ca:2:{i:0;s:10:\"_csrf-api4\";i:1;s:32:\"mPkJNMpIUtGJc6oXAbyO0XGxum-iRppL\";}'
+    'PHPSESSID' => 'vqjft4urmdgl3d4a0htrg55uhd'
+]
+
+$_SERVER = [
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'HTTP_COOKIE' => '_csrf=3c3293ae2753256229c45cea85883a15f72f248866facb6f654e4734496d9595a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22QoRVAgacC-Ges8L0sKvNy4rPP3SAnue_%22%3B%7D; _csrf-api4=a006404f2117f6512aa694243f034306c47da90379f0081d004170e51c21fb2ca%3A2%3A%7Bi%3A0%3Bs%3A10%3A%22_csrf-api4%22%3Bi%3A1%3Bs%3A32%3A%22mPkJNMpIUtGJc6oXAbyO0XGxum-iRppL%22%3B%7D; PHPSESSID=vqjft4urmdgl3d4a0htrg55uhd'
+    'HTTP_ACCEPT_LANGUAGE' => 'uk-UA,uk;q=0.9,ru;q=0.8,en-US;q=0.7,en;q=0.6'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.119 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'api4.boom.test'
+    'SCRIPT_FILENAME' => '/app/api_ver4/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'api4.boom.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.83.137'
+    'REMOTE_PORT' => '53060'
+    'REMOTE_ADDR' => '192.168.83.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/app/api_ver4/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/user/addcomment?params={%22PostID%22:%2239247%22,%22ArtistID%22:1,%22ActivityTypeID%22:2,%22ProfileID%22:21,%20%22RefTable%22:1,%20%22RefTableID%22:39247,%20%22Comment%22:%22tree111%22,%20%22Language%22:%22english%22,%20%22ActivityID%22:%22%22,%22UserType%22:3,%22StickerID%22:0,%22CustomStickerUrl%22:%22%22,%22parent_id%22:111}'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'params={%22PostID%22:%2239247%22,%22ArtistID%22:1,%22ActivityTypeID%22:2,%22ProfileID%22:21,%20%22RefTable%22:1,%20%22RefTableID%22:39247,%20%22Comment%22:%22tree111%22,%20%22Language%22:%22english%22,%20%22ActivityID%22:%22%22,%22UserType%22:3,%22StickerID%22:0,%22CustomStickerUrl%22:%22%22,%22parent_id%22:111}'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1517494646.4384
+    'REQUEST_TIME' => 1517494646
+]
