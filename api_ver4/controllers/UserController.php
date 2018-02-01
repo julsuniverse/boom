@@ -1483,7 +1483,7 @@ class UserController extends Controller
 
                         }, $connection->queryCacheDuration, $dependency_post_image);
 
-                        $latestcmntsproc = "CALL Latest_Post_CommentList(" . $postID . "," . $artistID . "," . $artistID . ",2,'" . self::S3BucketAbsolutePath . "','" . self::S3BucketPath . "','" . self::S3BucketProfileThumbImages . "','" . self::S3BucketStickers . "','" . self::S3BucketStickersSmall . "','" . self::S3BucketStickersMedium . "')";
+                        $latestcmntsproc = "CALL Latest_Post_CommentList_api4(" . $postID . "," . $artistID . "," . $artistID . ",2,'" . self::S3BucketAbsolutePath . "','" . self::S3BucketPath . "','" . self::S3BucketProfileThumbImages . "','" . self::S3BucketStickers . "','" . self::S3BucketStickersSmall . "','" . self::S3BucketStickersMedium . "')";
                         $commandForCmnts = $connection->createCommand($latestcmntsproc);
                         //$cmntsData = $commandForCmnts->queryAll();
 
@@ -3350,7 +3350,7 @@ class UserController extends Controller
                 $userType = $data->UserType;
                 $pageindex = $data->PageIndex;
                 $connection = Yii::$app->db;
-                $procedure = "CALL Ver2_Post_CommentList(" . $postID . "," . $artistID . "," . $profileID . "," . $userType . ",'" . self::S3BucketAbsolutePath . "','" . self::S3BucketPath . "','" . self::S3BucketProfileThumbImages . "','" . self::S3BucketStickers . "','" . self::S3BucketStickersSmall . "','" . self::S3BucketStickersMedium . "',10," . $pageindex . ",@o_RecCount)";
+                $procedure = "CALL Ver2_Post_CommentList_api4(" . $postID . "," . $artistID . "," . $profileID . "," . $userType . ",'" . self::S3BucketAbsolutePath . "','" . self::S3BucketPath . "','" . self::S3BucketProfileThumbImages . "','" . self::S3BucketStickers . "','" . self::S3BucketStickersSmall . "','" . self::S3BucketStickersMedium . "',10," . $pageindex . ",@o_RecCount)";
                 //echo $procedure; die;
                 $logString.="\n Member Post Comment List : ".$procedure.'\n';
                 $command = $connection->createCommand($procedure);
