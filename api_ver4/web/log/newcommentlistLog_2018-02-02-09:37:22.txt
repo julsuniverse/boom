@@ -1,0 +1,17 @@
+
+ ************************
+ DateTime : 2018-02-02 09:37:22
+ Message : yii\base\ErrorException: Undefined index: PostCommentActivityID in /app/api_ver4/controllers/UserController.php:3365
+Stack trace:
+#0 /app/api_ver4/controllers/UserController.php(3365): yii\base\ErrorHandler->handleError(8, 'Undefined index...', '/app/api_ver4/c...', 3365, Array)
+#1 [internal function]: api_ver4\controllers\UserController->actionNewcommentlist()
+#2 /app/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#3 /app/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 /app/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('newcommentlist', Array)
+#5 /app/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('user/newcomment...', Array)
+#6 /app/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /app/api_ver4/web/index.php(21): yii\base\Application->run()
+#8 {main}
+ Data: 
+ Params : {"PostID":"41773","ArtistID":1,"ProfileID":21,"Language":"english","UserType":3, "PageIndex":1}\n
+ Member Post Comment List : CALL Ver2_Post_CommentList_api4(41773,1,21,3,'http://d1t89cp2y0xf79.cloudfront.net','http://d1t89cp2y0xf79.cloudfront.net/boom-','/profileimages/thumb/','/stickerimages/','/stickerimages/StickerSmall/','/stickerimages/StickerMedium/',10,1,@o_RecCount)\n

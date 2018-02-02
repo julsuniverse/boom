@@ -3351,10 +3351,12 @@ class UserController extends Controller
                 $pageindex = $data->PageIndex;
                 $connection = Yii::$app->db;
                 $procedure = "CALL Ver2_Post_CommentList_api4(" . $postID . "," . $artistID . "," . $profileID . "," . $userType . ",'" . self::S3BucketAbsolutePath . "','" . self::S3BucketPath . "','" . self::S3BucketProfileThumbImages . "','" . self::S3BucketStickers . "','" . self::S3BucketStickersSmall . "','" . self::S3BucketStickersMedium . "',10," . $pageindex . ",@o_RecCount)";
-                //echo $procedure; die;
                 $logString.="\n Member Post Comment List : ".$procedure.'\n';
                 $command = $connection->createCommand($procedure);
                 $commentData = $command->queryAll();
+
+                $list = ActivityHelper::getCommentList($commentData);
+
                 $reccommand = $connection->createCommand('SELECT @o_RecCount')->queryOne();
                 $recordcnt = $reccommand['@o_RecCount'];
                 if (count($commentData) > 0)
@@ -3374,7 +3376,7 @@ class UserController extends Controller
                 echo json_encode(['Status' => $status,
                     "Message" => $lngmsg,
                     "RecordCount" => $recordcnt,
-                    "Result" => $commentData], JSON_PRETTY_PRINT);
+                    "Result" => $list], JSON_PRETTY_PRINT);
             }
             else
             {

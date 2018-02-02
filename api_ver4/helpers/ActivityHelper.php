@@ -64,4 +64,57 @@ class ActivityHelper extends Object
             'TotalLikes' => 0,
         ];
     }
+
+    public static function getCommentList(array $commentData)
+    {
+        $refs = array();
+        $list = array();
+
+        foreach ($commentData as $row)
+        {
+            $ref = & $refs[$row['PostCommentActivityID']];
+
+            $ref['PostCommentActivityID'] = $row['PostCommentActivityID'];
+            $ref['ParentID'] = $row['ParentID'];
+            $ref['Comment']      = $row['Comment'];
+            $ref['TotalLikes'] = $row['TotalLikes'];
+            $ref['TotalFlags'] = $row['TotalFlags'];
+            $ref['CommentedDate'] = $row['CommentedDate'];
+            $ref['StickerID'] = $row['StickerID'];
+            $ref['StickerImage'] = $row['StickerImage'];
+            $ref['StickerThumbImage'] = $row['StickerThumbImage'];
+            $ref['StickerMediumImage'] = $row['StickerMediumImage'];
+            $ref['ProfileID'] = $row['ProfileID'];
+            $ref['IsArtistComment'] = $row['IsArtistComment'];
+            $ref['MemberName'] = $row['MemberName'];
+            $ref['UserID'] = $row['UserID'];
+            $ref['ProfileThumb'] = $row['ProfileThumb'];
+            $ref['PostFlagActivityID'] = $row['PostFlagActivityID'];
+            $ref['PostLikeActivityID'] = $row['PostLikeActivityID'];
+            $ref['CustomStickerUrl'] = $row['CustomStickerUrl'];
+
+            if ($row['ParentID'] == null)
+            {
+                $list[$row['PostCommentActivityID']] = & $ref;
+            }
+            else
+            {
+                $refs[$row['ParentID']] ['children'] [$row['PostCommentActivityID']] = & $ref;
+            }
+        }
+
+        $list = array_values($list);
+
+        for($i = 0; $i < count($list); $i++) {
+
+            if(!empty($list[$i]['children'])) {
+                $list[$i]['children'] = array_values($list[$i]['children']);
+                $children = array_shift($list[$i]);
+                $list[$i] += ['children' => $children];
+            }
+
+        }
+        return $list;
+    }
+
 }
